@@ -7,15 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace PrototypeSAD
 {
     public partial class DBE : Form
     {
         public Form ref_to_main { get; set; }
+        public MySqlConnection conn;
+
         public DBE()
-        {
+        {            
             InitializeComponent();
+            conn = new MySqlConnection("Server=localhost;Database=prototype_sad;Uid=root;Pwd=root;");
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -99,7 +103,7 @@ namespace PrototypeSAD
 
         private void btnAddB_Click(object sender, EventArgs e)
         {
-            tabControl.SelectedTab = first;
+            tabControl.SelectedTab = fifth;
             resetColor();
             btnAddB.BackColor = Color.Gray;
         }
@@ -132,6 +136,33 @@ namespace PrototypeSAD
             btnDonation.BackColor = Color.Gray;
             secondTaskbar.SelectedTab = donation;
             tabControl.SelectedTab = third;
+        }
+
+        private void btnAddDonation_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+
+                MySqlCommand comm = new MySqlCommand("SELECT * FROM donation WHERE status = 'Approved'", conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+
+
+
+                conn.Close();
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show("Nah!" + ee);
+                conn.Close();
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

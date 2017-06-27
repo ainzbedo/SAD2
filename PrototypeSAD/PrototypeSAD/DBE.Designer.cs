@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
             this.btnAll = new System.Windows.Forms.Button();
             this.btnExpense = new System.Windows.Forms.Button();
             this.btnMain = new System.Windows.Forms.Button();
@@ -72,32 +73,32 @@
             this.button48 = new System.Windows.Forms.Button();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.first = new System.Windows.Forms.TabPage();
-            this.button64 = new System.Windows.Forms.Button();
-            this.button63 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.btnAddDonation = new System.Windows.Forms.Button();
+            this.btnChangeDonor = new System.Windows.Forms.Button();
+            this.listInKind = new System.Windows.Forms.ListView();
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel44 = new System.Windows.Forms.Panel();
-            this.label162 = new System.Windows.Forms.Label();
-            this.label156 = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblCell = new System.Windows.Forms.Label();
             this.label161 = new System.Windows.Forms.Label();
-            this.label154 = new System.Windows.Forms.Label();
+            this.lblDateAdded = new System.Windows.Forms.Label();
             this.label155 = new System.Windows.Forms.Label();
             this.label157 = new System.Windows.Forms.Label();
-            this.label158 = new System.Windows.Forms.Label();
+            this.lblPhone = new System.Windows.Forms.Label();
             this.label159 = new System.Windows.Forms.Label();
             this.label160 = new System.Windows.Forms.Label();
-            this.label148 = new System.Windows.Forms.Label();
-            this.label149 = new System.Windows.Forms.Label();
-            this.label150 = new System.Windows.Forms.Label();
+            this.lblPledge = new System.Windows.Forms.Label();
+            this.lblDonorGen = new System.Windows.Forms.Label();
+            this.lblDonorType = new System.Windows.Forms.Label();
             this.label151 = new System.Windows.Forms.Label();
             this.label152 = new System.Windows.Forms.Label();
             this.label153 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel18 = new System.Windows.Forms.Panel();
             this.label31 = new System.Windows.Forms.Label();
-            this.listView3 = new System.Windows.Forms.ListView();
+            this.listMonetary = new System.Windows.Forms.ListView();
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -107,16 +108,16 @@
             this.label164 = new System.Windows.Forms.Label();
             this.second = new System.Windows.Forms.TabPage();
             this.button25 = new System.Windows.Forms.Button();
-            this.listView2 = new System.Windows.Forms.ListView();
+            this.listResult = new System.Windows.Forms.ListView();
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel37 = new System.Windows.Forms.Panel();
             this.button24 = new System.Windows.Forms.Button();
             this.label111 = new System.Windows.Forms.Label();
             this.label112 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.third = new System.Windows.Forms.TabPage();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pbPic = new System.Windows.Forms.PictureBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label79 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
@@ -177,23 +178,23 @@
             this.label166 = new System.Windows.Forms.Label();
             this.button41 = new System.Windows.Forms.Button();
             this.button42 = new System.Windows.Forms.Button();
-            this.listView4 = new System.Windows.Forms.ListView();
+            this.listBudget = new System.Windows.Forms.ListView();
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel50 = new System.Windows.Forms.Panel();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtBOther = new System.Windows.Forms.TextBox();
             this.label165 = new System.Windows.Forms.Label();
             this.panel48 = new System.Windows.Forms.Panel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbBCategory = new System.Windows.Forms.ComboBox();
             this.label83 = new System.Windows.Forms.Label();
             this.panel47 = new System.Windows.Forms.Panel();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpBDate = new System.Windows.Forms.DateTimePicker();
             this.label82 = new System.Windows.Forms.Label();
             this.panel46 = new System.Windows.Forms.Panel();
             this.panel49 = new System.Windows.Forms.Panel();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtBPurpose = new System.Windows.Forms.TextBox();
             this.label84 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label81 = new System.Windows.Forms.Label();
@@ -201,32 +202,31 @@
             this.label80 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.sixth = new System.Windows.Forms.TabPage();
-            this.button47 = new System.Windows.Forms.Button();
-            this.button46 = new System.Windows.Forms.Button();
+            this.btnApprove = new System.Windows.Forms.Button();
+            this.btnDisapprove = new System.Windows.Forms.Button();
             this.label169 = new System.Windows.Forms.Label();
-            this.listView6 = new System.Windows.Forms.ListView();
+            this.listBudgetDetails = new System.Windows.Forms.ListView();
             this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel52 = new System.Windows.Forms.Panel();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.txtCategory = new System.Windows.Forms.TextBox();
+            this.txtDateRequested = new System.Windows.Forms.TextBox();
             this.label173 = new System.Windows.Forms.Label();
             this.label174 = new System.Windows.Forms.Label();
             this.label176 = new System.Windows.Forms.Label();
             this.label177 = new System.Windows.Forms.Label();
             this.label168 = new System.Windows.Forms.Label();
-            this.listView5 = new System.Windows.Forms.ListView();
+            this.listBPending = new System.Windows.Forms.ListView();
             this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel51 = new System.Windows.Forms.Panel();
             this.label167 = new System.Windows.Forms.Label();
             this.button45 = new System.Windows.Forms.Button();
             this.seventh = new System.Windows.Forms.TabPage();
-            this.button50 = new System.Windows.Forms.Button();
-            this.button51 = new System.Windows.Forms.Button();
+            this.addExpense = new System.Windows.Forms.Button();
             this.panel54 = new System.Windows.Forms.Panel();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.textBox25 = new System.Windows.Forms.TextBox();
@@ -256,7 +256,7 @@
             this.label170 = new System.Windows.Forms.Label();
             this.button49 = new System.Windows.Forms.Button();
             this.eighth = new System.Windows.Forms.TabPage();
-            this.listView9 = new System.Windows.Forms.ListView();
+            this.listDetails = new System.Windows.Forms.ListView();
             this.columnHeader31 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader32 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader33 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -264,8 +264,8 @@
             this.columnHeader35 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label15 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listView8 = new System.Windows.Forms.ListView();
+            this.txtSearchFinance = new System.Windows.Forms.TextBox();
+            this.listFinanceResult = new System.Windows.Forms.ListView();
             this.columnHeader28 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader29 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader30 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -276,7 +276,6 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.richTextBox4 = new System.Windows.Forms.RichTextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pan_RES.SuspendLayout();
@@ -295,7 +294,7 @@
             this.second.SuspendLayout();
             this.panel37.SuspendLayout();
             this.third.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPic)).BeginInit();
             this.fourth.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel9.SuspendLayout();
@@ -335,6 +334,20 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(83, 525);
             this.panel2.TabIndex = 8;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.button8.BackgroundImage = global::PrototypeSAD.Properties.Resources.settings;
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Location = new System.Drawing.Point(4, 466);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(77, 59);
+            this.button8.TabIndex = 10;
+            this.button8.UseVisualStyleBackColor = false;
             // 
             // btnAll
             // 
@@ -727,7 +740,7 @@
             this.panel.Controls.Add(this.btnDonor);
             this.panel.Location = new System.Drawing.Point(1, -1);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(200, 456);
+            this.panel.Size = new System.Drawing.Size(196, 526);
             this.panel.TabIndex = 0;
             // 
             // btnUpdate
@@ -743,6 +756,7 @@
             this.btnUpdate.Text = "       Update Donor Profile";
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -859,7 +873,7 @@
             this.btnAddE.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddE.Location = new System.Drawing.Point(0, 10);
             this.btnAddE.Name = "btnAddE";
-            this.btnAddE.Size = new System.Drawing.Size(199, 28);
+            this.btnAddE.Size = new System.Drawing.Size(199, 30);
             this.btnAddE.TabIndex = 3;
             this.btnAddE.Text = "       Add Expense";
             this.btnAddE.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -925,20 +939,20 @@
             // 
             // first
             // 
-            this.first.Controls.Add(this.button64);
-            this.first.Controls.Add(this.button63);
-            this.first.Controls.Add(this.listView1);
+            this.first.Controls.Add(this.btnAddDonation);
+            this.first.Controls.Add(this.btnChangeDonor);
+            this.first.Controls.Add(this.listInKind);
             this.first.Controls.Add(this.panel44);
             this.first.Controls.Add(this.label160);
-            this.first.Controls.Add(this.label148);
-            this.first.Controls.Add(this.label149);
-            this.first.Controls.Add(this.label150);
+            this.first.Controls.Add(this.lblPledge);
+            this.first.Controls.Add(this.lblDonorGen);
+            this.first.Controls.Add(this.lblDonorType);
             this.first.Controls.Add(this.label151);
             this.first.Controls.Add(this.label152);
             this.first.Controls.Add(this.label153);
             this.first.Controls.Add(this.pictureBox5);
             this.first.Controls.Add(this.panel18);
-            this.first.Controls.Add(this.listView3);
+            this.first.Controls.Add(this.listMonetary);
             this.first.Controls.Add(this.label163);
             this.first.Controls.Add(this.label164);
             this.first.Location = new System.Drawing.Point(4, 22);
@@ -949,47 +963,48 @@
             this.first.Text = "1";
             this.first.UseVisualStyleBackColor = true;
             // 
-            // button64
+            // btnAddDonation
             // 
-            this.button64.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.button64.FlatAppearance.BorderSize = 0;
-            this.button64.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button64.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button64.ForeColor = System.Drawing.Color.White;
-            this.button64.Location = new System.Drawing.Point(271, 487);
-            this.button64.Name = "button64";
-            this.button64.Size = new System.Drawing.Size(116, 28);
-            this.button64.TabIndex = 42;
-            this.button64.Text = "add donation";
-            this.button64.UseVisualStyleBackColor = false;
+            this.btnAddDonation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btnAddDonation.FlatAppearance.BorderSize = 0;
+            this.btnAddDonation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddDonation.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddDonation.ForeColor = System.Drawing.Color.White;
+            this.btnAddDonation.Location = new System.Drawing.Point(271, 487);
+            this.btnAddDonation.Name = "btnAddDonation";
+            this.btnAddDonation.Size = new System.Drawing.Size(116, 28);
+            this.btnAddDonation.TabIndex = 42;
+            this.btnAddDonation.Text = "add donation";
+            this.btnAddDonation.UseVisualStyleBackColor = false;
+            this.btnAddDonation.Click += new System.EventHandler(this.btnAddDonation_Click);
             // 
-            // button63
+            // btnChangeDonor
             // 
-            this.button63.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.button63.FlatAppearance.BorderSize = 0;
-            this.button63.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button63.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button63.ForeColor = System.Drawing.Color.White;
-            this.button63.Location = new System.Drawing.Point(393, 487);
-            this.button63.Name = "button63";
-            this.button63.Size = new System.Drawing.Size(116, 28);
-            this.button63.TabIndex = 41;
-            this.button63.Text = "change details";
-            this.button63.UseVisualStyleBackColor = false;
+            this.btnChangeDonor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btnChangeDonor.FlatAppearance.BorderSize = 0;
+            this.btnChangeDonor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChangeDonor.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangeDonor.ForeColor = System.Drawing.Color.White;
+            this.btnChangeDonor.Location = new System.Drawing.Point(393, 487);
+            this.btnChangeDonor.Name = "btnChangeDonor";
+            this.btnChangeDonor.Size = new System.Drawing.Size(116, 28);
+            this.btnChangeDonor.TabIndex = 41;
+            this.btnChangeDonor.Text = "change details";
+            this.btnChangeDonor.UseVisualStyleBackColor = false;
             // 
-            // listView1
+            // listInKind
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listInKind.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader6,
             this.columnHeader7,
             this.columnHeader10});
-            this.listView1.FullRowSelect = true;
-            this.listView1.Location = new System.Drawing.Point(9, 398);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(500, 83);
-            this.listView1.TabIndex = 39;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listInKind.FullRowSelect = true;
+            this.listInKind.Location = new System.Drawing.Point(9, 406);
+            this.listInKind.Name = "listInKind";
+            this.listInKind.Size = new System.Drawing.Size(500, 75);
+            this.listInKind.TabIndex = 39;
+            this.listInKind.UseCompatibleStateImageBehavior = false;
+            this.listInKind.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader6
             // 
@@ -1010,42 +1025,42 @@
             // 
             this.panel44.BackColor = System.Drawing.Color.White;
             this.panel44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel44.Controls.Add(this.label162);
-            this.panel44.Controls.Add(this.label156);
+            this.panel44.Controls.Add(this.lblEmail);
+            this.panel44.Controls.Add(this.lblCell);
             this.panel44.Controls.Add(this.label161);
-            this.panel44.Controls.Add(this.label154);
+            this.panel44.Controls.Add(this.lblDateAdded);
             this.panel44.Controls.Add(this.label155);
             this.panel44.Controls.Add(this.label157);
-            this.panel44.Controls.Add(this.label158);
+            this.panel44.Controls.Add(this.lblPhone);
             this.panel44.Controls.Add(this.label159);
             this.panel44.Location = new System.Drawing.Point(9, 179);
             this.panel44.Name = "panel44";
             this.panel44.Size = new System.Drawing.Size(501, 80);
             this.panel44.TabIndex = 33;
             // 
-            // label162
+            // lblEmail
             // 
-            this.label162.AutoSize = true;
-            this.label162.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.label162.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.label162.Location = new System.Drawing.Point(331, 41);
-            this.label162.Name = "label162";
-            this.label162.Size = new System.Drawing.Size(164, 14);
-            this.label162.TabIndex = 28;
-            this.label162.Text = "bradskycignal@gmail.com";
-            this.label162.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            this.lblEmail.Location = new System.Drawing.Point(331, 41);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(164, 14);
+            this.lblEmail.TabIndex = 28;
+            this.lblEmail.Text = "bradskycignal@gmail.com";
+            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label156
+            // lblCell
             // 
-            this.label156.AutoSize = true;
-            this.label156.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.label156.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.label156.Location = new System.Drawing.Point(418, 21);
-            this.label156.Name = "label156";
-            this.label156.Size = new System.Drawing.Size(77, 14);
-            this.label156.TabIndex = 27;
-            this.label156.Text = "0912456789";
-            this.label156.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblCell.AutoSize = true;
+            this.lblCell.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.lblCell.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            this.lblCell.Location = new System.Drawing.Point(418, 21);
+            this.lblCell.Name = "lblCell";
+            this.lblCell.Size = new System.Drawing.Size(77, 14);
+            this.lblCell.TabIndex = 27;
+            this.lblCell.Text = "0912456789";
+            this.lblCell.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label161
             // 
@@ -1058,17 +1073,17 @@
             this.label161.TabIndex = 26;
             this.label161.Text = "Date Added";
             // 
-            // label154
+            // lblDateAdded
             // 
-            this.label154.AutoSize = true;
-            this.label154.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.label154.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.label154.Location = new System.Drawing.Point(400, 60);
-            this.label154.Name = "label154";
-            this.label154.Size = new System.Drawing.Size(95, 14);
-            this.label154.TabIndex = 25;
-            this.label154.Text = "March 10, 2015";
-            this.label154.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblDateAdded.AutoSize = true;
+            this.lblDateAdded.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.lblDateAdded.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            this.lblDateAdded.Location = new System.Drawing.Point(400, 60);
+            this.lblDateAdded.Name = "lblDateAdded";
+            this.lblDateAdded.Size = new System.Drawing.Size(95, 14);
+            this.lblDateAdded.TabIndex = 25;
+            this.lblDateAdded.Text = "March 10, 2015";
+            this.lblDateAdded.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label155
             // 
@@ -1092,17 +1107,17 @@
             this.label157.TabIndex = 22;
             this.label157.Text = "Phone";
             // 
-            // label158
+            // lblPhone
             // 
-            this.label158.AutoSize = true;
-            this.label158.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.label158.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.label158.Location = new System.Drawing.Point(435, 3);
-            this.label158.Name = "label158";
-            this.label158.Size = new System.Drawing.Size(60, 14);
-            this.label158.TabIndex = 21;
-            this.label158.Text = "299-1111";
-            this.label158.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblPhone.AutoSize = true;
+            this.lblPhone.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.lblPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            this.lblPhone.Location = new System.Drawing.Point(435, 3);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(60, 14);
+            this.lblPhone.TabIndex = 21;
+            this.lblPhone.Text = "299-1111";
+            this.lblPhone.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label159
             // 
@@ -1127,39 +1142,39 @@
             this.label160.TabIndex = 32;
             this.label160.Text = "Donor Information";
             // 
-            // label148
+            // lblPledge
             // 
-            this.label148.AutoSize = true;
-            this.label148.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.label148.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.label148.Location = new System.Drawing.Point(458, 140);
-            this.label148.Name = "label148";
-            this.label148.Size = new System.Drawing.Size(47, 14);
-            this.label148.TabIndex = 31;
-            this.label148.Text = "Annual";
-            this.label148.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblPledge.AutoSize = true;
+            this.lblPledge.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.lblPledge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            this.lblPledge.Location = new System.Drawing.Point(458, 140);
+            this.lblPledge.Name = "lblPledge";
+            this.lblPledge.Size = new System.Drawing.Size(47, 14);
+            this.lblPledge.TabIndex = 31;
+            this.lblPledge.Text = "Annual";
+            this.lblPledge.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label149
+            // lblDonorGen
             // 
-            this.label149.AutoSize = true;
-            this.label149.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.label149.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.label149.Location = new System.Drawing.Point(465, 120);
-            this.label149.Name = "label149";
-            this.label149.Size = new System.Drawing.Size(40, 14);
-            this.label149.TabIndex = 30;
-            this.label149.Text = "Other";
+            this.lblDonorGen.AutoSize = true;
+            this.lblDonorGen.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.lblDonorGen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            this.lblDonorGen.Location = new System.Drawing.Point(465, 120);
+            this.lblDonorGen.Name = "lblDonorGen";
+            this.lblDonorGen.Size = new System.Drawing.Size(40, 14);
+            this.lblDonorGen.TabIndex = 30;
+            this.lblDonorGen.Text = "Other";
             // 
-            // label150
+            // lblDonorType
             // 
-            this.label150.AutoSize = true;
-            this.label150.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.label150.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.label150.Location = new System.Drawing.Point(440, 99);
-            this.label150.Name = "label150";
-            this.label150.Size = new System.Drawing.Size(65, 14);
-            this.label150.TabIndex = 29;
-            this.label150.Text = "Organizer";
+            this.lblDonorType.AutoSize = true;
+            this.lblDonorType.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.lblDonorType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            this.lblDonorType.Location = new System.Drawing.Point(440, 101);
+            this.lblDonorType.Name = "lblDonorType";
+            this.lblDonorType.Size = new System.Drawing.Size(65, 14);
+            this.lblDonorType.TabIndex = 29;
+            this.lblDonorType.Text = "Organizer";
             // 
             // label151
             // 
@@ -1224,21 +1239,21 @@
             this.label31.TabIndex = 2;
             this.label31.Text = "Name";
             // 
-            // listView3
+            // listMonetary
             // 
-            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listMonetary.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader13,
             this.columnHeader14,
             this.columnHeader15,
             this.columnHeader16,
             this.columnHeader17});
-            this.listView3.FullRowSelect = true;
-            this.listView3.Location = new System.Drawing.Point(9, 289);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(500, 83);
-            this.listView3.TabIndex = 37;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            this.listView3.View = System.Windows.Forms.View.Details;
+            this.listMonetary.FullRowSelect = true;
+            this.listMonetary.Location = new System.Drawing.Point(9, 289);
+            this.listMonetary.Name = "listMonetary";
+            this.listMonetary.Size = new System.Drawing.Size(500, 83);
+            this.listMonetary.TabIndex = 37;
+            this.listMonetary.UseCompatibleStateImageBehavior = false;
+            this.listMonetary.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader13
             // 
@@ -1293,10 +1308,10 @@
             // 
             this.second.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.second.Controls.Add(this.button25);
-            this.second.Controls.Add(this.listView2);
+            this.second.Controls.Add(this.listResult);
             this.second.Controls.Add(this.panel37);
             this.second.Controls.Add(this.label112);
-            this.second.Controls.Add(this.textBox6);
+            this.second.Controls.Add(this.txtSearch);
             this.second.Location = new System.Drawing.Point(4, 22);
             this.second.Name = "second";
             this.second.Padding = new System.Windows.Forms.Padding(3);
@@ -1319,18 +1334,18 @@
             this.button25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button25.UseVisualStyleBackColor = false;
             // 
-            // listView2
+            // listResult
             // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listResult.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader8,
             this.columnHeader9});
-            this.listView2.FullRowSelect = true;
-            this.listView2.Location = new System.Drawing.Point(6, 165);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(507, 351);
-            this.listView2.TabIndex = 29;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
+            this.listResult.FullRowSelect = true;
+            this.listResult.Location = new System.Drawing.Point(6, 165);
+            this.listResult.Name = "listResult";
+            this.listResult.Size = new System.Drawing.Size(507, 351);
+            this.listResult.TabIndex = 29;
+            this.listResult.UseCompatibleStateImageBehavior = false;
+            this.listResult.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader8
             // 
@@ -1389,19 +1404,19 @@
             this.label112.TabIndex = 28;
             this.label112.Text = "Results";
             // 
-            // textBox6
+            // txtSearch
             // 
-            this.textBox6.BackColor = System.Drawing.Color.White;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(6, 103);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(281, 35);
-            this.textBox6.TabIndex = 6;
+            this.txtSearch.BackColor = System.Drawing.Color.White;
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(6, 103);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(281, 35);
+            this.txtSearch.TabIndex = 6;
             // 
             // third
             // 
-            this.third.Controls.Add(this.pictureBox6);
+            this.third.Controls.Add(this.pbPic);
             this.third.Controls.Add(this.comboBox2);
             this.third.Controls.Add(this.label79);
             this.third.Controls.Add(this.textBox11);
@@ -1432,15 +1447,15 @@
             this.third.Text = "3";
             this.third.UseVisualStyleBackColor = true;
             // 
-            // pictureBox6
+            // pbPic
             // 
-            this.pictureBox6.BackColor = System.Drawing.Color.White;
-            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox6.Location = new System.Drawing.Point(190, 12);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(123, 123);
-            this.pictureBox6.TabIndex = 38;
-            this.pictureBox6.TabStop = false;
+            this.pbPic.BackColor = System.Drawing.Color.White;
+            this.pbPic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPic.Location = new System.Drawing.Point(190, 12);
+            this.pbPic.Name = "pbPic";
+            this.pbPic.Size = new System.Drawing.Size(123, 123);
+            this.pbPic.TabIndex = 38;
+            this.pbPic.TabStop = false;
             // 
             // comboBox2
             // 
@@ -2051,7 +2066,7 @@
             this.fifth.Controls.Add(this.label166);
             this.fifth.Controls.Add(this.button41);
             this.fifth.Controls.Add(this.button42);
-            this.fifth.Controls.Add(this.listView4);
+            this.fifth.Controls.Add(this.listBudget);
             this.fifth.Controls.Add(this.panel50);
             this.fifth.Controls.Add(this.panel48);
             this.fifth.Controls.Add(this.panel47);
@@ -2134,20 +2149,20 @@
             this.button42.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button42.UseVisualStyleBackColor = false;
             // 
-            // listView4
+            // listBudget
             // 
-            this.listView4.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listBudget.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader11,
             this.columnHeader12,
             this.columnHeader18,
             this.columnHeader19});
-            this.listView4.FullRowSelect = true;
-            this.listView4.Location = new System.Drawing.Point(8, 233);
-            this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(504, 212);
-            this.listView4.TabIndex = 26;
-            this.listView4.UseCompatibleStateImageBehavior = false;
-            this.listView4.View = System.Windows.Forms.View.Details;
+            this.listBudget.FullRowSelect = true;
+            this.listBudget.Location = new System.Drawing.Point(8, 233);
+            this.listBudget.Name = "listBudget";
+            this.listBudget.Size = new System.Drawing.Size(504, 212);
+            this.listBudget.TabIndex = 26;
+            this.listBudget.UseCompatibleStateImageBehavior = false;
+            this.listBudget.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader11
             // 
@@ -2173,21 +2188,21 @@
             // 
             this.panel50.BackColor = System.Drawing.Color.White;
             this.panel50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel50.Controls.Add(this.textBox14);
+            this.panel50.Controls.Add(this.txtBOther);
             this.panel50.Controls.Add(this.label165);
             this.panel50.Location = new System.Drawing.Point(8, 167);
             this.panel50.Name = "panel50";
             this.panel50.Size = new System.Drawing.Size(504, 30);
             this.panel50.TabIndex = 24;
             // 
-            // textBox14
+            // txtBOther
             // 
-            this.textBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox14.Location = new System.Drawing.Point(74, 4);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(425, 20);
-            this.textBox14.TabIndex = 2;
+            this.txtBOther.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtBOther.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBOther.Location = new System.Drawing.Point(74, 4);
+            this.txtBOther.Name = "txtBOther";
+            this.txtBOther.Size = new System.Drawing.Size(425, 20);
+            this.txtBOther.TabIndex = 2;
             // 
             // label165
             // 
@@ -2204,29 +2219,29 @@
             // 
             this.panel48.BackColor = System.Drawing.Color.White;
             this.panel48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel48.Controls.Add(this.comboBox3);
+            this.panel48.Controls.Add(this.cbBCategory);
             this.panel48.Controls.Add(this.label83);
             this.panel48.Location = new System.Drawing.Point(271, 138);
             this.panel48.Name = "panel48";
             this.panel48.Size = new System.Drawing.Size(241, 30);
             this.panel48.TabIndex = 24;
             // 
-            // comboBox3
+            // cbBCategory
             // 
-            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.comboBox3.CausesValidation = false;
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.cbBCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbBCategory.CausesValidation = false;
+            this.cbBCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbBCategory.FormattingEnabled = true;
+            this.cbBCategory.Items.AddRange(new object[] {
             "",
             "Parented",
             "Paternal Orphan",
             "Maternal Orphan",
             "Full Orphan"});
-            this.comboBox3.Location = new System.Drawing.Point(82, 3);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(154, 21);
-            this.comboBox3.TabIndex = 45;
+            this.cbBCategory.Location = new System.Drawing.Point(82, 3);
+            this.cbBCategory.Name = "cbBCategory";
+            this.cbBCategory.Size = new System.Drawing.Size(154, 21);
+            this.cbBCategory.TabIndex = 45;
             // 
             // label83
             // 
@@ -2243,19 +2258,19 @@
             // 
             this.panel47.BackColor = System.Drawing.Color.White;
             this.panel47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel47.Controls.Add(this.dateTimePicker2);
+            this.panel47.Controls.Add(this.dtpBDate);
             this.panel47.Controls.Add(this.label82);
             this.panel47.Location = new System.Drawing.Point(8, 138);
             this.panel47.Name = "panel47";
             this.panel47.Size = new System.Drawing.Size(264, 30);
             this.panel47.TabIndex = 23;
             // 
-            // dateTimePicker2
+            // dtpBDate
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(74, 4);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(182, 20);
-            this.dateTimePicker2.TabIndex = 26;
+            this.dtpBDate.Location = new System.Drawing.Point(74, 4);
+            this.dtpBDate.Name = "dtpBDate";
+            this.dtpBDate.Size = new System.Drawing.Size(182, 20);
+            this.dtpBDate.TabIndex = 26;
             // 
             // label82
             // 
@@ -2284,21 +2299,21 @@
             // 
             this.panel49.BackColor = System.Drawing.Color.White;
             this.panel49.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel49.Controls.Add(this.textBox13);
+            this.panel49.Controls.Add(this.txtBPurpose);
             this.panel49.Controls.Add(this.label84);
             this.panel49.Location = new System.Drawing.Point(-1, -1);
             this.panel49.Name = "panel49";
             this.panel49.Size = new System.Drawing.Size(504, 30);
             this.panel49.TabIndex = 23;
             // 
-            // textBox13
+            // txtBPurpose
             // 
-            this.textBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox13.Location = new System.Drawing.Point(74, 4);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(425, 20);
-            this.textBox13.TabIndex = 2;
+            this.txtBPurpose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtBPurpose.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBPurpose.Location = new System.Drawing.Point(74, 4);
+            this.txtBPurpose.Name = "txtBPurpose";
+            this.txtBPurpose.Size = new System.Drawing.Size(425, 20);
+            this.txtBPurpose.TabIndex = 2;
             // 
             // label84
             // 
@@ -2369,14 +2384,14 @@
             // sixth
             // 
             this.sixth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
-            this.sixth.Controls.Add(this.button47);
-            this.sixth.Controls.Add(this.button46);
+            this.sixth.Controls.Add(this.btnApprove);
+            this.sixth.Controls.Add(this.btnDisapprove);
             this.sixth.Controls.Add(this.label169);
-            this.sixth.Controls.Add(this.listView6);
+            this.sixth.Controls.Add(this.listBudgetDetails);
             this.sixth.Controls.Add(this.panel52);
             this.sixth.Controls.Add(this.label177);
             this.sixth.Controls.Add(this.label168);
-            this.sixth.Controls.Add(this.listView5);
+            this.sixth.Controls.Add(this.listBPending);
             this.sixth.Controls.Add(this.panel51);
             this.sixth.Location = new System.Drawing.Point(4, 22);
             this.sixth.Name = "sixth";
@@ -2385,35 +2400,35 @@
             this.sixth.TabIndex = 6;
             this.sixth.Text = "6";
             // 
-            // button47
+            // btnApprove
             // 
-            this.button47.BackColor = System.Drawing.Color.Transparent;
-            this.button47.BackgroundImage = global::PrototypeSAD.Properties.Resources.check;
-            this.button47.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button47.FlatAppearance.BorderSize = 0;
-            this.button47.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button47.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button47.Location = new System.Drawing.Point(415, 472);
-            this.button47.Name = "button47";
-            this.button47.Size = new System.Drawing.Size(49, 43);
-            this.button47.TabIndex = 39;
-            this.button47.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button47.UseVisualStyleBackColor = false;
+            this.btnApprove.BackColor = System.Drawing.Color.Transparent;
+            this.btnApprove.BackgroundImage = global::PrototypeSAD.Properties.Resources.check;
+            this.btnApprove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnApprove.FlatAppearance.BorderSize = 0;
+            this.btnApprove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnApprove.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApprove.Location = new System.Drawing.Point(415, 472);
+            this.btnApprove.Name = "btnApprove";
+            this.btnApprove.Size = new System.Drawing.Size(49, 43);
+            this.btnApprove.TabIndex = 39;
+            this.btnApprove.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnApprove.UseVisualStyleBackColor = false;
             // 
-            // button46
+            // btnDisapprove
             // 
-            this.button46.BackColor = System.Drawing.Color.Transparent;
-            this.button46.BackgroundImage = global::PrototypeSAD.Properties.Resources.x;
-            this.button46.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button46.FlatAppearance.BorderSize = 0;
-            this.button46.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button46.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button46.Location = new System.Drawing.Point(461, 471);
-            this.button46.Name = "button46";
-            this.button46.Size = new System.Drawing.Size(49, 43);
-            this.button46.TabIndex = 38;
-            this.button46.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button46.UseVisualStyleBackColor = false;
+            this.btnDisapprove.BackColor = System.Drawing.Color.Transparent;
+            this.btnDisapprove.BackgroundImage = global::PrototypeSAD.Properties.Resources.x;
+            this.btnDisapprove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDisapprove.FlatAppearance.BorderSize = 0;
+            this.btnDisapprove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDisapprove.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDisapprove.Location = new System.Drawing.Point(461, 471);
+            this.btnDisapprove.Name = "btnDisapprove";
+            this.btnDisapprove.Size = new System.Drawing.Size(49, 43);
+            this.btnDisapprove.TabIndex = 38;
+            this.btnDisapprove.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDisapprove.UseVisualStyleBackColor = false;
             // 
             // label169
             // 
@@ -2427,20 +2442,20 @@
             this.label169.TabIndex = 36;
             this.label169.Text = "Budget Details";
             // 
-            // listView6
+            // listBudgetDetails
             // 
-            this.listView6.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listBudgetDetails.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader22,
             this.columnHeader23,
             this.columnHeader24,
             this.columnHeader25});
-            this.listView6.FullRowSelect = true;
-            this.listView6.Location = new System.Drawing.Point(10, 359);
-            this.listView6.Name = "listView6";
-            this.listView6.Size = new System.Drawing.Size(500, 104);
-            this.listView6.TabIndex = 37;
-            this.listView6.UseCompatibleStateImageBehavior = false;
-            this.listView6.View = System.Windows.Forms.View.Details;
+            this.listBudgetDetails.FullRowSelect = true;
+            this.listBudgetDetails.Location = new System.Drawing.Point(10, 359);
+            this.listBudgetDetails.Name = "listBudgetDetails";
+            this.listBudgetDetails.Size = new System.Drawing.Size(500, 104);
+            this.listBudgetDetails.TabIndex = 37;
+            this.listBudgetDetails.UseCompatibleStateImageBehavior = false;
+            this.listBudgetDetails.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader22
             // 
@@ -2466,9 +2481,9 @@
             // 
             this.panel52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(188)))), ((int)(((byte)(188)))));
             this.panel52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel52.Controls.Add(this.textBox17);
-            this.panel52.Controls.Add(this.textBox16);
-            this.panel52.Controls.Add(this.textBox15);
+            this.panel52.Controls.Add(this.txtTotal);
+            this.panel52.Controls.Add(this.txtCategory);
+            this.panel52.Controls.Add(this.txtDateRequested);
             this.panel52.Controls.Add(this.label173);
             this.panel52.Controls.Add(this.label174);
             this.panel52.Controls.Add(this.label176);
@@ -2477,32 +2492,32 @@
             this.panel52.Size = new System.Drawing.Size(498, 73);
             this.panel52.TabIndex = 35;
             // 
-            // textBox17
+            // txtTotal
             // 
-            this.textBox17.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox17.Location = new System.Drawing.Point(118, 47);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(375, 20);
-            this.textBox17.TabIndex = 27;
+            this.txtTotal.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTotal.Location = new System.Drawing.Point(118, 47);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(375, 20);
+            this.txtTotal.TabIndex = 27;
             // 
-            // textBox16
+            // txtCategory
             // 
-            this.textBox16.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox16.Location = new System.Drawing.Point(118, 25);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(375, 20);
-            this.textBox16.TabIndex = 26;
+            this.txtCategory.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtCategory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCategory.Location = new System.Drawing.Point(118, 25);
+            this.txtCategory.Name = "txtCategory";
+            this.txtCategory.Size = new System.Drawing.Size(375, 20);
+            this.txtCategory.TabIndex = 26;
             // 
-            // textBox15
+            // txtDateRequested
             // 
-            this.textBox15.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox15.Location = new System.Drawing.Point(118, 3);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(375, 20);
-            this.textBox15.TabIndex = 25;
+            this.txtDateRequested.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtDateRequested.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDateRequested.Location = new System.Drawing.Point(118, 3);
+            this.txtDateRequested.Name = "txtDateRequested";
+            this.txtDateRequested.Size = new System.Drawing.Size(375, 20);
+            this.txtDateRequested.TabIndex = 25;
             // 
             // label173
             // 
@@ -2561,18 +2576,18 @@
             this.label168.TabIndex = 8;
             this.label168.Text = "Pending List";
             // 
-            // listView5
+            // listBPending
             // 
-            this.listView5.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listBPending.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader20,
             this.columnHeader21});
-            this.listView5.FullRowSelect = true;
-            this.listView5.Location = new System.Drawing.Point(8, 129);
-            this.listView5.Name = "listView5";
-            this.listView5.Size = new System.Drawing.Size(500, 99);
-            this.listView5.TabIndex = 9;
-            this.listView5.UseCompatibleStateImageBehavior = false;
-            this.listView5.View = System.Windows.Forms.View.Details;
+            this.listBPending.FullRowSelect = true;
+            this.listBPending.Location = new System.Drawing.Point(8, 129);
+            this.listBPending.Name = "listBPending";
+            this.listBPending.Size = new System.Drawing.Size(500, 99);
+            this.listBPending.TabIndex = 9;
+            this.listBPending.UseCompatibleStateImageBehavior = false;
+            this.listBPending.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader20
             // 
@@ -2623,8 +2638,7 @@
             // seventh
             // 
             this.seventh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.seventh.Controls.Add(this.button50);
-            this.seventh.Controls.Add(this.button51);
+            this.seventh.Controls.Add(this.addExpense);
             this.seventh.Controls.Add(this.panel54);
             this.seventh.Controls.Add(this.label179);
             this.seventh.Controls.Add(this.label171);
@@ -2637,33 +2651,19 @@
             this.seventh.TabIndex = 7;
             this.seventh.Text = "7";
             // 
-            // button50
+            // addExpense
             // 
-            this.button50.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.button50.FlatAppearance.BorderSize = 0;
-            this.button50.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button50.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button50.ForeColor = System.Drawing.Color.White;
-            this.button50.Location = new System.Drawing.Point(407, 487);
-            this.button50.Name = "button50";
-            this.button50.Size = new System.Drawing.Size(101, 28);
-            this.button50.TabIndex = 39;
-            this.button50.Text = "add";
-            this.button50.UseVisualStyleBackColor = false;
-            // 
-            // button51
-            // 
-            this.button51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.button51.FlatAppearance.BorderSize = 0;
-            this.button51.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button51.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button51.ForeColor = System.Drawing.Color.White;
-            this.button51.Location = new System.Drawing.Point(12, 487);
-            this.button51.Name = "button51";
-            this.button51.Size = new System.Drawing.Size(101, 28);
-            this.button51.TabIndex = 38;
-            this.button51.Text = "back";
-            this.button51.UseVisualStyleBackColor = false;
+            this.addExpense.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.addExpense.FlatAppearance.BorderSize = 0;
+            this.addExpense.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addExpense.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addExpense.ForeColor = System.Drawing.Color.White;
+            this.addExpense.Location = new System.Drawing.Point(407, 487);
+            this.addExpense.Name = "addExpense";
+            this.addExpense.Size = new System.Drawing.Size(101, 28);
+            this.addExpense.TabIndex = 39;
+            this.addExpense.Text = "add";
+            this.addExpense.UseVisualStyleBackColor = false;
             // 
             // panel54
             // 
@@ -2970,11 +2970,11 @@
             // eighth
             // 
             this.eighth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.eighth.Controls.Add(this.listView9);
+            this.eighth.Controls.Add(this.listDetails);
             this.eighth.Controls.Add(this.label15);
             this.eighth.Controls.Add(this.button7);
-            this.eighth.Controls.Add(this.textBox1);
-            this.eighth.Controls.Add(this.listView8);
+            this.eighth.Controls.Add(this.txtSearchFinance);
+            this.eighth.Controls.Add(this.listFinanceResult);
             this.eighth.Controls.Add(this.panel10);
             this.eighth.Controls.Add(this.label14);
             this.eighth.Controls.Add(this.panel13);
@@ -2985,21 +2985,21 @@
             this.eighth.TabIndex = 8;
             this.eighth.Text = "8";
             // 
-            // listView9
+            // listDetails
             // 
-            this.listView9.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listDetails.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader31,
             this.columnHeader32,
             this.columnHeader33,
             this.columnHeader34,
             this.columnHeader35});
-            this.listView9.FullRowSelect = true;
-            this.listView9.Location = new System.Drawing.Point(6, 317);
-            this.listView9.Name = "listView9";
-            this.listView9.Size = new System.Drawing.Size(507, 110);
-            this.listView9.TabIndex = 37;
-            this.listView9.UseCompatibleStateImageBehavior = false;
-            this.listView9.View = System.Windows.Forms.View.Details;
+            this.listDetails.FullRowSelect = true;
+            this.listDetails.Location = new System.Drawing.Point(6, 317);
+            this.listDetails.Name = "listDetails";
+            this.listDetails.Size = new System.Drawing.Size(507, 110);
+            this.listDetails.TabIndex = 37;
+            this.listDetails.UseCompatibleStateImageBehavior = false;
+            this.listDetails.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader31
             // 
@@ -3053,29 +3053,29 @@
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txtSearchFinance
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(6, 107);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(281, 35);
-            this.textBox1.TabIndex = 34;
+            this.txtSearchFinance.BackColor = System.Drawing.Color.White;
+            this.txtSearchFinance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearchFinance.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchFinance.Location = new System.Drawing.Point(6, 107);
+            this.txtSearchFinance.Name = "txtSearchFinance";
+            this.txtSearchFinance.Size = new System.Drawing.Size(281, 35);
+            this.txtSearchFinance.TabIndex = 34;
             // 
-            // listView8
+            // listFinanceResult
             // 
-            this.listView8.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listFinanceResult.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader28,
             this.columnHeader29,
             this.columnHeader30});
-            this.listView8.FullRowSelect = true;
-            this.listView8.Location = new System.Drawing.Point(6, 169);
-            this.listView8.Name = "listView8";
-            this.listView8.Size = new System.Drawing.Size(507, 122);
-            this.listView8.TabIndex = 33;
-            this.listView8.UseCompatibleStateImageBehavior = false;
-            this.listView8.View = System.Windows.Forms.View.Details;
+            this.listFinanceResult.FullRowSelect = true;
+            this.listFinanceResult.Location = new System.Drawing.Point(6, 169);
+            this.listFinanceResult.Name = "listFinanceResult";
+            this.listFinanceResult.Size = new System.Drawing.Size(507, 122);
+            this.listFinanceResult.TabIndex = 33;
+            this.listFinanceResult.UseCompatibleStateImageBehavior = false;
+            this.listFinanceResult.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader28
             // 
@@ -3171,30 +3171,16 @@
             this.label25.TabIndex = 10;
             this.label25.Text = "Recommendations";
             // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.BackgroundImage = global::PrototypeSAD.Properties.Resources.settings;
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(4, 466);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(77, 59);
-            this.button8.TabIndex = 10;
-            this.button8.UseVisualStyleBackColor = false;
-            // 
             // DBE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 550);
             this.ControlBox = false;
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.secondTaskbar);
             this.Controls.Add(this.tabControl);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DBE";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -3226,7 +3212,7 @@
             this.panel37.PerformLayout();
             this.third.ResumeLayout(false);
             this.third.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPic)).EndInit();
             this.fourth.ResumeLayout(false);
             this.fourth.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -3304,11 +3290,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TabControl secondTaskbar;
         private System.Windows.Forms.TabPage donation;
-        private System.Windows.Forms.Panel panel;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button btnDonor;
         private System.Windows.Forms.TabPage budget;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnApproveBud;
@@ -3316,16 +3297,16 @@
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage second;
         private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView listResult;
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.Panel panel37;
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.Label label111;
         private System.Windows.Forms.Label label112;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.TabPage third;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pbPic;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Label label85;
@@ -3379,9 +3360,9 @@
         private System.Windows.Forms.Button btnExpense;
         private System.Windows.Forms.Button btnAll;
         private System.Windows.Forms.TabPage first;
-        private System.Windows.Forms.Label label148;
-        private System.Windows.Forms.Label label149;
-        private System.Windows.Forms.Label label150;
+        private System.Windows.Forms.Label lblPledge;
+        private System.Windows.Forms.Label lblDonorGen;
+        private System.Windows.Forms.Label lblDonorType;
         private System.Windows.Forms.Label label151;
         private System.Windows.Forms.Label label152;
         private System.Windows.Forms.Label label153;
@@ -3389,29 +3370,29 @@
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Panel panel44;
-        private System.Windows.Forms.Label label154;
+        private System.Windows.Forms.Label lblDateAdded;
         private System.Windows.Forms.Label label155;
         private System.Windows.Forms.Label label157;
-        private System.Windows.Forms.Label label158;
+        private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.Label label159;
         private System.Windows.Forms.Label label160;
-        private System.Windows.Forms.Label label162;
-        private System.Windows.Forms.Label label156;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblCell;
         private System.Windows.Forms.Label label161;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listInKind;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.Label label164;
-        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ListView listMonetary;
         private System.Windows.Forms.ColumnHeader columnHeader13;
         private System.Windows.Forms.ColumnHeader columnHeader14;
         private System.Windows.Forms.ColumnHeader columnHeader15;
         private System.Windows.Forms.ColumnHeader columnHeader16;
         private System.Windows.Forms.ColumnHeader columnHeader17;
         private System.Windows.Forms.Label label163;
-        private System.Windows.Forms.Button button64;
-        private System.Windows.Forms.Button button63;
+        private System.Windows.Forms.Button btnAddDonation;
+        private System.Windows.Forms.Button btnChangeDonor;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label79;
         private System.Windows.Forms.TextBox textBox11;
@@ -3426,14 +3407,14 @@
         private System.Windows.Forms.TabPage expense;
         private System.Windows.Forms.TabPage all;
         private System.Windows.Forms.Panel panel48;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbBCategory;
         private System.Windows.Forms.Label label83;
         private System.Windows.Forms.Panel panel47;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpBDate;
         private System.Windows.Forms.Label label82;
         private System.Windows.Forms.Panel panel46;
         private System.Windows.Forms.Panel panel49;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtBPurpose;
         private System.Windows.Forms.Label label84;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label81;
@@ -3441,10 +3422,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label80;
         private System.Windows.Forms.Panel panel50;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txtBOther;
         private System.Windows.Forms.Label label165;
         private System.Windows.Forms.Label label166;
-        private System.Windows.Forms.ListView listView4;
+        private System.Windows.Forms.ListView listBudget;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.ColumnHeader columnHeader18;
@@ -3454,7 +3435,7 @@
         private System.Windows.Forms.Button button43;
         private System.Windows.Forms.Button button44;
         private System.Windows.Forms.Label label168;
-        private System.Windows.Forms.ListView listView5;
+        private System.Windows.Forms.ListView listBPending;
         private System.Windows.Forms.ColumnHeader columnHeader20;
         private System.Windows.Forms.ColumnHeader columnHeader21;
         private System.Windows.Forms.Panel panel51;
@@ -3465,17 +3446,17 @@
         private System.Windows.Forms.Label label174;
         private System.Windows.Forms.Label label176;
         private System.Windows.Forms.Label label177;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.TextBox txtCategory;
+        private System.Windows.Forms.TextBox txtDateRequested;
         private System.Windows.Forms.Label label169;
-        private System.Windows.Forms.ListView listView6;
+        private System.Windows.Forms.ListView listBudgetDetails;
         private System.Windows.Forms.ColumnHeader columnHeader22;
         private System.Windows.Forms.ColumnHeader columnHeader23;
         private System.Windows.Forms.ColumnHeader columnHeader24;
         private System.Windows.Forms.ColumnHeader columnHeader25;
-        private System.Windows.Forms.Button button46;
-        private System.Windows.Forms.Button button47;
+        private System.Windows.Forms.Button btnDisapprove;
+        private System.Windows.Forms.Button btnApprove;
         private System.Windows.Forms.Button btnAddE;
         private System.Windows.Forms.Panel panel53;
         private System.Windows.Forms.Label label170;
@@ -3484,8 +3465,7 @@
         private System.Windows.Forms.ListView listView7;
         private System.Windows.Forms.ColumnHeader columnHeader26;
         private System.Windows.Forms.ColumnHeader columnHeader27;
-        private System.Windows.Forms.Button button50;
-        private System.Windows.Forms.Button button51;
+        private System.Windows.Forms.Button addExpense;
         private System.Windows.Forms.Panel panel54;
         private System.Windows.Forms.Label label180;
         private System.Windows.Forms.RadioButton radioButton4;
@@ -3510,8 +3490,8 @@
         private System.Windows.Forms.Button button52;
         private System.Windows.Forms.Button button48;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ListView listView8;
+        private System.Windows.Forms.TextBox txtSearchFinance;
+        private System.Windows.Forms.ListView listFinanceResult;
         private System.Windows.Forms.ColumnHeader columnHeader28;
         private System.Windows.Forms.ColumnHeader columnHeader29;
         private System.Windows.Forms.Panel panel10;
@@ -3519,7 +3499,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ColumnHeader columnHeader30;
-        private System.Windows.Forms.ListView listView9;
+        private System.Windows.Forms.ListView listDetails;
         private System.Windows.Forms.ColumnHeader columnHeader31;
         private System.Windows.Forms.ColumnHeader columnHeader32;
         private System.Windows.Forms.ColumnHeader columnHeader33;
@@ -3527,5 +3507,10 @@
         private System.Windows.Forms.ColumnHeader columnHeader35;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnDonor;
     }
 }
