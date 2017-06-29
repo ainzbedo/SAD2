@@ -65,6 +65,18 @@
     <Compile Include="DBE.Designer.cs">
       <DependentUpon>DBE.cs</DependentUpon>
     </Compile>
+    <Compile Include="Confirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Confirm.Designer.cs">
+      <DependentUpon>Confirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Success.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Success.Designer.cs">
+      <DependentUpon>Success.cs</DependentUpon>
+    </Compile>
     <Compile Include="event_add.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +95,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Error.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Error.Designer.cs">
+      <DependentUpon>Error.cs</DependentUpon>
+    </Compile>
     <Compile Include="Member.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +117,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DBE.resx">
       <DependentUpon>DBE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Confirm.resx">
+      <DependentUpon>Confirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Success.resx">
+      <DependentUpon>Success.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Error.resx">
+      <DependentUpon>Error.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="event_add.resx">
       <DependentUpon>event_add.cs</DependentUpon>
@@ -239,6 +266,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error_header.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wait_header.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_yesconfirm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_noconfirm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\success_header.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_success.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

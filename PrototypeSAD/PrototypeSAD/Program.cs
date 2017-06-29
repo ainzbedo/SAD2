@@ -16,7 +16,7 @@ namespace PrototypeSAD
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new casestudy());
+            Application.Run(new Success());
         }
     }
 }

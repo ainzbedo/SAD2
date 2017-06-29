@@ -104,3 +104,6 @@ C:\Users\Sam\Source\Repos\SAD2\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.
 C:\Users\Sam\Source\Repos\SAD2\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.Member.resources
 C:\Users\Sam\Source\Repos\SAD2\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.Properties.Resources.resources
 C:\Users\Sam\Source\Repos\SAD2\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.csproj.GenerateResource.Cache
+C:\Users\Sam\Source\Repos\SAD2\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.Error.resources
+C:\Users\Sam\Source\Repos\SAD2\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.Confirm.resources
+C:\Users\Sam\Source\Repos\SAD2\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.Success.resources
