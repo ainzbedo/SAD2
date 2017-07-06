@@ -19,7 +19,8 @@ namespace PrototypeSAD
         public string type;
         public string time, desc, evn, evprog, evtype;
         public int month, day, year;
-        
+        public string[] tMonths = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
+
         public int evid, caseid;
         public int attendaceID;
         public string casename;
@@ -1051,6 +1052,150 @@ namespace PrototypeSAD
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+        public void monthDEA(string m)
+        {
+            //monthDEA = month Display Event Approved
+            //MessageBox.Show(m);
+            clearListview1();
+            int mnow = int.Parse(DateTime.Now.ToString("MM"));
+            int dnow = int.Parse(DateTime.Now.ToString("dd"));
+            int yearnow = int.Parse(DateTime.Now.ToString("yyyy"));
+            int evyear;
+            string evname, day, prog = "", id;
+            try
+            {
+
+                conn.Open();
+
+                MySqlCommand comm = new MySqlCommand("SELECT * FROM event WHERE status = 'Approved' AND evMonth = '" + m + "' AND evYear ='" + yearFilter.Value.ToString("yyyy") + "'", conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+                conn.Close();
+                int monthtoday = int.Parse(DateTime.Now.ToString("MM"));
+                int yeartoday = int.Parse(DateTime.Now.ToString("yyyy"));
+                if (dt.Rows.Count >= 1)
+                {
+
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+
+                        //MessageBox.Show(dt.Rows.Count + "");
+                        evmonth = int.Parse(dt.Rows[i]["evMonth"].ToString());
+                        evyear = int.Parse(dt.Rows[i]["evYear"].ToString());
+                        evday = int.Parse(dt.Rows[i]["evDay"].ToString());
+                        evname = dt.Rows[i]["evName"].ToString();
+                        //MessageBox.Show(" "+evday + " " + evmonth);
+                        day = evday.ToString();
+                        ListViewItem itm = new ListViewItem(day);
+                        itm.SubItems.Add(evname);
+                        //MessageBox.Show(" " + evday + " " + evname);
+                        listView1.Items.Add(itm);
+
+
+                        id = dt.Rows[i]["eventID"].ToString();
+                        if (yearnow == evyear)
+                        {
+                            if (mnow == evmonth)
+                            {
+                                if (dnow == evday)
+                                {
+                                    prog = "Ongoing";
+                                }
+                                else if (dnow < evday)
+                                {
+                                    prog = "Upcoming";
+                                }
+                                else if (dnow > evday)
+                                {
+                                    prog = "Finished";
+                                }
+
+                            }
+                            else if (mnow < evmonth)
+                            {
+                                prog = "Upcoming";
+                            }
+                            else if (mnow > evmonth)
+                            {
+                                prog = "Finished";
+                            }
+                        }
+                        else if (yearnow < evyear)
+                        {
+                            prog = "Upcoming";
+
+                        }
+                        else if (yearnow > evyear)
+                        {
+                            prog = "Finished";
+                        }
+                        //MessageBox.Show(prog + " " + id);
+                        updateEventProgress(prog, id);
+                    }
+                }
+
+
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show("Nah!" + ee);
+                conn.Close();
+            }
+        }
+        private void upb_Click(object sender, EventArgs e)
+        {
+            //up filter for month mo.1
+            int mnow = int.Parse(DateTime.Now.ToString("MM"));
+            string m = tMonths[mnow - 1];
+            if (monthLabel.Text == "December")
+            {
+                monthLabel.Text = tMonths[0];
+                monthDEA("01");
+            }
+            else
+            {
+                int num = 0;
+                for (int i = 0; i < 12; i++)
+                {
+                    if (tMonths[i] == monthLabel.Text)
+                    {
+                        m = tMonths[i + 1];
+                        num = i + 2;
+                    }
+                }
+                string n = num.ToString("00");
+                monthLabel.Text = m;
+                monthDEA(n);
+            }
+        }
+
+        private void downb_Click(object sender, EventArgs e)
+        {
+            //down filter for month mo.2
+            int mnow = int.Parse(DateTime.Now.ToString("MM"));
+            string m = tMonths[mnow - 1];
+            if (monthLabel.Text == "January")
+            {
+                monthLabel.Text = tMonths[11];
+                monthDEA("12");
+            }
+            else
+            {
+                int num = 0;
+                for (int i = 0; i < 12; i++)
+                {
+                    if (tMonths[i] == monthLabel.Text)
+                    {
+                        m = tMonths[i - 1];
+                        num = i;
+                    }
+                }
+                string n = num.ToString("00");
+                monthLabel.Text = m;
+                monthDEA(n);
+            }
         }
 
         private void maskedTextBox2_Validated(object sender, EventArgs e)

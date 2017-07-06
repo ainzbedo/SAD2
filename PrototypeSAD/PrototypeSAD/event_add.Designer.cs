@@ -33,10 +33,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -57,16 +53,11 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.button20 = new System.Windows.Forms.Button();
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label39 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
             this.listView4 = new System.Windows.Forms.ListView();
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -92,8 +83,6 @@
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.label47 = new System.Windows.Forms.Label();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
@@ -148,6 +137,21 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.upb = new System.Windows.Forms.Button();
+            this.downb = new System.Windows.Forms.Button();
+            this.monthLabel = new System.Windows.Forms.Label();
+            this.yearFilter = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -224,77 +228,15 @@
             this.panel2.Size = new System.Drawing.Size(83, 421);
             this.panel2.TabIndex = 6;
             // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::PrototypeSAD.Properties.Resources.Picture1;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(2, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 75);
-            this.button1.TabIndex = 3;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImage = global::PrototypeSAD.Properties.Resources.Picture3;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(2, 148);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(78, 75);
-            this.button4.TabIndex = 4;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::PrototypeSAD.Properties.Resources.Picture2;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(2, 74);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 75);
-            this.button2.TabIndex = 5;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.BackgroundImage = global::PrototypeSAD.Properties.Resources.eryey;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(1, 440);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(81, 67);
-            this.button5.TabIndex = 6;
-            this.button5.UseVisualStyleBackColor = false;
-            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(72, 0);
+            this.tabControl1.Location = new System.Drawing.Point(75, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(998, 509);
+            this.tabControl1.Size = new System.Drawing.Size(995, 509);
             this.tabControl1.TabIndex = 7;
             // 
             // tabPage1
@@ -304,7 +246,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(990, 483);
+            this.tabPage1.Size = new System.Drawing.Size(987, 483);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -355,9 +297,9 @@
             this.listView1.ForeColor = System.Drawing.Color.Black;
             this.listView1.FullRowSelect = true;
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.listView1.Location = new System.Drawing.Point(-1, 0);
+            this.listView1.Location = new System.Drawing.Point(-3, 0);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(982, 365);
+            this.listView1.Size = new System.Drawing.Size(984, 365);
             this.listView1.TabIndex = 13;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -461,10 +403,14 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Gray;
+            this.panel5.Controls.Add(this.yearFilter);
+            this.panel5.Controls.Add(this.monthLabel);
+            this.panel5.Controls.Add(this.downb);
+            this.panel5.Controls.Add(this.upb);
             this.panel5.Controls.Add(this.label2);
-            this.panel5.Location = new System.Drawing.Point(6, 0);
+            this.panel5.Location = new System.Drawing.Point(3, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(981, 48);
+            this.panel5.Size = new System.Drawing.Size(984, 48);
             this.panel5.TabIndex = 0;
             // 
             // label2
@@ -496,23 +442,10 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(648, 483);
+            this.tabPage5.Size = new System.Drawing.Size(987, 483);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // button20
-            // 
-            this.button20.BackgroundImage = global::PrototypeSAD.Properties.Resources.ttrrryyrry;
-            this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button20.FlatAppearance.BorderSize = 0;
-            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button20.Location = new System.Drawing.Point(320, 422);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(41, 33);
-            this.button20.TabIndex = 12;
-            this.button20.UseVisualStyleBackColor = true;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // listView2
             // 
@@ -561,58 +494,6 @@
             this.label37.Size = new System.Drawing.Size(37, 18);
             this.label37.TabIndex = 9;
             this.label37.Text = "List";
-            // 
-            // button12
-            // 
-            this.button12.BackgroundImage = global::PrototypeSAD.Properties.Resources.add;
-            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Location = new System.Drawing.Point(317, 385);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(44, 40);
-            this.button12.TabIndex = 5;
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
-            // 
-            // button15
-            // 
-            this.button15.BackgroundImage = global::PrototypeSAD.Properties.Resources.gfhgfhgfh;
-            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Location = new System.Drawing.Point(317, 256);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(44, 40);
-            this.button15.TabIndex = 8;
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
-            // 
-            // button14
-            // 
-            this.button14.BackgroundImage = global::PrototypeSAD.Properties.Resources.ffdd;
-            this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button14.FlatAppearance.BorderSize = 0;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Location = new System.Drawing.Point(317, 322);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(44, 40);
-            this.button14.TabIndex = 7;
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
-            // 
-            // button13
-            // 
-            this.button13.BackgroundImage = global::PrototypeSAD.Properties.Resources.asdasdasd;
-            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Location = new System.Drawing.Point(317, 289);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(44, 40);
-            this.button13.TabIndex = 6;
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // listView4
             // 
@@ -783,7 +664,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(648, 483);
+            this.tabPage2.Size = new System.Drawing.Size(987, 483);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -873,34 +754,6 @@
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(469, 249);
             this.panel15.TabIndex = 7;
-            // 
-            // button18
-            // 
-            this.button18.BackColor = System.Drawing.Color.Transparent;
-            this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button18.FlatAppearance.BorderSize = 0;
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Image = global::PrototypeSAD.Properties.Resources.hhgghgh;
-            this.button18.Location = new System.Drawing.Point(395, 192);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(60, 51);
-            this.button18.TabIndex = 19;
-            this.button18.UseVisualStyleBackColor = false;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
-            // 
-            // button17
-            // 
-            this.button17.BackColor = System.Drawing.Color.Transparent;
-            this.button17.BackgroundImage = global::PrototypeSAD.Properties.Resources.dfgdfgdfgfd;
-            this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button17.FlatAppearance.BorderSize = 0;
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Location = new System.Drawing.Point(326, 192);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(63, 51);
-            this.button17.TabIndex = 18;
-            this.button17.UseVisualStyleBackColor = false;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // checkBox3
             // 
@@ -1470,6 +1323,215 @@
             this.label16.TabIndex = 4;
             this.label16.Text = "Information";
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.White;
+            this.button5.BackgroundImage = global::PrototypeSAD.Properties.Resources.eryey;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(1, 440);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(81, 67);
+            this.button5.TabIndex = 6;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::PrototypeSAD.Properties.Resources.Picture1;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(2, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(78, 75);
+            this.button1.TabIndex = 3;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImage = global::PrototypeSAD.Properties.Resources.Picture3;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(2, 148);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(78, 75);
+            this.button4.TabIndex = 4;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::PrototypeSAD.Properties.Resources.Picture2;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(2, 74);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(78, 75);
+            this.button2.TabIndex = 5;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button20
+            // 
+            this.button20.BackgroundImage = global::PrototypeSAD.Properties.Resources.ttrrryyrry;
+            this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button20.FlatAppearance.BorderSize = 0;
+            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button20.Location = new System.Drawing.Point(320, 422);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(41, 33);
+            this.button20.TabIndex = 12;
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
+            // button12
+            // 
+            this.button12.BackgroundImage = global::PrototypeSAD.Properties.Resources.add;
+            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Location = new System.Drawing.Point(317, 385);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(44, 40);
+            this.button12.TabIndex = 5;
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button15
+            // 
+            this.button15.BackgroundImage = global::PrototypeSAD.Properties.Resources.gfhgfhgfh;
+            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button15.FlatAppearance.BorderSize = 0;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Location = new System.Drawing.Point(317, 256);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(44, 40);
+            this.button15.TabIndex = 8;
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // button14
+            // 
+            this.button14.BackgroundImage = global::PrototypeSAD.Properties.Resources.ffdd;
+            this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button14.FlatAppearance.BorderSize = 0;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Location = new System.Drawing.Point(317, 322);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(44, 40);
+            this.button14.TabIndex = 7;
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // button13
+            // 
+            this.button13.BackgroundImage = global::PrototypeSAD.Properties.Resources.asdasdasd;
+            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Location = new System.Drawing.Point(317, 289);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(44, 40);
+            this.button13.TabIndex = 6;
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // button18
+            // 
+            this.button18.BackColor = System.Drawing.Color.Transparent;
+            this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button18.FlatAppearance.BorderSize = 0;
+            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button18.Image = global::PrototypeSAD.Properties.Resources.hhgghgh;
+            this.button18.Location = new System.Drawing.Point(395, 192);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(60, 51);
+            this.button18.TabIndex = 19;
+            this.button18.UseVisualStyleBackColor = false;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
+            // button17
+            // 
+            this.button17.BackColor = System.Drawing.Color.Transparent;
+            this.button17.BackgroundImage = global::PrototypeSAD.Properties.Resources.dfgdfgdfgfd;
+            this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button17.FlatAppearance.BorderSize = 0;
+            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button17.Location = new System.Drawing.Point(326, 192);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(63, 51);
+            this.button17.TabIndex = 18;
+            this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // upb
+            // 
+            this.upb.BackColor = System.Drawing.Color.Gray;
+            this.upb.BackgroundImage = global::PrototypeSAD.Properties.Resources.up;
+            this.upb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.upb.FlatAppearance.BorderSize = 0;
+            this.upb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.upb.Location = new System.Drawing.Point(847, 2);
+            this.upb.Name = "upb";
+            this.upb.Size = new System.Drawing.Size(57, 46);
+            this.upb.TabIndex = 1;
+            this.upb.UseVisualStyleBackColor = false;
+            this.upb.Click += new System.EventHandler(this.upb_Click);
+            // 
+            // downb
+            // 
+            this.downb.BackColor = System.Drawing.Color.Gray;
+            this.downb.BackgroundImage = global::PrototypeSAD.Properties.Resources.down;
+            this.downb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.downb.FlatAppearance.BorderSize = 0;
+            this.downb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.downb.Location = new System.Drawing.Point(910, 2);
+            this.downb.Name = "downb";
+            this.downb.Size = new System.Drawing.Size(57, 46);
+            this.downb.TabIndex = 2;
+            this.downb.UseVisualStyleBackColor = false;
+            this.downb.Click += new System.EventHandler(this.downb_Click);
+            // 
+            // monthLabel
+            // 
+            this.monthLabel.AutoSize = true;
+            this.monthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monthLabel.ForeColor = System.Drawing.Color.White;
+            this.monthLabel.Location = new System.Drawing.Point(742, 9);
+            this.monthLabel.Name = "monthLabel";
+            this.monthLabel.Size = new System.Drawing.Size(92, 31);
+            this.monthLabel.TabIndex = 3;
+            this.monthLabel.Text = "label7";
+            // 
+            // yearFilter
+            // 
+            this.yearFilter.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yearFilter.CalendarMonthBackground = System.Drawing.Color.DarkGray;
+            this.yearFilter.CalendarTitleBackColor = System.Drawing.Color.DarkGray;
+            this.yearFilter.CustomFormat = "yyyy";
+            this.yearFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yearFilter.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.yearFilter.Location = new System.Drawing.Point(615, 6);
+            this.yearFilter.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.yearFilter.Name = "yearFilter";
+            this.yearFilter.ShowUpDown = true;
+            this.yearFilter.Size = new System.Drawing.Size(101, 38);
+            this.yearFilter.TabIndex = 5;
+            // 
             // event_add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1648,5 +1710,9 @@
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button downb;
+        private System.Windows.Forms.Button upb;
+        private System.Windows.Forms.Label monthLabel;
+        private System.Windows.Forms.DateTimePicker yearFilter;
     }
 }
