@@ -83,6 +83,7 @@ namespace PrototypeSAD
         {
             int mnow = int.Parse(DateTime.Now.ToString("MM"));
             int dnow = int.Parse(DateTime.Now.ToString("dd"));
+            int yearnow = int.Parse(DateTime.Now.ToString("yyyy"));
             int evyear;
             string evname, day, prog = "", id;
 
@@ -122,25 +123,48 @@ namespace PrototypeSAD
 
                         }
                         id = dt.Rows[i]["eventID"].ToString();
-                        if (mnow == evmonth)
+                        if (yearnow == evyear)
                         {
-                            if(dnow == evday)
+                            if (mnow == evmonth)
                             {
-                                prog = "Ongoing";
-                            }else if (dnow > evday)
-                            {
-                                prog = "Finished";
-                            }else if (dnow < evday)
+                                if (dnow == evday)
+                                {
+                                    prog = "Ongoing";
+                                }
+                                else if (dnow < evday)
+                                {
+                                    prog = "Upcoming";
+                                }
+                                else if (dnow > evday)
+                                {
+                                    prog = "Finished";
+                                }
+
+                            }
+                            else if (mnow < evmonth)
                             {
                                 prog = "Upcoming";
                             }
-                            
+                            else if (mnow > evmonth)
+                            {
+                                prog = "Finished";
+                            }
                         }
+                        else if (yearnow < evyear)
+                        {
+                            prog = "Upcoming";
+
+                        }
+                        else if (yearnow > evyear)
+                        {
+                            prog = "Finished";
+                        }
+                        //MessageBox.Show(prog + " " + id);
                         updateEventProgress(prog, id);
                     }
                 }
 
-                
+
             }
             catch (Exception ee)
             {
@@ -218,7 +242,10 @@ namespace PrototypeSAD
             button8.Enabled = false;
             maskedTextBox2.Enabled = false;
             dateTimePicker2.Enabled = false;
-            
+            int mnow = int.Parse(DateTime.Now.ToString("MM"));
+            string m = tMonths[mnow - 1];
+            monthLabel.Text = m;
+
         }
         public void updateEventProgress(string p, string id)
         {
@@ -1195,6 +1222,105 @@ namespace PrototypeSAD
                 string n = num.ToString("00");
                 monthLabel.Text = m;
                 monthDEA(n);
+            }
+        }
+
+        private void yearFilter_ValueChanged(object sender, EventArgs e)
+        {
+            //year filter for the events yr.
+            clearListview1();
+            int mnow = int.Parse(DateTime.Now.ToString("MM"));
+            int dnow = int.Parse(DateTime.Now.ToString("dd"));
+            int yearnow = int.Parse(DateTime.Now.ToString("yyyy"));
+            int evyear;
+            string evname, day, prog = "", id;
+            int num = 0;
+            for (int i = 0; i < 12; i++)
+            {
+                if (tMonths[i] == monthLabel.Text)
+                {
+                    num = i + 1;
+                }
+            }
+            string n = num.ToString("00");
+            //MessageBox.Show(n);
+            try
+            {
+
+                conn.Open();
+
+                MySqlCommand comm = new MySqlCommand("SELECT * FROM event WHERE status = 'Approved' AND evYear = '" + yearFilter.Value.ToString("yyyy") + "' AND evMonth = '" + n + "'", conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+                conn.Close();
+                int monthtoday = int.Parse(DateTime.Now.ToString("MM"));
+                int yeartoday = int.Parse(DateTime.Now.ToString("yyyy"));
+                if (dt.Rows.Count >= 1)
+                {
+
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        evmonth = int.Parse(dt.Rows[i]["evMonth"].ToString());
+                        evyear = int.Parse(dt.Rows[i]["evYear"].ToString());
+                        evday = int.Parse(dt.Rows[i]["evDay"].ToString());
+                        evname = dt.Rows[i]["evName"].ToString();
+                        //MessageBox.Show(" "+evday + " " + evmonth);
+                        day = evday.ToString();
+                        ListViewItem itm = new ListViewItem(day);
+                        itm.SubItems.Add(evname);
+                        //MessageBox.Show(" " + evday + " " + evname);
+                        listView1.Items.Add(itm);
+
+
+                        id = dt.Rows[i]["eventID"].ToString();
+                        if (yearnow == evyear)
+                        {
+                            if (mnow == evmonth)
+                            {
+                                if (dnow == evday)
+                                {
+                                    prog = "Ongoing";
+                                }
+                                else if (dnow < evday)
+                                {
+                                    prog = "Upcoming";
+                                }
+                                else if (dnow > evday)
+                                {
+                                    prog = "Finished";
+                                }
+
+                            }
+                            else if (mnow < evmonth)
+                            {
+                                prog = "Upcoming";
+                            }
+                            else if (mnow > evmonth)
+                            {
+                                prog = "Finished";
+                            }
+                        }
+                        else if (yearnow < evyear)
+                        {
+                            prog = "Upcoming";
+
+                        }
+                        else if (yearnow > evyear)
+                        {
+                            prog = "Finished";
+                        }
+                        //MessageBox.Show(prog + " " + id);
+                        updateEventProgress(prog, id);
+                    }
+                }
+
+
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show("Nah!" + ee);
+                conn.Close();
             }
         }
 
