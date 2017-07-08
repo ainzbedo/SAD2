@@ -130,14 +130,14 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.reqBy = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.eventVenue = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label28 = new System.Windows.Forms.Label();
@@ -147,9 +147,9 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.eventType = new System.Windows.Forms.ComboBox();
+            this.eventDes = new System.Windows.Forms.TextBox();
+            this.eventName = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -1286,19 +1286,19 @@
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.Silver;
-            this.panel11.Controls.Add(this.textBox7);
+            this.panel11.Controls.Add(this.reqBy);
             this.panel11.Controls.Add(this.label27);
             this.panel11.Location = new System.Drawing.Point(579, 338);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(237, 134);
             this.panel11.TabIndex = 6;
             // 
-            // textBox7
+            // reqBy
             // 
-            this.textBox7.Location = new System.Drawing.Point(18, 62);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(208, 20);
-            this.textBox7.TabIndex = 8;
+            this.reqBy.Location = new System.Drawing.Point(18, 62);
+            this.reqBy.Name = "reqBy";
+            this.reqBy.Size = new System.Drawing.Size(208, 20);
+            this.reqBy.TabIndex = 8;
             // 
             // label27
             // 
@@ -1336,7 +1336,7 @@
             this.panel9.BackColor = System.Drawing.Color.Silver;
             this.panel9.Controls.Add(this.maskedTextBox1);
             this.panel9.Controls.Add(this.checkBox2);
-            this.panel9.Controls.Add(this.textBox3);
+            this.panel9.Controls.Add(this.eventVenue);
             this.panel9.Controls.Add(this.label29);
             this.panel9.Controls.Add(this.dateTimePicker1);
             this.panel9.Controls.Add(this.label28);
@@ -1346,9 +1346,9 @@
             this.panel9.Controls.Add(this.label18);
             this.panel9.Controls.Add(this.label17);
             this.panel9.Controls.Add(this.button8);
-            this.panel9.Controls.Add(this.comboBox1);
-            this.panel9.Controls.Add(this.textBox2);
-            this.panel9.Controls.Add(this.textBox1);
+            this.panel9.Controls.Add(this.eventType);
+            this.panel9.Controls.Add(this.eventDes);
+            this.panel9.Controls.Add(this.eventName);
             this.panel9.Location = new System.Drawing.Point(18, 76);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(798, 232);
@@ -1377,13 +1377,13 @@
             this.checkBox2.UseVisualStyleBackColor = true;
             this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged_1);
             // 
-            // textBox3
+            // eventVenue
             // 
-            this.textBox3.Location = new System.Drawing.Point(17, 111);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(760, 20);
-            this.textBox3.TabIndex = 14;
+            this.eventVenue.Location = new System.Drawing.Point(17, 111);
+            this.eventVenue.Multiline = true;
+            this.eventVenue.Name = "eventVenue";
+            this.eventVenue.Size = new System.Drawing.Size(760, 20);
+            this.eventVenue.TabIndex = 14;
             // 
             // label29
             // 
@@ -1483,32 +1483,32 @@
             this.button8.Text = "add budget";
             this.button8.UseVisualStyleBackColor = false;
             // 
-            // comboBox1
+            // eventType
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.eventType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.eventType.FormattingEnabled = true;
+            this.eventType.Items.AddRange(new object[] {
             "",
             "Spiritual Mass"});
-            this.comboBox1.Location = new System.Drawing.Point(303, 163);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 21);
-            this.comboBox1.TabIndex = 4;
+            this.eventType.Location = new System.Drawing.Point(303, 163);
+            this.eventType.Name = "eventType";
+            this.eventType.Size = new System.Drawing.Size(200, 21);
+            this.eventType.TabIndex = 4;
             // 
-            // textBox2
+            // eventDes
             // 
-            this.textBox2.Location = new System.Drawing.Point(18, 62);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(759, 20);
-            this.textBox2.TabIndex = 1;
+            this.eventDes.Location = new System.Drawing.Point(18, 62);
+            this.eventDes.Multiline = true;
+            this.eventDes.Name = "eventDes";
+            this.eventDes.Size = new System.Drawing.Size(759, 20);
+            this.eventDes.TabIndex = 1;
             // 
-            // textBox1
+            // eventName
             // 
-            this.textBox1.Location = new System.Drawing.Point(18, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(759, 20);
-            this.textBox1.TabIndex = 0;
+            this.eventName.Location = new System.Drawing.Point(18, 21);
+            this.eventName.Name = "eventName";
+            this.eventName.Size = new System.Drawing.Size(759, 20);
+            this.eventName.TabIndex = 0;
             // 
             // label16
             // 
@@ -1542,8 +1542,8 @@
             this.ControlBox = false;
             this.Controls.Add(this.button5);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "event_add";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1660,13 +1660,13 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox reqBy;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox eventVenue;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label28;
@@ -1676,9 +1676,9 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox eventType;
+        private System.Windows.Forms.TextBox eventDes;
+        private System.Windows.Forms.TextBox eventName;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label15;

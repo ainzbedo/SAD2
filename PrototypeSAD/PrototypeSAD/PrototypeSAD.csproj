@@ -71,6 +71,12 @@
     <Compile Include="Confirm.Designer.cs">
       <DependentUpon>Confirm.cs</DependentUpon>
     </Compile>
+    <Compile Include="eventDateDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eventDateDialog.Designer.cs">
+      <DependentUpon>eventDateDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Success.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Confirm.resx">
       <DependentUpon>Confirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eventDateDialog.resx">
+      <DependentUpon>eventDateDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Success.resx">
       <DependentUpon>Success.cs</DependentUpon>

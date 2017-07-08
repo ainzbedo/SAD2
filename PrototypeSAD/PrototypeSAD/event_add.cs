@@ -279,7 +279,7 @@ namespace PrototypeSAD
             try
             {
                 conn.Open();
-                MySqlCommand comm = new MySqlCommand("INSERT INTO event(evName, evDesc, evMonth, evDay, evYear, evTime , evVenue, evProgress, evType, attendance, status, requestedBy) VALUES('" + textBox1.Text + "','" + textBox2.Text + "','" + month + "','" + day + "','" + year + "','" + maskedTextBox1.Text + "','" + textBox3.Text + "','" + "Pending" + "','" + comboBox1.Text + "', 'False' , 'Pending' " + ",'" + textBox7.Text + "');", conn);
+                MySqlCommand comm = new MySqlCommand("INSERT INTO event(evName, evDesc, evMonth, evDay, evYear, evTime , evVenue, evProgress, evType, attendance, status, requestedBy) VALUES('" + eventName.Text + "','" + eventDes.Text + "','" + month + "','" + day + "','" + year + "','" + maskedTextBox1.Text + "','" + eventVenue.Text + "','" + "Pending" + "','" + eventType.Text + "', 'False' , 'Pending' " + ",'" + reqBy.Text + "');", conn);
                 comm.ExecuteNonQuery();
 
                 conn.Close();
@@ -303,7 +303,7 @@ namespace PrototypeSAD
             try
             {
                 conn.Open();
-                MySqlCommand comm = new MySqlCommand("INSERT INTO event(evName, evDesc, evMonth, evDay, evYear, evTime , evVenue, evProgress, evType, status, reminderDate, reminderTime, attendance, requestedBy, budget, reminder) VALUES('" + textBox1.Text + "','" + textBox2.Text + "','" + month + "','" + day + "','" + year + "','" + maskedTextBox1.Text + "','" + textBox3.Text + "', 'Pending' , '" + comboBox1.Text + "' , 'Pending' ,'" + remindDate + "','" + maskedTextBox2.Text + "', 'False' ,'" + textBox7.Text + "', 'True', 'True');", conn);
+                MySqlCommand comm = new MySqlCommand("INSERT INTO event(evName, evDesc, evMonth, evDay, evYear, evTime , evVenue, evProgress, evType, status, reminderDate, reminderTime, attendance, requestedBy, budget, reminder) VALUES('" + eventName.Text + "','" + eventDes.Text + "','" + month + "','" + day + "','" + year + "','" + maskedTextBox1.Text + "','" + eventVenue.Text + "', 'Pending' , '" + eventType.Text + "' , 'Pending' ,'" + remindDate + "','" + maskedTextBox2.Text + "', 'False' ,'" + reqBy.Text + "', 'True', 'True');", conn);
                 comm.ExecuteNonQuery();
 
                 conn.Close();
@@ -326,7 +326,7 @@ namespace PrototypeSAD
             try
             {
                 conn.Open();
-                MySqlCommand comm = new MySqlCommand("INSERT INTO event(evName, evDesc, evMonth, evDay, evYear, evTime , evVenue, evProgress, evType, status, reminderDate, reminderTime, attendance, requestedBy, reminder) VALUES('" + textBox1.Text + "','" + textBox2.Text + "','" + month + "','" + day + "','" + year + "','" + maskedTextBox1.Text + "','" + textBox3.Text + "','" + "Pending" + "','" + comboBox1.Text + "','" + "Pending" + "','" + remindDate + "','" + maskedTextBox2.Text + "', 'False' ,'" + textBox7.Text + "','True');", conn);
+                MySqlCommand comm = new MySqlCommand("INSERT INTO event(evName, evDesc, evMonth, evDay, evYear, evTime , evVenue, evProgress, evType, status, reminderDate, reminderTime, attendance, requestedBy, reminder) VALUES('" + eventName.Text + "','" + eventDes.Text + "','" + month + "','" + day + "','" + year + "','" + maskedTextBox1.Text + "','" + eventVenue.Text + "','" + "Pending" + "','" + eventType.Text + "','" + "Pending" + "','" + remindDate + "','" + maskedTextBox2.Text + "', 'False' ,'" + reqBy.Text + "','True');", conn);
                 comm.ExecuteNonQuery();
 
                 conn.Close();
@@ -349,7 +349,7 @@ namespace PrototypeSAD
             try
             {
                 conn.Open();
-                MySqlCommand comm = new MySqlCommand("INSERT INTO event(evName, evDesc, evMonth, evDay, evYear, evTime , evVenue, evProgress, evType, status, attendance, requestedBy, budget) VALUES('" + textBox1.Text + "','" + textBox2.Text + "','" + month + "','" + day + "','" + year + "','" + maskedTextBox1.Text + "','" + textBox3.Text + "','" + "Pending" + "','" + comboBox1.Text + "', 'Pending' , 'False' ,'" + textBox7.Text + "', 'True');", conn);
+                MySqlCommand comm = new MySqlCommand("INSERT INTO event(evName, evDesc, evMonth, evDay, evYear, evTime , evVenue, evProgress, evType, status, attendance, requestedBy, budget) VALUES('" + eventName.Text + "','" + eventDes.Text + "','" + month + "','" + day + "','" + year + "','" + maskedTextBox1.Text + "','" + eventVenue.Text + "','" + "Pending" + "','" + eventType.Text + "', 'Pending' , 'False' ,'" + reqBy.Text + "', 'True');", conn);
                 comm.ExecuteNonQuery();
 
                 conn.Close();
@@ -515,33 +515,12 @@ namespace PrototypeSAD
                 conn.Close();
             }
         }
-        /*
-        public void updateEvent()
-        {
-            //tanungin si sam kasi usually may another table for the segregation of attendance being a case study and others as an attendee
-            try
-            {
-                conn.Open();
-                MySqlCommand comm = new MySqlCommand("UPDATE event SET status ='Approve';", conn);
-                comm.ExecuteNonQuery();
-
-                conn.Close();
-
-            }
-            catch (Exception ee)
-            {
-                MessageBox.Show("" + ee);
-                conn.Close();
-            }
-        }
-        */
-
-
+        
         private void button9_Click_1(object sender, EventArgs e)
         {
             if (checkBox2.Checked == true && checkBox1.Checked == true)
             {
-                if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || maskedTextBox1.Text == "" || textBox7.Text == "" || comboBox1.Text == "" || maskedTextBox2.Text == "")
+                if (eventName.Text == "" || eventDes.Text == "" || eventVenue.Text == "" || maskedTextBox1.Text == "" || reqBy.Text == "" || eventType.Text == "" || maskedTextBox2.Text == "")
                 {
                     MessageBox.Show("Please enter necessary fields!");
                 }
@@ -556,7 +535,7 @@ namespace PrototypeSAD
                 }
             } else if (checkBox2.Checked == true)
             {
-                if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || maskedTextBox1.Text == "" || textBox7.Text == "" || comboBox1.Text == "")
+                if (eventName.Text == "" || eventDes.Text == "" || eventVenue.Text == "" || maskedTextBox1.Text == "" || reqBy.Text == "" || eventType.Text == "")
                 {
                     MessageBox.Show("Please enter necessary fields!");
                 }
@@ -572,7 +551,7 @@ namespace PrototypeSAD
             }
             else if (checkBox1.Checked == true)
             {
-                if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || maskedTextBox1.Text == "" || textBox7.Text == "" || comboBox1.Text == "" || maskedTextBox2.Text == "")
+                if (eventName.Text == "" || eventDes.Text == "" || eventVenue.Text == "" || maskedTextBox1.Text == "" || reqBy.Text == "" || eventType.Text == "" || maskedTextBox2.Text == "")
                 {
                     MessageBox.Show("Please enter necessary fields!");
                 }
@@ -588,7 +567,7 @@ namespace PrototypeSAD
             }
             else
             {
-                if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || maskedTextBox1.Text == "" || textBox7.Text == "" || comboBox1.Text == "")
+                if (eventName.Text == "" || eventDes.Text == "" || eventVenue.Text == "" || maskedTextBox1.Text == "" || reqBy.Text == "" || eventType.Text == "")
                 {
                     MessageBox.Show("Please enter necessary fields!");
                 }
@@ -717,13 +696,13 @@ namespace PrototypeSAD
 
         private void button19_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox3.Text = "";
+            eventName.Text = "";
+            eventDes.Text = "";
+            eventVenue.Text = "";
             maskedTextBox1.Text = "";
             maskedTextBox2.Text = "";
-            textBox7.Text = "";
-            comboBox1.Text = "";
+            reqBy.Text = "";
+            eventType.Text = "";
             checkBox1.Checked = false;
             checkBox2.Checked = false;
             button9.Enabled = true;
