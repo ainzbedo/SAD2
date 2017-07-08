@@ -670,27 +670,27 @@ namespace PrototypeSAD
                     type = dt.Rows[0]["evType"].ToString();
                     budget = dt.Rows[0]["budget"].ToString();
                     remind = dt.Rows[0]["reminder"].ToString();
-                    textBox5.Text = evn;
-                    textBox8.Text = desc;
-                    textBox11.Text = type;
-                    textBox9.Text = month + "/" + day + "/" + year;
-                    textBox10.Text = time;
+                    eNameR.Text = evn;
+                    eDesR.Text = desc;
+                    eTypeR.Text = type;
+                    eDateR.Text = month + "/" + day + "/" + year;
+                    eTimeR.Text = time;
 
                     if (budget == "True")
                     {
-                        checkBox3.Checked = true;
+                        eBudgetR.Checked = true;
                     }
                     else
                     {
-                        checkBox3.Checked = false;
+                        eBudgetR.Checked = false;
                     }
                     if (remind == "True")
                     {
-                        checkBox4.Checked = true;
+                        eRemindR.Checked = true;
                     }
                     else
                     {
-                        checkBox4.Checked = false;
+                        eRemindR.Checked = false;
                     }
                 }
 
@@ -740,6 +740,17 @@ namespace PrototypeSAD
 
             displayEvents();
             MessageBox.Show("The event has been approved.");
+            clearItemsApproved();
+        }
+        public void clearItemsApproved()
+        {
+            eNameR.Text = "";
+            eDesR.Text = "";
+            eDateR.Text = "";
+            eTypeR.Text = "";
+            eTimeR.Text = "";
+            eRemindR.Checked = false;
+            eBudgetR.Checked = false;
         }
 
         public void approveEvent()
