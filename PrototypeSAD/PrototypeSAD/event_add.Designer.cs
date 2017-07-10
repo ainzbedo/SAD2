@@ -123,25 +123,18 @@
             this.label15 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.reqBy = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.button21 = new System.Windows.Forms.Button();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.eventVenue = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -152,6 +145,9 @@
             this.eventName = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -1210,33 +1206,13 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.Silver;
-            this.panel10.Controls.Add(this.maskedTextBox2);
-            this.panel10.Controls.Add(this.dateTimePicker2);
+            this.panel10.Controls.Add(this.label8);
+            this.panel10.Controls.Add(this.button22);
             this.panel10.Controls.Add(this.checkBox1);
-            this.panel10.Controls.Add(this.label26);
-            this.panel10.Controls.Add(this.label25);
-            this.panel10.Controls.Add(this.label24);
             this.panel10.Location = new System.Drawing.Point(18, 338);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(531, 134);
+            this.panel10.Size = new System.Drawing.Size(267, 134);
             this.panel10.TabIndex = 5;
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(315, 62);
-            this.maskedTextBox2.Mask = "00 : 00";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(201, 20);
-            this.maskedTextBox2.TabIndex = 13;
-            this.maskedTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.maskedTextBox2.Validated += new System.EventHandler(this.maskedTextBox2_Validated);
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(17, 62);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 12;
             // 
             // checkBox1
             // 
@@ -1249,54 +1225,21 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label26.Location = new System.Drawing.Point(468, 47);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(48, 12);
-            this.label26.TabIndex = 10;
-            this.label26.Text = "hh : mm";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label25.Location = new System.Drawing.Point(314, 47);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(32, 12);
-            this.label25.TabIndex = 9;
-            this.label25.Text = "Time";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label24.Location = new System.Drawing.Point(14, 47);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(31, 12);
-            this.label24.TabIndex = 8;
-            this.label24.Text = "Date";
-            // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.Silver;
             this.panel11.Controls.Add(this.reqBy);
             this.panel11.Controls.Add(this.label27);
-            this.panel11.Location = new System.Drawing.Point(579, 338);
+            this.panel11.Location = new System.Drawing.Point(320, 338);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(237, 134);
+            this.panel11.Size = new System.Drawing.Size(496, 134);
             this.panel11.TabIndex = 6;
             // 
             // reqBy
             // 
             this.reqBy.Location = new System.Drawing.Point(18, 62);
             this.reqBy.Name = "reqBy";
-            this.reqBy.Size = new System.Drawing.Size(208, 20);
+            this.reqBy.Size = new System.Drawing.Size(287, 20);
             this.reqBy.TabIndex = 8;
             // 
             // label27
@@ -1314,7 +1257,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(576, 322);
+            this.label23.Location = new System.Drawing.Point(323, 322);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(118, 18);
             this.label23.TabIndex = 8;
@@ -1333,13 +1276,12 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.Silver;
-            this.panel9.Controls.Add(this.maskedTextBox1);
+            this.panel9.Controls.Add(this.label5);
+            this.panel9.Controls.Add(this.button21);
             this.panel9.Controls.Add(this.checkBox2);
             this.panel9.Controls.Add(this.eventVenue);
             this.panel9.Controls.Add(this.label29);
             this.panel9.Controls.Add(this.dateTimePicker1);
-            this.panel9.Controls.Add(this.label28);
-            this.panel9.Controls.Add(this.label21);
             this.panel9.Controls.Add(this.label20);
             this.panel9.Controls.Add(this.label19);
             this.panel9.Controls.Add(this.label18);
@@ -1353,17 +1295,15 @@
             this.panel9.Size = new System.Drawing.Size(798, 232);
             this.panel9.TabIndex = 3;
             // 
-            // maskedTextBox1
+            // button21
             // 
-            this.maskedTextBox1.BeepOnError = true;
-            this.maskedTextBox1.Location = new System.Drawing.Point(606, 163);
-            this.maskedTextBox1.Mask = "00 : 00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(171, 20);
-            this.maskedTextBox1.TabIndex = 16;
-            this.maskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.maskedTextBox1.Validating += new System.ComponentModel.CancelEventHandler(this.maskedTextBox1_Validating);
-            this.maskedTextBox1.Validated += new System.EventHandler(this.maskedTextBox1_Validated);
+            this.button21.Location = new System.Drawing.Point(576, 142);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(130, 23);
+            this.button21.TabIndex = 17;
+            this.button21.Text = "SET DATE AND TIME";
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // checkBox2
             // 
@@ -1401,28 +1341,6 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 12;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label28.Location = new System.Drawing.Point(729, 148);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(48, 12);
-            this.label28.TabIndex = 11;
-            this.label28.Text = "hh : mm";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label21.Location = new System.Drawing.Point(604, 148);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(66, 12);
-            this.label21.TabIndex = 7;
-            this.label21.Text = "Event Time";
             // 
             // label20
             // 
@@ -1532,6 +1450,34 @@
             this.button5.Size = new System.Drawing.Size(83, 67);
             this.button5.TabIndex = 6;
             this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button22
+            // 
+            this.button22.Location = new System.Drawing.Point(16, 47);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(130, 23);
+            this.button22.TabIndex = 18;
+            this.button22.Text = "SET DATE AND TIME";
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(576, 170);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "label5";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(15, 86);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "label8";
             // 
             // event_add
             // 
@@ -1653,11 +1599,7 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.TextBox reqBy;
         private System.Windows.Forms.Label label27;
@@ -1668,8 +1610,6 @@
         private System.Windows.Forms.TextBox eventVenue;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
@@ -1708,12 +1648,14 @@
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button downb;
         private System.Windows.Forms.Button upb;
         private System.Windows.Forms.Label monthLabel;
         private System.Windows.Forms.DateTimePicker yearFilter;
+        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Label label5;
     }
 }

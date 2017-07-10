@@ -12,6 +12,7 @@ namespace PrototypeSAD
 {
     public partial class eventDateDialog : Form
     {
+        public event_add reftoevent_add {get; set;}
         public eventDateDialog()
         {
             InitializeComponent();
@@ -196,6 +197,11 @@ namespace PrototypeSAD
             }
             //MessageBox.Show(comboBox3.Text);
             dayUpdate(int.Parse(comboBox3.Text), num);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

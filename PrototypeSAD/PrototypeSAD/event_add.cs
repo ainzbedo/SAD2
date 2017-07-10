@@ -234,14 +234,14 @@ namespace PrototypeSAD
                 button7.Enabled = false;
             }
             dateTimePicker1.MinDate = DateTime.Now;
-            dateTimePicker2.MinDate = DateTime.Now;
+            //dateTimePicker2.MinDate = DateTime.Now;
             displayEvents();
             displayEventApproval();
             button10.Enabled = false;
             button11.Enabled = false;
             button8.Enabled = false;
-            maskedTextBox2.Enabled = false;
-            dateTimePicker2.Enabled = false;
+            //maskedTextBox2.Enabled = false;
+            //dateTimePicker2.Enabled = false;
             int mnow = int.Parse(DateTime.Now.ToString("MM"));
             string m = tMonths[mnow - 1];
             monthLabel.Text = m;
@@ -279,7 +279,7 @@ namespace PrototypeSAD
             try
             {
                 conn.Open();
-                MySqlCommand comm = new MySqlCommand("INSERT INTO event(evName, evDesc, evMonth, evDay, evYear, evTime , evVenue, evProgress, evType, attendance, status, requestedBy) VALUES('" + eventName.Text + "','" + eventDes.Text + "','" + month + "','" + day + "','" + year + "','" + maskedTextBox1.Text + "','" + eventVenue.Text + "','" + "Pending" + "','" + eventType.Text + "', 'False' , 'Pending' " + ",'" + reqBy.Text + "');", conn);
+                MySqlCommand comm = new MySqlCommand("INSERT INTO event(evName, evDesc, evMonth, evDay, evYear, evTime , evVenue, evProgress, evType, attendance, status, requestedBy) VALUES('" + eventName.Text + "','" + eventDes.Text + "','" + month + "','" + day + "','" + year + "','" + /*maskedTextBox1.Text + "','" +*/ eventVenue.Text + "','" + "Pending" + "','" + eventType.Text + "', 'False' , 'Pending' " + ",'" + reqBy.Text + "');", conn);
                 comm.ExecuteNonQuery();
 
                 conn.Close();
@@ -299,11 +299,11 @@ namespace PrototypeSAD
             string month = dateTimePicker1.Value.Date.ToString("MM");
             string day = dateTimePicker1.Value.Date.ToString("dd");
             string year = dateTimePicker1.Value.Date.ToString("yyyy");
-            string remindDate = dateTimePicker2.Value.Date.ToString("MM/dd/yyyy");
+            //string remindDate = dateTimePicker2.Value.Date.ToString("MM/dd/yyyy");
             try
             {
                 conn.Open();
-                MySqlCommand comm = new MySqlCommand("INSERT INTO event(evName, evDesc, evMonth, evDay, evYear, evTime , evVenue, evProgress, evType, status, reminderDate, reminderTime, attendance, requestedBy, budget, reminder) VALUES('" + eventName.Text + "','" + eventDes.Text + "','" + month + "','" + day + "','" + year + "','" + maskedTextBox1.Text + "','" + eventVenue.Text + "', 'Pending' , '" + eventType.Text + "' , 'Pending' ,'" + remindDate + "','" + maskedTextBox2.Text + "', 'False' ,'" + reqBy.Text + "', 'True', 'True');", conn);
+                MySqlCommand comm = new MySqlCommand("INSERT INTO event(evName, evDesc, evMonth, evDay, evYear, evTime , evVenue, evProgress, evType, status, reminderDate, reminderTime, attendance, requestedBy, budget, reminder) VALUES('" + eventName.Text + "','" + eventDes.Text + "','" + month + "','" + day + "','" + year + "','" + /*maskedTextBox1.Text + "','" +*/ eventVenue.Text + "', 'Pending' , '" + eventType.Text + "' , 'Pending' ,'" + /*remindDate + "','" + maskedTextBox2.Text +*/ "', 'False' ,'" + reqBy.Text + "', 'True', 'True');", conn);
                 comm.ExecuteNonQuery();
 
                 conn.Close();
@@ -322,11 +322,11 @@ namespace PrototypeSAD
             string month = dateTimePicker1.Value.Date.ToString("MM");
             string day = dateTimePicker1.Value.Date.ToString("dd");
             string year = dateTimePicker1.Value.Date.ToString("yyyy");
-            string remindDate = dateTimePicker2.Value.Date.ToString("MM/dd/yyyy");
+            //string remindDate = dateTimePicker2.Value.Date.ToString("MM/dd/yyyy");
             try
             {
                 conn.Open();
-                MySqlCommand comm = new MySqlCommand("INSERT INTO event(evName, evDesc, evMonth, evDay, evYear, evTime , evVenue, evProgress, evType, status, reminderDate, reminderTime, attendance, requestedBy, reminder) VALUES('" + eventName.Text + "','" + eventDes.Text + "','" + month + "','" + day + "','" + year + "','" + maskedTextBox1.Text + "','" + eventVenue.Text + "','" + "Pending" + "','" + eventType.Text + "','" + "Pending" + "','" + remindDate + "','" + maskedTextBox2.Text + "', 'False' ,'" + reqBy.Text + "','True');", conn);
+                MySqlCommand comm = new MySqlCommand("INSERT INTO event(evName, evDesc, evMonth, evDay, evYear, evTime , evVenue, evProgress, evType, status, reminderDate, reminderTime, attendance, requestedBy, reminder) VALUES('" + eventName.Text + "','" + eventDes.Text + "','" + month + "','" + day + "','" + year + "','" + /*maskedTextBox1.Text + "','" +*/ eventVenue.Text + "','" + "Pending" + "','" + eventType.Text + "','" + "Pending" + "','" + /*remindDate + "','" + maskedTextBox2.Text +*/ "', 'False' ,'" + reqBy.Text + "','True');", conn);
                 comm.ExecuteNonQuery();
 
                 conn.Close();
@@ -345,11 +345,11 @@ namespace PrototypeSAD
             string month = dateTimePicker1.Value.Date.ToString("MM");
             string day = dateTimePicker1.Value.Date.ToString("dd");
             string year = dateTimePicker1.Value.Date.ToString("yyyy");
-            string remindDate = dateTimePicker2.Value.Date.ToString("MM/dd/yyyy");
+            //string remindDate = dateTimePicker2.Value.Date.ToString("MM/dd/yyyy");
             try
             {
                 conn.Open();
-                MySqlCommand comm = new MySqlCommand("INSERT INTO event(evName, evDesc, evMonth, evDay, evYear, evTime , evVenue, evProgress, evType, status, attendance, requestedBy, budget) VALUES('" + eventName.Text + "','" + eventDes.Text + "','" + month + "','" + day + "','" + year + "','" + maskedTextBox1.Text + "','" + eventVenue.Text + "','" + "Pending" + "','" + eventType.Text + "', 'Pending' , 'False' ,'" + reqBy.Text + "', 'True');", conn);
+                MySqlCommand comm = new MySqlCommand("INSERT INTO event(evName, evDesc, evMonth, evDay, evYear, evTime , evVenue, evProgress, evType, status, attendance, requestedBy, budget) VALUES('" + eventName.Text + "','" + eventDes.Text + "','" + month + "','" + day + "','" + year + "','" + /*maskedTextBox1.Text + "','" +*/ eventVenue.Text + "','" + "Pending" + "','" + eventType.Text + "', 'Pending' , 'False' ,'" + reqBy.Text + "', 'True');", conn);
                 comm.ExecuteNonQuery();
 
                 conn.Close();
@@ -520,7 +520,7 @@ namespace PrototypeSAD
         {
             if (checkBox2.Checked == true && checkBox1.Checked == true)
             {
-                if (eventName.Text == "" || eventDes.Text == "" || eventVenue.Text == "" || maskedTextBox1.Text == "" || reqBy.Text == "" || eventType.Text == "" || maskedTextBox2.Text == "")
+                if (eventName.Text == "" || eventDes.Text == "" || eventVenue.Text == "" || reqBy.Text == "" || eventType.Text == "")
                 {
                     MessageBox.Show("Please enter necessary fields!");
                 }
@@ -535,7 +535,7 @@ namespace PrototypeSAD
                 }
             } else if (checkBox2.Checked == true)
             {
-                if (eventName.Text == "" || eventDes.Text == "" || eventVenue.Text == "" || maskedTextBox1.Text == "" || reqBy.Text == "" || eventType.Text == "")
+                if (eventName.Text == "" || eventDes.Text == "" || eventVenue.Text == "" || reqBy.Text == "" || eventType.Text == "")
                 {
                     MessageBox.Show("Please enter necessary fields!");
                 }
@@ -551,7 +551,7 @@ namespace PrototypeSAD
             }
             else if (checkBox1.Checked == true)
             {
-                if (eventName.Text == "" || eventDes.Text == "" || eventVenue.Text == "" || maskedTextBox1.Text == "" || reqBy.Text == "" || eventType.Text == "" || maskedTextBox2.Text == "")
+                if (eventName.Text == "" || eventDes.Text == "" || eventVenue.Text == "" || reqBy.Text == "" || eventType.Text == "")
                 {
                     MessageBox.Show("Please enter necessary fields!");
                 }
@@ -567,7 +567,7 @@ namespace PrototypeSAD
             }
             else
             {
-                if (eventName.Text == "" || eventDes.Text == "" || eventVenue.Text == "" || maskedTextBox1.Text == "" || reqBy.Text == "" || eventType.Text == "")
+                if (eventName.Text == "" || eventDes.Text == "" || eventVenue.Text == "" ||  reqBy.Text == "" || eventType.Text == "")
                 {
                     MessageBox.Show("Please enter necessary fields!");
                 }
@@ -699,8 +699,6 @@ namespace PrototypeSAD
             eventName.Text = "";
             eventDes.Text = "";
             eventVenue.Text = "";
-            maskedTextBox1.Text = "";
-            maskedTextBox2.Text = "";
             reqBy.Text = "";
             eventType.Text = "";
             checkBox1.Checked = false;
@@ -1031,42 +1029,18 @@ namespace PrototypeSAD
             listView3.Items.Clear();
         }
 
-        private void maskedTextBox1_Validating(object sender, CancelEventArgs e)
-        {
-            maskedTextBox1.BeepOnError = true;
-        }
+        
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if(checkBox1.Checked == true)
             {
-                dateTimePicker2.Enabled = true;
-                maskedTextBox2.Enabled = true;
+                
             }else
             {
-                dateTimePicker2.Enabled = false;
-                maskedTextBox2.Enabled = false;
+                
             }
         }
-
-        private void maskedTextBox1_Validated(object sender, EventArgs e)
-        {
-
-            string s = maskedTextBox1.Text;
-            string[] check = s.Split(':');
-            if (int.Parse(check[0]) > 24 || int.Parse(check[1]) > 59)
-            {
-                MessageBox.Show("Please folow the 24 hour format");
-                button9.Enabled = false;
-            }
-            else
-            {
-                //MessageBox.Show("Correct");
-                button9.Enabled = true;
-            }
-        }
-
-        
         public void monthDEA(string m)
         {
             //monthDEA = month Display Event Approved
@@ -1311,23 +1285,26 @@ namespace PrototypeSAD
             }
         }
 
-        private void maskedTextBox2_Validated(object sender, EventArgs e)
+        private void button21_Click(object sender, EventArgs e)
         {
-
-            string s = maskedTextBox2.Text;
-            string[] check = s.Split(':');
-            if (int.Parse(check[0]) > 24 || int.Parse(check[1]) > 59)
-            {
-                MessageBox.Show("Please folow the 24 hour format");
-                button9.Enabled = false;
-            }
-            else
-            {
-                //MessageBox.Show("Correct");
-                button9.Enabled = true;
-            }
+            datedial();
         }
 
+        private void button22_Click(object sender, EventArgs e)
+        {
+            datedial();
+        }
+
+        public void datedial()
+        {
+            eventDateDialog datedialog = new eventDateDialog();
+            datedialog.reftoevent_add = this;
+            DialogResult rest = datedialog.ShowDialog();
+            if (rest == DialogResult.OK)
+            {
+
+            }
+        }
         public void showAttendanceAP()
         {
             string role, status;
