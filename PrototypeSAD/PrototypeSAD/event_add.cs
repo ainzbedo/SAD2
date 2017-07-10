@@ -1066,10 +1066,7 @@ namespace PrototypeSAD
             }
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
+        
         public void monthDEA(string m)
         {
             //monthDEA = month Display Event Approved

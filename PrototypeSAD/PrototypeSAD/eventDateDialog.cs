@@ -16,21 +16,32 @@ namespace PrototypeSAD
         {
             InitializeComponent();
         }
-
+        public string[] tMonths = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
+        public int evYear = int.Parse(DateTime.Now.ToString("yyyy"));
+        public int evmonth = int.Parse(DateTime.Now.ToString("MM"));
+        public int evday = int.Parse(DateTime.Now.ToString("dd"));
+        public int evhour = int.Parse(DateTime.Now.ToString("hh"));
+        public int evmin = int.Parse(DateTime.Now.ToString("mm"));
+        public string evtt = DateTime.Now.ToString("hh:mm tt");
         private void eventDateDialog_Load(object sender, EventArgs e)
         {
-            int evYear = int.Parse(DateTime.Now.ToString("yyyy"));
-            int evmonth = int.Parse(DateTime.Now.ToString("mm"));
-            string[] tMonths = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
             dayUpdate(evYear, evmonth);
             for (int j = evYear; j <= evYear + 100; j++)
             {
                 comboBox3.Items.Add(""+ j +"");
             }
-            for (int i = 1; i <= 60; i++)
+            for (int i = 0; i < 60; i++)
             {
-                comboBox5.Items.Add(""+ i +"");
+                comboBox5.Items.Add(i.ToString("00"));
             }
+            comboBox1.SelectedIndex = evday - 1;
+            comboBox2.SelectedIndex = evmonth - 1;
+            comboBox3.SelectedItem = evYear.ToString();
+            comboBox4.SelectedIndex = evhour - 1;
+            comboBox5.SelectedIndex = evmin - 1;
+            comboBox6.SelectedItem = evtt.Substring(6, 2);
+
+            //MessageBox.Show(evtt.Substring(6, 2));
         }
         public void dayUpdate(int year, int month)
         {
@@ -153,14 +164,38 @@ namespace PrototypeSAD
             }
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        
+
+        private void comboBox3_SelectionChangeCommitted(object sender, EventArgs e)
         {
-                        
+            int num = 0;
+            string m;
+            for (int i = 0; i < 12; i++)
+            {
+                if (tMonths[i] == comboBox2.Text)
+                {
+                    //m = tMonths[i + 1];
+                    num = i + 1;
+                }
+            }
+            //MessageBox.Show(comboBox3.Text);
+            dayUpdate(int.Parse(comboBox3.Text), num);
         }
 
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBox2_SelectionChangeCommitted(object sender, EventArgs e)
         {
-
+            int num = 0;
+            string m;
+            for (int i = 0; i < 12; i++)
+            {
+                if (tMonths[i] == comboBox2.Text)
+                {
+                    //m = tMonths[i + 1];
+                    num = i + 1;
+                }
+            }
+            //MessageBox.Show(comboBox3.Text);
+            dayUpdate(int.Parse(comboBox3.Text), num);
         }
     }
 }
