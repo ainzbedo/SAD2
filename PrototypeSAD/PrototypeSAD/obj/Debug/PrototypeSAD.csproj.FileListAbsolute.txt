@@ -127,3 +127,6 @@ C:\Users\red_d\Desktop\Subjects\github\PrototypeSAD\PrototypeSAD\obj\Debug\Proto
 C:\Users\red_d\Desktop\Subjects\github\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.Properties.Resources.resources
 C:\Users\red_d\Desktop\Subjects\github\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.csproj.GenerateResource.Cache
 C:\Users\red_d\Desktop\Subjects\github\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.eventDateDialog.resources
+C:\Users\cocdejesus\Desktop\CASE PROTO\PrototypeSAD\PrototypeSAD\bin\Debug\PrototypeSAD.exe.config
+C:\Users\cocdejesus\Desktop\CASE PROTO\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.exe
+C:\Users\cocdejesus\Desktop\CASE PROTO\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.pdb
