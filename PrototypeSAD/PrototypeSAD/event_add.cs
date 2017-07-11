@@ -233,13 +233,14 @@ namespace PrototypeSAD
             {
                 button7.Enabled = false;
             }
-            dateTimePicker1.MinDate = DateTime.Now;
             //dateTimePicker2.MinDate = DateTime.Now;
             displayEvents();
             displayEventApproval();
             button10.Enabled = false;
             button11.Enabled = false;
             button8.Enabled = false;
+            button22.Enabled = false;
+            button9.Enabled = false;
             //maskedTextBox2.Enabled = false;
             //dateTimePicker2.Enabled = false;
             int mnow = int.Parse(DateTime.Now.ToString("MM"));
@@ -273,13 +274,14 @@ namespace PrototypeSAD
         public void insert()
         {
 
-            string month = dateTimePicker1.Value.Date.ToString("MM");
-            string day = dateTimePicker1.Value.Date.ToString("dd");
-            string year = dateTimePicker1.Value.Date.ToString("yyyy");
+            string month = dialogMonth;
+            string day = dialogDay;
+            string year = dialogYear;
+            string eventtime = dialogHour + ":" + dialogMin + " " + dialogtt;
             try
             {
                 conn.Open();
-                MySqlCommand comm = new MySqlCommand("INSERT INTO event(evName, evDesc, evMonth, evDay, evYear, evTime , evVenue, evProgress, evType, attendance, status, requestedBy) VALUES('" + eventName.Text + "','" + eventDes.Text + "','" + month + "','" + day + "','" + year + "','" + /*maskedTextBox1.Text + "','" +*/ eventVenue.Text + "','" + "Pending" + "','" + eventType.Text + "', 'False' , 'Pending' " + ",'" + reqBy.Text + "');", conn);
+                MySqlCommand comm = new MySqlCommand("INSERT INTO event(evName, evDesc, evMonth, evDay, evYear, evTime , evVenue, evProgress, evType, attendance, status, requestedBy) VALUES('" + eventName.Text + "','" + eventDes.Text + "','" + month + "','" + day + "','" + year + "','" + eventtime + "','" + eventVenue.Text + "','" + "Pending" + "','" + eventType.Text + "', 'False' , 'Pending' " + ",'" + reqBy.Text + "');", conn);
                 comm.ExecuteNonQuery();
 
                 conn.Close();
@@ -296,14 +298,17 @@ namespace PrototypeSAD
         public void insertWithboth()
         {
 
-            string month = dateTimePicker1.Value.Date.ToString("MM");
-            string day = dateTimePicker1.Value.Date.ToString("dd");
-            string year = dateTimePicker1.Value.Date.ToString("yyyy");
+            string month = dialogMonth;
+            string day = dialogDay;
+            string year = dialogYear;
+            string eventtime = dialogHour + ":" + dialogMin + " " + dialogtt;
+            string reminddate = dialogMonthR + "/" + dialogDayR + "/" + dialogYearR;
+            string remindtime = dialogHourR + ":" + dialogMinR + " " + dialogttR;
             //string remindDate = dateTimePicker2.Value.Date.ToString("MM/dd/yyyy");
             try
             {
                 conn.Open();
-                MySqlCommand comm = new MySqlCommand("INSERT INTO event(evName, evDesc, evMonth, evDay, evYear, evTime , evVenue, evProgress, evType, status, reminderDate, reminderTime, attendance, requestedBy, budget, reminder) VALUES('" + eventName.Text + "','" + eventDes.Text + "','" + month + "','" + day + "','" + year + "','" + /*maskedTextBox1.Text + "','" +*/ eventVenue.Text + "', 'Pending' , '" + eventType.Text + "' , 'Pending' ,'" + /*remindDate + "','" + maskedTextBox2.Text +*/ "', 'False' ,'" + reqBy.Text + "', 'True', 'True');", conn);
+                MySqlCommand comm = new MySqlCommand("INSERT INTO event(evName, evDesc, evMonth, evDay, evYear, evTime , evVenue, evProgress, evType, status, reminderDate, reminderTime, attendance, requestedBy, budget, reminder) VALUES('" + eventName.Text + "','" + eventDes.Text + "','" + month + "','" + day + "','" + year + "','" + eventtime + "','" + eventVenue.Text + "', 'Pending' , '" + eventType.Text + "' , 'Pending' ,'" + reminddate + "','" + remindtime + "', 'False' ,'" + reqBy.Text + "', 'True', 'True');", conn);
                 comm.ExecuteNonQuery();
 
                 conn.Close();
@@ -319,14 +324,17 @@ namespace PrototypeSAD
         public void insertWithRemind()
         {
 
-            string month = dateTimePicker1.Value.Date.ToString("MM");
-            string day = dateTimePicker1.Value.Date.ToString("dd");
-            string year = dateTimePicker1.Value.Date.ToString("yyyy");
+            string month = dialogMonth;
+            string day = dialogDay;
+            string year = dialogYear;
+            string eventtime = dialogHour + ":" + dialogMin + " " + dialogtt;
+            string reminddate = dialogMonthR + "/" + dialogDayR + "/" + dialogYearR;
+            string remindtime = dialogHourR + ":" + dialogMinR + " " + dialogttR;
             //string remindDate = dateTimePicker2.Value.Date.ToString("MM/dd/yyyy");
             try
             {
                 conn.Open();
-                MySqlCommand comm = new MySqlCommand("INSERT INTO event(evName, evDesc, evMonth, evDay, evYear, evTime , evVenue, evProgress, evType, status, reminderDate, reminderTime, attendance, requestedBy, reminder) VALUES('" + eventName.Text + "','" + eventDes.Text + "','" + month + "','" + day + "','" + year + "','" + /*maskedTextBox1.Text + "','" +*/ eventVenue.Text + "','" + "Pending" + "','" + eventType.Text + "','" + "Pending" + "','" + /*remindDate + "','" + maskedTextBox2.Text +*/ "', 'False' ,'" + reqBy.Text + "','True');", conn);
+                MySqlCommand comm = new MySqlCommand("INSERT INTO event(evName, evDesc, evMonth, evDay, evYear, evTime , evVenue, evProgress, evType, status, reminderDate, reminderTime, attendance, requestedBy, reminder) VALUES('" + eventName.Text + "','" + eventDes.Text + "','" + month + "','" + day + "','" + year + "','" + eventtime + "','" + eventVenue.Text + "','" + "Pending" + "','" + eventType.Text + "','" + "Pending" + "','" + reminddate + "','" + remindtime + "', 'False' ,'" + reqBy.Text + "','True');", conn);
                 comm.ExecuteNonQuery();
 
                 conn.Close();
@@ -342,14 +350,15 @@ namespace PrototypeSAD
         public void insertWithbudget()
         {
 
-            string month = dateTimePicker1.Value.Date.ToString("MM");
-            string day = dateTimePicker1.Value.Date.ToString("dd");
-            string year = dateTimePicker1.Value.Date.ToString("yyyy");
+            string month = dialogMonth;
+            string day = dialogDay;
+            string year = dialogYear;
+            string eventtime = dialogHour + ":" + dialogMin + " " + dialogtt;
             //string remindDate = dateTimePicker2.Value.Date.ToString("MM/dd/yyyy");
             try
             {
                 conn.Open();
-                MySqlCommand comm = new MySqlCommand("INSERT INTO event(evName, evDesc, evMonth, evDay, evYear, evTime , evVenue, evProgress, evType, status, attendance, requestedBy, budget) VALUES('" + eventName.Text + "','" + eventDes.Text + "','" + month + "','" + day + "','" + year + "','" + /*maskedTextBox1.Text + "','" +*/ eventVenue.Text + "','" + "Pending" + "','" + eventType.Text + "', 'Pending' , 'False' ,'" + reqBy.Text + "', 'True');", conn);
+                MySqlCommand comm = new MySqlCommand("INSERT INTO event(evName, evDesc, evMonth, evDay, evYear, evTime , evVenue, evProgress, evType, status, attendance, requestedBy, budget) VALUES('" + eventName.Text + "','" + eventDes.Text + "','" + month + "','" + day + "','" + year + "','" + eventtime + "','" + eventVenue.Text + "','" + "Pending" + "','" + eventType.Text + "', 'Pending' , 'False' ,'" + reqBy.Text + "', 'True');", conn);
                 comm.ExecuteNonQuery();
 
                 conn.Close();
@@ -1035,10 +1044,10 @@ namespace PrototypeSAD
         {
             if(checkBox1.Checked == true)
             {
-                
+                button22.Enabled = true;
             }else
             {
-                
+                button22.Enabled = false;
             }
         }
         public void monthDEA(string m)
@@ -1284,27 +1293,46 @@ namespace PrototypeSAD
                 conn.Close();
             }
         }
-
+        public string whichDialog = "";
+        public string dialogDay { get; set; }
+        public string dialogMonth { get; set; }
+        public string dialogYear { get; set; }
+        public string dialogHour { get; set; }
+        public string dialogMin { get; set; }
+        public string dialogtt { get; set; }
         private void button21_Click(object sender, EventArgs e)
         {
-            datedial();
+            whichDialog = "eventdetail";
+            eventDateDialog datedialog = new eventDateDialog();
+            datedialog.reftoevent_add = this;
+            DialogResult rest = datedialog.ShowDialog();
+            if (rest == DialogResult.OK)
+            {
+                button9.Enabled = true;
+                //MessageBox.Show(dialogDay + " " + dialogMonth + " " + dialogYear + " " + dialogHour + " " + dialogMin + " " + dialogtt);
+                label5.Text = tMonths[int.Parse(dialogMonth) - 1] + "/" + dialogDay + "/" + dialogYear + " " + dialogHour + ":" + dialogMin + " " + dialogtt;
+            }
         }
-
+        public string dialogDayR { get; set; }
+        public string dialogMonthR { get; set; }
+        public string dialogYearR { get; set; }
+        public string dialogHourR { get; set; }
+        public string dialogMinR { get; set; }
+        public string dialogttR { get; set; }
         private void button22_Click(object sender, EventArgs e)
         {
-            datedial();
-        }
-
-        public void datedial()
-        {
+            whichDialog = "eventRemind";
             eventDateDialog datedialog = new eventDateDialog();
             datedialog.reftoevent_add = this;
             DialogResult rest = datedialog.ShowDialog();
             if (rest == DialogResult.OK)
             {
 
+                //MessageBox.Show(dialogDay + " " + dialogMonth + " " + dialogYear + " " + dialogHour + " " + dialogMin + " " + dialogtt);
+                label8.Text = tMonths[int.Parse(dialogMonthR) - 1] + "/" + dialogDayR + "/" + dialogYearR + " " + dialogHourR + ":" + dialogMinR + " " + dialogttR;
             }
         }
+
         public void showAttendanceAP()
         {
             string role, status;

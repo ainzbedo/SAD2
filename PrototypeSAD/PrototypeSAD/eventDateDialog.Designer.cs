@@ -63,7 +63,7 @@
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Keep Calm Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "1",
@@ -98,14 +98,14 @@
             "30"});
             this.comboBox1.Location = new System.Drawing.Point(32, 66);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 29);
+            this.comboBox1.Size = new System.Drawing.Size(121, 31);
             this.comboBox1.TabIndex = 2;
             // 
             // comboBox2
             // 
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Keep Calm Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "JANUARY",
@@ -122,7 +122,7 @@
             "DECEMBER"});
             this.comboBox2.Location = new System.Drawing.Point(190, 66);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 29);
+            this.comboBox2.Size = new System.Drawing.Size(121, 31);
             this.comboBox2.TabIndex = 3;
             this.comboBox2.SelectionChangeCommitted += new System.EventHandler(this.comboBox2_SelectionChangeCommitted);
             // 
@@ -130,11 +130,11 @@
             // 
             this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.Font = new System.Drawing.Font("Keep Calm Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(349, 66);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 29);
+            this.comboBox3.Size = new System.Drawing.Size(121, 31);
             this.comboBox3.TabIndex = 4;
             this.comboBox3.SelectionChangeCommitted += new System.EventHandler(this.comboBox3_SelectionChangeCommitted);
             // 
@@ -142,7 +142,7 @@
             // 
             this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox4.Font = new System.Drawing.Font("Keep Calm Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
             "1",
@@ -159,32 +159,32 @@
             "12"});
             this.comboBox4.Location = new System.Drawing.Point(38, 154);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 29);
+            this.comboBox4.Size = new System.Drawing.Size(121, 31);
             this.comboBox4.TabIndex = 5;
             // 
             // comboBox5
             // 
             this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox5.Font = new System.Drawing.Font("Keep Calm Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Location = new System.Drawing.Point(190, 154);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 29);
+            this.comboBox5.Size = new System.Drawing.Size(121, 31);
             this.comboBox5.TabIndex = 6;
             // 
             // comboBox6
             // 
             this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox6.Font = new System.Drawing.Font("Keep Calm Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Items.AddRange(new object[] {
             "AM",
             "PM"});
             this.comboBox6.Location = new System.Drawing.Point(349, 154);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(121, 29);
+            this.comboBox6.Size = new System.Drawing.Size(121, 31);
             this.comboBox6.TabIndex = 7;
             // 
             // button1

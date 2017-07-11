@@ -17,13 +17,14 @@ namespace PrototypeSAD
         {
             InitializeComponent();
         }
-        public string[] tMonths = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
+        public string[] tMonths = { "JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER" };
         public int evYear = int.Parse(DateTime.Now.ToString("yyyy"));
         public int evmonth = int.Parse(DateTime.Now.ToString("MM"));
         public int evday = int.Parse(DateTime.Now.ToString("dd"));
         public int evhour = int.Parse(DateTime.Now.ToString("hh"));
         public int evmin = int.Parse(DateTime.Now.ToString("mm"));
         public string evtt = DateTime.Now.ToString("hh:mm tt");
+        public string day, month, year, hour, min, tt;
         private void eventDateDialog_Load(object sender, EventArgs e)
         {
             dayUpdate(evYear, evmonth);
@@ -169,38 +170,54 @@ namespace PrototypeSAD
 
         private void comboBox3_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            int num = 0;
-            string m;
-            for (int i = 0; i < 12; i++)
-            {
-                if (tMonths[i] == comboBox2.Text)
-                {
-                    //m = tMonths[i + 1];
-                    num = i + 1;
-                }
-            }
+            int num = Array.IndexOf(tMonths, comboBox2.Text) + 1;
             //MessageBox.Show(comboBox3.Text);
             dayUpdate(int.Parse(comboBox3.Text), num);
         }
 
         private void comboBox2_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            int num = 0;
-            string m;
-            for (int i = 0; i < 12; i++)
-            {
-                if (tMonths[i] == comboBox2.Text)
-                {
-                    //m = tMonths[i + 1];
-                    num = i + 1;
-                }
-            }
+            int num = Array.IndexOf(tMonths, comboBox2.Text) + 1;
             //MessageBox.Show(comboBox3.Text);
             dayUpdate(int.Parse(comboBox3.Text), num);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int num = Array.IndexOf(tMonths, comboBox2.Text) + 1;
+            string whichdialog = reftoevent_add.whichDialog;
+            if(whichdialog == "eventdetail")
+            {
+                day = comboBox1.Text;
+                month = num.ToString("00");
+                year = comboBox3.Text;
+                hour = comboBox4.Text;
+                min = comboBox5.Text;
+                tt = comboBox6.Text;
+                reftoevent_add.dialogDay = day;
+                reftoevent_add.dialogMonth = month;
+                reftoevent_add.dialogYear = year;
+                reftoevent_add.dialogHour = hour;
+                reftoevent_add.dialogMin = min;
+                reftoevent_add.dialogtt = tt;
+                //MessageBox.Show("Dito sa details");
+            }
+            else if(whichdialog == "eventRemind")
+            {
+                day = comboBox1.Text;
+                month = num.ToString("00");
+                year = comboBox3.Text;
+                hour = comboBox4.Text;
+                min = comboBox5.Text;
+                tt = comboBox6.Text;
+                reftoevent_add.dialogDayR = day;
+                reftoevent_add.dialogMonthR = month;
+                reftoevent_add.dialogYearR = year;
+                reftoevent_add.dialogHourR = hour;
+                reftoevent_add.dialogMinR = min;
+                reftoevent_add.dialogttR = tt;
+                //MessageBox.Show("Dito sa remind");
+            }
             this.DialogResult = DialogResult.OK;
         }
     }
