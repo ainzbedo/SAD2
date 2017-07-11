@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 
 namespace PrototypeSAD
 {
-    
+
     public partial class casestudy : Form
     {
         public Form2 ref_to_main { get; set; }
@@ -106,6 +106,10 @@ namespace PrototypeSAD
             tabControl.SelectedTab = third;
             resetColor();
             btnAdd.BackColor = Color.Gray;
+
+
+
+
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -113,20 +117,47 @@ namespace PrototypeSAD
             tabControl.SelectedTab = second;
             resetColor();
             btnSearch.BackColor = Color.Gray;
+
+
         }
 
         private void btnCaseStudy_Click(object sender, EventArgs e)
         {
+
             tabControl.SelectedTab = first;
             resetColor();
-            btnCaseStudy.BackColor = Color.Gray;                       
+            btnCaseStudy.BackColor = Color.Gray;
+
+
         }
 
         private void casestudy_Load(object sender, EventArgs e)
         {
-            string[] row = { "Ramon", "8", "Paternal Orphan", "Single Parent", "December 15, 2016" };
-            var listViewItem = new ListViewItem(row);
-            listView1.Items.Add(listViewItem);
+            try
+            {
+                conn.Open();
+
+                MySqlCommand comm = new MySqlCommand("SELECT id, name FROM casestudyprofile", conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+
+                adp.Fill(dt);
+
+                dtgcs.DataSource = dt;
+
+                dtgcs.Columns[0].Visible = false;
+
+                conn.Close();
+            }
+
+
+
+
+            catch (Exception ee)
+            {
+                MessageBox.Show("" + ee);
+                conn.Close();
+            }
 
             tabControl.SelectedTab = first;
             resetColor();
@@ -223,6 +254,73 @@ namespace PrototypeSAD
             tabControl.SelectedTab = third;
             resetColor2();
             btnAdd.BackColor = Color.Gray;
+        }
+
+        
+
+        private void dtgcs_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int id = int.Parse(dtgcs.Rows[e.RowIndex].Cells[0].Value.ToString());
+
+            tabControl.SelectedTab = sixteen;
+
+            try
+            {
+                conn.Open();
+
+                MySqlCommand comm = new MySqlCommand("SELECT name, birthdate, status, edtype, edlvl, blood_type, height, weight FROM casestudyprofile WHERE id = " + id, conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+
+                adp.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+
+                    lblname.Text = dt.Rows[0]["name"].ToString();
+                    lblstatus.Text = dt.Rows[0]["status"].ToString();
+                    lbldate.Text = Convert.ToDateTime(dt.Rows[0]["birthdate"].ToString()).ToString("mm/dd/yyy");
+                    lblblood.Text = dt.Rows[0]["blood_type"].ToString();
+                    lblheight.Text = dt.Rows[0]["height"].ToString();
+                    lblweight.Text = dt.Rows[0]["weight"].ToString();
+                    lbledtype.Text = dt.Rows[0]["edtype"].ToString();
+                    lbledlvl.Text = dt.Rows[0]["edlvl"].ToString();
+                }
+
+                conn.Close();
+            }
+
+
+
+
+            catch (Exception ee)
+            {
+                MessageBox.Show("" + ee);
+                conn.Close();
+            }
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            string name = txtname.Text, status = cbxstatus.Text, address = txtaddress.Text, lvl = txtlvl.Text, school = txtschool.Text, blood = cbxblood.Text, type = cbxtype.Text;
+            int height = int.Parse(txtheight.Text), weight = int.Parse(txtweight.Text);
+
+            try
+            {
+                conn.Open();
+                MySqlCommand comm = new MySqlCommand("INSERT INTO casestudyprofile(name, birthdate, status, address, edtype, edlvl, school, blood_type, height, weight) VALUES('" + name + "','" + dt2.Value.Date.ToString("yyyyMMdd") + "','" + status + "','" + address + "','" + type + "','" + lvl + "','" + school + "','" + blood + "','" + height + "','" + weight + "')", conn);
+                comm.ExecuteNonQuery();
+
+                MessageBox.Show("QUERY INSERTED HAR HAR!!");
+
+                conn.Close();
+
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show("" + ee);
+                conn.Close();
+            }
         }
     }
 }
