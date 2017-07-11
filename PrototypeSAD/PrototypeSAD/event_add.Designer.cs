@@ -118,7 +118,6 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.label40 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button19 = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
@@ -1134,7 +1133,6 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.button19);
             this.tabPage3.Controls.Add(this.panel8);
             this.tabPage3.Controls.Add(this.button9);
             this.tabPage3.Controls.Add(this.panel10);
@@ -1150,21 +1148,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // button19
-            // 
-            this.button19.BackColor = System.Drawing.Color.Gray;
-            this.button19.FlatAppearance.BorderSize = 0;
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button19.ForeColor = System.Drawing.Color.White;
-            this.button19.Location = new System.Drawing.Point(594, 515);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(90, 23);
-            this.button19.TabIndex = 16;
-            this.button19.Text = "Clear";
-            this.button19.UseVisualStyleBackColor = false;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // panel8
             // 
@@ -1621,7 +1604,6 @@
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.Label label7;

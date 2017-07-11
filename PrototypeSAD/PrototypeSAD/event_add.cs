@@ -591,9 +591,20 @@ namespace PrototypeSAD
                 }
             }
             button9.Enabled = false;
+            clear();
         }
 
-
+        public void clear()
+        {
+            eventName.Text = "";
+            eventDes.Text = "";
+            eventVenue.Text = "";
+            reqBy.Text = "";
+            eventType.Text = "";
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
+            button9.Enabled = true;
+        }
 
         private void checkBox2_CheckedChanged_1(object sender, EventArgs e)
         {
@@ -703,18 +714,7 @@ namespace PrototypeSAD
             MessageBox.Show("The event has been disapproved.");
         }
 
-        private void button19_Click(object sender, EventArgs e)
-        {
-            eventName.Text = "";
-            eventDes.Text = "";
-            eventVenue.Text = "";
-            reqBy.Text = "";
-            eventType.Text = "";
-            checkBox1.Checked = false;
-            checkBox2.Checked = false;
-            button9.Enabled = true;
-
-        }
+       
 
         private void button17_Click(object sender, EventArgs e)
         {
@@ -1490,6 +1490,9 @@ namespace PrototypeSAD
         public void ViewCaseAttendance()
         {
             string[] attendees = new string[100];
+            int evYear = int.Parse(DateTime.Now.ToString("yyyy"));
+            int evmonth = int.Parse(DateTime.Now.ToString("MM"));
+            int evday = int.Parse(DateTime.Now.ToString("dd"));
             try
             {
 
@@ -1505,8 +1508,11 @@ namespace PrototypeSAD
                     for (int i = 0; i < dt.Rows.Count; i++)
                     {
                         attendees[i] = dt.Rows[i]["attendee"].ToString();
-                        ListViewItem itm = new ListViewItem(attendees[i]);
-                        listView2.Items.Add(itm);
+                        if (checkIf2Events(attendees[i], evmonth, evday, evYear))
+                        {
+                            ListViewItem itm = new ListViewItem(attendees[i]);
+                            listView2.Items.Add(itm);
+                        }
                     }
 
                 }
@@ -1520,6 +1526,37 @@ namespace PrototypeSAD
                 conn.Close();
             }
             
+        }
+
+        public bool checkIf2Events(string attend, int month, int day, int year)
+        {
+            bool real = true;
+            try
+            {
+                //conn.Open();
+
+                MySqlCommand comm = new MySqlCommand("SELECT * FROM attendance JOIN event ON attendance.eventID = event.eventID WHERE attendance.status = 'Present' AND attendee = '" + attend + "' AND (evMonth = '" + month +"' AND evDay = '"+ day +"' AND evYear = '"+ year +"')", conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+                //MessageBox.Show("" + dt.Rows.Count);
+                if (dt.Rows.Count >= 1)
+                {
+                    real = false;
+                    MessageBox.Show("Meron");
+                } else {
+
+                    real = true;
+                    MessageBox.Show("wala");
+                }
+
+            }
+            catch(Exception ee)
+            {
+                MessageBox.Show("Nah!" + ee);
+                conn.Close();
+            }
+            return real;
         }
     }
 }
