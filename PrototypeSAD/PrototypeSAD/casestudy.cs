@@ -256,28 +256,7 @@ namespace PrototypeSAD
             btnAdd.BackColor = Color.Gray;
         }
 
-        private void btnaddcase_Click(object sender, EventArgs e)
-        {
-            string name = txtname.Text, status = cbxstatus.Text, address = txtaddress.Text, lvl = txtlvl.Text, school = txtschool.Text, blood = cbxblood.Text, type = cbxtype.Text;
-            int height = int.Parse(txtheight.Text), weight = int.Parse(txtweight.Text);
-
-            try
-            {
-                conn.Open();
-                MySqlCommand comm = new MySqlCommand("INSERT INTO casestudyprofile(name, birthdate, status, address, edtype, edlvl, school, blood_type, height, weight) VALUES('" + name + "','" + dt2.Value.Date.ToString("yyyyMMdd") + "','" + status + "','" + address + "','" + type + "','" + lvl + "','" + school + "','" + blood + "','" + height + "','" + weight + "')", conn);
-                comm.ExecuteNonQuery();
-
-                MessageBox.Show("QUERY INSERTED HAR HAR!!");
-
-                conn.Close();
-
-            }
-            catch (Exception ee)
-            {
-                MessageBox.Show("" + ee);
-                conn.Close();
-            }
-        }
+        
 
         private void dtgcs_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -314,6 +293,29 @@ namespace PrototypeSAD
 
 
 
+            catch (Exception ee)
+            {
+                MessageBox.Show("" + ee);
+                conn.Close();
+            }
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            string name = txtname.Text, status = cbxstatus.Text, address = txtaddress.Text, lvl = txtlvl.Text, school = txtschool.Text, blood = cbxblood.Text, type = cbxtype.Text;
+            int height = int.Parse(txtheight.Text), weight = int.Parse(txtweight.Text);
+
+            try
+            {
+                conn.Open();
+                MySqlCommand comm = new MySqlCommand("INSERT INTO casestudyprofile(name, birthdate, status, address, edtype, edlvl, school, blood_type, height, weight) VALUES('" + name + "','" + dt2.Value.Date.ToString("yyyyMMdd") + "','" + status + "','" + address + "','" + type + "','" + lvl + "','" + school + "','" + blood + "','" + height + "','" + weight + "')", conn);
+                comm.ExecuteNonQuery();
+
+                MessageBox.Show("QUERY INSERTED HAR HAR!!");
+
+                conn.Close();
+
+            }
             catch (Exception ee)
             {
                 MessageBox.Show("" + ee);

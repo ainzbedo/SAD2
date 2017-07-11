@@ -83,7 +83,7 @@
             this.cbxblood = new System.Windows.Forms.ComboBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.txtaddress = new System.Windows.Forms.RichTextBox();
-            this.button18 = new System.Windows.Forms.Button();
+            this.btnaddcase = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.label75 = new System.Windows.Forms.Label();
             this.label76 = new System.Windows.Forms.Label();
@@ -1003,7 +1003,7 @@
             this.third.Controls.Add(this.cbxblood);
             this.third.Controls.Add(this.pictureBox6);
             this.third.Controls.Add(this.txtaddress);
-            this.third.Controls.Add(this.button18);
+            this.third.Controls.Add(this.btnaddcase);
             this.third.Controls.Add(this.button19);
             this.third.Controls.Add(this.label75);
             this.third.Controls.Add(this.label76);
@@ -1084,19 +1084,20 @@
             this.txtaddress.TabIndex = 66;
             this.txtaddress.Text = "";
             // 
-            // button18
+            // btnaddcase
             // 
-            this.button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.button18.FlatAppearance.BorderSize = 0;
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button18.ForeColor = System.Drawing.Color.White;
-            this.button18.Location = new System.Drawing.Point(103, 478);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(196, 28);
-            this.button18.TabIndex = 64;
-            this.button18.Text = "add case study";
-            this.button18.UseVisualStyleBackColor = false;
+            this.btnaddcase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btnaddcase.FlatAppearance.BorderSize = 0;
+            this.btnaddcase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnaddcase.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnaddcase.ForeColor = System.Drawing.Color.White;
+            this.btnaddcase.Location = new System.Drawing.Point(103, 478);
+            this.btnaddcase.Name = "btnaddcase";
+            this.btnaddcase.Size = new System.Drawing.Size(196, 28);
+            this.btnaddcase.TabIndex = 64;
+            this.btnaddcase.Text = "add case study";
+            this.btnaddcase.UseVisualStyleBackColor = false;
+            this.btnaddcase.Click += new System.EventHandler(this.button18_Click);
             // 
             // button19
             // 
@@ -4168,7 +4169,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.RichTextBox txtaddress;
         private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button btnaddcase;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Label label75;
         private System.Windows.Forms.Label label76;
