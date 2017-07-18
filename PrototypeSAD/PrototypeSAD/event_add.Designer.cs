@@ -118,11 +118,12 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.label40 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button19 = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button22 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.reqBy = new System.Windows.Forms.TextBox();
@@ -130,13 +131,12 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.button21 = new System.Windows.Forms.Button();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.eventVenue = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
@@ -145,9 +145,6 @@
             this.eventName = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -338,7 +335,7 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
-            this.listView1.Font = new System.Drawing.Font("Keep Calm Med", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.ForeColor = System.Drawing.Color.Black;
             this.listView1.FullRowSelect = true;
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
@@ -1136,7 +1133,6 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.button19);
             this.tabPage3.Controls.Add(this.panel8);
             this.tabPage3.Controls.Add(this.button9);
             this.tabPage3.Controls.Add(this.panel10);
@@ -1152,21 +1148,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // button19
-            // 
-            this.button19.BackColor = System.Drawing.Color.Gray;
-            this.button19.FlatAppearance.BorderSize = 0;
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button19.ForeColor = System.Drawing.Color.White;
-            this.button19.Location = new System.Drawing.Point(594, 515);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(90, 23);
-            this.button19.TabIndex = 16;
-            this.button19.Text = "Clear";
-            this.button19.UseVisualStyleBackColor = false;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // panel8
             // 
@@ -1213,6 +1194,25 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(267, 134);
             this.panel10.TabIndex = 5;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(15, 86);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "label8";
+            // 
+            // button22
+            // 
+            this.button22.Location = new System.Drawing.Point(16, 47);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(130, 23);
+            this.button22.TabIndex = 18;
+            this.button22.Text = "SET DATE AND TIME";
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // checkBox1
             // 
@@ -1281,9 +1281,7 @@
             this.panel9.Controls.Add(this.checkBox2);
             this.panel9.Controls.Add(this.eventVenue);
             this.panel9.Controls.Add(this.label29);
-            this.panel9.Controls.Add(this.dateTimePicker1);
             this.panel9.Controls.Add(this.label20);
-            this.panel9.Controls.Add(this.label19);
             this.panel9.Controls.Add(this.label18);
             this.panel9.Controls.Add(this.label17);
             this.panel9.Controls.Add(this.button8);
@@ -1295,9 +1293,18 @@
             this.panel9.Size = new System.Drawing.Size(798, 232);
             this.panel9.TabIndex = 3;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(424, 165);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "label5";
+            // 
             // button21
             // 
-            this.button21.Location = new System.Drawing.Point(576, 142);
+            this.button21.Location = new System.Drawing.Point(279, 160);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(130, 23);
             this.button21.TabIndex = 17;
@@ -1335,34 +1342,16 @@
             this.label29.TabIndex = 13;
             this.label29.Text = "Event Venue";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(17, 160);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 12;
-            // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label20.Location = new System.Drawing.Point(300, 148);
+            this.label20.Location = new System.Drawing.Point(14, 147);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(66, 12);
             this.label20.TabIndex = 7;
             this.label20.Text = "Event Type";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label19.Location = new System.Drawing.Point(14, 145);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(65, 12);
-            this.label19.TabIndex = 7;
-            this.label19.Text = "Event Date";
             // 
             // label18
             // 
@@ -1407,7 +1396,7 @@
             this.eventType.Items.AddRange(new object[] {
             "",
             "Spiritual Mass"});
-            this.eventType.Location = new System.Drawing.Point(303, 163);
+            this.eventType.Location = new System.Drawing.Point(17, 162);
             this.eventType.Name = "eventType";
             this.eventType.Size = new System.Drawing.Size(200, 21);
             this.eventType.TabIndex = 4;
@@ -1451,34 +1440,6 @@
             this.button5.TabIndex = 6;
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // button22
-            // 
-            this.button22.Location = new System.Drawing.Point(16, 47);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(130, 23);
-            this.button22.TabIndex = 18;
-            this.button22.Text = "SET DATE AND TIME";
-            this.button22.UseVisualStyleBackColor = true;
-            this.button22.Click += new System.EventHandler(this.button22_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(576, 170);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "label5";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(15, 86);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "label8";
-            // 
             // event_add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1487,8 +1448,8 @@
             this.ControlBox = false;
             this.Controls.Add(this.button5);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "event_add";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1609,9 +1570,7 @@
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.TextBox eventVenue;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button button8;
@@ -1645,7 +1604,6 @@
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.Label label7;
