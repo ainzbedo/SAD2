@@ -146,3 +146,6 @@ C:\Users\cocdejesus\Desktop\CASE PROTO\PrototypeSAD\PrototypeSAD\obj\Debug\Proto
 C:\Users\cocdejesus\Desktop\CASE PROTO\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.Member.resources
 C:\Users\cocdejesus\Desktop\CASE PROTO\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.Properties.Resources.resources
 C:\Users\cocdejesus\Desktop\CASE PROTO\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.csproj.GenerateResource.Cache
+D:\CASE PROTO\PrototypeSAD\PrototypeSAD\bin\Debug\PrototypeSAD.exe.config
+D:\CASE PROTO\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.exe
+D:\CASE PROTO\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.pdb

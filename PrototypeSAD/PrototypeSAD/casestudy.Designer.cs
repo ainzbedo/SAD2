@@ -79,34 +79,20 @@
             this.label112 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.third = new System.Windows.Forms.TabPage();
-            this.dt2 = new System.Windows.Forms.DateTimePicker();
-            this.cbxblood = new System.Windows.Forms.ComboBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.txtfname = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.dtbirth = new System.Windows.Forms.DateTimePicker();
+            this.pbox1 = new System.Windows.Forms.PictureBox();
             this.txtaddress = new System.Windows.Forms.RichTextBox();
             this.btnaddcase = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.label75 = new System.Windows.Forms.Label();
-            this.label76 = new System.Windows.Forms.Label();
-            this.txtweight = new System.Windows.Forms.TextBox();
-            this.label77 = new System.Windows.Forms.Label();
-            this.txtheight = new System.Windows.Forms.TextBox();
-            this.label78 = new System.Windows.Forms.Label();
-            this.label79 = new System.Windows.Forms.Label();
-            this.label80 = new System.Windows.Forms.Label();
-            this.txtschool = new System.Windows.Forms.RichTextBox();
-            this.label81 = new System.Windows.Forms.Label();
-            this.cbxtype = new System.Windows.Forms.ComboBox();
-            this.txtlvl = new System.Windows.Forms.TextBox();
-            this.label82 = new System.Windows.Forms.Label();
-            this.label83 = new System.Windows.Forms.Label();
-            this.label84 = new System.Windows.Forms.Label();
+            this.btncancel = new System.Windows.Forms.Button();
             this.label85 = new System.Windows.Forms.Label();
             this.label86 = new System.Windows.Forms.Label();
             this.cbxstatus = new System.Windows.Forms.ComboBox();
-            this.txtname = new System.Windows.Forms.TextBox();
+            this.txtlname = new System.Windows.Forms.TextBox();
             this.label87 = new System.Windows.Forms.Label();
             this.label88 = new System.Windows.Forms.Label();
-            this.label89 = new System.Windows.Forms.Label();
             this.panel21 = new System.Windows.Forms.Panel();
             this.button17 = new System.Windows.Forms.Button();
             this.fourth = new System.Windows.Forms.TabPage();
@@ -235,7 +221,7 @@
             this.label97 = new System.Windows.Forms.Label();
             this.label98 = new System.Windows.Forms.Label();
             this.panel26 = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
+            this.btnfover = new System.Windows.Forms.Button();
             this.label74 = new System.Windows.Forms.Label();
             this.label90 = new System.Windows.Forms.Label();
             this.label91 = new System.Windows.Forms.Label();
@@ -262,7 +248,6 @@
             this.label59 = new System.Windows.Forms.Label();
             this.lblblood = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.label57 = new System.Windows.Forms.Label();
             this.panel20 = new System.Windows.Forms.Panel();
             this.label54 = new System.Windows.Forms.Label();
@@ -320,6 +305,13 @@
             this.button52 = new System.Windows.Forms.Button();
             this.btnSearch2 = new System.Windows.Forms.Button();
             this.btnCaseStudy2 = new System.Windows.Forms.Button();
+            this.txtage = new System.Windows.Forms.TextBox();
+            this.label89 = new System.Windows.Forms.Label();
+            this.dtjoin = new System.Windows.Forms.DateTimePicker();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.cbxprogram = new System.Windows.Forms.ComboBox();
+            this.opimage1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             this.pan_RES.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -331,7 +323,8 @@
             this.second.SuspendLayout();
             this.panel37.SuspendLayout();
             this.third.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox1)).BeginInit();
+            this.panel21.SuspendLayout();
             this.fourth.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel9.SuspendLayout();
@@ -999,34 +992,25 @@
             // 
             // third
             // 
-            this.third.Controls.Add(this.dt2);
-            this.third.Controls.Add(this.cbxblood);
-            this.third.Controls.Add(this.pictureBox6);
+            this.third.Controls.Add(this.label56);
+            this.third.Controls.Add(this.cbxprogram);
+            this.third.Controls.Add(this.dtjoin);
+            this.third.Controls.Add(this.label50);
+            this.third.Controls.Add(this.txtage);
+            this.third.Controls.Add(this.label44);
+            this.third.Controls.Add(this.txtfname);
+            this.third.Controls.Add(this.label41);
+            this.third.Controls.Add(this.dtbirth);
+            this.third.Controls.Add(this.pbox1);
             this.third.Controls.Add(this.txtaddress);
             this.third.Controls.Add(this.btnaddcase);
-            this.third.Controls.Add(this.button19);
-            this.third.Controls.Add(this.label75);
-            this.third.Controls.Add(this.label76);
-            this.third.Controls.Add(this.txtweight);
-            this.third.Controls.Add(this.label77);
-            this.third.Controls.Add(this.txtheight);
-            this.third.Controls.Add(this.label78);
-            this.third.Controls.Add(this.label79);
-            this.third.Controls.Add(this.label80);
-            this.third.Controls.Add(this.txtschool);
-            this.third.Controls.Add(this.label81);
-            this.third.Controls.Add(this.cbxtype);
-            this.third.Controls.Add(this.txtlvl);
-            this.third.Controls.Add(this.label82);
-            this.third.Controls.Add(this.label83);
-            this.third.Controls.Add(this.label84);
+            this.third.Controls.Add(this.btncancel);
             this.third.Controls.Add(this.label85);
             this.third.Controls.Add(this.label86);
             this.third.Controls.Add(this.cbxstatus);
-            this.third.Controls.Add(this.txtname);
+            this.third.Controls.Add(this.txtlname);
             this.third.Controls.Add(this.label87);
             this.third.Controls.Add(this.label88);
-            this.third.Controls.Add(this.label89);
             this.third.Controls.Add(this.panel21);
             this.third.Controls.Add(this.button17);
             this.third.Location = new System.Drawing.Point(4, 22);
@@ -1037,48 +1021,60 @@
             this.third.Text = "3";
             this.third.UseVisualStyleBackColor = true;
             // 
-            // dt2
+            // label44
             // 
-            this.dt2.Location = new System.Drawing.Point(103, 189);
-            this.dt2.Name = "dt2";
-            this.dt2.Size = new System.Drawing.Size(395, 20);
-            this.dt2.TabIndex = 69;
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label44.Location = new System.Drawing.Point(325, 163);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(40, 18);
+            this.label44.TabIndex = 73;
+            this.label44.Text = "Age";
             // 
-            // cbxblood
+            // txtfname
             // 
-            this.cbxblood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cbxblood.CausesValidation = false;
-            this.cbxblood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxblood.FormattingEnabled = true;
-            this.cbxblood.Items.AddRange(new object[] {
-            "A+",
-            "A-",
-            "B+",
-            "B-",
-            "AB+",
-            "AB-",
-            "O+",
-            "O-"});
-            this.cbxblood.Location = new System.Drawing.Point(404, 342);
-            this.cbxblood.Name = "cbxblood";
-            this.cbxblood.Size = new System.Drawing.Size(64, 21);
-            this.cbxblood.TabIndex = 68;
+            this.txtfname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtfname.Location = new System.Drawing.Point(114, 202);
+            this.txtfname.Name = "txtfname";
+            this.txtfname.Size = new System.Drawing.Size(199, 20);
+            this.txtfname.TabIndex = 71;
             // 
-            // pictureBox6
+            // label41
             // 
-            this.pictureBox6.BackColor = System.Drawing.Color.White;
-            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox6.Location = new System.Drawing.Point(190, 12);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(123, 123);
-            this.pictureBox6.TabIndex = 38;
-            this.pictureBox6.TabStop = false;
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label41.Location = new System.Drawing.Point(15, 201);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(94, 18);
+            this.label41.TabIndex = 70;
+            this.label41.Text = "First Name";
+            // 
+            // dtbirth
+            // 
+            this.dtbirth.Location = new System.Drawing.Point(114, 231);
+            this.dtbirth.Name = "dtbirth";
+            this.dtbirth.Size = new System.Drawing.Size(190, 20);
+            this.dtbirth.TabIndex = 69;
+            // 
+            // pbox1
+            // 
+            this.pbox1.BackColor = System.Drawing.Color.White;
+            this.pbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbox1.Location = new System.Drawing.Point(190, 12);
+            this.pbox1.Name = "pbox1";
+            this.pbox1.Size = new System.Drawing.Size(123, 123);
+            this.pbox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbox1.TabIndex = 38;
+            this.pbox1.TabStop = false;
+            this.pbox1.Click += new System.EventHandler(this.pbox1_Click);
             // 
             // txtaddress
             // 
             this.txtaddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtaddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtaddress.Location = new System.Drawing.Point(103, 243);
+            this.txtaddress.Location = new System.Drawing.Point(114, 298);
             this.txtaddress.Name = "txtaddress";
             this.txtaddress.Size = new System.Drawing.Size(395, 56);
             this.txtaddress.TabIndex = 66;
@@ -1091,195 +1087,35 @@
             this.btnaddcase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnaddcase.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnaddcase.ForeColor = System.Drawing.Color.White;
-            this.btnaddcase.Location = new System.Drawing.Point(103, 478);
+            this.btnaddcase.Location = new System.Drawing.Point(27, 478);
             this.btnaddcase.Name = "btnaddcase";
             this.btnaddcase.Size = new System.Drawing.Size(196, 28);
             this.btnaddcase.TabIndex = 64;
-            this.btnaddcase.Text = "add case study";
+            this.btnaddcase.Text = "Add Profile";
             this.btnaddcase.UseVisualStyleBackColor = false;
             this.btnaddcase.Click += new System.EventHandler(this.button18_Click);
             // 
-            // button19
+            // btncancel
             // 
-            this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.button19.FlatAppearance.BorderSize = 0;
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button19.ForeColor = System.Drawing.Color.White;
-            this.button19.Location = new System.Drawing.Point(302, 478);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(196, 28);
-            this.button19.TabIndex = 63;
-            this.button19.Text = "cancel";
-            this.button19.UseVisualStyleBackColor = false;
-            // 
-            // label75
-            // 
-            this.label75.AutoSize = true;
-            this.label75.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label75.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label75.Location = new System.Drawing.Point(469, 400);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(29, 14);
-            this.label75.TabIndex = 62;
-            this.label75.Text = "lbs.";
-            // 
-            // label76
-            // 
-            this.label76.AutoSize = true;
-            this.label76.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label76.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label76.Location = new System.Drawing.Point(469, 375);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(32, 14);
-            this.label76.TabIndex = 61;
-            this.label76.Text = "ft. in";
-            // 
-            // txtweight
-            // 
-            this.txtweight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtweight.Location = new System.Drawing.Point(404, 394);
-            this.txtweight.Name = "txtweight";
-            this.txtweight.Size = new System.Drawing.Size(64, 20);
-            this.txtweight.TabIndex = 60;
-            // 
-            // label77
-            // 
-            this.label77.AutoSize = true;
-            this.label77.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label77.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label77.Location = new System.Drawing.Point(299, 396);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(63, 18);
-            this.label77.TabIndex = 59;
-            this.label77.Text = "Weight";
-            // 
-            // txtheight
-            // 
-            this.txtheight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtheight.Location = new System.Drawing.Point(404, 369);
-            this.txtheight.Name = "txtheight";
-            this.txtheight.Size = new System.Drawing.Size(64, 20);
-            this.txtheight.TabIndex = 58;
-            // 
-            // label78
-            // 
-            this.label78.AutoSize = true;
-            this.label78.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label78.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label78.Location = new System.Drawing.Point(299, 371);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(60, 18);
-            this.label78.TabIndex = 57;
-            this.label78.Text = "Height";
-            // 
-            // label79
-            // 
-            this.label79.AutoSize = true;
-            this.label79.BackColor = System.Drawing.Color.Transparent;
-            this.label79.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label79.ForeColor = System.Drawing.Color.Black;
-            this.label79.Location = new System.Drawing.Point(353, 315);
-            this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(73, 24);
-            this.label79.TabIndex = 55;
-            this.label79.Text = "Health";
-            // 
-            // label80
-            // 
-            this.label80.AutoSize = true;
-            this.label80.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label80.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label80.Location = new System.Drawing.Point(299, 347);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(97, 18);
-            this.label80.TabIndex = 54;
-            this.label80.Text = "Blood Type";
-            // 
-            // txtschool
-            // 
-            this.txtschool.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtschool.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtschool.Location = new System.Drawing.Point(103, 400);
-            this.txtschool.Name = "txtschool";
-            this.txtschool.Size = new System.Drawing.Size(174, 59);
-            this.txtschool.TabIndex = 53;
-            this.txtschool.Text = "";
-            // 
-            // label81
-            // 
-            this.label81.AutoSize = true;
-            this.label81.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label81.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label81.Location = new System.Drawing.Point(15, 396);
-            this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(63, 18);
-            this.label81.TabIndex = 52;
-            this.label81.Text = "School";
-            // 
-            // cbxtype
-            // 
-            this.cbxtype.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cbxtype.CausesValidation = false;
-            this.cbxtype.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxtype.FormattingEnabled = true;
-            this.cbxtype.Items.AddRange(new object[] {
-            "",
-            "Formal",
-            "Non-formal"});
-            this.cbxtype.Location = new System.Drawing.Point(103, 342);
-            this.cbxtype.Name = "cbxtype";
-            this.cbxtype.Size = new System.Drawing.Size(174, 21);
-            this.cbxtype.TabIndex = 51;
-            // 
-            // txtlvl
-            // 
-            this.txtlvl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtlvl.Location = new System.Drawing.Point(103, 369);
-            this.txtlvl.Name = "txtlvl";
-            this.txtlvl.Size = new System.Drawing.Size(174, 20);
-            this.txtlvl.TabIndex = 50;
-            // 
-            // label82
-            // 
-            this.label82.AutoSize = true;
-            this.label82.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label82.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label82.Location = new System.Drawing.Point(15, 371);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(51, 18);
-            this.label82.TabIndex = 48;
-            this.label82.Text = "Level";
-            // 
-            // label83
-            // 
-            this.label83.AutoSize = true;
-            this.label83.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label83.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label83.Location = new System.Drawing.Point(15, 347);
-            this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(47, 18);
-            this.label83.TabIndex = 49;
-            this.label83.Text = "Type";
-            // 
-            // label84
-            // 
-            this.label84.AutoSize = true;
-            this.label84.BackColor = System.Drawing.Color.Transparent;
-            this.label84.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label84.ForeColor = System.Drawing.Color.Black;
-            this.label84.Location = new System.Drawing.Point(132, 315);
-            this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(112, 24);
-            this.label84.TabIndex = 47;
-            this.label84.Text = "Education";
+            this.btncancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btncancel.FlatAppearance.BorderSize = 0;
+            this.btncancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncancel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncancel.ForeColor = System.Drawing.Color.White;
+            this.btncancel.Location = new System.Drawing.Point(302, 478);
+            this.btncancel.Name = "btncancel";
+            this.btncancel.Size = new System.Drawing.Size(196, 28);
+            this.btncancel.TabIndex = 63;
+            this.btncancel.Text = "Cancel";
+            this.btncancel.UseVisualStyleBackColor = false;
+            this.btncancel.Click += new System.EventHandler(this.btncancel_Click);
             // 
             // label85
             // 
             this.label85.AutoSize = true;
             this.label85.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label85.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label85.Location = new System.Drawing.Point(15, 243);
+            this.label85.Location = new System.Drawing.Point(15, 302);
             this.label85.Name = "label85";
             this.label85.Size = new System.Drawing.Size(75, 18);
             this.label85.TabIndex = 46;
@@ -1290,7 +1126,7 @@
             this.label86.AutoSize = true;
             this.label86.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label86.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label86.Location = new System.Drawing.Point(15, 218);
+            this.label86.Location = new System.Drawing.Point(15, 260);
             this.label86.Name = "label86";
             this.label86.Size = new System.Drawing.Size(60, 18);
             this.label86.TabIndex = 45;
@@ -1300,33 +1136,33 @@
             // 
             this.cbxstatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cbxstatus.CausesValidation = false;
+            this.cbxstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxstatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxstatus.FormattingEnabled = true;
             this.cbxstatus.Items.AddRange(new object[] {
-            "",
             "Parented",
             "Paternal Orphan",
             "Maternal Orphan",
             "Full Orphan"});
-            this.cbxstatus.Location = new System.Drawing.Point(103, 215);
+            this.cbxstatus.Location = new System.Drawing.Point(114, 257);
             this.cbxstatus.Name = "cbxstatus";
-            this.cbxstatus.Size = new System.Drawing.Size(395, 21);
+            this.cbxstatus.Size = new System.Drawing.Size(188, 21);
             this.cbxstatus.TabIndex = 44;
             // 
-            // txtname
+            // txtlname
             // 
-            this.txtname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtname.Location = new System.Drawing.Point(103, 167);
-            this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(395, 20);
-            this.txtname.TabIndex = 42;
+            this.txtlname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtlname.Location = new System.Drawing.Point(114, 163);
+            this.txtlname.Name = "txtlname";
+            this.txtlname.Size = new System.Drawing.Size(199, 20);
+            this.txtlname.TabIndex = 42;
             // 
             // label87
             // 
             this.label87.AutoSize = true;
             this.label87.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label87.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label87.Location = new System.Drawing.Point(15, 193);
+            this.label87.Location = new System.Drawing.Point(15, 233);
             this.label87.Name = "label87";
             this.label87.Size = new System.Drawing.Size(83, 18);
             this.label87.TabIndex = 41;
@@ -1337,27 +1173,16 @@
             this.label88.AutoSize = true;
             this.label88.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label88.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label88.Location = new System.Drawing.Point(15, 169);
+            this.label88.Location = new System.Drawing.Point(15, 162);
             this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(54, 18);
+            this.label88.Size = new System.Drawing.Size(93, 18);
             this.label88.TabIndex = 40;
-            this.label88.Text = "Name";
-            // 
-            // label89
-            // 
-            this.label89.AutoSize = true;
-            this.label89.BackColor = System.Drawing.Color.Transparent;
-            this.label89.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label89.ForeColor = System.Drawing.Color.Black;
-            this.label89.Location = new System.Drawing.Point(159, 137);
-            this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(187, 24);
-            this.label89.TabIndex = 39;
-            this.label89.Text = "Basic Information";
+            this.label88.Text = "Last Name";
             // 
             // panel21
             // 
             this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.panel21.Controls.Add(this.label89);
             this.panel21.Location = new System.Drawing.Point(0, -1);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(519, 97);
@@ -2820,7 +2645,7 @@
             // 
             this.panel26.BackColor = System.Drawing.Color.White;
             this.panel26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel26.Controls.Add(this.button11);
+            this.panel26.Controls.Add(this.btnfover);
             this.panel26.Controls.Add(this.label74);
             this.panel26.Controls.Add(this.label90);
             this.panel26.Controls.Add(this.label91);
@@ -2830,19 +2655,20 @@
             this.panel26.Size = new System.Drawing.Size(226, 72);
             this.panel26.TabIndex = 25;
             // 
-            // button11
+            // btnfover
             // 
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(110, 42);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(109, 25);
-            this.button11.TabIndex = 35;
-            this.button11.Text = "family overview";
-            this.button11.UseVisualStyleBackColor = false;
+            this.btnfover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btnfover.FlatAppearance.BorderSize = 0;
+            this.btnfover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnfover.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnfover.ForeColor = System.Drawing.Color.White;
+            this.btnfover.Location = new System.Drawing.Point(110, 42);
+            this.btnfover.Name = "btnfover";
+            this.btnfover.Size = new System.Drawing.Size(109, 25);
+            this.btnfover.TabIndex = 35;
+            this.btnfover.Text = "family overview";
+            this.btnfover.UseVisualStyleBackColor = false;
+            this.btnfover.Click += new System.EventHandler(this.button11_Click);
             // 
             // label74
             // 
@@ -3062,7 +2888,6 @@
             this.panel23.Controls.Add(this.label59);
             this.panel23.Controls.Add(this.lblblood);
             this.panel23.Controls.Add(this.button9);
-            this.panel23.Controls.Add(this.button8);
             this.panel23.Controls.Add(this.label57);
             this.panel23.Location = new System.Drawing.Point(320, 157);
             this.panel23.Name = "panel23";
@@ -3157,26 +2982,12 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(94, 99);
+            this.button9.Location = new System.Drawing.Point(62, 96);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(88, 25);
             this.button9.TabIndex = 29;
             this.button9.Text = "records";
             this.button9.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(3, 99);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(88, 25);
-            this.button8.TabIndex = 28;
-            this.button8.Text = "allergies";
-            this.button8.UseVisualStyleBackColor = false;
             // 
             // label57
             // 
@@ -3949,6 +3760,74 @@
             this.btnCaseStudy2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCaseStudy2.UseVisualStyleBackColor = false;
             // 
+            // txtage
+            // 
+            this.txtage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtage.Location = new System.Drawing.Point(390, 160);
+            this.txtage.Name = "txtage";
+            this.txtage.Size = new System.Drawing.Size(123, 20);
+            this.txtage.TabIndex = 74;
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.BackColor = System.Drawing.Color.Transparent;
+            this.label89.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label89.ForeColor = System.Drawing.Color.Black;
+            this.label89.Location = new System.Drawing.Point(16, 22);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(121, 24);
+            this.label89.TabIndex = 39;
+            this.label89.Text = "New Profile";
+            // 
+            // dtjoin
+            // 
+            this.dtjoin.Location = new System.Drawing.Point(390, 202);
+            this.dtjoin.Name = "dtjoin";
+            this.dtjoin.Size = new System.Drawing.Size(123, 20);
+            this.dtjoin.TabIndex = 76;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label50.Location = new System.Drawing.Point(323, 190);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(61, 36);
+            this.label50.TabIndex = 75;
+            this.label50.Text = "Date \r\nJoined";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label56.Location = new System.Drawing.Point(308, 257);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(77, 18);
+            this.label56.TabIndex = 78;
+            this.label56.Text = "Program";
+            // 
+            // cbxprogram
+            // 
+            this.cbxprogram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbxprogram.CausesValidation = false;
+            this.cbxprogram.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxprogram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxprogram.FormattingEnabled = true;
+            this.cbxprogram.Items.AddRange(new object[] {
+            "Drop-In",
+            "Residential"});
+            this.cbxprogram.Location = new System.Drawing.Point(386, 257);
+            this.cbxprogram.Name = "cbxprogram";
+            this.cbxprogram.Size = new System.Drawing.Size(123, 21);
+            this.cbxprogram.TabIndex = 77;
+            // 
+            // opimage1
+            // 
+            this.opimage1.FileName = "openFileDialog1";
+            // 
             // casestudy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3982,7 +3861,9 @@
             this.panel37.PerformLayout();
             this.third.ResumeLayout(false);
             this.third.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox1)).EndInit();
+            this.panel21.ResumeLayout(false);
+            this.panel21.PerformLayout();
             this.fourth.ResumeLayout(false);
             this.fourth.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -4170,30 +4051,14 @@
         private System.Windows.Forms.RichTextBox txtaddress;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button btnaddcase;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Label label75;
-        private System.Windows.Forms.Label label76;
-        private System.Windows.Forms.TextBox txtweight;
-        private System.Windows.Forms.Label label77;
-        private System.Windows.Forms.TextBox txtheight;
-        private System.Windows.Forms.Label label78;
-        private System.Windows.Forms.Label label79;
-        private System.Windows.Forms.Label label80;
-        private System.Windows.Forms.RichTextBox txtschool;
-        private System.Windows.Forms.Label label81;
-        private System.Windows.Forms.ComboBox cbxtype;
-        private System.Windows.Forms.TextBox txtlvl;
-        private System.Windows.Forms.Label label82;
-        private System.Windows.Forms.Label label83;
-        private System.Windows.Forms.Label label84;
+        private System.Windows.Forms.Button btncancel;
         private System.Windows.Forms.Label label85;
         private System.Windows.Forms.Label label86;
         private System.Windows.Forms.ComboBox cbxstatus;
-        private System.Windows.Forms.TextBox txtname;
+        private System.Windows.Forms.TextBox txtlname;
         private System.Windows.Forms.Label label87;
         private System.Windows.Forms.Label label88;
-        private System.Windows.Forms.Label label89;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pbox1;
         private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnAddMem;
@@ -4230,7 +4095,6 @@
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label lblblood;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label lblheight;
@@ -4254,7 +4118,7 @@
         private System.Windows.Forms.Label label94;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Panel panel26;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btnfover;
         private System.Windows.Forms.Label label74;
         private System.Windows.Forms.Label label90;
         private System.Windows.Forms.Label label91;
@@ -4351,7 +4215,16 @@
         private System.Windows.Forms.Button btnCaseStudy2;
         private System.Windows.Forms.Button btnAddRes;
         private System.Windows.Forms.DataGridView dtgcs;
-        private System.Windows.Forms.ComboBox cbxblood;
-        private System.Windows.Forms.DateTimePicker dt2;
+        private System.Windows.Forms.DateTimePicker dtbirth;
+        private System.Windows.Forms.TextBox txtfname;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.TextBox txtage;
+        private System.Windows.Forms.Label label89;
+        private System.Windows.Forms.DateTimePicker dtjoin;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.ComboBox cbxprogram;
+        private System.Windows.Forms.OpenFileDialog opimage1;
     }
 }

@@ -137,7 +137,7 @@ namespace PrototypeSAD
             {
                 conn.Open();
 
-                MySqlCommand comm = new MySqlCommand("SELECT id, name FROM casestudyprofile", conn);
+                MySqlCommand comm = new MySqlCommand("SELECT id, lastname, firstname FROM casestudyprofile", conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                 DataTable dt = new DataTable();
 
@@ -268,7 +268,7 @@ namespace PrototypeSAD
             {
                 conn.Open();
 
-                MySqlCommand comm = new MySqlCommand("SELECT name, birthdate, status, edtype, edlvl, blood_type, height, weight FROM casestudyprofile WHERE id = " + id, conn);
+                MySqlCommand comm = new MySqlCommand("SELECT lastname, firstname", conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                 DataTable dt = new DataTable();
 
@@ -277,14 +277,8 @@ namespace PrototypeSAD
                 if (dt.Rows.Count > 0)
                 {
 
-                    lblname.Text = dt.Rows[0]["name"].ToString();
-                    lblstatus.Text = dt.Rows[0]["status"].ToString();
-                    lbldate.Text = Convert.ToDateTime(dt.Rows[0]["birthdate"].ToString()).ToString("mm/dd/yyy");
-                    lblblood.Text = dt.Rows[0]["blood_type"].ToString();
-                    lblheight.Text = dt.Rows[0]["height"].ToString();
-                    lblweight.Text = dt.Rows[0]["weight"].ToString();
-                    lbledtype.Text = dt.Rows[0]["edtype"].ToString();
-                    lbledlvl.Text = dt.Rows[0]["edlvl"].ToString();
+                    lblname.Text = dt.Rows[0]["lastname"].ToString() + " " + dt.Rows[0]["firstname"].ToString();
+                    
                 }
 
                 conn.Close();
@@ -302,25 +296,88 @@ namespace PrototypeSAD
 
         private void button18_Click(object sender, EventArgs e)
         {
-            string name = txtname.Text, status = cbxstatus.Text, address = txtaddress.Text, lvl = txtlvl.Text, school = txtschool.Text, blood = cbxblood.Text, type = cbxtype.Text;
-            int height = int.Parse(txtheight.Text), weight = int.Parse(txtweight.Text);
+            string lname = txtlname.Text, fname = txtfname.Text, status = cbxstatus.Text, program = cbxprogram.Text, address = txtaddress.Text;
+            int age;
 
-            try
+            if (string.IsNullOrEmpty(txtaddress.Text) || string.IsNullOrEmpty(txtage.Text) || string.IsNullOrEmpty(txtfname.Text) || string.IsNullOrEmpty(txtlname.Text) || string.IsNullOrEmpty(cbxprogram.Text) || string.IsNullOrEmpty(cbxstatus.Text))
             {
-                conn.Open();
-                MySqlCommand comm = new MySqlCommand("INSERT INTO casestudyprofile(name, birthdate, status, address, edtype, edlvl, school, blood_type, height, weight) VALUES('" + name + "','" + dt2.Value.Date.ToString("yyyyMMdd") + "','" + status + "','" + address + "','" + type + "','" + lvl + "','" + school + "','" + blood + "','" + height + "','" + weight + "')", conn);
-                comm.ExecuteNonQuery();
+                MessageBox.Show("Please fill out empty fields.");
+            }
 
-                MessageBox.Show("QUERY INSERTED HAR HAR!!");
+            else
+            {
 
-                conn.Close();
+                if (Int32.TryParse(txtage.Text, out age))
+                {
+                    age = int.Parse(txtage.Text);
+
+                    try
+                    {
+                        conn.Open();
+                        MySqlCommand comm = new MySqlCommand("INSERT INTO casestudyprofile(lastname, firstname, birthdate, status, caseage, program, dateJoined) VALUES('" + lname + "', '" + fname + "', '" + dtbirth.Value.Date.ToString("yyyyMMdd") + "','" + status + "','" + age + "','" + program + "','" + dtjoin.Value.Date.ToString("yyyyMMdd") + "')", conn);
+
+                        comm.ExecuteNonQuery();
+
+
+
+                        conn.Close();
+
+                    }
+                    catch (Exception ee)
+                    {
+                        MessageBox.Show("" + ee);
+                        conn.Close();
+                    }
+                }
+
+                else
+                {
+                    MessageBox.Show("Age input is invalid! Please input a proper input!");
+                }
 
             }
-            catch (Exception ee)
+
+            
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = fourth;
+            resetColor();
+            btnCaseStudy.BackColor = Color.Gray;
+        }
+
+        private void btncancel_Click(object sender, EventArgs e)
+        {
+            pbox1.Image = null;
+
+            txtlname.Clear();
+            txtfname.Clear();
+            txtage.Clear();
+            txtaddress.Clear();
+
+            cbxprogram.SelectedIndex = -1;
+            cbxstatus.SelectedIndex = -1;
+
+            dtbirth.Value = DateTime.Now;
+            dtjoin.Value = DateTime.Now;
+
+            tabControl.SelectedTab = first;
+            resetColor();
+
+        }
+
+        private void pbox1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog rest = new OpenFileDialog();
+
+            rest.Filter = "images| *.JPG; *.PNG; *.GJF"; // you can add any other image type 
+
+            if (rest.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show("" + ee);
-                conn.Close();
+                pbox1.Image = Image.FromFile(rest.FileName);
             }
+
         }
     }
 }
