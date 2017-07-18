@@ -137,7 +137,42 @@ namespace PrototypeSAD
             {
                 conn.Open();
 
-                MySqlCommand comm = new MySqlCommand("SELECT id, lastname, firstname FROM casestudyprofile", conn);
+                MySqlCommand comm = new MySqlCommand("SELECT caseid, lastname, firstname FROM casestudyprofile", conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+
+                adp.Fill(dt);
+
+                dtgcs.DataSource = dt;
+
+                dtgcs.Columns[0].Visible = false;
+
+                conn.Close();
+            }
+
+
+
+
+            catch (Exception ee)
+            {
+                MessageBox.Show("" + ee);
+                conn.Close();
+            }
+
+            tabControl.SelectedTab = first;
+            resetColor();
+            btnCaseStudy.BackColor = Color.Gray;
+
+            btnDropIn.BackColor = Color.Gray;
+        }
+
+        public void refresh()
+        {
+            try
+            {
+                conn.Open();
+
+                MySqlCommand comm = new MySqlCommand("SELECT caseid, lastname, firstname FROM casestudyprofile", conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                 DataTable dt = new DataTable();
 
@@ -318,9 +353,12 @@ namespace PrototypeSAD
 
                         comm.ExecuteNonQuery();
 
-
+                        MessageBox.Show("New Profile Added!");
 
                         conn.Close();
+
+                        tabControl.SelectedTab = first;
+                        refresh();
 
                     }
                     catch (Exception ee)

@@ -166,3 +166,22 @@ C:\Users\red_d\Desktop\Subjects\github2\PrototypeSAD\PrototypeSAD\obj\Debug\Prot
 C:\Users\red_d\Desktop\Subjects\github2\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.Member.resources
 C:\Users\red_d\Desktop\Subjects\github2\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.Properties.Resources.resources
 C:\Users\red_d\Desktop\Subjects\github2\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.csproj.GenerateResource.Cache
+C:\Users\KHUYA\Desktop\CASE PROTO\PrototypeSAD\PrototypeSAD\bin\Debug\PrototypeSAD.exe.config
+C:\Users\KHUYA\Desktop\CASE PROTO\PrototypeSAD\PrototypeSAD\bin\Debug\PrototypeSAD.exe
+C:\Users\KHUYA\Desktop\CASE PROTO\PrototypeSAD\PrototypeSAD\bin\Debug\PrototypeSAD.pdb
+C:\Users\KHUYA\Desktop\CASE PROTO\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.csprojResolveAssemblyReference.cache
+C:\Users\KHUYA\Desktop\CASE PROTO\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.attendee.resources
+C:\Users\KHUYA\Desktop\CASE PROTO\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.casestudy.resources
+C:\Users\KHUYA\Desktop\CASE PROTO\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.DBE.resources
+C:\Users\KHUYA\Desktop\CASE PROTO\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.Confirm.resources
+C:\Users\KHUYA\Desktop\CASE PROTO\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.eventDateDialog.resources
+C:\Users\KHUYA\Desktop\CASE PROTO\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.Success.resources
+C:\Users\KHUYA\Desktop\CASE PROTO\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.Error.resources
+C:\Users\KHUYA\Desktop\CASE PROTO\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.event_add.resources
+C:\Users\KHUYA\Desktop\CASE PROTO\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.Form1.resources
+C:\Users\KHUYA\Desktop\CASE PROTO\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.Form2.resources
+C:\Users\KHUYA\Desktop\CASE PROTO\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.Member.resources
+C:\Users\KHUYA\Desktop\CASE PROTO\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.Properties.Resources.resources
+C:\Users\KHUYA\Desktop\CASE PROTO\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.csproj.GenerateResource.Cache
+C:\Users\KHUYA\Desktop\CASE PROTO\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.exe
+C:\Users\KHUYA\Desktop\CASE PROTO\PrototypeSAD\PrototypeSAD\obj\Debug\PrototypeSAD.pdb

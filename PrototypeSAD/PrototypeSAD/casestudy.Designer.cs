@@ -79,6 +79,11 @@
             this.label112 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.third = new System.Windows.Forms.TabPage();
+            this.label56 = new System.Windows.Forms.Label();
+            this.cbxprogram = new System.Windows.Forms.ComboBox();
+            this.dtjoin = new System.Windows.Forms.DateTimePicker();
+            this.label50 = new System.Windows.Forms.Label();
+            this.txtage = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
             this.txtfname = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
@@ -94,6 +99,7 @@
             this.label87 = new System.Windows.Forms.Label();
             this.label88 = new System.Windows.Forms.Label();
             this.panel21 = new System.Windows.Forms.Panel();
+            this.label89 = new System.Windows.Forms.Label();
             this.button17 = new System.Windows.Forms.Button();
             this.fourth = new System.Windows.Forms.TabPage();
             this.btnAddMem = new System.Windows.Forms.Button();
@@ -305,12 +311,6 @@
             this.button52 = new System.Windows.Forms.Button();
             this.btnSearch2 = new System.Windows.Forms.Button();
             this.btnCaseStudy2 = new System.Windows.Forms.Button();
-            this.txtage = new System.Windows.Forms.TextBox();
-            this.label89 = new System.Windows.Forms.Label();
-            this.dtjoin = new System.Windows.Forms.DateTimePicker();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
-            this.cbxprogram = new System.Windows.Forms.ComboBox();
             this.opimage1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             this.pan_RES.SuspendLayout();
@@ -1021,6 +1021,58 @@
             this.third.Text = "3";
             this.third.UseVisualStyleBackColor = true;
             // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label56.Location = new System.Drawing.Point(308, 257);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(77, 18);
+            this.label56.TabIndex = 78;
+            this.label56.Text = "Program";
+            // 
+            // cbxprogram
+            // 
+            this.cbxprogram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbxprogram.CausesValidation = false;
+            this.cbxprogram.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxprogram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxprogram.FormattingEnabled = true;
+            this.cbxprogram.Items.AddRange(new object[] {
+            "Drop-In",
+            "Residential"});
+            this.cbxprogram.Location = new System.Drawing.Point(386, 257);
+            this.cbxprogram.Name = "cbxprogram";
+            this.cbxprogram.Size = new System.Drawing.Size(123, 21);
+            this.cbxprogram.TabIndex = 77;
+            // 
+            // dtjoin
+            // 
+            this.dtjoin.Location = new System.Drawing.Point(390, 202);
+            this.dtjoin.Name = "dtjoin";
+            this.dtjoin.Size = new System.Drawing.Size(123, 20);
+            this.dtjoin.TabIndex = 76;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label50.Location = new System.Drawing.Point(323, 190);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(61, 36);
+            this.label50.TabIndex = 75;
+            this.label50.Text = "Date \r\nJoined";
+            // 
+            // txtage
+            // 
+            this.txtage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtage.Location = new System.Drawing.Point(390, 160);
+            this.txtage.Name = "txtage";
+            this.txtage.Size = new System.Drawing.Size(123, 20);
+            this.txtage.TabIndex = 74;
+            // 
             // label44
             // 
             this.label44.AutoSize = true;
@@ -1062,9 +1114,9 @@
             // 
             this.pbox1.BackColor = System.Drawing.Color.White;
             this.pbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbox1.Location = new System.Drawing.Point(190, 12);
+            this.pbox1.Location = new System.Drawing.Point(143, 12);
             this.pbox1.Name = "pbox1";
-            this.pbox1.Size = new System.Drawing.Size(123, 123);
+            this.pbox1.Size = new System.Drawing.Size(242, 130);
             this.pbox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbox1.TabIndex = 38;
             this.pbox1.TabStop = false;
@@ -1187,6 +1239,18 @@
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(519, 97);
             this.panel21.TabIndex = 37;
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.BackColor = System.Drawing.Color.Transparent;
+            this.label89.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label89.ForeColor = System.Drawing.Color.Black;
+            this.label89.Location = new System.Drawing.Point(16, 22);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(121, 24);
+            this.label89.TabIndex = 39;
+            this.label89.Text = "New Profile";
             // 
             // button17
             // 
@@ -3759,70 +3823,6 @@
             this.btnCaseStudy2.Text = "       Case Studies";
             this.btnCaseStudy2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCaseStudy2.UseVisualStyleBackColor = false;
-            // 
-            // txtage
-            // 
-            this.txtage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtage.Location = new System.Drawing.Point(390, 160);
-            this.txtage.Name = "txtage";
-            this.txtage.Size = new System.Drawing.Size(123, 20);
-            this.txtage.TabIndex = 74;
-            // 
-            // label89
-            // 
-            this.label89.AutoSize = true;
-            this.label89.BackColor = System.Drawing.Color.Transparent;
-            this.label89.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label89.ForeColor = System.Drawing.Color.Black;
-            this.label89.Location = new System.Drawing.Point(16, 22);
-            this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(121, 24);
-            this.label89.TabIndex = 39;
-            this.label89.Text = "New Profile";
-            // 
-            // dtjoin
-            // 
-            this.dtjoin.Location = new System.Drawing.Point(390, 202);
-            this.dtjoin.Name = "dtjoin";
-            this.dtjoin.Size = new System.Drawing.Size(123, 20);
-            this.dtjoin.TabIndex = 76;
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label50.Location = new System.Drawing.Point(323, 190);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(61, 36);
-            this.label50.TabIndex = 75;
-            this.label50.Text = "Date \r\nJoined";
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label56.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label56.Location = new System.Drawing.Point(308, 257);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(77, 18);
-            this.label56.TabIndex = 78;
-            this.label56.Text = "Program";
-            // 
-            // cbxprogram
-            // 
-            this.cbxprogram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cbxprogram.CausesValidation = false;
-            this.cbxprogram.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxprogram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxprogram.FormattingEnabled = true;
-            this.cbxprogram.Items.AddRange(new object[] {
-            "Drop-In",
-            "Residential"});
-            this.cbxprogram.Location = new System.Drawing.Point(386, 257);
-            this.cbxprogram.Name = "cbxprogram";
-            this.cbxprogram.Size = new System.Drawing.Size(123, 21);
-            this.cbxprogram.TabIndex = 77;
             // 
             // opimage1
             // 
