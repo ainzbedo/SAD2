@@ -303,7 +303,7 @@ namespace PrototypeSAD
             {
                 conn.Open();
 
-                MySqlCommand comm = new MySqlCommand("SELECT lastname, firstname", conn);
+                MySqlCommand comm = new MySqlCommand("SELECT lastname, firstname FROM casestudyprofile", conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                 DataTable dt = new DataTable();
 
@@ -312,7 +312,7 @@ namespace PrototypeSAD
                 if (dt.Rows.Count > 0)
                 {
 
-                    lblname.Text = dt.Rows[0]["lastname"].ToString() + " " + dt.Rows[0]["firstname"].ToString();
+                    lblname.Text = dt.Rows[0]["firstname"].ToString() + " " + dt.Rows[0]["lastname"].ToString();
                     
                 }
 
