@@ -447,5 +447,15 @@ namespace PrototypeSAD
             tabControl.SelectedTab = first;
             resetColor();
         }
+
+        private void btned_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = eighth;
+        }
+
+        private void btnedback_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = sixteen;
+        }
     }
 }

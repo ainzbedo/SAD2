@@ -139,7 +139,7 @@
             this.eighth = new System.Windows.Forms.TabPage();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnedback = new System.Windows.Forms.Button();
             this.panel17 = new System.Windows.Forms.Panel();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
@@ -238,7 +238,7 @@
             this.label93 = new System.Windows.Forms.Label();
             this.label94 = new System.Windows.Forms.Label();
             this.panel24 = new System.Windows.Forms.Panel();
-            this.button12 = new System.Windows.Forms.Button();
+            this.btned = new System.Windows.Forms.Button();
             this.label65 = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
             this.lbledlvl = new System.Windows.Forms.Label();
@@ -1015,7 +1015,7 @@
             this.third.Location = new System.Drawing.Point(4, 22);
             this.third.Name = "third";
             this.third.Padding = new System.Windows.Forms.Padding(3);
-            this.third.Size = new System.Drawing.Size(524, 525);
+            this.third.Size = new System.Drawing.Size(519, 525);
             this.third.TabIndex = 3;
             this.third.Text = "3";
             this.third.UseVisualStyleBackColor = true;
@@ -1282,7 +1282,7 @@
             this.fourth.Location = new System.Drawing.Point(4, 22);
             this.fourth.Name = "fourth";
             this.fourth.Padding = new System.Windows.Forms.Padding(3);
-            this.fourth.Size = new System.Drawing.Size(524, 525);
+            this.fourth.Size = new System.Drawing.Size(519, 525);
             this.fourth.TabIndex = 4;
             this.fourth.Text = "4";
             // 
@@ -1623,7 +1623,7 @@
             this.fifth.Location = new System.Drawing.Point(4, 22);
             this.fifth.Name = "fifth";
             this.fifth.Padding = new System.Windows.Forms.Padding(3);
-            this.fifth.Size = new System.Drawing.Size(524, 525);
+            this.fifth.Size = new System.Drawing.Size(519, 525);
             this.fifth.TabIndex = 5;
             this.fifth.Text = "5";
             this.fifth.UseVisualStyleBackColor = true;
@@ -1633,7 +1633,7 @@
             this.sixth.Location = new System.Drawing.Point(4, 22);
             this.sixth.Name = "sixth";
             this.sixth.Padding = new System.Windows.Forms.Padding(3);
-            this.sixth.Size = new System.Drawing.Size(524, 525);
+            this.sixth.Size = new System.Drawing.Size(519, 525);
             this.sixth.TabIndex = 6;
             this.sixth.Text = "6";
             this.sixth.UseVisualStyleBackColor = true;
@@ -1643,7 +1643,7 @@
             this.seventh.Location = new System.Drawing.Point(4, 22);
             this.seventh.Name = "seventh";
             this.seventh.Padding = new System.Windows.Forms.Padding(3);
-            this.seventh.Size = new System.Drawing.Size(524, 525);
+            this.seventh.Size = new System.Drawing.Size(519, 525);
             this.seventh.TabIndex = 7;
             this.seventh.Text = "7";
             this.seventh.UseVisualStyleBackColor = true;
@@ -1652,7 +1652,7 @@
             // 
             this.eighth.Controls.Add(this.pictureBox2);
             this.eighth.Controls.Add(this.button6);
-            this.eighth.Controls.Add(this.button7);
+            this.eighth.Controls.Add(this.btnedback);
             this.eighth.Controls.Add(this.panel17);
             this.eighth.Controls.Add(this.panel16);
             this.eighth.Controls.Add(this.panel15);
@@ -1664,7 +1664,7 @@
             this.eighth.Location = new System.Drawing.Point(4, 22);
             this.eighth.Name = "eighth";
             this.eighth.Padding = new System.Windows.Forms.Padding(3);
-            this.eighth.Size = new System.Drawing.Size(524, 525);
+            this.eighth.Size = new System.Drawing.Size(519, 525);
             this.eighth.TabIndex = 8;
             this.eighth.Text = "8";
             this.eighth.UseVisualStyleBackColor = true;
@@ -1693,19 +1693,20 @@
             this.button6.Text = "add";
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // btnedback
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(9, 491);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(101, 28);
-            this.button7.TabIndex = 26;
-            this.button7.Text = "back";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnedback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btnedback.FlatAppearance.BorderSize = 0;
+            this.btnedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnedback.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnedback.ForeColor = System.Drawing.Color.White;
+            this.btnedback.Location = new System.Drawing.Point(9, 491);
+            this.btnedback.Name = "btnedback";
+            this.btnedback.Size = new System.Drawing.Size(101, 28);
+            this.btnedback.TabIndex = 26;
+            this.btnedback.Text = "back";
+            this.btnedback.UseVisualStyleBackColor = false;
+            this.btnedback.Click += new System.EventHandler(this.btnedback_Click);
             // 
             // panel17
             // 
@@ -2844,7 +2845,7 @@
             // 
             this.panel24.BackColor = System.Drawing.Color.White;
             this.panel24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel24.Controls.Add(this.button12);
+            this.panel24.Controls.Add(this.btned);
             this.panel24.Controls.Add(this.label65);
             this.panel24.Controls.Add(this.label66);
             this.panel24.Controls.Add(this.lbledlvl);
@@ -2856,19 +2857,20 @@
             this.panel24.Size = new System.Drawing.Size(298, 90);
             this.panel24.TabIndex = 21;
             // 
-            // button12
+            // btned
             // 
-            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(110, 60);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(179, 25);
-            this.button12.TabIndex = 35;
-            this.button12.Text = "show educational progress";
-            this.button12.UseVisualStyleBackColor = false;
+            this.btned.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btned.FlatAppearance.BorderSize = 0;
+            this.btned.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btned.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btned.ForeColor = System.Drawing.Color.White;
+            this.btned.Location = new System.Drawing.Point(110, 60);
+            this.btned.Name = "btned";
+            this.btned.Size = new System.Drawing.Size(179, 25);
+            this.btned.TabIndex = 35;
+            this.btned.Text = "show educational progress";
+            this.btned.UseVisualStyleBackColor = false;
+            this.btned.Click += new System.EventHandler(this.btned_Click);
             // 
             // label65
             // 
@@ -4032,7 +4034,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnedback;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.RichTextBox txtaddress;
@@ -4102,7 +4104,7 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Label label93;
         private System.Windows.Forms.Label label94;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button btned;
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.Button btnfover;
         private System.Windows.Forms.Label label74;
