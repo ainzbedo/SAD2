@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.IO;
 
 namespace PrototypeSAD
 {
@@ -299,34 +300,9 @@ namespace PrototypeSAD
 
             tabControl.SelectedTab = sixteen;
 
-            try
-            {
-                conn.Open();
+            reload(id);
 
-                MySqlCommand comm = new MySqlCommand("SELECT lastname, firstname FROM casestudyprofile", conn);
-                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
-                DataTable dt = new DataTable();
-
-                adp.Fill(dt);
-
-                if (dt.Rows.Count > 0)
-                {
-
-                    lblname.Text = dt.Rows[0]["firstname"].ToString() + " " + dt.Rows[0]["lastname"].ToString();
-                    
-                }
-
-                conn.Close();
-            }
-
-
-
-
-            catch (Exception ee)
-            {
-                MessageBox.Show("" + ee);
-                conn.Close();
-            }
+            
         }
 
         private void button18_Click(object sender, EventArgs e)
@@ -339,6 +315,11 @@ namespace PrototypeSAD
                 MessageBox.Show("Please fill out empty fields.");
             }
 
+            else if (pbox1.Image == null)
+            {
+                MessageBox.Show("Please insert a proper picture.");
+            } 
+
             else
             {
 
@@ -349,7 +330,7 @@ namespace PrototypeSAD
                     try
                     {
                         conn.Open();
-                        MySqlCommand comm = new MySqlCommand("INSERT INTO casestudyprofile(lastname, firstname, birthdate, status, caseage, program, dateJoined) VALUES('" + lname + "', '" + fname + "', '" + dtbirth.Value.Date.ToString("yyyyMMdd") + "','" + status + "','" + age + "','" + program + "','" + dtjoin.Value.Date.ToString("yyyyMMdd") + "')", conn);
+                        MySqlCommand comm = new MySqlCommand("INSERT INTO casestudyprofile(lastname, firstname, birthdate, status, caseage, program, dateJoined, picture, address) VALUES('" + lname + "', '" + fname + "', '" + dtbirth.Value.Date.ToString("yyyyMMdd") + "','" + status + "','" + age + "','" + program + "','" + dtjoin.Value.Date.ToString("yyyy/MM/dd") + "', '" + pbox1.Image + "', '" + address + "')", conn);
 
                         comm.ExecuteNonQuery();
 
@@ -359,6 +340,8 @@ namespace PrototypeSAD
 
                         tabControl.SelectedTab = first;
                         refresh();
+
+                        reset();
 
                     }
                     catch (Exception ee)
@@ -387,6 +370,67 @@ namespace PrototypeSAD
 
         private void btncancel_Click(object sender, EventArgs e)
         {
+            reset();
+
+        }
+
+        private void pbox1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog rest = new OpenFileDialog();
+
+            rest.Filter = "images| *.JPG; *.PNG; *.GJF"; // you can add any other image type 
+
+            if (rest.ShowDialog() == DialogResult.OK)
+            {
+                pbox1.Image = Image.FromFile(rest.FileName);
+            }
+
+        }
+
+        public void reload(int id)
+        {
+            try
+            {
+                conn.Open();
+
+                MySqlCommand comm = new MySqlCommand("SELECT lastname, firstname, birthdate, caseAge, program, status, address, datejoined, picture FROM casestudyprofile WHERE caseid = " + id, conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+
+                adp.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+
+                    lblname.Text = dt.Rows[0]["firstname"].ToString() + " " + dt.Rows[0]["lastname"].ToString();
+                    lbladdress.Text = dt.Rows[0]["address"].ToString();
+                    lblage.Text = dt.Rows[0]["caseAge"].ToString() + " years old";
+                    lblprogram.Text = dt.Rows[0]["program"].ToString();
+                    lblstatus.Text = dt.Rows[0]["status"].ToString();
+
+                    lbldate.Text = Convert.ToDateTime(dt.Rows[0]["birthdate"]).ToString("MMMM dd, yyyy");
+                    lbljoined.Text = Convert.ToDateTime(dt.Rows[0]["datejoined"]).ToString("MMMM dd, yyyy");
+
+
+                    //pbox2.Image = Image.FromStream(new MemoryStream((byte[])dt.Rows[0]["picture"]));
+
+                }
+
+                conn.Close();
+            }
+
+
+
+
+            catch (Exception ee)
+            {
+                MessageBox.Show("" + ee);
+                conn.Close();
+            }
+        }
+
+        public void reset()
+        {
             pbox1.Image = null;
 
             txtlname.Clear();
@@ -402,20 +446,6 @@ namespace PrototypeSAD
 
             tabControl.SelectedTab = first;
             resetColor();
-
-        }
-
-        private void pbox1_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog rest = new OpenFileDialog();
-
-            rest.Filter = "images| *.JPG; *.PNG; *.GJF"; // you can add any other image type 
-
-            if (rest.ShowDialog() == DialogResult.OK)
-            {
-                pbox1.Image = Image.FromFile(rest.FileName);
-            }
-
         }
     }
 }

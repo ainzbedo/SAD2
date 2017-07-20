@@ -215,7 +215,7 @@
             this.fourteen = new System.Windows.Forms.TabPage();
             this.fifteen = new System.Windows.Forms.TabPage();
             this.sixteen = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbox2 = new System.Windows.Forms.PictureBox();
             this.button16 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.label95 = new System.Windows.Forms.Label();
@@ -256,20 +256,19 @@
             this.button9 = new System.Windows.Forms.Button();
             this.label57 = new System.Windows.Forms.Label();
             this.panel20 = new System.Windows.Forms.Panel();
-            this.label54 = new System.Windows.Forms.Label();
+            this.lbljoined = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
+            this.lbladdress = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.lbldate = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.lblstatus = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
+            this.lblage = new System.Windows.Forms.Label();
+            this.lblprogram = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
-            this.label40 = new System.Windows.Forms.Label();
             this.lblname = new System.Windows.Forms.Label();
             this.label64 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
@@ -354,7 +353,7 @@
             this.panel28.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.sixteen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox2)).BeginInit();
             this.panel27.SuspendLayout();
             this.panel26.SuspendLayout();
             this.panel25.SuspendLayout();
@@ -891,7 +890,7 @@
             this.second.Location = new System.Drawing.Point(4, 22);
             this.second.Name = "second";
             this.second.Padding = new System.Windows.Forms.Padding(3);
-            this.second.Size = new System.Drawing.Size(519, 525);
+            this.second.Size = new System.Drawing.Size(524, 525);
             this.second.TabIndex = 2;
             this.second.Text = "2";
             // 
@@ -1016,7 +1015,7 @@
             this.third.Location = new System.Drawing.Point(4, 22);
             this.third.Name = "third";
             this.third.Padding = new System.Windows.Forms.Padding(3);
-            this.third.Size = new System.Drawing.Size(519, 525);
+            this.third.Size = new System.Drawing.Size(524, 525);
             this.third.TabIndex = 3;
             this.third.Text = "3";
             this.third.UseVisualStyleBackColor = true;
@@ -1283,7 +1282,7 @@
             this.fourth.Location = new System.Drawing.Point(4, 22);
             this.fourth.Name = "fourth";
             this.fourth.Padding = new System.Windows.Forms.Padding(3);
-            this.fourth.Size = new System.Drawing.Size(519, 525);
+            this.fourth.Size = new System.Drawing.Size(524, 525);
             this.fourth.TabIndex = 4;
             this.fourth.Text = "4";
             // 
@@ -1624,7 +1623,7 @@
             this.fifth.Location = new System.Drawing.Point(4, 22);
             this.fifth.Name = "fifth";
             this.fifth.Padding = new System.Windows.Forms.Padding(3);
-            this.fifth.Size = new System.Drawing.Size(519, 525);
+            this.fifth.Size = new System.Drawing.Size(524, 525);
             this.fifth.TabIndex = 5;
             this.fifth.Text = "5";
             this.fifth.UseVisualStyleBackColor = true;
@@ -1634,7 +1633,7 @@
             this.sixth.Location = new System.Drawing.Point(4, 22);
             this.sixth.Name = "sixth";
             this.sixth.Padding = new System.Windows.Forms.Padding(3);
-            this.sixth.Size = new System.Drawing.Size(519, 525);
+            this.sixth.Size = new System.Drawing.Size(524, 525);
             this.sixth.TabIndex = 6;
             this.sixth.Text = "6";
             this.sixth.UseVisualStyleBackColor = true;
@@ -1644,7 +1643,7 @@
             this.seventh.Location = new System.Drawing.Point(4, 22);
             this.seventh.Name = "seventh";
             this.seventh.Padding = new System.Windows.Forms.Padding(3);
-            this.seventh.Size = new System.Drawing.Size(519, 525);
+            this.seventh.Size = new System.Drawing.Size(524, 525);
             this.seventh.TabIndex = 7;
             this.seventh.Text = "7";
             this.seventh.UseVisualStyleBackColor = true;
@@ -1665,7 +1664,7 @@
             this.eighth.Location = new System.Drawing.Point(4, 22);
             this.eighth.Name = "eighth";
             this.eighth.Padding = new System.Windows.Forms.Padding(3);
-            this.eighth.Size = new System.Drawing.Size(519, 525);
+            this.eighth.Size = new System.Drawing.Size(524, 525);
             this.eighth.TabIndex = 8;
             this.eighth.Text = "8";
             this.eighth.UseVisualStyleBackColor = true;
@@ -2061,7 +2060,7 @@
             this.ninth.Location = new System.Drawing.Point(4, 22);
             this.ninth.Name = "ninth";
             this.ninth.Padding = new System.Windows.Forms.Padding(3);
-            this.ninth.Size = new System.Drawing.Size(519, 525);
+            this.ninth.Size = new System.Drawing.Size(524, 525);
             this.ninth.TabIndex = 9;
             this.ninth.Text = "9";
             this.ninth.UseVisualStyleBackColor = true;
@@ -2082,7 +2081,7 @@
             this.tenth.Location = new System.Drawing.Point(4, 22);
             this.tenth.Name = "tenth";
             this.tenth.Padding = new System.Windows.Forms.Padding(3);
-            this.tenth.Size = new System.Drawing.Size(519, 525);
+            this.tenth.Size = new System.Drawing.Size(524, 525);
             this.tenth.TabIndex = 10;
             this.tenth.Text = "10";
             this.tenth.UseVisualStyleBackColor = true;
@@ -2488,7 +2487,7 @@
             this.eleventh.Location = new System.Drawing.Point(4, 22);
             this.eleventh.Name = "eleventh";
             this.eleventh.Padding = new System.Windows.Forms.Padding(3);
-            this.eleventh.Size = new System.Drawing.Size(519, 525);
+            this.eleventh.Size = new System.Drawing.Size(524, 525);
             this.eleventh.TabIndex = 11;
             this.eleventh.Text = "11";
             this.eleventh.UseVisualStyleBackColor = true;
@@ -2498,7 +2497,7 @@
             this.twelfth.Location = new System.Drawing.Point(4, 22);
             this.twelfth.Name = "twelfth";
             this.twelfth.Padding = new System.Windows.Forms.Padding(3);
-            this.twelfth.Size = new System.Drawing.Size(519, 525);
+            this.twelfth.Size = new System.Drawing.Size(524, 525);
             this.twelfth.TabIndex = 12;
             this.twelfth.Text = "12";
             this.twelfth.UseVisualStyleBackColor = true;
@@ -2508,7 +2507,7 @@
             this.thirteen.Location = new System.Drawing.Point(4, 22);
             this.thirteen.Name = "thirteen";
             this.thirteen.Padding = new System.Windows.Forms.Padding(3);
-            this.thirteen.Size = new System.Drawing.Size(519, 525);
+            this.thirteen.Size = new System.Drawing.Size(524, 525);
             this.thirteen.TabIndex = 13;
             this.thirteen.Text = "13";
             this.thirteen.UseVisualStyleBackColor = true;
@@ -2518,7 +2517,7 @@
             this.fourteen.Location = new System.Drawing.Point(4, 22);
             this.fourteen.Name = "fourteen";
             this.fourteen.Padding = new System.Windows.Forms.Padding(3);
-            this.fourteen.Size = new System.Drawing.Size(519, 525);
+            this.fourteen.Size = new System.Drawing.Size(524, 525);
             this.fourteen.TabIndex = 14;
             this.fourteen.Text = "14";
             this.fourteen.UseVisualStyleBackColor = true;
@@ -2528,7 +2527,7 @@
             this.fifteen.Location = new System.Drawing.Point(4, 22);
             this.fifteen.Name = "fifteen";
             this.fifteen.Padding = new System.Windows.Forms.Padding(3);
-            this.fifteen.Size = new System.Drawing.Size(519, 525);
+            this.fifteen.Size = new System.Drawing.Size(524, 525);
             this.fifteen.TabIndex = 15;
             this.fifteen.Text = "15";
             this.fifteen.UseVisualStyleBackColor = true;
@@ -2536,7 +2535,7 @@
             // sixteen
             // 
             this.sixteen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
-            this.sixteen.Controls.Add(this.pictureBox1);
+            this.sixteen.Controls.Add(this.pbox2);
             this.sixteen.Controls.Add(this.button16);
             this.sixteen.Controls.Add(this.button15);
             this.sixteen.Controls.Add(this.label95);
@@ -2548,8 +2547,8 @@
             this.sixteen.Controls.Add(this.panel23);
             this.sixteen.Controls.Add(this.panel20);
             this.sixteen.Controls.Add(this.lblstatus);
-            this.sixteen.Controls.Add(this.label45);
-            this.sixteen.Controls.Add(this.label46);
+            this.sixteen.Controls.Add(this.lblage);
+            this.sixteen.Controls.Add(this.lblprogram);
             this.sixteen.Controls.Add(this.label47);
             this.sixteen.Controls.Add(this.label48);
             this.sixteen.Controls.Add(this.label49);
@@ -2566,15 +2565,15 @@
             this.sixteen.TabIndex = 16;
             this.sixteen.Text = "16";
             // 
-            // pictureBox1
+            // pbox2
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(11, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(123, 123);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            this.pbox2.BackColor = System.Drawing.Color.White;
+            this.pbox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbox2.Location = new System.Drawing.Point(11, 9);
+            this.pbox2.Name = "pbox2";
+            this.pbox2.Size = new System.Drawing.Size(202, 123);
+            this.pbox2.TabIndex = 8;
+            this.pbox2.TabStop = false;
             // 
             // button16
             // 
@@ -3068,9 +3067,9 @@
             // 
             this.panel20.BackColor = System.Drawing.Color.White;
             this.panel20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel20.Controls.Add(this.label54);
+            this.panel20.Controls.Add(this.lbljoined);
             this.panel20.Controls.Add(this.label55);
-            this.panel20.Controls.Add(this.label53);
+            this.panel20.Controls.Add(this.lbladdress);
             this.panel20.Controls.Add(this.label52);
             this.panel20.Controls.Add(this.lbldate);
             this.panel20.Controls.Add(this.label51);
@@ -3079,17 +3078,17 @@
             this.panel20.Size = new System.Drawing.Size(298, 96);
             this.panel20.TabIndex = 18;
             // 
-            // label54
+            // lbljoined
             // 
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.label54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.label54.Location = new System.Drawing.Point(169, 74);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(120, 14);
-            this.label54.TabIndex = 25;
-            this.label54.Text = "December 15, 2016";
-            this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbljoined.AutoSize = true;
+            this.lbljoined.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.lbljoined.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            this.lbljoined.Location = new System.Drawing.Point(173, 74);
+            this.lbljoined.Name = "lbljoined";
+            this.lbljoined.Size = new System.Drawing.Size(120, 14);
+            this.lbljoined.TabIndex = 25;
+            this.lbljoined.Text = "December 15, 2016";
+            this.lbljoined.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label55
             // 
@@ -3102,17 +3101,17 @@
             this.label55.TabIndex = 24;
             this.label55.Text = "Date Joined";
             // 
-            // label53
+            // lbladdress
             // 
-            this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.label53.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.label53.Location = new System.Drawing.Point(107, 26);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(182, 42);
-            this.label53.TabIndex = 23;
-            this.label53.Text = "Elpidio Quirino Ave, Poblacion\r\nDistrict Davao City,\r\nDavao del Sur";
-            this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbladdress.AutoSize = true;
+            this.lbladdress.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.lbladdress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            this.lbladdress.Location = new System.Drawing.Point(177, 36);
+            this.lbladdress.Name = "lbladdress";
+            this.lbladdress.Size = new System.Drawing.Size(14, 14);
+            this.lbladdress.TabIndex = 23;
+            this.lbladdress.Text = "e";
+            this.lbladdress.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label52
             // 
@@ -3130,7 +3129,7 @@
             this.lbldate.AutoSize = true;
             this.lbldate.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
             this.lbldate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.lbldate.Location = new System.Drawing.Point(177, 7);
+            this.lbldate.Location = new System.Drawing.Point(181, 7);
             this.lbldate.Name = "lbldate";
             this.lbldate.Size = new System.Drawing.Size(112, 14);
             this.lbldate.TabIndex = 21;
@@ -3153,41 +3152,41 @@
             this.lblstatus.AutoSize = true;
             this.lblstatus.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
             this.lblstatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.lblstatus.Location = new System.Drawing.Point(405, 118);
+            this.lblstatus.Location = new System.Drawing.Point(411, 118);
             this.lblstatus.Name = "lblstatus";
             this.lblstatus.Size = new System.Drawing.Size(102, 14);
             this.lblstatus.TabIndex = 16;
             this.lblstatus.Text = "Paternal Orphan";
             this.lblstatus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label45
+            // lblage
             // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.label45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.label45.Location = new System.Drawing.Point(436, 97);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(71, 14);
-            this.label45.TabIndex = 15;
-            this.label45.Text = "8 years old";
+            this.lblage.AutoSize = true;
+            this.lblage.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.lblage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            this.lblage.Location = new System.Drawing.Point(442, 97);
+            this.lblage.Name = "lblage";
+            this.lblage.Size = new System.Drawing.Size(71, 14);
+            this.lblage.TabIndex = 15;
+            this.lblage.Text = "8 years old";
             // 
-            // label46
+            // lblprogram
             // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.label46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.label46.Location = new System.Drawing.Point(317, 75);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(190, 14);
-            this.label46.TabIndex = 14;
-            this.label46.Text = "70 days under Drop-in Program";
+            this.lblprogram.AutoSize = true;
+            this.lblprogram.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.lblprogram.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            this.lblprogram.Location = new System.Drawing.Point(446, 75);
+            this.lblprogram.Name = "lblprogram";
+            this.lblprogram.Size = new System.Drawing.Size(28, 14);
+            this.lblprogram.TabIndex = 14;
+            this.lblprogram.Text = "wut";
             // 
             // label47
             // 
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
             this.label47.ForeColor = System.Drawing.Color.Black;
-            this.label47.Location = new System.Drawing.Point(139, 118);
+            this.label47.Location = new System.Drawing.Point(219, 118);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(44, 14);
             this.label47.TabIndex = 13;
@@ -3198,7 +3197,7 @@
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
             this.label48.ForeColor = System.Drawing.Color.Black;
-            this.label48.Location = new System.Drawing.Point(140, 97);
+            this.label48.Location = new System.Drawing.Point(220, 97);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(31, 14);
             this.label48.TabIndex = 12;
@@ -3209,7 +3208,7 @@
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
             this.label49.ForeColor = System.Drawing.Color.Black;
-            this.label49.Location = new System.Drawing.Point(140, 75);
+            this.label49.Location = new System.Drawing.Point(220, 75);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(58, 14);
             this.label49.TabIndex = 11;
@@ -3218,30 +3217,18 @@
             // panel19
             // 
             this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
-            this.panel19.Controls.Add(this.label40);
             this.panel19.Controls.Add(this.lblname);
             this.panel19.Location = new System.Drawing.Point(0, 0);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(519, 69);
             this.panel19.TabIndex = 9;
             // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.ForeColor = System.Drawing.Color.White;
-            this.label40.Location = new System.Drawing.Point(452, 41);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(53, 25);
-            this.label40.TabIndex = 3;
-            this.label40.Text = "Age";
-            // 
             // lblname
             // 
             this.lblname.AutoSize = true;
             this.lblname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblname.ForeColor = System.Drawing.Color.White;
-            this.lblname.Location = new System.Drawing.Point(130, 41);
+            this.lblname.Location = new System.Drawing.Point(210, 41);
             this.lblname.Name = "lblname";
             this.lblname.Size = new System.Drawing.Size(72, 25);
             this.lblname.TabIndex = 2;
@@ -3917,7 +3904,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.sixteen.ResumeLayout(false);
             this.sixteen.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox2)).EndInit();
             this.panel27.ResumeLayout(false);
             this.panel27.PerformLayout();
             this.panel26.ResumeLayout(false);
@@ -4074,13 +4061,12 @@
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.TabPage sixteen;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbox2;
         private System.Windows.Forms.Panel panel19;
-        private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label lblname;
         private System.Windows.Forms.Label lblstatus;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label lblage;
+        private System.Windows.Forms.Label lblprogram;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label49;
@@ -4091,8 +4077,8 @@
         private System.Windows.Forms.Label lbldate;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label lbladdress;
+        private System.Windows.Forms.Label lbljoined;
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label lblblood;
