@@ -18,6 +18,8 @@ namespace PrototypeSAD
         public Form2 ref_to_main { get; set; }
         public MySqlConnection conn;
 
+        public int id;
+
         private void btnAnnual_Click(object sender, EventArgs e)
         {
             tabControl.SelectedTab = fifteen;
@@ -296,23 +298,13 @@ namespace PrototypeSAD
 
         private void dtgcs_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int id = int.Parse(dtgcs.Rows[e.RowIndex].Cells[0].Value.ToString());
+            id = int.Parse(dtgcs.Rows[e.RowIndex].Cells[0].Value.ToString());
 
             tabControl.SelectedTab = sixteen;
 
             reload(id);
 
-            if (exists(id))
-            {
-                btned.Text = "View";
-            }
-
-            else
-            {
-                btned.Text = "Add";
-            
-
-            }
+            exists(id);
         }
 
         private void button18_Click(object sender, EventArgs e)
@@ -350,8 +342,8 @@ namespace PrototypeSAD
 
                         tabControl.SelectedTab = first;
                    
-
                         reset();
+                        refresh();
 
                     }
                     catch (Exception ee)
@@ -439,9 +431,8 @@ namespace PrototypeSAD
             }
         }
 
-        public Boolean exists(int id)
+        public void exists(int id)
         {
-            bool lol = false;
 
             try
             {
@@ -451,12 +442,10 @@ namespace PrototypeSAD
 
                 int UserExist = (int)comm.ExecuteScalar();
 
-                lol = (UserExist > 0) ? true : false;
-
-
+                btned.Text = (UserExist > 0) ? "Add Info" : "View Info";
+                
                 conn.Close();
 
-               
             }
 
            
@@ -466,7 +455,7 @@ namespace PrototypeSAD
                 conn.Close();
             }
 
-            return lol;
+         
         }
 
         public void reset()
@@ -497,7 +486,7 @@ namespace PrototypeSAD
 
         private void btned_Click(object sender, EventArgs e)
         {
-            lblnamed.Text = lblname.Text;
+            lblnamed.Text = lblnamedrpt.Text = lblname.Text;
 
             if (btned.Text == "Add")
             {
@@ -507,18 +496,52 @@ namespace PrototypeSAD
             else
             {
                 tabControl.SelectedTab = eighth;
+
+                try
+                {
+                    conn.Open();
+
+                    string[] data = lblnamedrpt.Text.Split(' ');
+
+                    MySqlCommand comm = new MySqlCommand("SELECT school, edutype, level FROM education WHERE caseid = " + id, conn);
+                    MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                    DataTable dt = new DataTable();
+
+                    adp.Fill(dt);
+
+                    if (dt.Rows.Count > 0)
+                    {
+
+                        lblschool.Text = dt.Rows[0]["school"].ToString();
+                        lbltype.Text = dt.Rows[0]["edutype"].ToString();
+                        lbllevel.Text = dt.Rows[0]["level"].ToString();
+
+                    }
+
+                    conn.Close();
+                }
+
+
+
+
+                catch (Exception ee)
+                {
+                    MessageBox.Show("" + ee);
+                    conn.Close();
+                }
             }
         }
 
         private void btnedback_Click(object sender, EventArgs e)
         {
             tabControl.SelectedTab = sixteen;
+
         }
 
         private void btnadded_Click(object sender, EventArgs e)
         {
+
             string edname = txtedname.Text, type = cbxtype.Text, level = cbxlevel.Text;
-            int id;
 
             if (string.IsNullOrEmpty(edname) || string.IsNullOrEmpty(type) || string.IsNullOrEmpty(level))
             {
@@ -532,35 +555,24 @@ namespace PrototypeSAD
                     {
 
                     conn.Open();
-                    string[] data = lblnamed.Text.Split(' ');
-                    MySqlCommand comm = new MySqlCommand("SELECT caseid FROM casestudyprofile WHERE firstname + lastname = '" + lblnamed.Text + "'", conn);
-
-                    MySqlDataAdapter adp = new MySqlDataAdapter(comm);
-                    DataTable dt = new DataTable();
-
-                    adp.Fill(dt);
-
-                    if (dt.Rows.Count > 0)
-                    {
-
-                        id = int.Parse(dt.Rows[0]["caseid"].ToString());
 
 
-                        comm = new MySqlCommand("INSERT INTO education(caseid, school, eduType, level) VALUES('" + id + "', '" + edname + "', '" + type + "','" + level + "')", conn);
+                        MySqlCommand comm = new MySqlCommand("INSERT INTO education(caseid, school, eduType, level) VALUES('" + id + "', '" + edname + "', '" + type + "','" + level + "')", conn);
 
                         comm.ExecuteNonQuery();
 
                         MessageBox.Show("New Info Added!");
 
+                        exists(id);
+
                         conn.Close();
-                    }
 
+                    tabControl.SelectedTab = eighth;
 
-                        tabControl.SelectedTab = eighth;
+                    reset2();
 
-                        reset2();
-
-                    }
+                }
+                
                     catch (Exception ee)
                     {
                         MessageBox.Show("" + ee);
