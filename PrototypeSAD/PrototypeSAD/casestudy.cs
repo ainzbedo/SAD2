@@ -442,7 +442,9 @@ namespace PrototypeSAD
 
                 int UserExist = (int)comm.ExecuteScalar();
 
-                btned.Text = (UserExist > 0) ? "Add Info" : "View Info";
+                btned.Text = (UserExist > 0) ? "View Info" : "Add Info"; //put add info on catch
+
+                MessageBox.Show(btned.Text);
                 
                 conn.Close();
 
