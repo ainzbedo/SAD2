@@ -292,7 +292,7 @@ namespace PrototypeSAD
             btnAdd.BackColor = Color.Gray;
         }
 
-        
+
 
         private void dtgcs_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -302,7 +302,17 @@ namespace PrototypeSAD
 
             reload(id);
 
+            if (exists(id))
+            {
+                btned.Text = "View";
+            }
+
+            else
+            {
+                btned.Text = "Add";
             
+
+            }
         }
 
         private void button18_Click(object sender, EventArgs e)
@@ -339,7 +349,7 @@ namespace PrototypeSAD
                         conn.Close();
 
                         tabControl.SelectedTab = first;
-                        refresh();
+                   
 
                         reset();
 
@@ -429,6 +439,36 @@ namespace PrototypeSAD
             }
         }
 
+        public Boolean exists(int id)
+        {
+            bool lol = false;
+
+            try
+            {
+                conn.Open();
+
+                MySqlCommand comm = new MySqlCommand("SELECT caseid FROM education WHERE caseid = " + id, conn);
+
+                int UserExist = (int)comm.ExecuteScalar();
+
+                lol = (UserExist > 0) ? true : false;
+
+
+                conn.Close();
+
+               
+            }
+
+           
+            catch (Exception ee)
+            {
+                //MessageBox.Show("" + ee);
+                conn.Close();
+            }
+
+            return lol;
+        }
+
         public void reset()
         {
             pbox1.Image = null;
@@ -448,14 +488,93 @@ namespace PrototypeSAD
             resetColor();
         }
 
+        public void reset2()
+        {
+            txtedname.Clear();
+            cbxlevel.SelectedIndex = -1;
+            cbxtype.SelectedIndex = -1;
+        }
+
         private void btned_Click(object sender, EventArgs e)
         {
-            tabControl.SelectedTab = eighth;
+            lblnamed.Text = lblname.Text;
+
+            if (btned.Text == "Add")
+            {
+                tabControl.SelectedTab = seventh;
+            }
+
+            else
+            {
+                tabControl.SelectedTab = eighth;
+            }
         }
 
         private void btnedback_Click(object sender, EventArgs e)
         {
             tabControl.SelectedTab = sixteen;
+        }
+
+        private void btnadded_Click(object sender, EventArgs e)
+        {
+            string edname = txtedname.Text, type = cbxtype.Text, level = cbxlevel.Text;
+            int id;
+
+            if (string.IsNullOrEmpty(edname) || string.IsNullOrEmpty(type) || string.IsNullOrEmpty(level))
+            {
+                MessageBox.Show("Please fill out empty fields.");
+            }
+
+            else
+            {
+
+                try
+                    {
+
+                    conn.Open();
+                    string[] data = lblnamed.Text.Split(' ');
+                    MySqlCommand comm = new MySqlCommand("SELECT caseid FROM casestudyprofile WHERE firstname + lastname = '" + lblnamed.Text + "'", conn);
+
+                    MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                    DataTable dt = new DataTable();
+
+                    adp.Fill(dt);
+
+                    if (dt.Rows.Count > 0)
+                    {
+
+                        id = int.Parse(dt.Rows[0]["caseid"].ToString());
+
+
+                        comm = new MySqlCommand("INSERT INTO education(caseid, school, eduType, level) VALUES('" + id + "', '" + edname + "', '" + type + "','" + level + "')", conn);
+
+                        comm.ExecuteNonQuery();
+
+                        MessageBox.Show("New Info Added!");
+
+                        conn.Close();
+                    }
+
+
+                        tabControl.SelectedTab = eighth;
+
+                        reset2();
+
+                    }
+                    catch (Exception ee)
+                    {
+                        MessageBox.Show("" + ee);
+                        conn.Close();
+                    }
+                }
+
+            }
+        
+
+        private void btncanceled_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = sixteen;
+            reset2();
         }
     }
 }

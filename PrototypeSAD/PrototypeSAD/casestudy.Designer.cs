@@ -311,6 +311,19 @@
             this.btnSearch2 = new System.Windows.Forms.Button();
             this.btnCaseStudy2 = new System.Windows.Forms.Button();
             this.opimage1 = new System.Windows.Forms.OpenFileDialog();
+            this.panel38 = new System.Windows.Forms.Panel();
+            this.label40 = new System.Windows.Forms.Label();
+            this.txtedname = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.btnadded = new System.Windows.Forms.Button();
+            this.btncanceled = new System.Windows.Forms.Button();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.cbxtype = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbxlevel = new System.Windows.Forms.ComboBox();
+            this.lblnamed = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pan_RES.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -331,6 +344,7 @@
             this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.seventh.SuspendLayout();
             this.eighth.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel17.SuspendLayout();
@@ -366,6 +380,9 @@
             this.dropin.SuspendLayout();
             this.residential.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel38.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -890,7 +907,7 @@
             this.second.Location = new System.Drawing.Point(4, 22);
             this.second.Name = "second";
             this.second.Padding = new System.Windows.Forms.Padding(3);
-            this.second.Size = new System.Drawing.Size(524, 525);
+            this.second.Size = new System.Drawing.Size(519, 525);
             this.second.TabIndex = 2;
             this.second.Text = "2";
             // 
@@ -1640,6 +1657,11 @@
             // 
             // seventh
             // 
+            this.seventh.Controls.Add(this.groupBox2);
+            this.seventh.Controls.Add(this.groupBox1);
+            this.seventh.Controls.Add(this.panel38);
+            this.seventh.Controls.Add(this.btnadded);
+            this.seventh.Controls.Add(this.btncanceled);
             this.seventh.Location = new System.Drawing.Point(4, 22);
             this.seventh.Name = "seventh";
             this.seventh.Padding = new System.Windows.Forms.Padding(3);
@@ -2061,7 +2083,7 @@
             this.ninth.Location = new System.Drawing.Point(4, 22);
             this.ninth.Name = "ninth";
             this.ninth.Padding = new System.Windows.Forms.Padding(3);
-            this.ninth.Size = new System.Drawing.Size(524, 525);
+            this.ninth.Size = new System.Drawing.Size(519, 525);
             this.ninth.TabIndex = 9;
             this.ninth.Text = "9";
             this.ninth.UseVisualStyleBackColor = true;
@@ -2082,7 +2104,7 @@
             this.tenth.Location = new System.Drawing.Point(4, 22);
             this.tenth.Name = "tenth";
             this.tenth.Padding = new System.Windows.Forms.Padding(3);
-            this.tenth.Size = new System.Drawing.Size(524, 525);
+            this.tenth.Size = new System.Drawing.Size(519, 525);
             this.tenth.TabIndex = 10;
             this.tenth.Text = "10";
             this.tenth.UseVisualStyleBackColor = true;
@@ -2488,7 +2510,7 @@
             this.eleventh.Location = new System.Drawing.Point(4, 22);
             this.eleventh.Name = "eleventh";
             this.eleventh.Padding = new System.Windows.Forms.Padding(3);
-            this.eleventh.Size = new System.Drawing.Size(524, 525);
+            this.eleventh.Size = new System.Drawing.Size(519, 525);
             this.eleventh.TabIndex = 11;
             this.eleventh.Text = "11";
             this.eleventh.UseVisualStyleBackColor = true;
@@ -2498,7 +2520,7 @@
             this.twelfth.Location = new System.Drawing.Point(4, 22);
             this.twelfth.Name = "twelfth";
             this.twelfth.Padding = new System.Windows.Forms.Padding(3);
-            this.twelfth.Size = new System.Drawing.Size(524, 525);
+            this.twelfth.Size = new System.Drawing.Size(519, 525);
             this.twelfth.TabIndex = 12;
             this.twelfth.Text = "12";
             this.twelfth.UseVisualStyleBackColor = true;
@@ -2508,7 +2530,7 @@
             this.thirteen.Location = new System.Drawing.Point(4, 22);
             this.thirteen.Name = "thirteen";
             this.thirteen.Padding = new System.Windows.Forms.Padding(3);
-            this.thirteen.Size = new System.Drawing.Size(524, 525);
+            this.thirteen.Size = new System.Drawing.Size(519, 525);
             this.thirteen.TabIndex = 13;
             this.thirteen.Text = "13";
             this.thirteen.UseVisualStyleBackColor = true;
@@ -2518,7 +2540,7 @@
             this.fourteen.Location = new System.Drawing.Point(4, 22);
             this.fourteen.Name = "fourteen";
             this.fourteen.Padding = new System.Windows.Forms.Padding(3);
-            this.fourteen.Size = new System.Drawing.Size(524, 525);
+            this.fourteen.Size = new System.Drawing.Size(519, 525);
             this.fourteen.TabIndex = 14;
             this.fourteen.Text = "14";
             this.fourteen.UseVisualStyleBackColor = true;
@@ -2528,7 +2550,7 @@
             this.fifteen.Location = new System.Drawing.Point(4, 22);
             this.fifteen.Name = "fifteen";
             this.fifteen.Padding = new System.Windows.Forms.Padding(3);
-            this.fifteen.Size = new System.Drawing.Size(524, 525);
+            this.fifteen.Size = new System.Drawing.Size(519, 525);
             this.fifteen.TabIndex = 15;
             this.fifteen.Text = "15";
             this.fifteen.UseVisualStyleBackColor = true;
@@ -3817,6 +3839,167 @@
             // 
             this.opimage1.FileName = "openFileDialog1";
             // 
+            // panel38
+            // 
+            this.panel38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.panel38.Controls.Add(this.lblnamed);
+            this.panel38.Controls.Add(this.label40);
+            this.panel38.Location = new System.Drawing.Point(0, 9);
+            this.panel38.Name = "panel38";
+            this.panel38.Size = new System.Drawing.Size(519, 97);
+            this.panel38.TabIndex = 72;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.BackColor = System.Drawing.Color.Transparent;
+            this.label40.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.Color.Black;
+            this.label40.Location = new System.Drawing.Point(11, 64);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(218, 24);
+            this.label40.TabIndex = 39;
+            this.label40.Text = "Basic Education Info";
+            // 
+            // txtedname
+            // 
+            this.txtedname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtedname.Location = new System.Drawing.Point(102, 18);
+            this.txtedname.Name = "txtedname";
+            this.txtedname.Size = new System.Drawing.Size(297, 27);
+            this.txtedname.TabIndex = 78;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label45.Location = new System.Drawing.Point(3, 17);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(54, 18);
+            this.label45.TabIndex = 77;
+            this.label45.Text = "Name";
+            // 
+            // btnadded
+            // 
+            this.btnadded.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btnadded.FlatAppearance.BorderSize = 0;
+            this.btnadded.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnadded.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnadded.ForeColor = System.Drawing.Color.White;
+            this.btnadded.Location = new System.Drawing.Point(27, 488);
+            this.btnadded.Name = "btnadded";
+            this.btnadded.Size = new System.Drawing.Size(196, 28);
+            this.btnadded.TabIndex = 76;
+            this.btnadded.Text = "Add Info";
+            this.btnadded.UseVisualStyleBackColor = false;
+            this.btnadded.Click += new System.EventHandler(this.btnadded_Click);
+            // 
+            // btncanceled
+            // 
+            this.btncanceled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btncanceled.FlatAppearance.BorderSize = 0;
+            this.btncanceled.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncanceled.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncanceled.ForeColor = System.Drawing.Color.White;
+            this.btncanceled.Location = new System.Drawing.Point(302, 488);
+            this.btncanceled.Name = "btncanceled";
+            this.btncanceled.Size = new System.Drawing.Size(196, 28);
+            this.btncanceled.TabIndex = 75;
+            this.btncanceled.Text = "Cancel";
+            this.btncanceled.UseVisualStyleBackColor = false;
+            this.btncanceled.Click += new System.EventHandler(this.btncanceled_Click);
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label46.Location = new System.Drawing.Point(6, 51);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(47, 18);
+            this.label46.TabIndex = 73;
+            this.label46.Text = "Type";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label53.Location = new System.Drawing.Point(6, 29);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(51, 18);
+            this.label53.TabIndex = 79;
+            this.label53.Text = "Level";
+            // 
+            // cbxtype
+            // 
+            this.cbxtype.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbxtype.CausesValidation = false;
+            this.cbxtype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxtype.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxtype.FormattingEnabled = true;
+            this.cbxtype.Items.AddRange(new object[] {
+            "Public",
+            "Private"});
+            this.cbxtype.Location = new System.Drawing.Point(102, 52);
+            this.cbxtype.Name = "cbxtype";
+            this.cbxtype.Size = new System.Drawing.Size(199, 27);
+            this.cbxtype.TabIndex = 81;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cbxtype);
+            this.groupBox1.Controls.Add(this.txtedname);
+            this.groupBox1.Controls.Add(this.label45);
+            this.groupBox1.Controls.Add(this.label46);
+            this.groupBox1.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(9, 131);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(424, 91);
+            this.groupBox1.TabIndex = 82;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "School";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.cbxlevel);
+            this.groupBox2.Controls.Add(this.label53);
+            this.groupBox2.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(9, 284);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(354, 70);
+            this.groupBox2.TabIndex = 83;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Child";
+            // 
+            // cbxlevel
+            // 
+            this.cbxlevel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbxlevel.CausesValidation = false;
+            this.cbxlevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxlevel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxlevel.FormattingEnabled = true;
+            this.cbxlevel.Items.AddRange(new object[] {
+            "Primary",
+            "Secondary",
+            "Tertiary"});
+            this.cbxlevel.Location = new System.Drawing.Point(102, 26);
+            this.cbxlevel.Name = "cbxlevel";
+            this.cbxlevel.Size = new System.Drawing.Size(199, 27);
+            this.cbxlevel.TabIndex = 84;
+            // 
+            // lblnamed
+            // 
+            this.lblnamed.AutoSize = true;
+            this.lblnamed.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnamed.ForeColor = System.Drawing.Color.White;
+            this.lblnamed.Location = new System.Drawing.Point(13, 17);
+            this.lblnamed.Name = "lblnamed";
+            this.lblnamed.Size = new System.Drawing.Size(72, 25);
+            this.lblnamed.TabIndex = 40;
+            this.lblnamed.Text = "Name";
+            // 
             // casestudy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3866,6 +4049,7 @@
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.seventh.ResumeLayout(false);
             this.eighth.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel17.ResumeLayout(false);
@@ -3926,6 +4110,12 @@
             this.dropin.ResumeLayout(false);
             this.residential.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.panel38.ResumeLayout(false);
+            this.panel38.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4214,5 +4404,18 @@
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.ComboBox cbxprogram;
         private System.Windows.Forms.OpenFileDialog opimage1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ComboBox cbxlevel;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox cbxtype;
+        private System.Windows.Forms.TextBox txtedname;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Panel panel38;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Button btnadded;
+        private System.Windows.Forms.Button btncanceled;
+        private System.Windows.Forms.Label lblnamed;
     }
 }
