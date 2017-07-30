@@ -252,8 +252,8 @@
             this.label94 = new System.Windows.Forms.Label();
             this.panel24 = new System.Windows.Forms.Panel();
             this.btned = new System.Windows.Forms.Button();
-            this.label65 = new System.Windows.Forms.Label();
-            this.label66 = new System.Windows.Forms.Label();
+            this.lbledschool = new System.Windows.Forms.Label();
+            this.lbl64 = new System.Windows.Forms.Label();
             this.lbledlvl = new System.Windows.Forms.Label();
             this.label68 = new System.Windows.Forms.Label();
             this.lbledtype = new System.Windows.Forms.Label();
@@ -3029,8 +3029,8 @@
             this.panel24.BackColor = System.Drawing.Color.White;
             this.panel24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel24.Controls.Add(this.btned);
-            this.panel24.Controls.Add(this.label65);
-            this.panel24.Controls.Add(this.label66);
+            this.panel24.Controls.Add(this.lbledschool);
+            this.panel24.Controls.Add(this.lbl64);
             this.panel24.Controls.Add(this.lbledlvl);
             this.panel24.Controls.Add(this.label68);
             this.panel24.Controls.Add(this.lbledtype);
@@ -3055,28 +3055,28 @@
             this.btned.UseVisualStyleBackColor = false;
             this.btned.Click += new System.EventHandler(this.btned_Click);
             // 
-            // label65
+            // lbledschool
             // 
-            this.label65.AutoSize = true;
-            this.label65.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.label65.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.label65.Location = new System.Drawing.Point(121, 45);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(168, 14);
-            this.label65.TabIndex = 25;
-            this.label65.Text = "Wireless Elementary School";
-            this.label65.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbledschool.AutoSize = true;
+            this.lbledschool.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.lbledschool.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            this.lbledschool.Location = new System.Drawing.Point(121, 45);
+            this.lbledschool.Name = "lbledschool";
+            this.lbledschool.Size = new System.Drawing.Size(168, 14);
+            this.lbledschool.TabIndex = 25;
+            this.lbledschool.Text = "Wireless Elementary School";
+            this.lbledschool.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label66
+            // lbl64
             // 
-            this.label66.AutoSize = true;
-            this.label66.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.label66.ForeColor = System.Drawing.Color.Black;
-            this.label66.Location = new System.Drawing.Point(3, 45);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(76, 14);
-            this.label66.TabIndex = 24;
-            this.label66.Text = "Date Joined";
+            this.lbl64.AutoSize = true;
+            this.lbl64.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.lbl64.ForeColor = System.Drawing.Color.Black;
+            this.lbl64.Location = new System.Drawing.Point(3, 45);
+            this.lbl64.Name = "lbl64";
+            this.lbl64.Size = new System.Drawing.Size(46, 14);
+            this.lbl64.TabIndex = 24;
+            this.lbl64.Text = "School";
             // 
             // lbledlvl
             // 
@@ -4283,8 +4283,8 @@
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Label label64;
         private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Label lbledschool;
+        private System.Windows.Forms.Label lbl64;
         private System.Windows.Forms.Label lbledlvl;
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.Label lbledtype;

@@ -418,6 +418,21 @@ namespace PrototypeSAD
 
                 }
 
+                comm = new MySqlCommand("SELECT school, edutype, level FROM education WHERE caseid = " + id, conn);
+                adp = new MySqlDataAdapter(comm);
+                dt = new DataTable();
+
+                adp.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+
+                    lbledlvl.Text = dt.Rows[0]["level"].ToString();
+                    lbledtype.Text = dt.Rows[0]["edutype"].ToString();
+                    lbledschool.Text = dt.Rows[0]["school"].ToString();
+
+                }
+
                 conn.Close();
             }
 
@@ -453,6 +468,12 @@ namespace PrototypeSAD
            
             catch (Exception ee)
             {
+                btned.Text = "Add Info";
+
+                lbledlvl.Text = "";
+                lbledtype.Text = "";
+                lbledschool.Text = "";
+
                 //MessageBox.Show("" + ee);
                 conn.Close();
             }
@@ -490,7 +511,7 @@ namespace PrototypeSAD
         {
             lblnamed.Text = lblnamedrpt.Text = lblname.Text;
 
-            if (btned.Text == "Add")
+            if (btned.Text == "Add Info")
             {
                 tabControl.SelectedTab = seventh;
             }
@@ -517,6 +538,10 @@ namespace PrototypeSAD
                         lblschool.Text = dt.Rows[0]["school"].ToString();
                         lbltype.Text = dt.Rows[0]["edutype"].ToString();
                         lbllevel.Text = dt.Rows[0]["level"].ToString();
+
+                        lbledlvl.Text = dt.Rows[0]["level"].ToString();
+                        lbledtype.Text = dt.Rows[0]["edutype"].ToString();
+                        lbledschool.Text = dt.Rows[0]["school"].ToString();
 
                     }
 
@@ -568,6 +593,10 @@ namespace PrototypeSAD
                         exists(id);
 
                         conn.Close();
+
+                    lbltype.Text = lbledtype.Text = type;
+                    lblschool.Text = lbledschool.Text = edname;
+                    lbllevel.Text = lbledlvl.Text = level;
 
                     tabControl.SelectedTab = eighth;
 
