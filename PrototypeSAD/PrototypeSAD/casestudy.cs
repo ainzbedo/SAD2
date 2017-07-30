@@ -80,7 +80,7 @@ namespace PrototypeSAD
         {
             tabControl.SelectedTab = seventh;
             resetColor();
-            btnHealth.BackColor = Color.Gray;
+            shit.BackColor = Color.Gray;
         }
 
         private void btnProb_Click(object sender, EventArgs e)
@@ -207,7 +207,7 @@ namespace PrototypeSAD
         public void resetColor()
         {
             btnCaseStudy.BackColor = Color.Transparent; btnAdd.BackColor = Color.Transparent; btnAnnual.BackColor = Color.Transparent; btnCloseCase.BackColor = Color.Transparent; btnCon.BackColor = Color.Transparent; btnDropIn.BackColor = Color.Transparent;
-            btnEdu.BackColor = Color.Transparent; btnFam.BackColor = Color.Transparent; btnHealth.BackColor = Color.Transparent; btnInc.BackColor = Color.Transparent; btnProb.BackColor = Color.Transparent; btnProg.BackColor = Color.Transparent;
+            btnEdu.BackColor = Color.Transparent; btnFam.BackColor = Color.Transparent; shit.BackColor = Color.Transparent; btnInc.BackColor = Color.Transparent; btnProb.BackColor = Color.Transparent; btnProg.BackColor = Color.Transparent;
             btnResidential.BackColor = Color.Transparent; btnSearch.BackColor = Color.Transparent; btnServ.BackColor = Color.Transparent; btnSS.BackColor = Color.Transparent; btnUpdate.BackColor = Color.Transparent;
             btnDropIn.BackColor = Color.Gray;
         }
@@ -304,7 +304,9 @@ namespace PrototypeSAD
 
             reload(id);
 
-            exists(id);
+            existsed(id);
+
+            existshealth(id);
         }
 
         private void button18_Click(object sender, EventArgs e)
@@ -312,7 +314,7 @@ namespace PrototypeSAD
             string lname = txtlname.Text, fname = txtfname.Text, status = cbxstatus.Text, program = cbxprogram.Text, address = txtaddress.Text;
             int age;
 
-            if (string.IsNullOrEmpty(txtaddress.Text) || string.IsNullOrEmpty(txtage.Text) || string.IsNullOrEmpty(txtfname.Text) || string.IsNullOrEmpty(txtlname.Text) || string.IsNullOrEmpty(cbxprogram.Text) || string.IsNullOrEmpty(cbxstatus.Text))
+            if (string.IsNullOrEmpty(address) || string.IsNullOrEmpty(txtage.Text) || string.IsNullOrEmpty(fname) || string.IsNullOrEmpty(lname) || string.IsNullOrEmpty(program) || string.IsNullOrEmpty(status))
             {
                 MessageBox.Show("Please fill out empty fields.");
             }
@@ -446,7 +448,7 @@ namespace PrototypeSAD
             }
         }
 
-        public void exists(int id)
+        public void existsed(int id)
         {
 
             try
@@ -474,11 +476,44 @@ namespace PrototypeSAD
                 lbledtype.Text = "";
                 lbledschool.Text = "";
 
-                //MessageBox.Show("" + ee);
                 conn.Close();
             }
 
          
+        }
+
+        public void existshealth(int id)
+        {
+
+            try
+            {
+                conn.Open();
+
+                MySqlCommand comm = new MySqlCommand("SELECT caseid FROM health WHERE caseid = " + id, conn);
+
+                int UserExist = (int)comm.ExecuteScalar();
+
+                btnhealth.Text = (UserExist > 0) ? "View Info" : "Add Info"; //put add info on catch
+
+                MessageBox.Show(btnhealth.Text);
+
+                conn.Close();
+
+            }
+
+
+            catch (Exception ee)
+            {
+                btnhealth.Text = "Add Info";
+
+                lblblood.Text = "";
+                lblheight.Text = "";
+                lblweight.Text = "";
+
+                conn.Close();
+            }
+
+
         }
 
         public void reset()
@@ -590,7 +625,7 @@ namespace PrototypeSAD
 
                         MessageBox.Show("New Info Added!");
 
-                        exists(id);
+                        existsed(id);
 
                         conn.Close();
 
@@ -618,6 +653,74 @@ namespace PrototypeSAD
         {
             tabControl.SelectedTab = sixteen;
             reset2();
+        }
+
+        private void btnhealth_Click_1(object sender, EventArgs e)
+        {
+
+            lblnamehealth.Text = lblname.Text;
+
+            if (btnhealth.Text == "Add Info")
+            {
+                tabControl.SelectedTab = eleventh;
+            }
+
+            //iput pa dis
+
+        }
+
+        private void btncancelhealth_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = sixteen;
+        }
+
+        private void btnaddhealth_Click(object sender, EventArgs e)
+        {
+            string blood = cbxbloodtype.Text;
+            int height, weight;
+
+            if (string.IsNullOrEmpty(blood) || string.IsNullOrEmpty(cbxheight.Text) || string.IsNullOrEmpty(cbxweight.Text))
+            {
+                MessageBox.Show("Please fill out empty fields.");
+            }
+
+            else
+            {
+
+                if (Int32.TryParse)
+
+                try
+                {
+
+                    conn.Open();
+
+
+                    MySqlCommand comm = new MySqlCommand("INSERT INTO education(caseid, school, eduType, level) VALUES('" + id + "', '" + edname + "', '" + type + "','" + level + "')", conn);
+
+                    comm.ExecuteNonQuery();
+
+                    MessageBox.Show("New Info Added!");
+
+                    existsed(id);
+
+                    conn.Close();
+
+                    lbltype.Text = lbledtype.Text = type;
+                    lblschool.Text = lbledschool.Text = edname;
+                    lbllevel.Text = lbledlvl.Text = level;
+
+                    tabControl.SelectedTab = eighth;
+
+                    reset2();
+
+                }
+
+                catch (Exception ee)
+                {
+                    MessageBox.Show("" + ee);
+                    conn.Close();
+                }
+            }
         }
     }
 }
