@@ -461,7 +461,7 @@ namespace PrototypeSAD
 
                 btned.Text = (UserExist > 0) ? "View Info" : "Add Info"; //put add info on catch
 
-                MessageBox.Show(btned.Text);
+              
                 
                 conn.Close();
 
@@ -495,7 +495,7 @@ namespace PrototypeSAD
 
                 btnhealth.Text = (UserExist > 0) ? "View Info" : "Add Info"; //put add info on catch
 
-                MessageBox.Show(btnhealth.Text);
+            
 
                 conn.Close();
 
@@ -540,6 +540,14 @@ namespace PrototypeSAD
             txtedname.Clear();
             cbxlevel.SelectedIndex = -1;
             cbxtype.SelectedIndex = -1;
+        }
+
+        public void reset3()
+        {
+            txtheight.Clear();
+            txtweight.Clear();
+            cbxbloodtype.SelectedIndex = -1;
+           
         }
 
         private void btned_Click(object sender, EventArgs e)
@@ -679,7 +687,7 @@ namespace PrototypeSAD
             string blood = cbxbloodtype.Text;
             int height, weight;
 
-            if (string.IsNullOrEmpty(blood) || string.IsNullOrEmpty(cbxheight.Text) || string.IsNullOrEmpty(cbxweight.Text))
+            if (string.IsNullOrEmpty(blood) || string.IsNullOrEmpty(txtheight.Text) || string.IsNullOrEmpty(txtweight.Text))
             {
                 MessageBox.Show("Please fill out empty fields.");
             }
@@ -687,38 +695,60 @@ namespace PrototypeSAD
             else
             {
 
-                if (Int32.TryParse)
-
-                try
+                if (Int32.TryParse(txtheight.Text, out height) && Int32.TryParse(txtweight.Text, out weight))
                 {
+                    height = int.Parse(txtheight.Text); weight = int.Parse(txtweight.Text);
 
-                    conn.Open();
+                    try
+                    {
+
+                        conn.Open();
 
 
-                    MySqlCommand comm = new MySqlCommand("INSERT INTO education(caseid, school, eduType, level) VALUES('" + id + "', '" + edname + "', '" + type + "','" + level + "')", conn);
+                        MySqlCommand comm = new MySqlCommand("INSERT INTO health(caseid, height, weight, bloodtype) VALUES('" + id + "', '" + height + "', '" + weight + "','" + blood + "')", conn);
 
-                    comm.ExecuteNonQuery();
+                        comm.ExecuteNonQuery();
 
-                    MessageBox.Show("New Info Added!");
+                        MessageBox.Show("New Info Added!");
 
-                    existsed(id);
+                        existshealth(id);
 
-                    conn.Close();
+                        conn.Close();
 
-                    lbltype.Text = lbledtype.Text = type;
-                    lblschool.Text = lbledschool.Text = edname;
-                    lbllevel.Text = lbledlvl.Text = level;
+                        lblblood.Text = blood;
+                        lblheight.Text = height.ToString();
+                        lblweight.Text = weight.ToString();
 
-                    tabControl.SelectedTab = eighth;
+                        tabControl.SelectedTab = sixteen;
 
-                    reset2();
+                        reset3();
+
+                    }
+
+                    catch (Exception ee)
+                    {
+                        MessageBox.Show("" + ee);
+                        conn.Close();
+                    }
 
                 }
 
-                catch (Exception ee)
+                else
                 {
-                    MessageBox.Show("" + ee);
-                    conn.Close();
+                    if (Int32.TryParse(txtheight.Text, out height) == false && Int32.TryParse(txtweight.Text, out weight) == false)
+                    {
+                        MessageBox.Show("Height and Weight inputs are invalid! Use numbers!");
+                    }
+
+                    else if (Int32.TryParse(txtheight.Text, out height) == false)
+                    {
+                        MessageBox.Show("Height input is invalid! Use numbers!");
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Weight input is invalid! Use numbers!");
+                    }
                 }
             }
         }
