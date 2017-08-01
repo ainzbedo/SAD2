@@ -382,7 +382,7 @@ namespace PrototypeSAD
         {
             OpenFileDialog rest = new OpenFileDialog();
 
-            rest.Filter = "images| *.JPG; *.PNG; *.GJF"; // you can add any other image type 
+            rest.Filter = "images| *.JPG; *.PNG; *.GIF"; // you can add any other image type 
 
             if (rest.ShowDialog() == DialogResult.OK)
             {

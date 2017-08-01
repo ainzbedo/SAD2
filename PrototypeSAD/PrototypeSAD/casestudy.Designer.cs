@@ -151,7 +151,7 @@
             this.btncanceled = new System.Windows.Forms.Button();
             this.eighth = new System.Windows.Forms.TabPage();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnedited = new System.Windows.Forms.Button();
             this.btnedback = new System.Windows.Forms.Button();
             this.panel17 = new System.Windows.Forms.Panel();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -223,11 +223,11 @@
             this.label99 = new System.Windows.Forms.Label();
             this.label100 = new System.Windows.Forms.Label();
             this.eleventh = new System.Windows.Forms.TabPage();
+            this.btnaddhealth = new System.Windows.Forms.Button();
+            this.btncancelhealth = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cbxbloodtype = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.cbxweight = new System.Windows.Forms.ComboBox();
-            this.cbxheight = new System.Windows.Forms.ComboBox();
             this.txtweight = new System.Windows.Forms.TextBox();
             this.txtheight = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -336,8 +336,6 @@
             this.btnSearch2 = new System.Windows.Forms.Button();
             this.btnCaseStudy2 = new System.Windows.Forms.Button();
             this.opimage1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnaddhealth = new System.Windows.Forms.Button();
-            this.btncancelhealth = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pan_RES.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -1852,7 +1850,7 @@
             // eighth
             // 
             this.eighth.Controls.Add(this.pictureBox2);
-            this.eighth.Controls.Add(this.button6);
+            this.eighth.Controls.Add(this.btnedited);
             this.eighth.Controls.Add(this.btnedback);
             this.eighth.Controls.Add(this.panel17);
             this.eighth.Controls.Add(this.panel16);
@@ -1880,19 +1878,19 @@
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
-            // button6
+            // btnedited
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(6, 494);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(101, 28);
-            this.button6.TabIndex = 27;
-            this.button6.Text = "Edit";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnedited.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btnedited.FlatAppearance.BorderSize = 0;
+            this.btnedited.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnedited.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnedited.ForeColor = System.Drawing.Color.White;
+            this.btnedited.Location = new System.Drawing.Point(6, 494);
+            this.btnedited.Name = "btnedited";
+            this.btnedited.Size = new System.Drawing.Size(101, 28);
+            this.btnedited.TabIndex = 27;
+            this.btnedited.Text = "Edit ";
+            this.btnedited.UseVisualStyleBackColor = false;
             // 
             // btnedback
             // 
@@ -2699,6 +2697,36 @@
             this.eleventh.Text = "11";
             this.eleventh.UseVisualStyleBackColor = true;
             // 
+            // btnaddhealth
+            // 
+            this.btnaddhealth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btnaddhealth.FlatAppearance.BorderSize = 0;
+            this.btnaddhealth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnaddhealth.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnaddhealth.ForeColor = System.Drawing.Color.White;
+            this.btnaddhealth.Location = new System.Drawing.Point(16, 491);
+            this.btnaddhealth.Name = "btnaddhealth";
+            this.btnaddhealth.Size = new System.Drawing.Size(196, 28);
+            this.btnaddhealth.TabIndex = 88;
+            this.btnaddhealth.Text = "Add Info";
+            this.btnaddhealth.UseVisualStyleBackColor = false;
+            this.btnaddhealth.Click += new System.EventHandler(this.btnaddhealth_Click);
+            // 
+            // btncancelhealth
+            // 
+            this.btncancelhealth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btncancelhealth.FlatAppearance.BorderSize = 0;
+            this.btncancelhealth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncancelhealth.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncancelhealth.ForeColor = System.Drawing.Color.White;
+            this.btncancelhealth.Location = new System.Drawing.Point(291, 491);
+            this.btncancelhealth.Name = "btncancelhealth";
+            this.btncancelhealth.Size = new System.Drawing.Size(196, 28);
+            this.btncancelhealth.TabIndex = 87;
+            this.btncancelhealth.Text = "Cancel";
+            this.btncancelhealth.UseVisualStyleBackColor = false;
+            this.btncancelhealth.Click += new System.EventHandler(this.btncancelhealth_Click);
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.cbxbloodtype);
@@ -2733,8 +2761,6 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.cbxweight);
-            this.groupBox4.Controls.Add(this.cbxheight);
             this.groupBox4.Controls.Add(this.txtweight);
             this.groupBox4.Controls.Add(this.txtheight);
             this.groupBox4.Controls.Add(this.label14);
@@ -2746,38 +2772,6 @@
             this.groupBox4.TabIndex = 85;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "BMI";
-            // 
-            // cbxweight
-            // 
-            this.cbxweight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cbxweight.CausesValidation = false;
-            this.cbxweight.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxweight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxweight.FormattingEnabled = true;
-            this.cbxweight.Items.AddRange(new object[] {
-            "Primary",
-            "Secondary",
-            "Tertiary"});
-            this.cbxweight.Location = new System.Drawing.Point(323, 58);
-            this.cbxweight.Name = "cbxweight";
-            this.cbxweight.Size = new System.Drawing.Size(70, 27);
-            this.cbxweight.TabIndex = 88;
-            // 
-            // cbxheight
-            // 
-            this.cbxheight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cbxheight.CausesValidation = false;
-            this.cbxheight.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxheight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxheight.FormattingEnabled = true;
-            this.cbxheight.Items.AddRange(new object[] {
-            "Primary",
-            "Secondary",
-            "Tertiary"});
-            this.cbxheight.Location = new System.Drawing.Point(323, 18);
-            this.cbxheight.Name = "cbxheight";
-            this.cbxheight.Size = new System.Drawing.Size(70, 27);
-            this.cbxheight.TabIndex = 87;
             // 
             // txtweight
             // 
@@ -4175,36 +4169,6 @@
             // 
             this.opimage1.FileName = "openFileDialog1";
             // 
-            // btnaddhealth
-            // 
-            this.btnaddhealth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.btnaddhealth.FlatAppearance.BorderSize = 0;
-            this.btnaddhealth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnaddhealth.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnaddhealth.ForeColor = System.Drawing.Color.White;
-            this.btnaddhealth.Location = new System.Drawing.Point(16, 491);
-            this.btnaddhealth.Name = "btnaddhealth";
-            this.btnaddhealth.Size = new System.Drawing.Size(196, 28);
-            this.btnaddhealth.TabIndex = 88;
-            this.btnaddhealth.Text = "Add Info";
-            this.btnaddhealth.UseVisualStyleBackColor = false;
-            this.btnaddhealth.Click += new System.EventHandler(this.btnaddhealth_Click);
-            // 
-            // btncancelhealth
-            // 
-            this.btncancelhealth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.btncancelhealth.FlatAppearance.BorderSize = 0;
-            this.btncancelhealth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncancelhealth.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncancelhealth.ForeColor = System.Drawing.Color.White;
-            this.btncancelhealth.Location = new System.Drawing.Point(291, 491);
-            this.btncancelhealth.Name = "btncancelhealth";
-            this.btncancelhealth.Size = new System.Drawing.Size(196, 28);
-            this.btncancelhealth.TabIndex = 87;
-            this.btncancelhealth.Text = "Cancel";
-            this.btncancelhealth.UseVisualStyleBackColor = false;
-            this.btncancelhealth.Click += new System.EventHandler(this.btncancelhealth_Click);
-            // 
             // casestudy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4434,7 +4398,7 @@
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnedited;
         private System.Windows.Forms.Button btnedback;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -4637,8 +4601,6 @@
         private System.Windows.Forms.Panel panel39;
         private System.Windows.Forms.Label lblnamehealth;
         private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.ComboBox cbxweight;
-        private System.Windows.Forms.ComboBox cbxheight;
         private System.Windows.Forms.TextBox txtweight;
         private System.Windows.Forms.Button btnaddhealth;
         private System.Windows.Forms.Button btncancelhealth;
