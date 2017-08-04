@@ -138,6 +138,7 @@
             this.btnaddcon = new System.Windows.Forms.Button();
             this.btncancon = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.richconbox = new System.Windows.Forms.RichTextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.condate = new System.Windows.Forms.DateTimePicker();
             this.txtintname = new System.Windows.Forms.TextBox();
@@ -197,6 +198,8 @@
             this.label20 = new System.Windows.Forms.Label();
             this.lblnamedrpt = new System.Windows.Forms.Label();
             this.ninth = new System.Windows.Forms.TabPage();
+            this.panel41 = new System.Windows.Forms.Panel();
+            this.label65 = new System.Windows.Forms.Label();
             this.tenth = new System.Windows.Forms.TabPage();
             this.button23 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
@@ -270,7 +273,7 @@
             this.label92 = new System.Windows.Forms.Label();
             this.panel25 = new System.Windows.Forms.Panel();
             this.label71 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btncon = new System.Windows.Forms.Button();
             this.label93 = new System.Windows.Forms.Label();
             this.label94 = new System.Windows.Forms.Label();
             this.panel24 = new System.Windows.Forms.Panel();
@@ -315,7 +318,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnFam = new System.Windows.Forms.Button();
-            this.btnCon = new System.Windows.Forms.Button();
+            this.shit2 = new System.Windows.Forms.Button();
             this.btnProb = new System.Windows.Forms.Button();
             this.shit = new System.Windows.Forms.Button();
             this.btnEdu = new System.Windows.Forms.Button();
@@ -347,10 +350,14 @@
             this.btnSearch2 = new System.Windows.Forms.Button();
             this.btnCaseStudy2 = new System.Windows.Forms.Button();
             this.opimage1 = new System.Windows.Forms.OpenFileDialog();
-            this.richconbox = new System.Windows.Forms.RichTextBox();
+            this.tabconrecords = new System.Windows.Forms.TabControl();
+            this.tabrecords = new System.Windows.Forms.TabPage();
+            this.document = new System.Windows.Forms.TabPage();
             this.dtgcon = new System.Windows.Forms.DataGridView();
-            this.panel41 = new System.Windows.Forms.Panel();
-            this.label65 = new System.Windows.Forms.Label();
+            this.richboxrecords = new System.Windows.Forms.RichTextBox();
+            this.btnaddconrec = new System.Windows.Forms.Button();
+            this.btncancelcon = new System.Windows.Forms.Button();
+            this.btncancelviewrec = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pan_RES.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -390,6 +397,7 @@
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
             this.ninth.SuspendLayout();
+            this.panel41.SuspendLayout();
             this.tenth.SuspendLayout();
             this.panel36.SuspendLayout();
             this.panel35.SuspendLayout();
@@ -419,8 +427,10 @@
             this.dropin.SuspendLayout();
             this.residential.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.tabconrecords.SuspendLayout();
+            this.tabrecords.SuspendLayout();
+            this.document.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgcon)).BeginInit();
-            this.panel41.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -782,7 +792,7 @@
             this.tabControl.Location = new System.Drawing.Point(301, 74);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(527, 551);
+            this.tabControl.Size = new System.Drawing.Size(561, 562);
             this.tabControl.TabIndex = 7;
             // 
             // first
@@ -1725,6 +1735,7 @@
             this.btncancon.TabIndex = 92;
             this.btncancon.Text = "Cancel";
             this.btncancon.UseVisualStyleBackColor = false;
+            this.btncancon.Click += new System.EventHandler(this.btncancon_Click);
             // 
             // groupBox5
             // 
@@ -1736,6 +1747,14 @@
             this.groupBox5.TabIndex = 91;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Details";
+            // 
+            // richconbox
+            // 
+            this.richconbox.Location = new System.Drawing.Point(18, 32);
+            this.richconbox.Name = "richconbox";
+            this.richconbox.Size = new System.Drawing.Size(424, 173);
+            this.richconbox.TabIndex = 0;
+            this.richconbox.Text = "";
             // 
             // groupBox6
             // 
@@ -2407,15 +2426,35 @@
             // 
             // ninth
             // 
-            this.ninth.Controls.Add(this.dtgcon);
+            this.ninth.Controls.Add(this.tabconrecords);
             this.ninth.Controls.Add(this.panel41);
             this.ninth.Location = new System.Drawing.Point(4, 22);
             this.ninth.Name = "ninth";
             this.ninth.Padding = new System.Windows.Forms.Padding(3);
-            this.ninth.Size = new System.Drawing.Size(519, 525);
+            this.ninth.Size = new System.Drawing.Size(553, 536);
             this.ninth.TabIndex = 9;
             this.ninth.Text = "9";
             this.ninth.UseVisualStyleBackColor = true;
+            // 
+            // panel41
+            // 
+            this.panel41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.panel41.Controls.Add(this.label65);
+            this.panel41.Location = new System.Drawing.Point(0, 5);
+            this.panel41.Name = "panel41";
+            this.panel41.Size = new System.Drawing.Size(519, 83);
+            this.panel41.TabIndex = 9;
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.ForeColor = System.Drawing.Color.White;
+            this.label65.Location = new System.Drawing.Point(-3, 27);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(504, 55);
+            this.label65.TabIndex = 6;
+            this.label65.Text = "Consultation Records";
             // 
             // tenth
             // 
@@ -3288,7 +3327,7 @@
             this.panel25.BackColor = System.Drawing.Color.White;
             this.panel25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel25.Controls.Add(this.label71);
-            this.panel25.Controls.Add(this.button10);
+            this.panel25.Controls.Add(this.btncon);
             this.panel25.Controls.Add(this.label93);
             this.panel25.Location = new System.Drawing.Point(320, 312);
             this.panel25.Name = "panel25";
@@ -3307,19 +3346,20 @@
             this.label71.Text = "February 22, 2017";
             this.label71.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // button10
+            // btncon
             // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(94, 41);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(88, 25);
-            this.button10.TabIndex = 29;
-            this.button10.Text = "records";
-            this.button10.UseVisualStyleBackColor = false;
+            this.btncon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btncon.FlatAppearance.BorderSize = 0;
+            this.btncon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncon.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncon.ForeColor = System.Drawing.Color.White;
+            this.btncon.Location = new System.Drawing.Point(94, 41);
+            this.btncon.Name = "btncon";
+            this.btncon.Size = new System.Drawing.Size(88, 25);
+            this.btncon.TabIndex = 29;
+            this.btncon.Text = "records";
+            this.btncon.UseVisualStyleBackColor = false;
+            this.btncon.Click += new System.EventHandler(this.button10_Click);
             // 
             // label93
             // 
@@ -3863,20 +3903,20 @@
             this.btnFam.UseVisualStyleBackColor = false;
             this.btnFam.Click += new System.EventHandler(this.btnFam_Click);
             // 
-            // btnCon
+            // shit2
             // 
-            this.btnCon.BackColor = System.Drawing.Color.Transparent;
-            this.btnCon.FlatAppearance.BorderSize = 0;
-            this.btnCon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCon.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCon.Location = new System.Drawing.Point(0, 121);
-            this.btnCon.Name = "btnCon";
-            this.btnCon.Size = new System.Drawing.Size(199, 28);
-            this.btnCon.TabIndex = 6;
-            this.btnCon.Text = "       Add Daily Consultation";
-            this.btnCon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCon.UseVisualStyleBackColor = false;
-            this.btnCon.Click += new System.EventHandler(this.btnCon_Click);
+            this.shit2.BackColor = System.Drawing.Color.Transparent;
+            this.shit2.FlatAppearance.BorderSize = 0;
+            this.shit2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.shit2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shit2.Location = new System.Drawing.Point(0, 121);
+            this.shit2.Name = "shit2";
+            this.shit2.Size = new System.Drawing.Size(199, 28);
+            this.shit2.TabIndex = 6;
+            this.shit2.Text = "       Add Daily Consultation";
+            this.shit2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.shit2.UseVisualStyleBackColor = false;
+            this.shit2.Click += new System.EventHandler(this.btnCon_Click);
             // 
             // btnProb
             // 
@@ -4041,7 +4081,7 @@
             this.panel.Controls.Add(this.btnEdu);
             this.panel.Controls.Add(this.shit);
             this.panel.Controls.Add(this.btnProb);
-            this.panel.Controls.Add(this.btnCon);
+            this.panel.Controls.Add(this.shit2);
             this.panel.Controls.Add(this.btnFam);
             this.panel.Controls.Add(this.btnAdd);
             this.panel.Controls.Add(this.btnSearch);
@@ -4321,42 +4361,102 @@
             // 
             this.opimage1.FileName = "openFileDialog1";
             // 
-            // richconbox
+            // tabconrecords
             // 
-            this.richconbox.Location = new System.Drawing.Point(18, 32);
-            this.richconbox.Name = "richconbox";
-            this.richconbox.Size = new System.Drawing.Size(424, 173);
-            this.richconbox.TabIndex = 0;
-            this.richconbox.Text = "";
+            this.tabconrecords.Controls.Add(this.tabrecords);
+            this.tabconrecords.Controls.Add(this.document);
+            this.tabconrecords.Location = new System.Drawing.Point(0, 87);
+            this.tabconrecords.Name = "tabconrecords";
+            this.tabconrecords.SelectedIndex = 0;
+            this.tabconrecords.Size = new System.Drawing.Size(547, 443);
+            this.tabconrecords.TabIndex = 11;
+            // 
+            // tabrecords
+            // 
+            this.tabrecords.Controls.Add(this.btnaddconrec);
+            this.tabrecords.Controls.Add(this.btncancelcon);
+            this.tabrecords.Controls.Add(this.dtgcon);
+            this.tabrecords.Location = new System.Drawing.Point(4, 22);
+            this.tabrecords.Name = "tabrecords";
+            this.tabrecords.Padding = new System.Windows.Forms.Padding(3);
+            this.tabrecords.Size = new System.Drawing.Size(539, 417);
+            this.tabrecords.TabIndex = 0;
+            this.tabrecords.Text = "1";
+            this.tabrecords.UseVisualStyleBackColor = true;
+            // 
+            // document
+            // 
+            this.document.Controls.Add(this.btncancelviewrec);
+            this.document.Controls.Add(this.richboxrecords);
+            this.document.Location = new System.Drawing.Point(4, 22);
+            this.document.Name = "document";
+            this.document.Padding = new System.Windows.Forms.Padding(3);
+            this.document.Size = new System.Drawing.Size(539, 417);
+            this.document.TabIndex = 1;
+            this.document.Text = "2";
+            this.document.UseVisualStyleBackColor = true;
             // 
             // dtgcon
             // 
             this.dtgcon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgcon.Location = new System.Drawing.Point(3, 90);
+            this.dtgcon.Location = new System.Drawing.Point(12, 6);
             this.dtgcon.Name = "dtgcon";
             this.dtgcon.ReadOnly = true;
-            this.dtgcon.Size = new System.Drawing.Size(510, 435);
-            this.dtgcon.TabIndex = 10;
+            this.dtgcon.Size = new System.Drawing.Size(521, 352);
+            this.dtgcon.TabIndex = 11;
             // 
-            // panel41
+            // richboxrecords
             // 
-            this.panel41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
-            this.panel41.Controls.Add(this.label65);
-            this.panel41.Location = new System.Drawing.Point(0, 5);
-            this.panel41.Name = "panel41";
-            this.panel41.Size = new System.Drawing.Size(519, 83);
-            this.panel41.TabIndex = 9;
+            this.richboxrecords.Location = new System.Drawing.Point(6, 6);
+            this.richboxrecords.Name = "richboxrecords";
+            this.richboxrecords.Size = new System.Drawing.Size(527, 378);
+            this.richboxrecords.TabIndex = 0;
+            this.richboxrecords.Text = "";
             // 
-            // label65
+            // btnaddconrec
             // 
-            this.label65.AutoSize = true;
-            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.ForeColor = System.Drawing.Color.White;
-            this.label65.Location = new System.Drawing.Point(-3, 27);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(504, 55);
-            this.label65.TabIndex = 6;
-            this.label65.Text = "Consultation Records";
+            this.btnaddconrec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btnaddconrec.FlatAppearance.BorderSize = 0;
+            this.btnaddconrec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnaddconrec.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnaddconrec.ForeColor = System.Drawing.Color.White;
+            this.btnaddconrec.Location = new System.Drawing.Point(12, 375);
+            this.btnaddconrec.Name = "btnaddconrec";
+            this.btnaddconrec.Size = new System.Drawing.Size(196, 28);
+            this.btnaddconrec.TabIndex = 78;
+            this.btnaddconrec.Text = "Add Record";
+            this.btnaddconrec.UseVisualStyleBackColor = false;
+            this.btnaddconrec.Click += new System.EventHandler(this.btnaddconrec_Click);
+            // 
+            // btncancelcon
+            // 
+            this.btncancelcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btncancelcon.FlatAppearance.BorderSize = 0;
+            this.btncancelcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncancelcon.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncancelcon.ForeColor = System.Drawing.Color.White;
+            this.btncancelcon.Location = new System.Drawing.Point(337, 375);
+            this.btncancelcon.Name = "btncancelcon";
+            this.btncancelcon.Size = new System.Drawing.Size(196, 28);
+            this.btncancelcon.TabIndex = 77;
+            this.btncancelcon.Text = "Cancel";
+            this.btncancelcon.UseVisualStyleBackColor = false;
+            this.btncancelcon.Click += new System.EventHandler(this.btncancelcon_Click);
+            // 
+            // btncancelviewrec
+            // 
+            this.btncancelviewrec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btncancelviewrec.FlatAppearance.BorderSize = 0;
+            this.btncancelviewrec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncancelviewrec.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncancelviewrec.ForeColor = System.Drawing.Color.White;
+            this.btncancelviewrec.Location = new System.Drawing.Point(337, 386);
+            this.btncancelviewrec.Name = "btncancelviewrec";
+            this.btncancelviewrec.Size = new System.Drawing.Size(196, 28);
+            this.btncancelviewrec.TabIndex = 78;
+            this.btncancelviewrec.Text = "Back";
+            this.btncancelviewrec.UseVisualStyleBackColor = false;
+            this.btncancelviewrec.Click += new System.EventHandler(this.btncancelviewrec_Click);
             // 
             // casestudy
             // 
@@ -4439,6 +4539,8 @@
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.ninth.ResumeLayout(false);
+            this.panel41.ResumeLayout(false);
+            this.panel41.PerformLayout();
             this.tenth.ResumeLayout(false);
             this.panel36.ResumeLayout(false);
             this.panel36.PerformLayout();
@@ -4487,9 +4589,10 @@
             this.dropin.ResumeLayout(false);
             this.residential.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.tabconrecords.ResumeLayout(false);
+            this.tabrecords.ResumeLayout(false);
+            this.document.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgcon)).EndInit();
-            this.panel41.ResumeLayout(false);
-            this.panel41.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4511,7 +4614,7 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnFam;
-        private System.Windows.Forms.Button btnCon;
+        private System.Windows.Forms.Button shit2;
         private System.Windows.Forms.Button btnProb;
         private System.Windows.Forms.Button shit;
         private System.Windows.Forms.Button btnEdu;
@@ -4665,7 +4768,7 @@
         private System.Windows.Forms.Label label70;
         private System.Windows.Forms.Panel panel25;
         private System.Windows.Forms.Label label71;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btncon;
         private System.Windows.Forms.Label label93;
         private System.Windows.Forms.Label label94;
         private System.Windows.Forms.Button btned;
@@ -4815,8 +4918,15 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.RichTextBox richconbox;
-        private System.Windows.Forms.DataGridView dtgcon;
         private System.Windows.Forms.Panel panel41;
         private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.TabControl tabconrecords;
+        private System.Windows.Forms.TabPage tabrecords;
+        private System.Windows.Forms.DataGridView dtgcon;
+        private System.Windows.Forms.TabPage document;
+        private System.Windows.Forms.RichTextBox richboxrecords;
+        private System.Windows.Forms.Button btnaddconrec;
+        private System.Windows.Forms.Button btncancelcon;
+        private System.Windows.Forms.Button btncancelviewrec;
     }
 }

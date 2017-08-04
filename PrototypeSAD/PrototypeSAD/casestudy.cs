@@ -94,7 +94,7 @@ namespace PrototypeSAD
         {
             tabControl.SelectedTab = fifth;
             resetColor();
-            btnCon.BackColor = Color.Gray;
+            shit2.BackColor = Color.Gray;
         }
 
         private void btnFam_Click(object sender, EventArgs e)
@@ -206,7 +206,7 @@ namespace PrototypeSAD
 
         public void resetColor()
         {
-            btnCaseStudy.BackColor = Color.Transparent; btnAdd.BackColor = Color.Transparent; btnAnnual.BackColor = Color.Transparent; btnCloseCase.BackColor = Color.Transparent; btnCon.BackColor = Color.Transparent; btnDropIn.BackColor = Color.Transparent;
+            btnCaseStudy.BackColor = Color.Transparent; btnAdd.BackColor = Color.Transparent; btnAnnual.BackColor = Color.Transparent; btnCloseCase.BackColor = Color.Transparent; shit2.BackColor = Color.Transparent; btnDropIn.BackColor = Color.Transparent;
             btnEdu.BackColor = Color.Transparent; btnFam.BackColor = Color.Transparent; shit.BackColor = Color.Transparent; btnInc.BackColor = Color.Transparent; btnProb.BackColor = Color.Transparent; btnProg.BackColor = Color.Transparent;
             btnResidential.BackColor = Color.Transparent; btnSearch.BackColor = Color.Transparent; btnServ.BackColor = Color.Transparent; btnSS.BackColor = Color.Transparent; btnUpdate.BackColor = Color.Transparent;
             btnDropIn.BackColor = Color.Gray;
@@ -632,11 +632,11 @@ namespace PrototypeSAD
                         comm.ExecuteNonQuery();
 
                         MessageBox.Show("New Info Added!");
-
-                        existsed(id);
                       
 
                         conn.Close();
+
+                    existsed(id);
 
                     lbltype.Text = lbledtype.Text = type;
                     lblschool.Text = lbledschool.Text = edname;
@@ -712,9 +712,9 @@ namespace PrototypeSAD
 
                         MessageBox.Show("New Info Added!");
 
-                        existshealth(id);
-
                         conn.Close();
+
+                        existshealth(id);
 
                         lblblood.Text = blood;
                         lblheight.Text = height.ToString();
@@ -752,6 +752,32 @@ namespace PrototypeSAD
                     }
                 }
             }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = ninth;
+            tabconrecords.SelectedTab = tabrecords;
+        }
+
+        private void btnaddconrec_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = sixth;
+        }
+
+        private void btncancon_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = ninth;
+        }
+
+        private void btncancelcon_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = sixteen;
+        }
+
+        private void btncancelviewrec_Click(object sender, EventArgs e)
+        {
+            tabconrecords.SelectedTab = tabrecords;
         }
     }
 }
