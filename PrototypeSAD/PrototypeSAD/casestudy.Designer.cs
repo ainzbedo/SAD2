@@ -135,6 +135,17 @@
             this.button2 = new System.Windows.Forms.Button();
             this.fifth = new System.Windows.Forms.TabPage();
             this.sixth = new System.Windows.Forms.TabPage();
+            this.btnaddcon = new System.Windows.Forms.Button();
+            this.btncancon = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.condate = new System.Windows.Forms.DateTimePicker();
+            this.txtintname = new System.Windows.Forms.TextBox();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.panel40 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.seventh = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbxlevel = new System.Windows.Forms.ComboBox();
@@ -336,6 +347,10 @@
             this.btnSearch2 = new System.Windows.Forms.Button();
             this.btnCaseStudy2 = new System.Windows.Forms.Button();
             this.opimage1 = new System.Windows.Forms.OpenFileDialog();
+            this.richconbox = new System.Windows.Forms.RichTextBox();
+            this.dtgcon = new System.Windows.Forms.DataGridView();
+            this.panel41 = new System.Windows.Forms.Panel();
+            this.label65 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pan_RES.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -356,6 +371,10 @@
             this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.sixth.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.panel40.SuspendLayout();
             this.seventh.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -370,6 +389,7 @@
             this.panel12.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
+            this.ninth.SuspendLayout();
             this.tenth.SuspendLayout();
             this.panel36.SuspendLayout();
             this.panel35.SuspendLayout();
@@ -399,6 +419,8 @@
             this.dropin.SuspendLayout();
             this.residential.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgcon)).BeginInit();
+            this.panel41.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -1663,6 +1685,11 @@
             // 
             // sixth
             // 
+            this.sixth.Controls.Add(this.btnaddcon);
+            this.sixth.Controls.Add(this.btncancon);
+            this.sixth.Controls.Add(this.groupBox5);
+            this.sixth.Controls.Add(this.groupBox6);
+            this.sixth.Controls.Add(this.panel40);
             this.sixth.Location = new System.Drawing.Point(4, 22);
             this.sixth.Name = "sixth";
             this.sixth.Padding = new System.Windows.Forms.Padding(3);
@@ -1670,6 +1697,129 @@
             this.sixth.TabIndex = 6;
             this.sixth.Text = "6";
             this.sixth.UseVisualStyleBackColor = true;
+            // 
+            // btnaddcon
+            // 
+            this.btnaddcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btnaddcon.FlatAppearance.BorderSize = 0;
+            this.btnaddcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnaddcon.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnaddcon.ForeColor = System.Drawing.Color.White;
+            this.btnaddcon.Location = new System.Drawing.Point(16, 492);
+            this.btnaddcon.Name = "btnaddcon";
+            this.btnaddcon.Size = new System.Drawing.Size(196, 28);
+            this.btnaddcon.TabIndex = 93;
+            this.btnaddcon.Text = "Add Info";
+            this.btnaddcon.UseVisualStyleBackColor = false;
+            // 
+            // btncancon
+            // 
+            this.btncancon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btncancon.FlatAppearance.BorderSize = 0;
+            this.btncancon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncancon.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncancon.ForeColor = System.Drawing.Color.White;
+            this.btncancon.Location = new System.Drawing.Point(291, 492);
+            this.btncancon.Name = "btncancon";
+            this.btncancon.Size = new System.Drawing.Size(196, 28);
+            this.btncancon.TabIndex = 92;
+            this.btncancon.Text = "Cancel";
+            this.btncancon.UseVisualStyleBackColor = false;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.richconbox);
+            this.groupBox5.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.Location = new System.Drawing.Point(19, 250);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(464, 236);
+            this.groupBox5.TabIndex = 91;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Details";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.condate);
+            this.groupBox6.Controls.Add(this.txtintname);
+            this.groupBox6.Controls.Add(this.label58);
+            this.groupBox6.Controls.Add(this.label60);
+            this.groupBox6.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.Location = new System.Drawing.Point(9, 126);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(424, 91);
+            this.groupBox6.TabIndex = 90;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Interview Setting";
+            // 
+            // condate
+            // 
+            this.condate.Location = new System.Drawing.Point(124, 17);
+            this.condate.Name = "condate";
+            this.condate.Size = new System.Drawing.Size(199, 27);
+            this.condate.TabIndex = 94;
+            // 
+            // txtintname
+            // 
+            this.txtintname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtintname.Location = new System.Drawing.Point(124, 58);
+            this.txtintname.Name = "txtintname";
+            this.txtintname.Size = new System.Drawing.Size(199, 27);
+            this.txtintname.TabIndex = 79;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label58.Location = new System.Drawing.Point(3, 17);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(46, 18);
+            this.label58.TabIndex = 77;
+            this.label58.Text = "Date";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label60.Location = new System.Drawing.Point(3, 60);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(99, 18);
+            this.label60.TabIndex = 73;
+            this.label60.Text = "Interviewer";
+            // 
+            // panel40
+            // 
+            this.panel40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.panel40.Controls.Add(this.label13);
+            this.panel40.Controls.Add(this.label21);
+            this.panel40.Location = new System.Drawing.Point(0, 4);
+            this.panel40.Name = "panel40";
+            this.panel40.Size = new System.Drawing.Size(519, 97);
+            this.panel40.TabIndex = 89;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(13, 17);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(72, 25);
+            this.label13.TabIndex = 40;
+            this.label13.Text = "Name";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.Black;
+            this.label21.Location = new System.Drawing.Point(11, 64);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(138, 24);
+            this.label21.TabIndex = 39;
+            this.label21.Text = "Consultation";
             // 
             // seventh
             // 
@@ -2257,6 +2407,8 @@
             // 
             // ninth
             // 
+            this.ninth.Controls.Add(this.dtgcon);
+            this.ninth.Controls.Add(this.panel41);
             this.ninth.Location = new System.Drawing.Point(4, 22);
             this.ninth.Name = "ninth";
             this.ninth.Padding = new System.Windows.Forms.Padding(3);
@@ -4169,6 +4321,43 @@
             // 
             this.opimage1.FileName = "openFileDialog1";
             // 
+            // richconbox
+            // 
+            this.richconbox.Location = new System.Drawing.Point(18, 32);
+            this.richconbox.Name = "richconbox";
+            this.richconbox.Size = new System.Drawing.Size(424, 173);
+            this.richconbox.TabIndex = 0;
+            this.richconbox.Text = "";
+            // 
+            // dtgcon
+            // 
+            this.dtgcon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgcon.Location = new System.Drawing.Point(3, 90);
+            this.dtgcon.Name = "dtgcon";
+            this.dtgcon.ReadOnly = true;
+            this.dtgcon.Size = new System.Drawing.Size(510, 435);
+            this.dtgcon.TabIndex = 10;
+            // 
+            // panel41
+            // 
+            this.panel41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.panel41.Controls.Add(this.label65);
+            this.panel41.Location = new System.Drawing.Point(0, 5);
+            this.panel41.Name = "panel41";
+            this.panel41.Size = new System.Drawing.Size(519, 83);
+            this.panel41.TabIndex = 9;
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.ForeColor = System.Drawing.Color.White;
+            this.label65.Location = new System.Drawing.Point(-3, 27);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(504, 55);
+            this.label65.TabIndex = 6;
+            this.label65.Text = "Consultation Records";
+            // 
             // casestudy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4218,6 +4407,12 @@
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.sixth.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.panel40.ResumeLayout(false);
+            this.panel40.PerformLayout();
             this.seventh.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -4243,6 +4438,7 @@
             this.panel10.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            this.ninth.ResumeLayout(false);
             this.tenth.ResumeLayout(false);
             this.panel36.ResumeLayout(false);
             this.panel36.PerformLayout();
@@ -4291,6 +4487,9 @@
             this.dropin.ResumeLayout(false);
             this.residential.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgcon)).EndInit();
+            this.panel41.ResumeLayout(false);
+            this.panel41.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4604,5 +4803,20 @@
         private System.Windows.Forms.TextBox txtweight;
         private System.Windows.Forms.Button btnaddhealth;
         private System.Windows.Forms.Button btncancelhealth;
+        private System.Windows.Forms.Button btnaddcon;
+        private System.Windows.Forms.Button btncancon;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.DateTimePicker condate;
+        private System.Windows.Forms.TextBox txtintname;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Panel panel40;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.RichTextBox richconbox;
+        private System.Windows.Forms.DataGridView dtgcon;
+        private System.Windows.Forms.Panel panel41;
+        private System.Windows.Forms.Label label65;
     }
 }
