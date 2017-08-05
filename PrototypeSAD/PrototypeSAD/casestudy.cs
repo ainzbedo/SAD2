@@ -19,6 +19,7 @@ namespace PrototypeSAD
         public MySqlConnection conn;
 
         public int id;
+        public string filename;
 
         private void btnAnnual_Click(object sender, EventArgs e)
         {
@@ -302,6 +303,9 @@ namespace PrototypeSAD
 
             tabControl.SelectedTab = sixteen;
 
+            lbladdeditprofile.Text = "New Profile";
+            btnaddeditcase.Text = "Add Info";
+
             reload(id);
 
             existsed(id);
@@ -310,6 +314,16 @@ namespace PrototypeSAD
         }
 
         private void button18_Click(object sender, EventArgs e)
+        {
+
+            if (btnaddeditcase.Text == "Add Info")
+            {
+                addprofile();
+            }
+           
+        }
+
+        public void addprofile()
         {
             string lname = txtlname.Text, fname = txtfname.Text, status = cbxstatus.Text, program = cbxprogram.Text, address = txtaddress.Text;
             int age;
@@ -322,7 +336,7 @@ namespace PrototypeSAD
             else if (pbox1.Image == null)
             {
                 MessageBox.Show("Please insert a proper picture.");
-            } 
+            }
 
             else
             {
@@ -343,7 +357,7 @@ namespace PrototypeSAD
                         conn.Close();
 
                         tabControl.SelectedTab = first;
-                   
+
                         reset();
                         refresh();
 
@@ -361,8 +375,6 @@ namespace PrototypeSAD
                 }
 
             }
-
-            
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -387,6 +399,8 @@ namespace PrototypeSAD
             if (rest.ShowDialog() == DialogResult.OK)
             {
                 pbox1.Image = Image.FromFile(rest.FileName);
+
+                filename = rest.FileName;
             }
 
         }
@@ -416,7 +430,7 @@ namespace PrototypeSAD
                     lbljoined.Text = Convert.ToDateTime(dt.Rows[0]["datejoined"]).ToString("MMMM dd, yyyy");
 
 
-                    //pbox2.Image = Image.FromStream(new MemoryStream((byte[])dt.Rows[0]["picture"]));
+                    pbox2.Image = Image.FromFile(filename);
 
                 }
 
@@ -444,6 +458,36 @@ namespace PrototypeSAD
             catch (Exception ee)
             {
                 MessageBox.Show("" + ee);
+                conn.Close();
+            }
+        }
+
+        public void reloadcon(int id)
+        {
+            MessageBox.Show(id.ToString());
+            try
+            {
+                conn.Open();
+
+                MySqlCommand comm = new MySqlCommand("SELECT cid, interviewdate, interviewer FROM consultation WHERE caseid = " + id + " ORDER BY interviewdate", conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+
+                adp.Fill(dt);
+
+                dtgcon.DataSource = dt;
+
+                dtgcon.Columns[0].Visible = false;
+
+                conn.Close();
+
+            }
+
+
+            catch (Exception ee)
+            {
+                MessageBox.Show("There are no current consultation records for this case study.");                
+                //MessageBox.Show("" + ee);
                 conn.Close();
             }
         }
@@ -548,6 +592,14 @@ namespace PrototypeSAD
             txtweight.Clear();
             cbxbloodtype.SelectedIndex = -1;
            
+        }
+
+        public void reset4()
+        {
+            condate.Value = DateTime.Now;
+            txtintname.Clear();
+            richconbox.Clear();
+
         }
 
         private void btned_Click(object sender, EventArgs e)
@@ -758,6 +810,8 @@ namespace PrototypeSAD
         {
             tabControl.SelectedTab = ninth;
             tabconrecords.SelectedTab = tabrecords;
+
+            reloadcon(id);
         }
 
         private void btnaddconrec_Click(object sender, EventArgs e)
@@ -768,6 +822,8 @@ namespace PrototypeSAD
         private void btncancon_Click(object sender, EventArgs e)
         {
             tabControl.SelectedTab = ninth;
+
+
         }
 
         private void btncancelcon_Click(object sender, EventArgs e)
@@ -778,6 +834,80 @@ namespace PrototypeSAD
         private void btncancelviewrec_Click(object sender, EventArgs e)
         {
             tabconrecords.SelectedTab = tabrecords;
+        }
+
+        private void dtgcon_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int cid = int.Parse(dtgcs.Rows[e.RowIndex].Cells[0].Value.ToString()) - 1;
+            //MessageBox.Show(cid.ToString());
+            try
+            {
+                conn.Open();
+
+                MySqlCommand comm = new MySqlCommand("SELECT condes FROM consultation WHERE cid = " + cid, conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+
+                adp.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+
+                    richboxrecords.Text = dt.Rows[0]["condes"].ToString();
+
+                }
+
+                tabconrecords.SelectedTab = document;
+
+                conn.Close();
+
+            }
+
+            catch (Exception ee)
+            {
+                MessageBox.Show("" + ee);
+                conn.Close();
+            }
+        }
+
+        private void btnaddcon_Click(object sender, EventArgs e)
+        {
+            string interviewer = txtintname.Text, condes = richconbox.Text;
+
+            if (string.IsNullOrEmpty(interviewer) || string.IsNullOrEmpty(condes))
+            {
+                MessageBox.Show("Please fill out empty fields.");
+            }
+
+            else
+            {
+                try
+                {
+
+                    conn.Open();
+
+
+                    MySqlCommand comm = new MySqlCommand("INSERT INTO consultation(caseid, condes, interviewdate, interviewer) VALUES('" + id + "', '" + condes + "', '" + condate.Value.Date.ToString("yyyyMMdd") + "','" + interviewer + "')", conn);
+
+                    comm.ExecuteNonQuery();
+
+                    MessageBox.Show("Consultation Record Added!");
+
+                    conn.Close();
+
+                    reloadcon(id);
+
+                    tabControl.SelectedTab = ninth;
+
+                    reset4();
+                }
+
+                catch (Exception ee)
+                {
+                    MessageBox.Show("" + ee);
+                    conn.Close();
+                }
+            }
         }
     }
 }
