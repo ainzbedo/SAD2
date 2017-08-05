@@ -262,9 +262,10 @@
             this.fourteen = new System.Windows.Forms.TabPage();
             this.fifteen = new System.Windows.Forms.TabPage();
             this.sixteen = new System.Windows.Forms.TabPage();
+            this.btneditprofile = new System.Windows.Forms.Button();
             this.pbox2 = new System.Windows.Forms.PictureBox();
             this.button16 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
+            this.btnbackcasestud = new System.Windows.Forms.Button();
             this.label95 = new System.Windows.Forms.Label();
             this.panel27 = new System.Windows.Forms.Panel();
             this.button14 = new System.Windows.Forms.Button();
@@ -358,7 +359,6 @@
             this.btnSearch2 = new System.Windows.Forms.Button();
             this.btnCaseStudy2 = new System.Windows.Forms.Button();
             this.opimage1 = new System.Windows.Forms.OpenFileDialog();
-            this.btneditprofile = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pan_RES.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -3182,7 +3182,7 @@
             this.sixteen.Controls.Add(this.btneditprofile);
             this.sixteen.Controls.Add(this.pbox2);
             this.sixteen.Controls.Add(this.button16);
-            this.sixteen.Controls.Add(this.button15);
+            this.sixteen.Controls.Add(this.btnbackcasestud);
             this.sixteen.Controls.Add(this.label95);
             this.sixteen.Controls.Add(this.panel27);
             this.sixteen.Controls.Add(this.panel26);
@@ -3210,6 +3210,21 @@
             this.sixteen.TabIndex = 16;
             this.sixteen.Text = "16";
             // 
+            // btneditprofile
+            // 
+            this.btneditprofile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btneditprofile.FlatAppearance.BorderSize = 0;
+            this.btneditprofile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btneditprofile.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneditprofile.ForeColor = System.Drawing.Color.White;
+            this.btneditprofile.Location = new System.Drawing.Point(13, 491);
+            this.btneditprofile.Name = "btneditprofile";
+            this.btneditprofile.Size = new System.Drawing.Size(136, 25);
+            this.btneditprofile.TabIndex = 40;
+            this.btneditprofile.Text = "Edit Basic Info";
+            this.btneditprofile.UseVisualStyleBackColor = false;
+            this.btneditprofile.Click += new System.EventHandler(this.btneditprofile_Click);
+            // 
             // pbox2
             // 
             this.pbox2.BackColor = System.Drawing.Color.White;
@@ -3234,19 +3249,20 @@
             this.button16.Text = "services list";
             this.button16.UseVisualStyleBackColor = false;
             // 
-            // button15
+            // btnbackcasestud
             // 
-            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Location = new System.Drawing.Point(320, 491);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(187, 25);
-            this.button15.TabIndex = 37;
-            this.button15.Text = "show documents";
-            this.button15.UseVisualStyleBackColor = false;
+            this.btnbackcasestud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btnbackcasestud.FlatAppearance.BorderSize = 0;
+            this.btnbackcasestud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbackcasestud.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbackcasestud.ForeColor = System.Drawing.Color.White;
+            this.btnbackcasestud.Location = new System.Drawing.Point(320, 491);
+            this.btnbackcasestud.Name = "btnbackcasestud";
+            this.btnbackcasestud.Size = new System.Drawing.Size(187, 25);
+            this.btnbackcasestud.TabIndex = 37;
+            this.btnbackcasestud.Text = "Back";
+            this.btnbackcasestud.UseVisualStyleBackColor = false;
+            this.btnbackcasestud.Click += new System.EventHandler(this.btnbackcasestud_Click);
             // 
             // label95
             // 
@@ -4463,20 +4479,6 @@
             // 
             this.opimage1.FileName = "openFileDialog1";
             // 
-            // btneditprofile
-            // 
-            this.btneditprofile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.btneditprofile.FlatAppearance.BorderSize = 0;
-            this.btneditprofile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btneditprofile.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneditprofile.ForeColor = System.Drawing.Color.White;
-            this.btneditprofile.Location = new System.Drawing.Point(13, 491);
-            this.btneditprofile.Name = "btneditprofile";
-            this.btneditprofile.Size = new System.Drawing.Size(136, 25);
-            this.btneditprofile.TabIndex = 40;
-            this.btneditprofile.Text = "Edit Basic Info";
-            this.btneditprofile.UseVisualStyleBackColor = false;
-            // 
             // casestudy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4806,7 +4808,7 @@
         private System.Windows.Forms.Label label97;
         private System.Windows.Forms.Label label98;
         private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button btnbackcasestud;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel panel28;

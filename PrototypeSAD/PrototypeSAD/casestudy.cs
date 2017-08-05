@@ -430,7 +430,7 @@ namespace PrototypeSAD
                     lbljoined.Text = Convert.ToDateTime(dt.Rows[0]["datejoined"]).ToString("MMMM dd, yyyy");
 
 
-                    pbox2.Image = Image.FromFile(filename);
+                    //pbox2.Image = Image.FromFile(filename);
 
                 }
 
@@ -477,7 +477,7 @@ namespace PrototypeSAD
 
                 dtgcon.DataSource = dt;
 
-                dtgcon.Columns[0].Visible = false;
+                //dtgcon.Columns[0].Visible = false;
 
                 conn.Close();
 
@@ -575,7 +575,16 @@ namespace PrototypeSAD
             dtbirth.Value = DateTime.Now;
             dtjoin.Value = DateTime.Now;
 
-            tabControl.SelectedTab = first;
+            if (btnaddeditcase.Text == "Add Profile")
+            {
+                tabControl.SelectedTab = first;
+            }
+
+            else
+            {
+                tabControl.SelectedTab = sixteen;
+            }
+            
             resetColor();
         }
 
@@ -834,12 +843,13 @@ namespace PrototypeSAD
         private void btncancelviewrec_Click(object sender, EventArgs e)
         {
             tabconrecords.SelectedTab = tabrecords;
+            richboxrecords.Clear();
         }
 
         private void dtgcon_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int cid = int.Parse(dtgcs.Rows[e.RowIndex].Cells[0].Value.ToString()) - 1;
-            //MessageBox.Show(cid.ToString());
+            int cid = int.Parse(dtgcs.Rows[e.RowIndex].Cells[0].Value.ToString());
+            MessageBox.Show(cid.ToString());
             try
             {
                 conn.Open();
@@ -908,6 +918,19 @@ namespace PrototypeSAD
                     conn.Close();
                 }
             }
+        }
+
+        private void btneditprofile_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = third;
+
+            btnaddeditcase.Text = "Add Changes";
+            lbladdeditprofile.Text = "Edit Profile";
+        }
+
+        private void btnbackcasestud_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = first;
         }
     }
 }
