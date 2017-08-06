@@ -811,6 +811,10 @@
             // 
             // dtgcs
             // 
+            this.dtgcs.AllowUserToAddRows = false;
+            this.dtgcs.AllowUserToDeleteRows = false;
+            this.dtgcs.AllowUserToResizeColumns = false;
+            this.dtgcs.AllowUserToResizeRows = false;
             this.dtgcs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgcs.Location = new System.Drawing.Point(3, 168);
             this.dtgcs.Name = "dtgcs";

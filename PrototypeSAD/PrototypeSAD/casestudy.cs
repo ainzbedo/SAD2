@@ -137,6 +137,10 @@ namespace PrototypeSAD
 
         private void casestudy_Load(object sender, EventArgs e)
         {
+
+            lbladdeditprofile.Text = "New Profile";
+            btnaddeditcase.Text = "Add Profile";
+
             try
             {
                 conn.Open();
@@ -303,9 +307,6 @@ namespace PrototypeSAD
 
             tabControl.SelectedTab = sixteen;
 
-            lbladdeditprofile.Text = "New Profile";
-            btnaddeditcase.Text = "Add Info";
-
             reload(id);
 
             existsed(id);
@@ -316,7 +317,7 @@ namespace PrototypeSAD
         private void button18_Click(object sender, EventArgs e)
         {
 
-            if (btnaddeditcase.Text == "Add Info")
+            if (btnaddeditcase.Text == "Add Profile")
             {
                 addprofile();
             }
@@ -348,7 +349,7 @@ namespace PrototypeSAD
                     try
                     {
                         conn.Open();
-                        MySqlCommand comm = new MySqlCommand("INSERT INTO casestudyprofile(lastname, firstname, birthdate, status, caseage, program, dateJoined, picture, address) VALUES('" + lname + "', '" + fname + "', '" + dtbirth.Value.Date.ToString("yyyyMMdd") + "','" + status + "','" + age + "','" + program + "','" + dtjoin.Value.Date.ToString("yyyy/MM/dd") + "', '" + pbox1.Image + "', '" + address + "')", conn);
+                        MySqlCommand comm = new MySqlCommand("INSERT INTO casestudyprofile(lastname, firstname, birthdate, status, caseage, program, dateJoined, picture, address) VALUES('" + lname + "', '" + fname + "', '" + dtbirth.Value.Date.ToString("yyyyMMdd") + "','" + status + "','" + age + "','" + program + "','" + dtjoin.Value.Date.ToString("yyyy/MM/dd") + "', '" + filename + "', '" + address + "')", conn);
 
                         comm.ExecuteNonQuery();
 
@@ -400,7 +401,7 @@ namespace PrototypeSAD
             {
                 pbox1.Image = Image.FromFile(rest.FileName);
 
-                filename = rest.FileName;
+                filename = rest.InitialDirectory + rest.FileName;
             }
 
         }
@@ -430,7 +431,7 @@ namespace PrototypeSAD
                     lbljoined.Text = Convert.ToDateTime(dt.Rows[0]["datejoined"]).ToString("MMMM dd, yyyy");
 
 
-                    //pbox2.Image = Image.FromFile(filename);
+                    pbox2.Image = Image.FromFile(dt.Rows[0]["picture"].ToString());
 
                 }
 
@@ -475,9 +476,17 @@ namespace PrototypeSAD
 
                 adp.Fill(dt);
 
-                dtgcon.DataSource = dt;
+                if (dt.Rows.Count == 0)
+                {
+                    MessageBox.Show("There are no current consultation records for this case study.");
+                }
 
-                //dtgcon.Columns[0].Visible = false;
+                else
+                {
+                    dtgcon.DataSource = dt;
+                }
+
+                dtgcon.Columns[0].Visible = false;
 
                 conn.Close();
 
@@ -486,7 +495,7 @@ namespace PrototypeSAD
 
             catch (Exception ee)
             {
-                MessageBox.Show("There are no current consultation records for this case study.");                
+                                
                 //MessageBox.Show("" + ee);
                 conn.Close();
             }
@@ -848,7 +857,7 @@ namespace PrototypeSAD
 
         private void dtgcon_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int cid = int.Parse(dtgcs.Rows[e.RowIndex].Cells[0].Value.ToString());
+            int cid = int.Parse(dtgcon.Rows[e.RowIndex].Cells[0].Value.ToString());
             MessageBox.Show(cid.ToString());
             try
             {
