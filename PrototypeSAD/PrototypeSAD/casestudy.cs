@@ -383,6 +383,8 @@ namespace PrototypeSAD
             tabControl.SelectedTab = fourth;
             resetColor();
             btnCaseStudy.BackColor = Color.Gray;
+
+            existsfam(id);
         }
 
         private void btncancel_Click(object sender, EventArgs e)
@@ -401,13 +403,16 @@ namespace PrototypeSAD
             {
                 pbox1.Image = Image.FromFile(rest.FileName);
 
-                filename = rest.InitialDirectory + rest.FileName;
+                filename = Path.GetFullPath(rest.FileName);
             }
 
         }
 
         public void reload(int id)
         {
+            for (int m = 0; m <= dtgcs.ColumnCount - 1; m++)
+                dtgcs.Columns[m].SortMode = DataGridViewColumnSortMode.NotSortable;
+
             try
             {
                 conn.Open();
@@ -431,7 +436,7 @@ namespace PrototypeSAD
                     lbljoined.Text = Convert.ToDateTime(dt.Rows[0]["datejoined"]).ToString("MMMM dd, yyyy");
 
 
-                    pbox2.Image = Image.FromFile(dt.Rows[0]["picture"].ToString());
+                    //pbox2.Image = Image.FromFile(dt.Rows[0]["picture"].ToString());
 
                 }
 
@@ -466,6 +471,10 @@ namespace PrototypeSAD
         public void reloadcon(int id)
         {
             MessageBox.Show(id.ToString());
+
+            for (int m = 0; m <= dtgcon.ColumnCount - 1; m++)
+                dtgcon.Columns[m].SortMode = DataGridViewColumnSortMode.NotSortable;
+
             try
             {
                 conn.Open();
@@ -481,10 +490,8 @@ namespace PrototypeSAD
                     MessageBox.Show("There are no current consultation records for this case study.");
                 }
 
-                else
-                {
                     dtgcon.DataSource = dt;
-                }
+               
 
                 dtgcon.Columns[0].Visible = false;
 
@@ -533,6 +540,38 @@ namespace PrototypeSAD
             }
 
          
+        }
+
+        public void existsfam(int id)
+        {
+
+            try
+            {
+                conn.Open();
+
+                MySqlCommand comm = new MySqlCommand("SELECT caseid FROM family WHERE caseid = " + id, conn);
+
+                int UserExist = (int)comm.ExecuteScalar();
+
+                btned.Text = (UserExist > 0) ? "Edit Info" : "Add Info"; //put add info on catch
+
+
+
+                conn.Close();
+
+            }
+
+
+            catch (Exception ee)
+            {
+                btned.Text = "Add Info";
+
+                lblfamtype.Text = "";
+                
+                conn.Close();
+            }
+
+
         }
 
         public void existshealth(int id)
@@ -859,6 +898,8 @@ namespace PrototypeSAD
         {
             int cid = int.Parse(dtgcon.Rows[e.RowIndex].Cells[0].Value.ToString());
             MessageBox.Show(cid.ToString());
+            MessageBox.Show(e.RowIndex.ToString());
+
             try
             {
                 conn.Open();
@@ -940,6 +981,14 @@ namespace PrototypeSAD
         private void btnbackcasestud_Click(object sender, EventArgs e)
         {
             tabControl.SelectedTab = first;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (btnfamtype.Text == "Add Info")
+            {
+                tabControl.SelectedTab = fifth;
+            }
         }
     }
 }
