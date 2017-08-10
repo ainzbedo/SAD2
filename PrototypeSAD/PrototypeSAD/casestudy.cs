@@ -414,7 +414,11 @@ namespace PrototypeSAD
             {
                 pbox1.Image = Image.FromFile(rest.FileName);
 
-                filename = Path.GetFullPath(rest.FileName);
+                filename = Environment.CurrentDirectory =  Environment.GetEnvironmentVariable(rest.FileName);
+                DirectoryInfo info = new DirectoryInfo(".");
+
+                
+
             }
 
         }
@@ -447,7 +451,7 @@ namespace PrototypeSAD
                     lbljoined.Text = Convert.ToDateTime(dt.Rows[0]["datejoined"]).ToString("MMMM dd, yyyy");
 
 
-                    //pbox2.Image = Image.FromFile(dt.Rows[0]["picture"].ToString());
+                    pbox2.ImageLocation = dt.Rows[0]["picture"].ToString();
 
                 }
 
