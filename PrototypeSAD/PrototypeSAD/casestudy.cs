@@ -151,10 +151,17 @@ namespace PrototypeSAD
 
                 adp.Fill(dt);
 
-                dtgcs.DataSource = dt;
+                if (dt.Rows.Count > 0)
+                {
+                    dtgcs.DataSource = dt;
+                    dtgcs.Columns[0].Visible = false;
+                }
 
-                dtgcs.Columns[0].Visible = false;
-
+                else
+                {
+                    MessageBox.Show("There are no case studies currently profiled.");
+                }
+              
                 conn.Close();
             }
 
@@ -236,19 +243,20 @@ namespace PrototypeSAD
             this.Close();
         }
 
-        private void btnAddMem_Click(object sender, EventArgs e)
+       private void btnAddMem_Click(object sender, EventArgs e)
         {
-            var tae = new DataGridViewRow
+            /*var celladded = new DataGridViewCell();
+            var cellcadded = new DataGridViewCellCollection
             {
-
+                DataGridViewCell = celladded
             };
-
-            var ambot = new DataGridViewCellCollection(tae)
+            var cellradded = new DataGridViewRow
             {
-
+                DataGridViewCellCollection = cellcadded
             };
-            
-            //famOverview.Items.Add(tae);
+            DataGridView1.Rows.add(cellradded);
+
+            dtfamOverview.Rows.Add(tae);*/
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -312,15 +320,24 @@ namespace PrototypeSAD
 
         private void dtgcs_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            id = int.Parse(dtgcs.Rows[e.RowIndex].Cells[0].Value.ToString());
+            try
+            {
+                id = int.Parse(dtgcs.Rows[e.RowIndex].Cells[0].Value.ToString());
 
-            tabControl.SelectedTab = sixteen;
+                tabControl.SelectedTab = sixteen;
 
-            reload(id);
+                reload(id);
 
-            existsed(id);
+                existsed(id);
 
-            existshealth(id);
+                existshealth(id);
+
+            }
+
+            catch (Exception ee)
+            {
+
+            }
         }
 
         private void button18_Click(object sender, EventArgs e)
@@ -414,10 +431,7 @@ namespace PrototypeSAD
             {
                 pbox1.Image = Image.FromFile(rest.FileName);
 
-                filename = Environment.CurrentDirectory =  Environment.GetEnvironmentVariable(rest.FileName);
-                DirectoryInfo info = new DirectoryInfo(".");
-
-                
+                filename = Path.GetFullPath(rest.FileName);
 
             }
 
@@ -537,7 +551,7 @@ namespace PrototypeSAD
             {
                 conn.Open();
 
-                MySqlCommand comm = new MySqlCommand("SELECT familyid FROM family WHERE caseid = " + id, conn);
+                MySqlCommand comm = new MySqlCommand("SELECT familyid, famtype FROM family WHERE caseid = " + id, conn);
 
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                 DataTable dt = new DataTable();
@@ -547,6 +561,9 @@ namespace PrototypeSAD
                 if (dt.Rows.Count > 0)
                 {
                     famid = int.Parse(dt.Rows[0]["familyid"].ToString());
+
+                    lblfamtype.Text = dt.Rows[0]["famtype"].ToString();
+
                     reloadmem(famid);
                     
                 }
@@ -575,7 +592,7 @@ namespace PrototypeSAD
         {
             try
             {
-                MySqlCommand comm = new MySqlCommand("SELECT memberid, type, gender, birthdate, relationship, dependency FROM member WHERE familyd = " + famid, conn);
+                MySqlCommand comm = new MySqlCommand("SELECT memberid, type, gender, birthdate, relationship, dependency FROM member WHERE familyid = " + famid, conn);
 
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                 DataTable dt = new DataTable();
@@ -585,6 +602,7 @@ namespace PrototypeSAD
                 if (dt.Rows.Count > 0)
                 {
                     dtfamOverview.DataSource = dt;
+                    dtfamOverview.Columns[0].Visible = false;
                 }
             }
 
@@ -984,13 +1002,12 @@ namespace PrototypeSAD
 
         private void dtgcon_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int cid = int.Parse(dtgcon.Rows[e.RowIndex].Cells[0].Value.ToString());
-            MessageBox.Show(cid.ToString());
-            MessageBox.Show(e.RowIndex.ToString());
-
+           
             try
             {
                 conn.Open();
+
+                int cid = int.Parse(dtgcon.Rows[e.RowIndex].Cells[0].Value.ToString());
 
                 MySqlCommand comm = new MySqlCommand("SELECT condes FROM consultation WHERE cid = " + cid, conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
@@ -1013,7 +1030,7 @@ namespace PrototypeSAD
 
             catch (Exception ee)
             {
-                MessageBox.Show("" + ee);
+                //MessageBox.Show("" + ee);
                 conn.Close();
             }
         }
@@ -1088,6 +1105,47 @@ namespace PrototypeSAD
         private void btnbackfam_Click(object sender, EventArgs e)
         {
             tabControl.SelectedTab = sixteen;
+        }
+
+        private void btnaddfamtype_Click(object sender, EventArgs e)
+        {
+            string famtype = cbxfamtype.Text;
+
+            if (string.IsNullOrEmpty(famtype))
+            {
+                MessageBox.Show("Fill in the empty fields.");
+            }
+
+            else
+            {
+                try
+                {
+                    conn.Open();
+
+
+                    MySqlCommand comm = new MySqlCommand("INSERT INTO family(caseid, famtype) VALUES('" + id + "', '" + famtype + "')", conn);
+
+                    comm.ExecuteNonQuery();
+
+                    MessageBox.Show("Family Type Added!");
+
+                    conn.Close();
+
+                    existsfam(id);
+
+                    reloadfam(id);
+
+                    tabControl.SelectedTab = ninth;
+
+                    cbxfamtype.SelectedIndex = -1;
+                }
+
+                catch (Exception ee)
+                {
+                    MessageBox.Show("" + ee);
+                    conn.Close();
+                }
+            }
         }
     }
 }

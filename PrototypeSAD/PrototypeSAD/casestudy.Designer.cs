@@ -102,6 +102,7 @@
             this.lbladdeditprofile = new System.Windows.Forms.Label();
             this.button17 = new System.Windows.Forms.Button();
             this.fourth = new System.Windows.Forms.TabPage();
+            this.dtfamOverview = new System.Windows.Forms.DataGridView();
             this.btnfamtype = new System.Windows.Forms.Button();
             this.btnAddMem = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -348,7 +349,6 @@
             this.btnSearch2 = new System.Windows.Forms.Button();
             this.btnCaseStudy2 = new System.Windows.Forms.Button();
             this.opimage1 = new System.Windows.Forms.OpenFileDialog();
-            this.dtfamOverview = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.pan_RES.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -363,6 +363,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbox1)).BeginInit();
             this.panel21.SuspendLayout();
             this.fourth.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtfamOverview)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.fifth.SuspendLayout();
@@ -421,7 +422,6 @@
             this.dropin.SuspendLayout();
             this.residential.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtfamOverview)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -1343,6 +1343,23 @@
             this.fourth.TabIndex = 4;
             this.fourth.Text = "4";
             // 
+            // dtfamOverview
+            // 
+            this.dtfamOverview.AllowUserToAddRows = false;
+            this.dtfamOverview.AllowUserToDeleteRows = false;
+            this.dtfamOverview.AllowUserToResizeColumns = false;
+            this.dtfamOverview.AllowUserToResizeRows = false;
+            this.dtfamOverview.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dtfamOverview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtfamOverview.ColumnHeadersVisible = false;
+            this.dtfamOverview.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dtfamOverview.Location = new System.Drawing.Point(17, 181);
+            this.dtfamOverview.Name = "dtfamOverview";
+            this.dtfamOverview.ReadOnly = true;
+            this.dtfamOverview.RowHeadersVisible = false;
+            this.dtfamOverview.Size = new System.Drawing.Size(500, 214);
+            this.dtfamOverview.TabIndex = 28;
+            // 
             // btnfamtype
             // 
             this.btnfamtype.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
@@ -1559,6 +1576,7 @@
             this.btnaddfamtype.TabIndex = 95;
             this.btnaddfamtype.Text = "Add Info";
             this.btnaddfamtype.UseVisualStyleBackColor = false;
+            this.btnaddfamtype.Click += new System.EventHandler(this.btnaddfamtype_Click);
             // 
             // btncanfamtype
             // 
@@ -1601,8 +1619,12 @@
             this.cbxfamtype.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxfamtype.FormattingEnabled = true;
             this.cbxfamtype.Items.AddRange(new object[] {
-            "Public",
-            "Private"});
+            "Nuclear",
+            "Single Parent",
+            "Extended",
+            "Childless",
+            "Step",
+            "Grandparent"});
             this.cbxfamtype.Location = new System.Drawing.Point(28, 26);
             this.cbxfamtype.Name = "cbxfamtype";
             this.cbxfamtype.Size = new System.Drawing.Size(166, 27);
@@ -4408,22 +4430,6 @@
             // 
             this.opimage1.FileName = "openFileDialog1";
             // 
-            // dtfamOverview
-            // 
-            this.dtfamOverview.AllowUserToAddRows = false;
-            this.dtfamOverview.AllowUserToDeleteRows = false;
-            this.dtfamOverview.AllowUserToResizeColumns = false;
-            this.dtfamOverview.AllowUserToResizeRows = false;
-            this.dtfamOverview.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.dtfamOverview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtfamOverview.ColumnHeadersVisible = false;
-            this.dtfamOverview.Location = new System.Drawing.Point(17, 181);
-            this.dtfamOverview.Name = "dtfamOverview";
-            this.dtfamOverview.ReadOnly = true;
-            this.dtfamOverview.RowHeadersVisible = false;
-            this.dtfamOverview.Size = new System.Drawing.Size(500, 214);
-            this.dtfamOverview.TabIndex = 28;
-            // 
             // casestudy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4461,6 +4467,7 @@
             this.panel21.ResumeLayout(false);
             this.panel21.PerformLayout();
             this.fourth.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtfamOverview)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -4555,7 +4562,6 @@
             this.dropin.ResumeLayout(false);
             this.residential.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtfamOverview)).EndInit();
             this.ResumeLayout(false);
 
         }
