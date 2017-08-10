@@ -102,27 +102,29 @@
             this.lbladdeditprofile = new System.Windows.Forms.Label();
             this.button17 = new System.Windows.Forms.Button();
             this.fourth = new System.Windows.Forms.TabPage();
+            this.btnfamtype = new System.Windows.Forms.Button();
             this.btnAddMem = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.famOverview = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnbackfam = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lblnum = new System.Windows.Forms.Label();
             this.lblfamtype = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblfamstatus = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lblnamefam = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.fifth = new System.Windows.Forms.TabPage();
+            this.btnaddfamtype = new System.Windows.Forms.Button();
+            this.btncanfamtype = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.cbxfamtype = new System.Windows.Forms.ComboBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.sixth = new System.Windows.Forms.TabPage();
             this.btnaddcon = new System.Windows.Forms.Button();
             this.btncancon = new System.Windows.Forms.Button();
@@ -204,11 +206,9 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label110 = new System.Windows.Forms.Label();
             this.panel35 = new System.Windows.Forms.Panel();
-            this.label108 = new System.Windows.Forms.Label();
             this.richTextBox9 = new System.Windows.Forms.RichTextBox();
             this.label109 = new System.Windows.Forms.Label();
             this.panel34 = new System.Windows.Forms.Panel();
-            this.label107 = new System.Windows.Forms.Label();
             this.richTextBox8 = new System.Windows.Forms.RichTextBox();
             this.label106 = new System.Windows.Forms.Label();
             this.panel33 = new System.Windows.Forms.Panel();
@@ -348,7 +348,7 @@
             this.btnSearch2 = new System.Windows.Forms.Button();
             this.btnCaseStudy2 = new System.Windows.Forms.Button();
             this.opimage1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnfamtype = new System.Windows.Forms.Button();
+            this.dtfamOverview = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.pan_RES.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -365,6 +365,9 @@
             this.fourth.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.fifth.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.sixth.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -418,6 +421,7 @@
             this.dropin.SuspendLayout();
             this.residential.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtfamOverview)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -1324,11 +1328,11 @@
             // fourth
             // 
             this.fourth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
+            this.fourth.Controls.Add(this.dtfamOverview);
             this.fourth.Controls.Add(this.btnfamtype);
             this.fourth.Controls.Add(this.btnAddMem);
             this.fourth.Controls.Add(this.button4);
-            this.fourth.Controls.Add(this.button3);
-            this.fourth.Controls.Add(this.famOverview);
+            this.fourth.Controls.Add(this.btnbackfam);
             this.fourth.Controls.Add(this.panel6);
             this.fourth.Controls.Add(this.panel5);
             this.fourth.Controls.Add(this.button2);
@@ -1338,6 +1342,21 @@
             this.fourth.Size = new System.Drawing.Size(553, 536);
             this.fourth.TabIndex = 4;
             this.fourth.Text = "4";
+            // 
+            // btnfamtype
+            // 
+            this.btnfamtype.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btnfamtype.FlatAppearance.BorderSize = 0;
+            this.btnfamtype.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnfamtype.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnfamtype.ForeColor = System.Drawing.Color.White;
+            this.btnfamtype.Location = new System.Drawing.Point(418, 110);
+            this.btnfamtype.Name = "btnfamtype";
+            this.btnfamtype.Size = new System.Drawing.Size(101, 28);
+            this.btnfamtype.TabIndex = 27;
+            this.btnfamtype.Text = "add";
+            this.btnfamtype.UseVisualStyleBackColor = false;
+            this.btnfamtype.Click += new System.EventHandler(this.btnfamtype_Click);
             // 
             // btnAddMem
             // 
@@ -1369,72 +1388,20 @@
             this.button4.Text = "add";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnbackfam
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(9, 502);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(101, 28);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "back";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(6, 55);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(175, 24);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Family Overview";
-            // 
-            // famOverview
-            // 
-            this.famOverview.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5});
-            this.famOverview.FullRowSelect = true;
-            this.famOverview.Location = new System.Drawing.Point(8, 181);
-            this.famOverview.Name = "famOverview";
-            this.famOverview.Size = new System.Drawing.Size(500, 214);
-            this.famOverview.TabIndex = 5;
-            this.famOverview.UseCompatibleStateImageBehavior = false;
-            this.famOverview.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Name";
-            this.columnHeader1.Width = 131;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Relationship";
-            this.columnHeader2.Width = 90;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Age";
-            this.columnHeader3.Width = 51;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Status";
-            this.columnHeader4.Width = 87;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Occupation";
-            this.columnHeader5.Width = 134;
+            this.btnbackfam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btnbackfam.FlatAppearance.BorderSize = 0;
+            this.btnbackfam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbackfam.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbackfam.ForeColor = System.Drawing.Color.White;
+            this.btnbackfam.Location = new System.Drawing.Point(9, 502);
+            this.btnbackfam.Name = "btnbackfam";
+            this.btnbackfam.Size = new System.Drawing.Size(101, 28);
+            this.btnbackfam.TabIndex = 18;
+            this.btnbackfam.Text = "back";
+            this.btnbackfam.UseVisualStyleBackColor = false;
+            this.btnbackfam.Click += new System.EventHandler(this.btnbackfam_Click);
             // 
             // panel6
             // 
@@ -1442,7 +1409,7 @@
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.lblnum);
             this.panel6.Controls.Add(this.lblfamtype);
-            this.panel6.Controls.Add(this.label7);
+            this.panel6.Controls.Add(this.lblfamstatus);
             this.panel6.Controls.Add(this.label6);
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.label4);
@@ -1473,16 +1440,16 @@
             this.lblfamtype.TabIndex = 8;
             this.lblfamtype.Text = "Single Parent";
             // 
-            // label7
+            // lblfamstatus
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.label7.Location = new System.Drawing.Point(323, 2);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 14);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Status";
+            this.lblfamstatus.AutoSize = true;
+            this.lblfamstatus.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.lblfamstatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            this.lblfamstatus.Location = new System.Drawing.Point(323, 2);
+            this.lblfamstatus.Name = "lblfamstatus";
+            this.lblfamstatus.Size = new System.Drawing.Size(44, 14);
+            this.lblfamstatus.TabIndex = 7;
+            this.lblfamstatus.Text = "Status";
             // 
             // label6
             // 
@@ -1538,6 +1505,18 @@
             this.lblnamefam.TabIndex = 2;
             this.lblnamefam.Text = "Name";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(6, 55);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(175, 24);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Family Overview";
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
@@ -1555,6 +1534,10 @@
             // 
             // fifth
             // 
+            this.fifth.Controls.Add(this.btnaddfamtype);
+            this.fifth.Controls.Add(this.btncanfamtype);
+            this.fifth.Controls.Add(this.groupBox7);
+            this.fifth.Controls.Add(this.panel7);
             this.fifth.Location = new System.Drawing.Point(4, 22);
             this.fifth.Name = "fifth";
             this.fifth.Padding = new System.Windows.Forms.Padding(3);
@@ -1562,6 +1545,101 @@
             this.fifth.TabIndex = 5;
             this.fifth.Text = "5";
             this.fifth.UseVisualStyleBackColor = true;
+            // 
+            // btnaddfamtype
+            // 
+            this.btnaddfamtype.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btnaddfamtype.FlatAppearance.BorderSize = 0;
+            this.btnaddfamtype.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnaddfamtype.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnaddfamtype.ForeColor = System.Drawing.Color.White;
+            this.btnaddfamtype.Location = new System.Drawing.Point(15, 502);
+            this.btnaddfamtype.Name = "btnaddfamtype";
+            this.btnaddfamtype.Size = new System.Drawing.Size(196, 28);
+            this.btnaddfamtype.TabIndex = 95;
+            this.btnaddfamtype.Text = "Add Info";
+            this.btnaddfamtype.UseVisualStyleBackColor = false;
+            // 
+            // btncanfamtype
+            // 
+            this.btncanfamtype.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btncanfamtype.FlatAppearance.BorderSize = 0;
+            this.btncanfamtype.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncanfamtype.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncanfamtype.ForeColor = System.Drawing.Color.White;
+            this.btncanfamtype.Location = new System.Drawing.Point(351, 502);
+            this.btncanfamtype.Name = "btncanfamtype";
+            this.btncanfamtype.Size = new System.Drawing.Size(196, 28);
+            this.btncanfamtype.TabIndex = 94;
+            this.btncanfamtype.Text = "Cancel";
+            this.btncanfamtype.UseVisualStyleBackColor = false;
+            this.btncanfamtype.Click += new System.EventHandler(this.btncanfamtype_Click);
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.cbxfamtype);
+            this.groupBox7.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox7.Location = new System.Drawing.Point(15, 126);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(224, 72);
+            this.groupBox7.TabIndex = 92;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Family Type";
+            // 
+            // cbxfamtype
+            // 
+            this.cbxfamtype.AutoCompleteCustomSource.AddRange(new string[] {
+            "Nuclear",
+            "Single Parent",
+            "Extended",
+            "Childless",
+            "Step",
+            "Grandparent"});
+            this.cbxfamtype.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbxfamtype.CausesValidation = false;
+            this.cbxfamtype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxfamtype.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxfamtype.FormattingEnabled = true;
+            this.cbxfamtype.Items.AddRange(new object[] {
+            "Public",
+            "Private"});
+            this.cbxfamtype.Location = new System.Drawing.Point(28, 26);
+            this.cbxfamtype.Name = "cbxfamtype";
+            this.cbxfamtype.Size = new System.Drawing.Size(166, 27);
+            this.cbxfamtype.TabIndex = 82;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.panel7.Controls.Add(this.label8);
+            this.panel7.Controls.Add(this.label9);
+            this.panel7.Location = new System.Drawing.Point(6, 4);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(519, 97);
+            this.panel7.TabIndex = 91;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(13, 17);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(72, 25);
+            this.label8.TabIndex = 40;
+            this.label8.Text = "Name";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(11, 64);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(138, 24);
+            this.label9.TabIndex = 39;
+            this.label9.Text = "Consultation";
             // 
             // sixth
             // 
@@ -2517,24 +2595,12 @@
             // 
             this.panel35.BackColor = System.Drawing.Color.White;
             this.panel35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel35.Controls.Add(this.label108);
             this.panel35.Controls.Add(this.richTextBox9);
             this.panel35.Controls.Add(this.label109);
             this.panel35.Location = new System.Drawing.Point(8, 308);
             this.panel35.Name = "panel35";
             this.panel35.Size = new System.Drawing.Size(504, 111);
             this.panel35.TabIndex = 69;
-            // 
-            // label108
-            // 
-            this.label108.AutoSize = true;
-            this.label108.Font = new System.Drawing.Font("Arial Rounded MT Bold", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label108.ForeColor = System.Drawing.Color.Silver;
-            this.label108.Location = new System.Drawing.Point(426, 8);
-            this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(69, 11);
-            this.label108.TabIndex = 68;
-            this.label108.Text = "max 1500 char.";
             // 
             // richTextBox9
             // 
@@ -2561,24 +2627,12 @@
             // 
             this.panel34.BackColor = System.Drawing.Color.White;
             this.panel34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel34.Controls.Add(this.label107);
             this.panel34.Controls.Add(this.richTextBox8);
             this.panel34.Controls.Add(this.label106);
             this.panel34.Location = new System.Drawing.Point(8, 198);
             this.panel34.Name = "panel34";
             this.panel34.Size = new System.Drawing.Size(504, 111);
             this.panel34.TabIndex = 25;
-            // 
-            // label107
-            // 
-            this.label107.AutoSize = true;
-            this.label107.Font = new System.Drawing.Font("Arial Rounded MT Bold", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label107.ForeColor = System.Drawing.Color.Silver;
-            this.label107.Location = new System.Drawing.Point(426, 8);
-            this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(69, 11);
-            this.label107.TabIndex = 68;
-            this.label107.Text = "max 1500 char.";
             // 
             // richTextBox8
             // 
@@ -4354,20 +4408,21 @@
             // 
             this.opimage1.FileName = "openFileDialog1";
             // 
-            // btnfamtype
+            // dtfamOverview
             // 
-            this.btnfamtype.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.btnfamtype.FlatAppearance.BorderSize = 0;
-            this.btnfamtype.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnfamtype.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnfamtype.ForeColor = System.Drawing.Color.White;
-            this.btnfamtype.Location = new System.Drawing.Point(418, 110);
-            this.btnfamtype.Name = "btnfamtype";
-            this.btnfamtype.Size = new System.Drawing.Size(101, 28);
-            this.btnfamtype.TabIndex = 27;
-            this.btnfamtype.Text = "add";
-            this.btnfamtype.UseVisualStyleBackColor = false;
-            this.btnfamtype.Click += new System.EventHandler(this.button1_Click);
+            this.dtfamOverview.AllowUserToAddRows = false;
+            this.dtfamOverview.AllowUserToDeleteRows = false;
+            this.dtfamOverview.AllowUserToResizeColumns = false;
+            this.dtfamOverview.AllowUserToResizeRows = false;
+            this.dtfamOverview.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dtfamOverview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtfamOverview.ColumnHeadersVisible = false;
+            this.dtfamOverview.Location = new System.Drawing.Point(17, 181);
+            this.dtfamOverview.Name = "dtfamOverview";
+            this.dtfamOverview.ReadOnly = true;
+            this.dtfamOverview.RowHeadersVisible = false;
+            this.dtfamOverview.Size = new System.Drawing.Size(500, 214);
+            this.dtfamOverview.TabIndex = 28;
             // 
             // casestudy
             // 
@@ -4410,6 +4465,10 @@
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.fifth.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.sixth.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
@@ -4496,6 +4555,7 @@
             this.dropin.ResumeLayout(false);
             this.residential.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtfamOverview)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -4548,17 +4608,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblfamstatus;
         private System.Windows.Forms.Label lblfamtype;
         private System.Windows.Forms.Label lblnum;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ListView famOverview;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnbackfam;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label lblschool;
@@ -4705,12 +4759,10 @@
         private System.Windows.Forms.Panel panel34;
         private System.Windows.Forms.Label label106;
         private System.Windows.Forms.RichTextBox richTextBox8;
-        private System.Windows.Forms.Label label107;
         private System.Windows.Forms.Panel panel36;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label110;
         private System.Windows.Forms.Panel panel35;
-        private System.Windows.Forms.Label label108;
         private System.Windows.Forms.RichTextBox richTextBox9;
         private System.Windows.Forms.Label label109;
         private System.Windows.Forms.Button button21;
@@ -4822,5 +4874,13 @@
         private System.Windows.Forms.Button btncancelviewrec;
         private System.Windows.Forms.Button btneditprofile;
         private System.Windows.Forms.Button btnfamtype;
+        private System.Windows.Forms.Button btnaddfamtype;
+        private System.Windows.Forms.Button btncanfamtype;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.ComboBox cbxfamtype;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridView dtfamOverview;
     }
 }

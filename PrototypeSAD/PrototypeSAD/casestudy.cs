@@ -238,8 +238,17 @@ namespace PrototypeSAD
 
         private void btnAddMem_Click(object sender, EventArgs e)
         {
-            Member addmem = new PrototypeSAD.Member();
-            addmem.Show();
+            var tae = new DataGridViewRow
+            {
+
+            };
+
+            var ambot = new DataGridViewCellCollection(tae)
+            {
+
+            };
+            
+            //famOverview.Items.Add(tae);
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -385,6 +394,8 @@ namespace PrototypeSAD
             btnCaseStudy.BackColor = Color.Gray;
 
             existsfam(id);
+
+            reloadfam(id);
         }
 
         private void btncancel_Click(object sender, EventArgs e)
@@ -470,7 +481,7 @@ namespace PrototypeSAD
 
         public void reloadcon(int id)
         {
-            MessageBox.Show(id.ToString());
+            //MessageBox.Show(id.ToString());
 
             for (int m = 0; m <= dtgcon.ColumnCount - 1; m++)
                 dtgcon.Columns[m].SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -490,7 +501,12 @@ namespace PrototypeSAD
                     MessageBox.Show("There are no current consultation records for this case study.");
                 }
 
+                else
+
+                {
                     dtgcon.DataSource = dt;
+
+                }
                
 
                 dtgcon.Columns[0].Visible = false;
@@ -505,6 +521,74 @@ namespace PrototypeSAD
                                 
                 //MessageBox.Show("" + ee);
                 conn.Close();
+            }
+        }
+
+        public void reloadfam(int id)
+        {
+
+            int famid;
+
+            try
+            {
+                conn.Open();
+
+                MySqlCommand comm = new MySqlCommand("SELECT familyid FROM family WHERE caseid = " + id, conn);
+
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+
+                adp.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    famid = int.Parse(dt.Rows[0]["familyid"].ToString());
+                    reloadmem(famid);
+                    
+                }
+
+                else
+                {
+                    MessageBox.Show("There are no current family records for this case study.");
+                }
+
+               
+                conn.Close();
+
+            }
+
+
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString() + "reloadfam");
+
+                conn.Close();
+            }
+
+        }
+
+        public void reloadmem(int famid)
+        {
+            try
+            {
+                MySqlCommand comm = new MySqlCommand("SELECT memberid, type, gender, birthdate, relationship, dependency FROM member WHERE familyd = " + famid, conn);
+
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+
+                adp.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    dtfamOverview.DataSource = dt;
+                }
+            }
+
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString() + "reloadmem");
+
+                
             }
         }
 
@@ -983,12 +1067,23 @@ namespace PrototypeSAD
             tabControl.SelectedTab = first;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btncanfamtype_Click(object sender, EventArgs e)
         {
-            if (btnfamtype.Text == "Add Info")
+            tabControl.SelectedTab = fourth;
+
+        }
+
+        private void btnfamtype_Click(object sender, EventArgs e)
+        {
+            if (btnfamtype.Text == "add")
             {
                 tabControl.SelectedTab = fifth;
             }
+        }
+
+        private void btnbackfam_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = sixteen;
         }
     }
 }
