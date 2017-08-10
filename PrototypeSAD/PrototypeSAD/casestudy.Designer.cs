@@ -3183,6 +3183,7 @@
             this.pbox2.Location = new System.Drawing.Point(11, 9);
             this.pbox2.Name = "pbox2";
             this.pbox2.Size = new System.Drawing.Size(202, 123);
+            this.pbox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbox2.TabIndex = 8;
             this.pbox2.TabStop = false;
             // 

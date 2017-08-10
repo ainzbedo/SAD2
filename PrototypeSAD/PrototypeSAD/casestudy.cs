@@ -431,7 +431,7 @@ namespace PrototypeSAD
             {
                 pbox1.Image = Image.FromFile(rest.FileName);
 
-                filename = Path.GetFullPath(rest.FileName);
+                filename = Path.GetFullPath(rest.FileName).Replace(@"\", @"\\");
 
             }
 
