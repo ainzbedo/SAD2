@@ -18,8 +18,9 @@ namespace PrototypeSAD
         public Form2 ref_to_main { get; set; }
         public MySqlConnection conn;
 
-        public int id;
+        public int id, fammode;
         public string filename;
+        public DataTable tblfam;
 
         private void btnAnnual_Click(object sender, EventArgs e)
         {
@@ -245,18 +246,76 @@ namespace PrototypeSAD
 
        private void btnAddMem_Click(object sender, EventArgs e)
         {
-            /*var celladded = new DataGridViewCell();
-            var cellcadded = new DataGridViewCellCollection
-            {
-                DataGridViewCell = celladded
-            };
-            var cellradded = new DataGridViewRow
-            {
-                DataGridViewCellCollection = cellcadded
-            };
-            DataGridView1.Rows.add(cellradded);
 
-            dtfamOverview.Rows.Add(tae);*/
+            int count;
+
+            DataTable dt = new DataTable();
+
+            if (fammode == 0)
+            {
+                if (dtfamOverview.DataSource == null)
+                {
+                    try
+                    {
+                        //MessageBox.Show(ee.ToString());
+
+                        
+
+                        dt.Columns.Add("1st Header");
+                        dt.Columns.Add("2nd Header");
+                        dt.Columns.Add("3rd Header");
+
+                        DataRow newRow = dt.NewRow();
+                        dt.Rows.Add(newRow);
+
+                        dtfamOverview.DataSource = dt;
+                    }
+
+                    catch (Exception ee)
+                    {
+                        MessageBox.Show(ee.ToString());
+
+                    }
+                }
+
+                else
+                {
+                    try
+                    {
+                        DataRow newRow = dt.NewRow();
+                        dt.Rows.Add(newRow);
+
+                        dtfamOverview.Refresh();
+
+                    }
+
+                    catch(Exception ee)
+                    {
+                        MessageBox.Show(ee.ToString());
+
+                    }
+                }
+                
+            }
+
+            else
+            {
+                try
+                {
+                    DataRow newRow = tblfam.NewRow();
+                    tblfam.Rows.Add(newRow);
+
+                    dtfamOverview.Refresh();
+                }
+
+                catch(Exception ee)
+                {
+                    MessageBox.Show(ee.ToString());
+                }
+            }
+            
+
+            
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -273,7 +332,7 @@ namespace PrototypeSAD
 
         private void tenth_MouseHover(object sender, EventArgs e)
         {
-            rbAM.PerformClick();
+            rbam.PerformClick();
         }
 
         private void btnDropIn_Click(object sender, EventArgs e)
@@ -501,8 +560,8 @@ namespace PrototypeSAD
         {
             //MessageBox.Show(id.ToString());
 
-            for (int m = 0; m <= dtgcon.ColumnCount - 1; m++)
-                dtgcon.Columns[m].SortMode = DataGridViewColumnSortMode.NotSortable;
+            //for (int m = 0; m <= dtgcon.ColumnCount - 1; m++)
+              //  dtgcon.Columns[m].SortMode = DataGridViewColumnSortMode.NotSortable;
 
             try
             {
@@ -537,6 +596,46 @@ namespace PrototypeSAD
             catch (Exception ee)
             {
                                 
+                //MessageBox.Show("" + ee);
+                conn.Close();
+            }
+        }
+
+        public void reloadincid(int id)
+        {
+            try
+            {
+                conn.Open();
+
+                MySqlCommand comm = new MySqlCommand("SELECT incidid, type, incdate FROM incident WHERE caseid = " + id + " ORDER BY incdate", conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+
+                adp.Fill(dt);
+
+                if (dt.Rows.Count == 0)
+                {
+                    MessageBox.Show("There are no current incident records for this case study.");
+                }
+
+                else
+
+                {
+                    dtincid.DataSource = dt;
+
+                }
+
+
+                dtincid.Columns[0].Visible = false;
+
+                conn.Close();
+
+            }
+
+
+            catch (Exception ee)
+            {
+
                 //MessageBox.Show("" + ee);
                 conn.Close();
             }
@@ -588,6 +687,7 @@ namespace PrototypeSAD
 
         }
 
+      
         public void reloadmem(int famid)
         {
             try
@@ -595,22 +695,24 @@ namespace PrototypeSAD
                 MySqlCommand comm = new MySqlCommand("SELECT memberid, type, gender, birthdate, relationship, dependency FROM member WHERE familyid = " + famid, conn);
 
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
-                DataTable dt = new DataTable();
+                //DataTable dt = new DataTable();
 
-                adp.Fill(dt);
+                adp.Fill(tblfam);
 
-                if (dt.Rows.Count > 0)
+                if (tblfam.Rows.Count > 0)
                 {
-                    dtfamOverview.DataSource = dt;
+                    dtfamOverview.DataSource = tblfam;
                     dtfamOverview.Columns[0].Visible = false;
+
+                    fammode = 1;
                 }
             }
 
             catch (Exception ee)
             {
-                MessageBox.Show(ee.ToString() + "reloadmem");
+                MessageBox.Show("There are no current member records for this case study.");
 
-                
+                fammode = 0;
             }
         }
 
@@ -646,6 +748,34 @@ namespace PrototypeSAD
             }
 
          
+        }
+
+        public void existsinvolve(int incidid)
+        {
+            try
+            {
+                conn.Open();
+
+                MySqlCommand comm = new MySqlCommand("SELECT involveid FROM involvement WHERE caseid = " + id, conn);
+
+                
+
+                int UserExist = (int)comm.ExecuteScalar();
+
+                btnaddinvolve.Text = (UserExist > 0) ? "View Info" : "Add Info"; //put add info on catch
+                
+                conn.Close();
+
+            }
+
+
+            catch (Exception ee)
+            {
+                btnaddinvolve.Text = "Add Info";
+
+                conn.Close();
+            }
+
         }
 
         public void existsfam(int id)
@@ -763,6 +893,22 @@ namespace PrototypeSAD
             txtintname.Clear();
             richconbox.Clear();
 
+        }
+
+        public void reset5()
+        {
+            txttypeincid.Clear();
+            txtincidlocation.Clear();
+            rtxtactiontaken.Clear();
+            rtxtinciddesc.Clear();
+
+            rbam.Checked = false;
+            rbpm.Checked = false;
+
+            cbxhour.SelectedIndex = -1;
+            cbxmin.SelectedIndex = -1;
+
+            dateincid.Value = DateTime.Now;
         }
 
         private void btned_Click(object sender, EventArgs e)
@@ -1105,6 +1251,143 @@ namespace PrototypeSAD
         private void btnbackfam_Click(object sender, EventArgs e)
         {
             tabControl.SelectedTab = sixteen;
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = twelfth;
+
+            reloadincid(id);
+
+        }
+
+        private void dtincid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                int incid = int.Parse(dtincid.Rows[e.RowIndex].Cells[0].Value.ToString());
+
+                tabControl.SelectedTab = thirteen;
+
+                conn.Open();
+
+                MySqlCommand comm = new MySqlCommand("SELECT type, incdate, venue, description, action FROM incident WHERE incidid = " + incid, conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+
+                adp.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    inctype.Text = dt.Rows[0]["type"].ToString();
+                    incidlocation.Text = dt.Rows[0]["venue"].ToString();
+                    repinciddesc.Text = dt.Rows[0]["description"].ToString();
+                    repincidaction.Text = dt.Rows[0]["action"].ToString();
+
+                    lbldateincid.Text = dt.Rows[0]["incdate"].ToString();
+
+
+                }
+
+                tabControl.SelectedTab = thirteen;
+
+                conn.Close();
+
+            }
+
+            catch (Exception ee)
+            {
+                //MessageBox.Show("" + ee);
+                conn.Close();
+            }
+
+            //existshealth(id);
+
+        }
+
+          
+
+        private void btnaddincid_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = fourteen;
+        }
+
+        private void btnbackmainincid_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = sixteen;
+        }
+
+        private void btnbackincidrec_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = twelfth;
+
+            reset5();
+        }
+
+        private void btnaddincidrecord_Click(object sender, EventArgs e)
+        {
+            string type = txttypeincid.Text, hour = cbxhour.Text, minute = cbxmin.Text, zone, location = txtincidlocation.Text, desc = rtxtinciddesc.Text, action = rtxtactiontaken.Text;
+            
+            if (string.IsNullOrEmpty(type) || string.IsNullOrEmpty(hour) || string.IsNullOrEmpty(minute) || string.IsNullOrEmpty(location) || string.IsNullOrEmpty(desc) || string.IsNullOrEmpty(action) || (rbam.Checked == false && rbpm.Checked == false))
+            {
+                MessageBox.Show("Please fill out empty fields.");
+            }
+
+            else
+            {
+                if (rbam.Checked == true)
+                {
+                    zone = "AM";
+                }
+
+                else
+                {
+                    zone = "PM";
+                }
+                
+                DateTime dt = DateTime.Parse(hour + ":" + minute + " " + zone);
+
+                //dt.ToString("hh:mm tt");
+
+                try
+                {
+                    conn.Open();
+
+
+                    MySqlCommand comm = new MySqlCommand("INSERT INTO incident(type, incdate, venue, description, action, dateadded) VALUES('" + type + "', '" + dateincid.Value.Date.ToString("MM/dd/yyyy ") + dt.ToString("hh:mm tt") + "','" + location + "', '" + desc + "', '" + action + "', '" + DateTime.Now +"')", conn);
+
+                    comm.ExecuteNonQuery();
+
+                    MessageBox.Show("Incident Record Added!");
+
+                    conn.Close();
+
+                    reloadincid(id);
+
+                    tabControl.SelectedTab = twelfth;
+
+                    reset5();
+                }
+
+                catch (Exception ee)
+                {
+                    MessageBox.Show("" + ee);
+                    conn.Close();
+                }
+
+            }
+
+            
+        }
+
+        private void btnbackmainincid_Click_1(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = sixteen;
+        }
+
+        private void btnaddincid_Click_1(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = tenth;
         }
 
         private void btnaddfamtype_Click(object sender, EventArgs e)
