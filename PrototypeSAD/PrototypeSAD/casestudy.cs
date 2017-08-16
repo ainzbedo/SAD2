@@ -146,7 +146,7 @@ namespace PrototypeSAD
             {
                 conn.Open();
 
-                MySqlCommand comm = new MySqlCommand("SELECT caseid, lastname, firstname FROM casestudyprofile", conn);
+                MySqlCommand comm = new MySqlCommand("SELECT caseid, lastname, firstname, program FROM casestudyprofile", conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                 DataTable dt = new DataTable();
 
@@ -156,6 +156,10 @@ namespace PrototypeSAD
                 {
                     dtgcs.DataSource = dt;
                     dtgcs.Columns[0].Visible = false;
+
+                    getdrop();
+                    getresidential();
+                    getcount();
                 }
 
                 else
@@ -188,7 +192,7 @@ namespace PrototypeSAD
             {
                 conn.Open();
 
-                MySqlCommand comm = new MySqlCommand("SELECT caseid, lastname, firstname FROM casestudyprofile", conn);
+                MySqlCommand comm = new MySqlCommand("SELECT caseid, lastname, firstname, status FROM casestudyprofile", conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                 DataTable dt = new DataTable();
 
@@ -197,6 +201,10 @@ namespace PrototypeSAD
                 dtgcs.DataSource = dt;
 
                 dtgcs.Columns[0].Visible = false;
+
+                getdrop();
+                getresidential();
+                getcount();
 
                 conn.Close();
             }
@@ -215,6 +223,39 @@ namespace PrototypeSAD
             btnCaseStudy.BackColor = Color.Gray;
 
             btnDropIn.BackColor = Color.Gray;
+        }
+
+        public void getdrop()
+        {
+            MySqlCommand comm = new MySqlCommand("SELECT COUNT(*) FROM casestudyprofile WHERE program = 'Drop-In'", conn);
+            MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+            DataTable dt = new DataTable();
+
+            adp.Fill(dt);
+
+            lbldrop.Text = dt.Rows[0]["count(*)"].ToString();
+        }
+
+        public void getresidential()
+        {
+            MySqlCommand comm = new MySqlCommand("SELECT COUNT(*) FROM casestudyprofile WHERE program = 'Residential'", conn);
+            MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+            DataTable dt = new DataTable();
+
+            adp.Fill(dt);
+
+            lblresidential.Text = dt.Rows[0]["count(*)"].ToString();
+        }
+
+        public void getcount()
+        {
+            MySqlCommand comm = new MySqlCommand("SELECT COUNT(caseid) FROM casestudyprofile", conn);
+            MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+            DataTable dt = new DataTable();
+
+            adp.Fill(dt);
+
+            lbltotalcase.Text = dt.Rows[0]["count(caseid)"].ToString();
         }
 
         public void resetColor()
@@ -498,8 +539,8 @@ namespace PrototypeSAD
 
         public void reload(int id)
         {
-            for (int m = 0; m <= dtgcs.ColumnCount - 1; m++)
-                dtgcs.Columns[m].SortMode = DataGridViewColumnSortMode.NotSortable;
+            //for (int m = 0; m <= dtgcs.ColumnCount - 1; m++)
+                //dtgcs.Columns[m].SortMode = DataGridViewColumnSortMode.NotSortable;
 
             try
             {

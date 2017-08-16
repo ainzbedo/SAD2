@@ -57,10 +57,10 @@
             this.first = new System.Windows.Forms.TabPage();
             this.dtgcs = new System.Windows.Forms.DataGridView();
             this.panel22 = new System.Windows.Forms.Panel();
-            this.label30 = new System.Windows.Forms.Label();
+            this.lbltotalcase = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
+            this.lblresidential = new System.Windows.Forms.Label();
+            this.lbldrop = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
@@ -258,6 +258,8 @@
             this.repinciddesc = new System.Windows.Forms.RichTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.inctype = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.lbldateincid = new System.Windows.Forms.Label();
             this.a = new System.Windows.Forms.Label();
             this.fourteen = new System.Windows.Forms.TabPage();
@@ -362,8 +364,6 @@
             this.btnSearch2 = new System.Windows.Forms.Button();
             this.btnCaseStudy2 = new System.Windows.Forms.Button();
             this.opimage1 = new System.Windows.Forms.OpenFileDialog();
-            this.inctype = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pan_RES.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -836,10 +836,10 @@
             // 
             // panel22
             // 
-            this.panel22.Controls.Add(this.label30);
+            this.panel22.Controls.Add(this.lbltotalcase);
             this.panel22.Controls.Add(this.label31);
-            this.panel22.Controls.Add(this.label32);
-            this.panel22.Controls.Add(this.label33);
+            this.panel22.Controls.Add(this.lblresidential);
+            this.panel22.Controls.Add(this.lbldrop);
             this.panel22.Controls.Add(this.label34);
             this.panel22.Controls.Add(this.label35);
             this.panel22.Controls.Add(this.label36);
@@ -850,15 +850,15 @@
             this.panel22.Size = new System.Drawing.Size(513, 79);
             this.panel22.TabIndex = 6;
             // 
-            // label30
+            // lbltotalcase
             // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(436, 48);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(24, 16);
-            this.label30.TabIndex = 10;
-            this.label30.Text = "##";
+            this.lbltotalcase.AutoSize = true;
+            this.lbltotalcase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltotalcase.Location = new System.Drawing.Point(436, 48);
+            this.lbltotalcase.Name = "lbltotalcase";
+            this.lbltotalcase.Size = new System.Drawing.Size(24, 16);
+            this.lbltotalcase.TabIndex = 10;
+            this.lbltotalcase.Text = "##";
             // 
             // label31
             // 
@@ -870,25 +870,25 @@
             this.label31.TabIndex = 9;
             this.label31.Text = "##";
             // 
-            // label32
+            // lblresidential
             // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(199, 50);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(24, 16);
-            this.label32.TabIndex = 8;
-            this.label32.Text = "##";
+            this.lblresidential.AutoSize = true;
+            this.lblresidential.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblresidential.Location = new System.Drawing.Point(199, 50);
+            this.lblresidential.Name = "lblresidential";
+            this.lblresidential.Size = new System.Drawing.Size(24, 16);
+            this.lblresidential.TabIndex = 8;
+            this.lblresidential.Text = "##";
             // 
-            // label33
+            // lbldrop
             // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(199, 27);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(24, 16);
-            this.label33.TabIndex = 7;
-            this.label33.Text = "##";
+            this.lbldrop.AutoSize = true;
+            this.lbldrop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldrop.Location = new System.Drawing.Point(199, 27);
+            this.lbldrop.Name = "lbldrop";
+            this.lbldrop.Size = new System.Drawing.Size(24, 16);
+            this.lbldrop.TabIndex = 7;
+            this.lbldrop.Text = "##";
             // 
             // label34
             // 
@@ -3311,6 +3311,26 @@
             this.panel9.Size = new System.Drawing.Size(541, 85);
             this.panel9.TabIndex = 12;
             // 
+            // inctype
+            // 
+            this.inctype.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.inctype.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.inctype.Location = new System.Drawing.Point(125, 56);
+            this.inctype.Name = "inctype";
+            this.inctype.Size = new System.Drawing.Size(375, 20);
+            this.inctype.TabIndex = 13;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label12.Location = new System.Drawing.Point(18, 59);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(101, 14);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "Type of Incident";
+            // 
             // lbldateincid
             // 
             this.lbldateincid.AutoSize = true;
@@ -4674,26 +4694,6 @@
             // 
             this.opimage1.FileName = "openFileDialog1";
             // 
-            // inctype
-            // 
-            this.inctype.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.inctype.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inctype.Location = new System.Drawing.Point(125, 56);
-            this.inctype.Name = "inctype";
-            this.inctype.Size = new System.Drawing.Size(375, 20);
-            this.inctype.TabIndex = 13;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label12.Location = new System.Drawing.Point(18, 59);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(101, 14);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "Type of Incident";
-            // 
             // casestudy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4944,10 +4944,10 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnAddMem;
         private System.Windows.Forms.Panel panel22;
-        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label lbltotalcase;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label lblresidential;
+        private System.Windows.Forms.Label lbldrop;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
