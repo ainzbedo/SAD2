@@ -112,7 +112,8 @@ namespace PrototypeSAD
             resetColor();
             btnAdd.BackColor = Color.Gray;
 
-
+            lbladdeditprofile.Text = "New Profile";
+            btnaddeditcase.Text = "Add Profile";
 
 
         }
@@ -447,7 +448,57 @@ namespace PrototypeSAD
             {
                 addprofile();
             }
+
+            else
+            {
+                
+                editprofile();
+            }
            
+        }
+
+        public void reloadeditinfo(int id)
+        {
+            try
+            {
+                conn.Open();
+
+                MySqlCommand comm = new MySqlCommand("SELECT lastname, firstname, birthdate, caseAge, program, status, address, datejoined, picture FROM casestudyprofile WHERE caseid = " + id, conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+
+                adp.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+
+                    txtlname.Text = dt.Rows[0]["lastname"].ToString();
+                    txtfname.Text = dt.Rows[0]["firstname"].ToString();
+                    txtaddress.Text = dt.Rows[0]["address"].ToString();
+                    txtage.Text = dt.Rows[0]["caseAge"].ToString();
+                    cbxprogram.Text = dt.Rows[0]["program"].ToString();
+                    cbxstatus.Text = dt.Rows[0]["status"].ToString();
+
+                    dtbirth.Value = Convert.ToDateTime(dt.Rows[0]["birthdate"]);
+                    dtjoin.Value = Convert.ToDateTime(dt.Rows[0]["datejoined"]);
+
+
+                    pbox1.ImageLocation = dt.Rows[0]["picture"].ToString();
+
+                    filename = dt.Rows[0]["picture"].ToString().Replace(@"\", @"\\");
+
+                }
+
+                conn.Close();
+            }
+
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
+                conn.Close();
+            }
+
+
         }
 
         public void addprofile()
@@ -504,6 +555,71 @@ namespace PrototypeSAD
             }
         }
 
+        public void editprofile()
+        {
+            string lname = txtlname.Text, fname = txtfname.Text, status = cbxstatus.Text, program = cbxprogram.Text, address = txtaddress.Text;
+            int age;
+
+            
+            if (string.IsNullOrEmpty(address) || string.IsNullOrEmpty(txtage.Text) || string.IsNullOrEmpty(fname) || string.IsNullOrEmpty(lname) || string.IsNullOrEmpty(program) || string.IsNullOrEmpty(status))
+            {
+                MessageBox.Show("Please fill out empty fields.");
+            }
+
+            else if (pbox1.Image == null)
+            {
+                MessageBox.Show("Please insert a proper picture.");
+            }
+
+            else
+            {
+
+                if (Int32.TryParse(txtage.Text, out age))
+                {
+                    age = int.Parse(txtage.Text);
+
+                    try
+                    {
+                        MessageBox.Show(filename);
+                        conn.Open();
+                        MySqlCommand comm = new MySqlCommand("UPDATE casestudyprofile SET lastname = '" + lname + "', firstname = " +
+                                            "'" + fname + "', birthdate = " + dtbirth.Value.Date.ToString("yyyyMMdd") + ", status = '" + status + "', " +
+                                            "caseage = " + age + ", program = '" + program + "', datejoined = " + dtjoin.Value.Date.ToString("yyyyMMdd") + ", " +
+                                            "picture = '" + filename + "', address = '" + address + "' WHERE caseid = " + id, conn);
+
+                        comm.ExecuteNonQuery();
+
+                        MessageBox.Show("Profile Edited!");
+
+                        conn.Close();
+
+                        tabControl.SelectedTab = sixteen;
+
+                        reset();
+                        refresh();
+
+                        reload(id);
+
+                        existsed(id);
+
+                        existshealth(id);
+
+                    }
+                    catch (Exception ee)
+                    {
+                        MessageBox.Show("" + ee);
+                        conn.Close();
+                    }
+                }
+
+                else
+                {
+                    MessageBox.Show("Age input is invalid! Please input a proper input!");
+                }
+
+            }
+        }
+
         private void button11_Click(object sender, EventArgs e)
         {
             tabControl.SelectedTab = fourth;
@@ -534,6 +650,8 @@ namespace PrototypeSAD
                 filename = Path.GetFullPath(rest.FileName).Replace(@"\", @"\\");
 
             }
+
+            
 
         }
 
@@ -1268,6 +1386,8 @@ namespace PrototypeSAD
 
             btnaddeditcase.Text = "Add Changes";
             lbladdeditprofile.Text = "Edit Profile";
+
+            reloadeditinfo(id);
         }
 
         private void btnbackcasestud_Click(object sender, EventArgs e)

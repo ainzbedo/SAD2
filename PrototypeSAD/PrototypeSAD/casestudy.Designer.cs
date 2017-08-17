@@ -1186,6 +1186,7 @@
             // dtbirth
             // 
             this.dtbirth.Location = new System.Drawing.Point(114, 231);
+            this.dtbirth.MaxDate = new System.DateTime(9997, 12, 2, 0, 0, 0, 0);
             this.dtbirth.Name = "dtbirth";
             this.dtbirth.Size = new System.Drawing.Size(190, 20);
             this.dtbirth.TabIndex = 69;
