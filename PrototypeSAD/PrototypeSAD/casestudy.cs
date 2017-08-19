@@ -143,6 +143,10 @@ namespace PrototypeSAD
             lbladdeditprofile.Text = "New Profile";
             btnaddeditcase.Text = "Add Profile";
 
+            dtbirth.MaxDate = DateTime.Now.AddDays(1);
+            dtjoin.MaxDate = DateTime.Now.AddDays(1);
+            condate.MaxDate = DateTime.Now.AddDays(1);
+
             try
             {
                 conn.Open();
@@ -193,7 +197,7 @@ namespace PrototypeSAD
             {
                 conn.Open();
 
-                MySqlCommand comm = new MySqlCommand("SELECT caseid, lastname, firstname, status FROM casestudyprofile", conn);
+                MySqlCommand comm = new MySqlCommand("SELECT caseid, lastname, firstname, program FROM casestudyprofile", conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                 DataTable dt = new DataTable();
 
@@ -800,6 +804,46 @@ namespace PrototypeSAD
             }
         }
 
+        public void reloadhealth(int id)
+        {
+            try
+            {
+                conn.Open();
+
+                MySqlCommand comm = new MySqlCommand("SELECT hid, healthdate FROM health WHERE caseid = " + id + " ORDER BY healthdate", conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+
+                adp.Fill(dt);
+
+                if (dt.Rows.Count == 0)
+                {
+                    MessageBox.Show("There are no current incident records for this case study.");
+                }
+
+                else
+
+                {
+                    dtincid.DataSource = dt;
+
+                }
+
+
+                dtincid.Columns[0].Visible = false;
+
+                conn.Close();
+
+            }
+
+
+            catch (Exception ee)
+            {
+
+                //MessageBox.Show("" + ee);
+                conn.Close();
+            }
+        }
+
         public void reloadfam(int id)
         {
 
@@ -1187,15 +1231,8 @@ namespace PrototypeSAD
         private void btnhealth_Click_1(object sender, EventArgs e)
         {
 
-            lblnamehealth.Text = lblname.Text;
-
-            if (btnhealth.Text == "Add Info")
-            {
-                tabControl.SelectedTab = eleventh;
-            }
-
-            //iput pa dis
-
+            tabControl.SelectedTab = fifteen;
+            reloadhealth(id);
         }
 
         private void btncancelhealth_Click(object sender, EventArgs e)
@@ -1314,7 +1351,7 @@ namespace PrototypeSAD
 
                 int cid = int.Parse(dtgcon.Rows[e.RowIndex].Cells[0].Value.ToString());
 
-                MySqlCommand comm = new MySqlCommand("SELECT condes FROM consultation WHERE cid = " + cid, conn);
+                MySqlCommand comm = new MySqlCommand("SELECT condes, interviewdate, interviewer FROM consultation WHERE cid = " + cid, conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                 DataTable dt = new DataTable();
 
@@ -1324,6 +1361,10 @@ namespace PrototypeSAD
                 {
 
                     richboxrecords.Text = dt.Rows[0]["condes"].ToString();
+
+                    lbldatecon.Text = Convert.ToDateTime(dt.Rows[0]["interviewdate"]).ToString("MMMM dd, yyyy");
+              
+                    lblintcon.Text = dt.Rows[0]["interviewer"].ToString();
 
                 }
 
@@ -1549,6 +1590,27 @@ namespace PrototypeSAD
         private void btnaddincid_Click_1(object sender, EventArgs e)
         {
             tabControl.SelectedTab = tenth;
+        }
+
+        private void btnbackfrominc_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = twelfth;
+        }
+
+        private void btnbackfrominvolve_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = tenth;
+        }
+
+        private void btnbackfromhealth_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = sixteen;
+        }
+
+        private void btngotohealth_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = seventh;
+           
         }
 
         private void btnaddfamtype_Click(object sender, EventArgs e)
