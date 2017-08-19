@@ -18,7 +18,7 @@ namespace PrototypeSAD
         public Form2 ref_to_main { get; set; }
         public MySqlConnection conn;
 
-        public int id, fammode;
+        public int id, hid, fammode;
         public string filename;
         public DataTable tblfam;
 
@@ -230,9 +230,10 @@ namespace PrototypeSAD
             lbladdeditprofile.Text = "New Profile";
             btnaddeditcase.Text = "Add Profile";
 
-            dtbirth.MaxDate = DateTime.Now.AddDays(1);
-            dtjoin.MaxDate = DateTime.Now.AddDays(1);
-            condate.MaxDate = DateTime.Now.AddDays(1);
+            dtbirth.MaxDate = DateTime.Now;
+            dtjoin.MaxDate = DateTime.Now;
+            condate.MaxDate = DateTime.Now;
+            dtpcheck.MaxDate = DateTime.Now;
 
             try
             {
@@ -990,7 +991,7 @@ namespace PrototypeSAD
             {
                 conn.Open();
 
-                MySqlCommand comm = new MySqlCommand("SELECT hid, healthdate FROM health WHERE caseid = " + id + " ORDER BY healthdate", conn);
+                MySqlCommand comm = new MySqlCommand("SELECT checkid, checkupdate FROM checkup JOIN health ON health.hid = checkup.hid WHERE health.caseid = " + id + " ORDER BY checkupdate", conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                 DataTable dt = new DataTable();
 
@@ -1004,12 +1005,16 @@ namespace PrototypeSAD
                 else
 
                 {
-                    dtincid.DataSource = dt;
+                    dtghealth.DataSource = dt;
+                    dtghealth.Columns[0].Visible = false;
+                    //dtincid.Columns[1].Visible = false;
 
+                    //hid = int.Parse(dt.Rows[0]["health.hid"].ToString());
+                    //MessageBox.Show(hid.ToString());
                 }
 
 
-                dtincid.Columns[0].Visible = false;
+                
 
                 conn.Close();
 
@@ -1019,7 +1024,7 @@ namespace PrototypeSAD
             catch (Exception ee)
             {
 
-                //MessageBox.Show("" + ee);
+                MessageBox.Show("" + ee);
                 conn.Close();
             }
         }
@@ -1239,8 +1244,8 @@ namespace PrototypeSAD
             cbxprogram.SelectedIndex = -1;
             cbxstatus.SelectedIndex = -1;
 
-            dtbirth.Value = DateTime.Now;
-            dtjoin.Value = DateTime.Now;
+            dtbirth.Value = DateTime.Now.Date;
+            dtjoin.Value = DateTime.Now.Date;
 
             if (btnaddeditcase.Text == "Add Profile")
             {
@@ -1275,7 +1280,7 @@ namespace PrototypeSAD
 
         public void reset4()
         {
-            condate.Value = DateTime.Now;
+            condate.Value = DateTime.Now.Date;
             txtintname.Clear();
             richconbox.Clear();
 
@@ -1294,7 +1299,14 @@ namespace PrototypeSAD
             cbxhour.SelectedIndex = -1;
             cbxmin.SelectedIndex = -1;
 
-            dateincid.Value = DateTime.Now;
+            dateincid.Value = DateTime.Now.Date;
+        }
+
+        public void reset6()
+        {
+            dtpcheck.Value = DateTime.Now.Date;
+            txtlocationcheck.Clear();
+            rcheckdetails.Clear();
         }
 
         private void btned_Click(object sender, EventArgs e)
@@ -1760,12 +1772,12 @@ namespace PrototypeSAD
 
         private void btnbackfromhealth_Click(object sender, EventArgs e)
         {
-            tabControl.SelectedTab = sixteen;
+            tabControl.SelectedTab = seventeen;
         }
 
         private void btngotohealth_Click(object sender, EventArgs e)
         {
-            tabControl.SelectedTab = seventh;
+            tabControl.SelectedTab = eighteen;
            
         }
 
@@ -1785,6 +1797,95 @@ namespace PrototypeSAD
             rtxtcondition.Text = rviewcondition.Text;
 
             tabControl.SelectedTab = eleventh;
+        }
+
+        private void btngotocheckup_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = fifteen;
+
+            reloadhealth(id);
+
+        }
+
+        private void btnbackfromcheck_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = fifteen;
+
+            reset6();
+        }
+
+        private void dtghealth_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        public void gethid(int id)
+        {
+            try
+            {
+                conn.Open();
+
+                MySqlCommand comm = new MySqlCommand("SELECT hid FROM health WHERE caseid = " + id, conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+
+                adp.Fill(dt);
+
+                hid = int.Parse(dt.Rows[0]["hid"].ToString());
+
+                conn.Close();
+
+            }
+
+
+            catch (Exception ee)
+            {
+
+                MessageBox.Show("" + ee);
+                conn.Close();
+            }
+        }
+
+        private void btnaddcheckuprec_Click(object sender, EventArgs e)
+        {
+            string location = txtlocationcheck.Text, details = rcheckdetails.Text;
+
+            gethid(id);
+
+            if (string.IsNullOrEmpty(location) || string.IsNullOrEmpty(details))
+            {
+                MessageBox.Show("Please fill out empty fields.");
+            }
+
+            else
+            {
+                try
+                {
+
+                    conn.Open();
+
+
+                    MySqlCommand comm = new MySqlCommand("INSERT INTO checkup(hid, checkupdetails, checkupdate) VALUES('" + hid + "', '" + details + "', '" + dtpcheck.Value.Date.ToString("yyyyMMdd") + "')", conn);
+                    MessageBox.Show(hid.ToString());
+                    comm.ExecuteNonQuery();
+
+                    MessageBox.Show("Checkup Record Added!");
+
+                    conn.Close();
+
+                    reloadhealth(id);
+
+                    tabControl.SelectedTab = fifteen;
+
+                    reset6();
+                }
+
+                catch (Exception ee)
+                {
+                    MessageBox.Show("" + ee);
+                    conn.Close();
+                }
+            }
         }
 
         private void btnaddfamtype_Click(object sender, EventArgs e)

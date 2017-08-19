@@ -237,8 +237,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblincidname = new System.Windows.Forms.Label();
             this.eleventh = new System.Windows.Forms.TabPage();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.rtxtcondition = new System.Windows.Forms.RichTextBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
@@ -400,6 +398,19 @@
             this.rviewcondition = new System.Windows.Forms.RichTextBox();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.rviewall = new System.Windows.Forms.RichTextBox();
+            this.eighteen = new System.Windows.Forms.TabPage();
+            this.btnaddcheckuprec = new System.Windows.Forms.Button();
+            this.btnbackfromcheck = new System.Windows.Forms.Button();
+            this.panel45 = new System.Windows.Forms.Panel();
+            this.lblnamecheck = new System.Windows.Forms.Label();
+            this.label76 = new System.Windows.Forms.Label();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.rcheckdetails = new System.Windows.Forms.RichTextBox();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.dtpcheck = new System.Windows.Forms.DateTimePicker();
+            this.txtlocationcheck = new System.Windows.Forms.TextBox();
+            this.label75 = new System.Windows.Forms.Label();
+            this.label77 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pan_RES.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -456,7 +467,6 @@
             this.panel28.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.eleventh.SuspendLayout();
-            this.groupBox11.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -492,6 +502,10 @@
             this.groupBox15.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox13.SuspendLayout();
+            this.eighteen.SuspendLayout();
+            this.panel45.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.groupBox17.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -851,6 +865,7 @@
             this.tabControl.Controls.Add(this.fifteen);
             this.tabControl.Controls.Add(this.sixteen);
             this.tabControl.Controls.Add(this.seventeen);
+            this.tabControl.Controls.Add(this.eighteen);
             this.tabControl.Location = new System.Drawing.Point(301, 74);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
@@ -1771,7 +1786,7 @@
             this.btncancon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncancon.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncancon.ForeColor = System.Drawing.Color.White;
-            this.btncancon.Location = new System.Drawing.Point(291, 492);
+            this.btncancon.Location = new System.Drawing.Point(407, 492);
             this.btncancon.Name = "btncancon";
             this.btncancon.Size = new System.Drawing.Size(196, 28);
             this.btncancon.TabIndex = 92;
@@ -1783,18 +1798,18 @@
             // 
             this.groupBox5.Controls.Add(this.richconbox);
             this.groupBox5.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(19, 250);
+            this.groupBox5.Location = new System.Drawing.Point(9, 250);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(464, 236);
+            this.groupBox5.Size = new System.Drawing.Size(594, 236);
             this.groupBox5.TabIndex = 91;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Details";
             // 
             // richconbox
             // 
-            this.richconbox.Location = new System.Drawing.Point(18, 32);
+            this.richconbox.Location = new System.Drawing.Point(9, 26);
             this.richconbox.Name = "richconbox";
-            this.richconbox.Size = new System.Drawing.Size(424, 173);
+            this.richconbox.Size = new System.Drawing.Size(579, 204);
             this.richconbox.TabIndex = 0;
             this.richconbox.Text = "";
             // 
@@ -3091,7 +3106,6 @@
             // 
             // eleventh
             // 
-            this.eleventh.Controls.Add(this.groupBox11);
             this.eleventh.Controls.Add(this.groupBox10);
             this.eleventh.Controls.Add(this.groupBox9);
             this.eleventh.Controls.Add(this.btnaddhealth);
@@ -3106,24 +3120,6 @@
             this.eleventh.TabIndex = 11;
             this.eleventh.Text = "11";
             this.eleventh.UseVisualStyleBackColor = true;
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.dateTimePicker1);
-            this.groupBox11.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox11.Location = new System.Drawing.Point(335, 162);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(211, 55);
-            this.groupBox11.TabIndex = 92;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Checkup Date";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(6, 22);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(199, 27);
-            this.dateTimePicker1.TabIndex = 0;
             // 
             // groupBox10
             // 
@@ -3656,6 +3652,7 @@
             this.dtghealth.RowHeadersVisible = false;
             this.dtghealth.Size = new System.Drawing.Size(521, 352);
             this.dtghealth.TabIndex = 83;
+            this.dtghealth.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtghealth_CellClick);
             // 
             // panel43
             // 
@@ -4478,8 +4475,9 @@
             this.btngotocheckup.Name = "btngotocheckup";
             this.btngotocheckup.Size = new System.Drawing.Size(187, 28);
             this.btngotocheckup.TabIndex = 92;
-            this.btngotocheckup.Text = "Add Checkup Records";
+            this.btngotocheckup.Text = "View Checkup Records";
             this.btngotocheckup.UseVisualStyleBackColor = false;
+            this.btngotocheckup.Click += new System.EventHandler(this.btngotocheckup_Click);
             // 
             // btnedithealth
             // 
@@ -5185,6 +5183,154 @@
             this.rviewall.TabIndex = 89;
             this.rviewall.Text = "";
             // 
+            // eighteen
+            // 
+            this.eighteen.Controls.Add(this.groupBox17);
+            this.eighteen.Controls.Add(this.groupBox11);
+            this.eighteen.Controls.Add(this.btnaddcheckuprec);
+            this.eighteen.Controls.Add(this.btnbackfromcheck);
+            this.eighteen.Controls.Add(this.panel45);
+            this.eighteen.Location = new System.Drawing.Point(4, 22);
+            this.eighteen.Name = "eighteen";
+            this.eighteen.Padding = new System.Windows.Forms.Padding(3);
+            this.eighteen.Size = new System.Drawing.Size(609, 536);
+            this.eighteen.TabIndex = 18;
+            this.eighteen.Text = "18";
+            this.eighteen.UseVisualStyleBackColor = true;
+            // 
+            // btnaddcheckuprec
+            // 
+            this.btnaddcheckuprec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btnaddcheckuprec.FlatAppearance.BorderSize = 0;
+            this.btnaddcheckuprec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnaddcheckuprec.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnaddcheckuprec.ForeColor = System.Drawing.Color.White;
+            this.btnaddcheckuprec.Location = new System.Drawing.Point(6, 502);
+            this.btnaddcheckuprec.Name = "btnaddcheckuprec";
+            this.btnaddcheckuprec.Size = new System.Drawing.Size(196, 28);
+            this.btnaddcheckuprec.TabIndex = 95;
+            this.btnaddcheckuprec.Text = "Add Info";
+            this.btnaddcheckuprec.UseVisualStyleBackColor = false;
+            this.btnaddcheckuprec.Click += new System.EventHandler(this.btnaddcheckuprec_Click);
+            // 
+            // btnbackfromcheck
+            // 
+            this.btnbackfromcheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btnbackfromcheck.FlatAppearance.BorderSize = 0;
+            this.btnbackfromcheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbackfromcheck.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbackfromcheck.ForeColor = System.Drawing.Color.White;
+            this.btnbackfromcheck.Location = new System.Drawing.Point(407, 502);
+            this.btnbackfromcheck.Name = "btnbackfromcheck";
+            this.btnbackfromcheck.Size = new System.Drawing.Size(196, 28);
+            this.btnbackfromcheck.TabIndex = 94;
+            this.btnbackfromcheck.Text = "Cancel";
+            this.btnbackfromcheck.UseVisualStyleBackColor = false;
+            this.btnbackfromcheck.Click += new System.EventHandler(this.btnbackfromcheck_Click);
+            // 
+            // panel45
+            // 
+            this.panel45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.panel45.Controls.Add(this.lblnamecheck);
+            this.panel45.Controls.Add(this.label76);
+            this.panel45.Location = new System.Drawing.Point(6, 5);
+            this.panel45.Name = "panel45";
+            this.panel45.Size = new System.Drawing.Size(519, 97);
+            this.panel45.TabIndex = 93;
+            // 
+            // lblnamecheck
+            // 
+            this.lblnamecheck.AutoSize = true;
+            this.lblnamecheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnamecheck.ForeColor = System.Drawing.Color.White;
+            this.lblnamecheck.Location = new System.Drawing.Point(13, 17);
+            this.lblnamecheck.Name = "lblnamecheck";
+            this.lblnamecheck.Size = new System.Drawing.Size(72, 25);
+            this.lblnamecheck.TabIndex = 40;
+            this.lblnamecheck.Text = "Name";
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.BackColor = System.Drawing.Color.Transparent;
+            this.label76.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label76.ForeColor = System.Drawing.Color.Black;
+            this.label76.Location = new System.Drawing.Point(11, 64);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(179, 24);
+            this.label76.TabIndex = 39;
+            this.label76.Text = "Basic Health Info";
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.rcheckdetails);
+            this.groupBox11.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox11.Location = new System.Drawing.Point(3, 226);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(600, 259);
+            this.groupBox11.TabIndex = 97;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Remarks/Recommendations";
+            // 
+            // rcheckdetails
+            // 
+            this.rcheckdetails.Location = new System.Drawing.Point(6, 26);
+            this.rcheckdetails.Name = "rcheckdetails";
+            this.rcheckdetails.Size = new System.Drawing.Size(579, 227);
+            this.rcheckdetails.TabIndex = 89;
+            this.rcheckdetails.Text = "";
+            // 
+            // groupBox17
+            // 
+            this.groupBox17.Controls.Add(this.dtpcheck);
+            this.groupBox17.Controls.Add(this.txtlocationcheck);
+            this.groupBox17.Controls.Add(this.label75);
+            this.groupBox17.Controls.Add(this.label77);
+            this.groupBox17.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox17.Location = new System.Drawing.Point(21, 117);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(424, 91);
+            this.groupBox17.TabIndex = 98;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "General";
+            // 
+            // dtpcheck
+            // 
+            this.dtpcheck.Location = new System.Drawing.Point(185, 19);
+            this.dtpcheck.Name = "dtpcheck";
+            this.dtpcheck.Size = new System.Drawing.Size(199, 27);
+            this.dtpcheck.TabIndex = 94;
+            // 
+            // txtlocationcheck
+            // 
+            this.txtlocationcheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtlocationcheck.Location = new System.Drawing.Point(185, 60);
+            this.txtlocationcheck.Name = "txtlocationcheck";
+            this.txtlocationcheck.Size = new System.Drawing.Size(199, 27);
+            this.txtlocationcheck.TabIndex = 79;
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label75.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label75.Location = new System.Drawing.Point(3, 17);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(46, 18);
+            this.label75.TabIndex = 77;
+            this.label75.Text = "Date";
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label77.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label77.Location = new System.Drawing.Point(3, 60);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(147, 18);
+            this.label77.TabIndex = 73;
+            this.label77.Text = "Place of Checkup";
+            // 
             // casestudy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5290,7 +5436,6 @@
             this.panel28.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.eleventh.ResumeLayout(false);
-            this.groupBox11.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -5344,6 +5489,12 @@
             this.groupBox15.PerformLayout();
             this.groupBox12.ResumeLayout(false);
             this.groupBox13.ResumeLayout(false);
+            this.eighteen.ResumeLayout(false);
+            this.panel45.ResumeLayout(false);
+            this.panel45.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox17.ResumeLayout(false);
+            this.groupBox17.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -5701,8 +5852,6 @@
         private System.Windows.Forms.RichTextBox rtxtall;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.RichTextBox rtxtcondition;
-        private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TabPage seventeen;
         private System.Windows.Forms.Button btngotocheckup;
         private System.Windows.Forms.Button btnedithealth;
@@ -5721,5 +5870,18 @@
         private System.Windows.Forms.Label lblvblood;
         private System.Windows.Forms.Label lblvweight;
         private System.Windows.Forms.Label lblvheight;
+        private System.Windows.Forms.TabPage eighteen;
+        private System.Windows.Forms.Button btnaddcheckuprec;
+        private System.Windows.Forms.Button btnbackfromcheck;
+        private System.Windows.Forms.Panel panel45;
+        private System.Windows.Forms.Label lblnamecheck;
+        private System.Windows.Forms.Label label76;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.RichTextBox rcheckdetails;
+        private System.Windows.Forms.GroupBox groupBox17;
+        private System.Windows.Forms.DateTimePicker dtpcheck;
+        private System.Windows.Forms.TextBox txtlocationcheck;
+        private System.Windows.Forms.Label label75;
+        private System.Windows.Forms.Label label77;
     }
 }
