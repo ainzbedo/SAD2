@@ -22,6 +22,17 @@ namespace PrototypeSAD
         public string filename;
         public DataTable tblfam;
 
+        public casestudy()
+        {
+            InitializeComponent();
+            conn = new MySqlConnection("Server=localhost;Database=prototype_sad;Uid=root;Pwd=root;");
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void btnAnnual_Click(object sender, EventArgs e)
         {
             tabControl.SelectedTab = fifteen;
@@ -56,6 +67,66 @@ namespace PrototypeSAD
             resetColor();
             btnUpdate.BackColor = Color.Gray;
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = sixteen;
+            resetColor();
+            btnCaseStudy.BackColor = Color.Gray;
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = first;
+        }
+
+        private void tenth_MouseHover(object sender, EventArgs e)
+        {
+            rbam.PerformClick();
+        }
+
+        private void btnDropIn_Click(object sender, EventArgs e)
+        {
+            resetColor();
+            btnResidential.BackColor = Color.Transparent;
+            btnMain.BackColor = Color.Transparent;
+            btnDropIn.BackColor = Color.Gray;
+            secondTaskbar.SelectedTab = dropin;
+        }
+
+        private void btnResidential_Click(object sender, EventArgs e)
+        {
+            resetColor();
+            btnDropIn.BackColor = Color.Transparent;
+            btnMain.BackColor = Color.Transparent;
+            btnResidential.BackColor = Color.Gray;
+            secondTaskbar.SelectedTab = residential;
+        }
+
+        private void btnMain_Click(object sender, EventArgs e)
+        {
+            resetColor();
+            btnDropIn.BackColor = Color.Transparent;
+            btnResidential.BackColor = Color.Transparent;
+            btnMain.BackColor = Color.Gray;
+
+            this.Close();
+        }
+
+        private void casestudy_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ref_to_main.Show();
+        }
+
+        private void btnAddRes_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = third;
+            resetColor2();
+            btnAdd.BackColor = Color.Gray;
+        }
+
+
+
 
         private void btnInc_Click(object sender, EventArgs e)
         {
@@ -135,6 +206,22 @@ namespace PrototypeSAD
             btnCaseStudy.BackColor = Color.Gray;
 
 
+        }
+
+        public void resetColor()
+        {
+            btnCaseStudy.BackColor = Color.Transparent; btnAdd.BackColor = Color.Transparent; btnAnnual.BackColor = Color.Transparent; btnCloseCase.BackColor = Color.Transparent; shit2.BackColor = Color.Transparent; btnDropIn.BackColor = Color.Transparent;
+            btnEdu.BackColor = Color.Transparent; btnFam.BackColor = Color.Transparent; shit.BackColor = Color.Transparent; btnInc.BackColor = Color.Transparent; btnProb.BackColor = Color.Transparent; btnProg.BackColor = Color.Transparent;
+            btnResidential.BackColor = Color.Transparent; btnSearch.BackColor = Color.Transparent; btnServ.BackColor = Color.Transparent; btnSS.BackColor = Color.Transparent; btnUpdate.BackColor = Color.Transparent;
+            btnDropIn.BackColor = Color.Gray;
+        }
+
+        public void resetColor2()
+        {
+            btnCaseStudy2.BackColor = Color.Transparent; btnAddRes.BackColor = Color.Transparent; btnSearch2.BackColor = Color.Transparent; button52.BackColor = Color.Transparent;
+            button51.BackColor = Color.Transparent; button50.BackColor = Color.Transparent; button49.BackColor = Color.Transparent; button48.BackColor = Color.Transparent;
+            button47.BackColor = Color.Transparent; button46.BackColor = Color.Transparent; button45.BackColor = Color.Transparent; button44.BackColor = Color.Transparent;
+            button43.BackColor = Color.Transparent; button42.BackColor = Color.Transparent; button41.BackColor = Color.Transparent;
         }
 
         private void casestudy_Load(object sender, EventArgs e)
@@ -263,33 +350,6 @@ namespace PrototypeSAD
             lbltotalcase.Text = dt.Rows[0]["count(caseid)"].ToString();
         }
 
-        public void resetColor()
-        {
-            btnCaseStudy.BackColor = Color.Transparent; btnAdd.BackColor = Color.Transparent; btnAnnual.BackColor = Color.Transparent; btnCloseCase.BackColor = Color.Transparent; shit2.BackColor = Color.Transparent; btnDropIn.BackColor = Color.Transparent;
-            btnEdu.BackColor = Color.Transparent; btnFam.BackColor = Color.Transparent; shit.BackColor = Color.Transparent; btnInc.BackColor = Color.Transparent; btnProb.BackColor = Color.Transparent; btnProg.BackColor = Color.Transparent;
-            btnResidential.BackColor = Color.Transparent; btnSearch.BackColor = Color.Transparent; btnServ.BackColor = Color.Transparent; btnSS.BackColor = Color.Transparent; btnUpdate.BackColor = Color.Transparent;
-            btnDropIn.BackColor = Color.Gray;
-        }
-
-        public void resetColor2()
-        {
-            btnCaseStudy2.BackColor = Color.Transparent; btnAddRes.BackColor = Color.Transparent; btnSearch2.BackColor = Color.Transparent; button52.BackColor = Color.Transparent;
-            button51.BackColor = Color.Transparent; button50.BackColor = Color.Transparent; button49.BackColor = Color.Transparent; button48.BackColor = Color.Transparent;
-            button47.BackColor = Color.Transparent; button46.BackColor = Color.Transparent; button45.BackColor = Color.Transparent; button44.BackColor = Color.Transparent;
-            button43.BackColor = Color.Transparent; button42.BackColor = Color.Transparent; button41.BackColor = Color.Transparent;
-        }
-
-        public casestudy()
-        {
-            InitializeComponent();
-            conn = new MySqlConnection("Server=localhost;Database=prototype_sad;Uid=root;Pwd=root;");
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
        private void btnAddMem_Click(object sender, EventArgs e)
         {
 
@@ -364,65 +424,7 @@ namespace PrototypeSAD
             
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            tabControl.SelectedTab = sixteen;
-            resetColor();
-            btnCaseStudy.BackColor = Color.Gray;
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            tabControl.SelectedTab = first;
-        }
-
-        private void tenth_MouseHover(object sender, EventArgs e)
-        {
-            rbam.PerformClick();
-        }
-
-        private void btnDropIn_Click(object sender, EventArgs e)
-        {
-            resetColor();
-            btnResidential.BackColor = Color.Transparent;
-            btnMain.BackColor = Color.Transparent;
-            btnDropIn.BackColor = Color.Gray;
-            secondTaskbar.SelectedTab = dropin;
-        }
-
-        private void btnResidential_Click(object sender, EventArgs e)
-        {
-            resetColor();
-            btnDropIn.BackColor = Color.Transparent;
-            btnMain.BackColor = Color.Transparent;
-            btnResidential.BackColor = Color.Gray;
-            secondTaskbar.SelectedTab = residential;
-        }
-
-        private void btnMain_Click(object sender, EventArgs e)
-        {
-            resetColor();
-            btnDropIn.BackColor = Color.Transparent;
-            btnResidential.BackColor = Color.Transparent;
-            btnMain.BackColor = Color.Gray;
-
-            this.Close();
-        }
-
-        private void casestudy_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            ref_to_main.Show();
-        }
-
-        private void btnAddRes_Click(object sender, EventArgs e)
-        {
-            tabControl.SelectedTab = third;
-            resetColor2();
-            btnAdd.BackColor = Color.Gray;
-        }
-
-
-
+        
         private void dtgcs_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -624,12 +626,190 @@ namespace PrototypeSAD
             }
         }
 
+        public void reloadedithealth(int id)
+        {
+            try
+            {
+                conn.Open();
+
+                MySqlCommand comm = new MySqlCommand("SELECT height, weight, bloodtype, allergies, hecondition FROM health WHERE caseid = " + id, conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+
+                adp.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+
+                    lblvheight.Text = dt.Rows[0]["height"].ToString();
+                    lblvweight.Text = dt.Rows[0]["weight"].ToString();
+                    lblvblood.Text = dt.Rows[0]["bloodtype"].ToString();
+                    rviewall.Text = dt.Rows[0]["allergies"].ToString();
+                    rviewcondition.Text = dt.Rows[0]["hecondition"].ToString();
+
+                }
+
+                conn.Close();
+            }
+
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
+                conn.Close();
+            }
+
+
+        }
+
+        public void addhealth()
+        {
+            string blood = cbxbloodtype.Text, allergy = rtxtall.Text, condition = rtxtcondition.Text;
+            int height, weight;
+
+            if (string.IsNullOrEmpty(blood) || string.IsNullOrEmpty(txtheight.Text) || string.IsNullOrEmpty(txtweight.Text) || string.IsNullOrEmpty(allergy) || string.IsNullOrEmpty(condition))
+            {
+                MessageBox.Show("Please fill out empty fields.");
+            }
+
+            else
+            {
+
+                if (Int32.TryParse(txtheight.Text, out height) && Int32.TryParse(txtweight.Text, out weight))
+                {
+                    height = int.Parse(txtheight.Text); weight = int.Parse(txtweight.Text);
+
+                    try
+                    {
+
+                        conn.Open();
+
+
+                        MySqlCommand comm = new MySqlCommand("INSERT INTO health(caseid, height, weight, bloodtype, allergies, hecondition) VALUES('" + id + "', '" + height + "', '" + weight + "','" + blood + "','" + allergy + "','" + condition + "')", conn);
+
+                        comm.ExecuteNonQuery();
+
+                        MessageBox.Show("New Info Added!");
+
+                        conn.Close();
+
+                        existshealth(id);
+
+                        reloadedithealth(id);
+
+                        lblblood.Text = blood;
+                        lblheight.Text = height.ToString();
+                        lblweight.Text = weight.ToString();
+
+                        tabControl.SelectedTab = sixteen;
+
+                        reset3();
+
+                    }
+
+                    catch (Exception ee)
+                    {
+                        MessageBox.Show("" + ee);
+                        conn.Close();
+                    }
+
+                }
+
+                else
+                {
+                    if (Int32.TryParse(txtheight.Text, out height) == false && Int32.TryParse(txtweight.Text, out weight) == false)
+                    {
+                        MessageBox.Show("Height and Weight inputs are invalid! Use numbers!");
+                    }
+
+                    else if (Int32.TryParse(txtheight.Text, out height) == false)
+                    {
+                        MessageBox.Show("Height input is invalid! Use numbers!");
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Weight input is invalid! Use numbers!");
+                    }
+                }
+            }
+        }
+
+        public void edithealth()
+        {
+            string blood = cbxbloodtype.Text, allergy = rtxtall.Text, condition = rtxtcondition.Text;
+            int height, weight;
+
+            if (string.IsNullOrEmpty(blood) || string.IsNullOrEmpty(txtheight.Text) || string.IsNullOrEmpty(txtweight.Text) || string.IsNullOrEmpty(allergy) || string.IsNullOrEmpty(condition))
+            {
+                MessageBox.Show("Please fill out empty fields.");
+            }
+
+            else
+            {
+
+                if (Int32.TryParse(txtheight.Text, out height) && Int32.TryParse(txtweight.Text, out weight))
+                {
+                    height = int.Parse(txtheight.Text); weight = int.Parse(txtweight.Text);
+
+                    try
+                    {
+
+                        conn.Open();
+
+
+                        MySqlCommand comm = new MySqlCommand("UPDATE health SET height = '" + height + "', weight = '" + weight + "', bloodtype = '" + blood + "', allergies = '" + allergy + "', hecondition = '" + condition + "' WHERE caseid = " + id, conn);
+
+                        comm.ExecuteNonQuery();
+
+                        MessageBox.Show("New Info Added!");
+
+                        conn.Close();
+
+                        existshealth(id);
+
+                        reloadedithealth(id);
+
+                        lblblood.Text = blood;
+                        lblheight.Text = height.ToString();
+                        lblweight.Text = weight.ToString();
+
+                        tabControl.SelectedTab = sixteen;
+
+                        reset3();
+
+                    }
+
+                    catch (Exception ee)
+                    {
+                        MessageBox.Show("" + ee);
+                        conn.Close();
+                    }
+
+                }
+
+                else
+                {
+                    if (Int32.TryParse(txtheight.Text, out height) == false && Int32.TryParse(txtweight.Text, out weight) == false)
+                    {
+                        MessageBox.Show("Height and Weight inputs are invalid! Use numbers!");
+                    }
+
+                    else if (Int32.TryParse(txtheight.Text, out height) == false)
+                    {
+                        MessageBox.Show("Height input is invalid! Use numbers!");
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Weight input is invalid! Use numbers!");
+                    }
+                }
+            }
+        }
+
         private void button11_Click(object sender, EventArgs e)
         {
-            tabControl.SelectedTab = fourth;
-            resetColor();
-            btnCaseStudy.BackColor = Color.Gray;
-
+            
             existsfam(id);
 
             reloadfam(id);
@@ -1087,6 +1267,9 @@ namespace PrototypeSAD
             txtheight.Clear();
             txtweight.Clear();
             cbxbloodtype.SelectedIndex = -1;
+
+            rtxtcondition.Clear();
+            rtxtall.Clear();
            
         }
 
@@ -1231,84 +1414,57 @@ namespace PrototypeSAD
         private void btnhealth_Click_1(object sender, EventArgs e)
         {
 
-            tabControl.SelectedTab = fifteen;
-            reloadhealth(id);
-        }
-
-        private void btncancelhealth_Click(object sender, EventArgs e)
-        {
-            tabControl.SelectedTab = sixteen;
-        }
-
-        private void btnaddhealth_Click(object sender, EventArgs e)
-        {
-            string blood = cbxbloodtype.Text;
-            int height, weight;
-
-            if (string.IsNullOrEmpty(blood) || string.IsNullOrEmpty(txtheight.Text) || string.IsNullOrEmpty(txtweight.Text))
+            if (btnhealth.Text == "Add Info")
             {
-                MessageBox.Show("Please fill out empty fields.");
+                tabControl.SelectedTab = eleventh;
+
+                btnaddhealth.Text = "Add Info";
             }
 
             else
             {
-
-                if (Int32.TryParse(txtheight.Text, out height) && Int32.TryParse(txtweight.Text, out weight))
-                {
-                    height = int.Parse(txtheight.Text); weight = int.Parse(txtweight.Text);
-
-                    try
-                    {
-
-                        conn.Open();
-
-
-                        MySqlCommand comm = new MySqlCommand("INSERT INTO health(caseid, height, weight, bloodtype) VALUES('" + id + "', '" + height + "', '" + weight + "','" + blood + "')", conn);
-
-                        comm.ExecuteNonQuery();
-
-                        MessageBox.Show("New Info Added!");
-
-                        conn.Close();
-
-                        existshealth(id);
-
-                        lblblood.Text = blood;
-                        lblheight.Text = height.ToString();
-                        lblweight.Text = weight.ToString();
-
-                        tabControl.SelectedTab = sixteen;
-
-                        reset3();
-
-                    }
-
-                    catch (Exception ee)
-                    {
-                        MessageBox.Show("" + ee);
-                        conn.Close();
-                    }
-
-                }
-
-                else
-                {
-                    if (Int32.TryParse(txtheight.Text, out height) == false && Int32.TryParse(txtweight.Text, out weight) == false)
-                    {
-                        MessageBox.Show("Height and Weight inputs are invalid! Use numbers!");
-                    }
-
-                    else if (Int32.TryParse(txtheight.Text, out height) == false)
-                    {
-                        MessageBox.Show("Height input is invalid! Use numbers!");
-                    }
-
-                    else
-                    {
-                        MessageBox.Show("Weight input is invalid! Use numbers!");
-                    }
-                }
+                tabControl.SelectedTab = seventeen;
+                reloadedithealth(id);
             }
+            
+
+  
+
+            lblnamehealth.Text = lblname.Text;
+            //reloadhealth(id);
+        }
+
+        private void btncancelhealth_Click(object sender, EventArgs e)
+        {
+            if (btnaddhealth.Text == "Add Info")
+            {
+
+                tabControl.SelectedTab = sixteen;
+
+            }
+
+            else
+            {
+                tabControl.SelectedTab = seventeen;
+            }
+
+            reset3();
+        }
+
+        private void btnaddhealth_Click(object sender, EventArgs e)
+        {
+
+            if (btnaddhealth.Text == "Add Info")
+            {
+                addhealth();
+            }
+
+            else
+            {
+                edithealth();
+            }
+
+            
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -1611,6 +1767,24 @@ namespace PrototypeSAD
         {
             tabControl.SelectedTab = seventh;
            
+        }
+
+        private void btnbackfromhealthview_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = sixteen;
+        }
+
+        private void btnedithealth_Click(object sender, EventArgs e)
+        {
+            btnaddhealth.Text = "Add Changes";
+
+            txtheight.Text = lblvheight.Text;
+            txtweight.Text = lblvweight.Text;
+            cbxbloodtype.Text = lblvblood.Text;
+            rtxtall.Text = rviewall.Text;
+            rtxtcondition.Text = rviewcondition.Text;
+
+            tabControl.SelectedTab = eleventh;
         }
 
         private void btnaddfamtype_Click(object sender, EventArgs e)

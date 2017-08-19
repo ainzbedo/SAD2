@@ -196,6 +196,11 @@
             this.btncancelcon = new System.Windows.Forms.Button();
             this.dtgcon = new System.Windows.Forms.DataGridView();
             this.document = new System.Windows.Forms.TabPage();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.lbldatecon = new System.Windows.Forms.Label();
+            this.lblintcon = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
             this.btncancelviewrec = new System.Windows.Forms.Button();
             this.richboxrecords = new System.Windows.Forms.RichTextBox();
             this.panel41 = new System.Windows.Forms.Panel();
@@ -232,6 +237,12 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblincidname = new System.Windows.Forms.Label();
             this.eleventh = new System.Windows.Forms.TabPage();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.rtxtcondition = new System.Windows.Forms.RichTextBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.rtxtall = new System.Windows.Forms.RichTextBox();
             this.btnaddhealth = new System.Windows.Forms.Button();
             this.btncancelhealth = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -251,6 +262,7 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.thirteen = new System.Windows.Forms.TabPage();
+            this.btnbackfrominc = new System.Windows.Forms.Button();
             this.incidlocation = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.repincidaction = new System.Windows.Forms.RichTextBox();
@@ -263,10 +275,16 @@
             this.lbldateincid = new System.Windows.Forms.Label();
             this.a = new System.Windows.Forms.Label();
             this.fourteen = new System.Windows.Forms.TabPage();
+            this.btnbackfrominvolve = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel42 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.fifteen = new System.Windows.Forms.TabPage();
+            this.btngotohealth = new System.Windows.Forms.Button();
+            this.btnbackfromhealth = new System.Windows.Forms.Button();
+            this.dtghealth = new System.Windows.Forms.DataGridView();
+            this.panel43 = new System.Windows.Forms.Panel();
+            this.label33 = new System.Windows.Forms.Label();
             this.sixteen = new System.Windows.Forms.TabPage();
             this.btneditprofile = new System.Windows.Forms.Button();
             this.pbox2 = new System.Windows.Forms.PictureBox();
@@ -328,6 +346,13 @@
             this.label43 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
+            this.seventeen = new System.Windows.Forms.TabPage();
+            this.btngotocheckup = new System.Windows.Forms.Button();
+            this.btnedithealth = new System.Windows.Forms.Button();
+            this.btnbackfromhealthview = new System.Windows.Forms.Button();
+            this.panel44 = new System.Windows.Forms.Panel();
+            this.lblviewhealthname = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
             this.btnCaseStudy = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -364,22 +389,17 @@
             this.btnSearch2 = new System.Windows.Forms.Button();
             this.btnCaseStudy2 = new System.Windows.Forms.Button();
             this.opimage1 = new System.Windows.Forms.OpenFileDialog();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.lbldatecon = new System.Windows.Forms.Label();
-            this.lblintcon = new System.Windows.Forms.Label();
-            this.btnbackfrominc = new System.Windows.Forms.Button();
-            this.btnbackfrominvolve = new System.Windows.Forms.Button();
-            this.btngotohealth = new System.Windows.Forms.Button();
-            this.btnbackfromhealth = new System.Windows.Forms.Button();
-            this.dtghealth = new System.Windows.Forms.DataGridView();
-            this.panel43 = new System.Windows.Forms.Panel();
-            this.label33 = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.lblvheight = new System.Windows.Forms.Label();
+            this.lblvweight = new System.Windows.Forms.Label();
+            this.lblvblood = new System.Windows.Forms.Label();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.rviewcondition = new System.Windows.Forms.RichTextBox();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.rviewall = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.pan_RES.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -423,6 +443,7 @@
             this.tabrecords.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgcon)).BeginInit();
             this.document.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.panel41.SuspendLayout();
             this.tenth.SuspendLayout();
             this.panel35.SuspendLayout();
@@ -435,6 +456,9 @@
             this.panel28.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.eleventh.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.panel39.SuspendLayout();
@@ -446,6 +470,8 @@
             this.fourteen.SuspendLayout();
             this.panel42.SuspendLayout();
             this.fifteen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtghealth)).BeginInit();
+            this.panel43.SuspendLayout();
             this.sixteen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbox2)).BeginInit();
             this.panel27.SuspendLayout();
@@ -455,16 +481,17 @@
             this.panel23.SuspendLayout();
             this.panel20.SuspendLayout();
             this.panel19.SuspendLayout();
+            this.seventeen.SuspendLayout();
+            this.panel44.SuspendLayout();
             this.panel.SuspendLayout();
             this.secondTaskbar.SuspendLayout();
             this.dropin.SuspendLayout();
             this.residential.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.groupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtghealth)).BeginInit();
-            this.panel43.SuspendLayout();
-            this.groupBox9.SuspendLayout();
-            this.groupBox10.SuspendLayout();
+            this.groupBox14.SuspendLayout();
+            this.groupBox15.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox13.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -823,10 +850,11 @@
             this.tabControl.Controls.Add(this.fourteen);
             this.tabControl.Controls.Add(this.fifteen);
             this.tabControl.Controls.Add(this.sixteen);
+            this.tabControl.Controls.Add(this.seventeen);
             this.tabControl.Location = new System.Drawing.Point(301, 74);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(575, 562);
+            this.tabControl.Size = new System.Drawing.Size(617, 562);
             this.tabControl.TabIndex = 7;
             // 
             // first
@@ -837,7 +865,7 @@
             this.first.Location = new System.Drawing.Point(4, 22);
             this.first.Name = "first";
             this.first.Padding = new System.Windows.Forms.Padding(3);
-            this.first.Size = new System.Drawing.Size(553, 536);
+            this.first.Size = new System.Drawing.Size(609, 536);
             this.first.TabIndex = 0;
             this.first.Text = "1";
             this.first.UseVisualStyleBackColor = true;
@@ -993,7 +1021,7 @@
             this.second.Location = new System.Drawing.Point(4, 22);
             this.second.Name = "second";
             this.second.Padding = new System.Windows.Forms.Padding(3);
-            this.second.Size = new System.Drawing.Size(553, 536);
+            this.second.Size = new System.Drawing.Size(609, 536);
             this.second.TabIndex = 2;
             this.second.Text = "2";
             // 
@@ -1118,7 +1146,7 @@
             this.third.Location = new System.Drawing.Point(4, 22);
             this.third.Name = "third";
             this.third.Padding = new System.Windows.Forms.Padding(3);
-            this.third.Size = new System.Drawing.Size(553, 536);
+            this.third.Size = new System.Drawing.Size(609, 536);
             this.third.TabIndex = 3;
             this.third.Text = "3";
             this.third.UseVisualStyleBackColor = true;
@@ -1383,7 +1411,7 @@
             this.fourth.Location = new System.Drawing.Point(4, 22);
             this.fourth.Name = "fourth";
             this.fourth.Padding = new System.Windows.Forms.Padding(3);
-            this.fourth.Size = new System.Drawing.Size(553, 536);
+            this.fourth.Size = new System.Drawing.Size(609, 536);
             this.fourth.TabIndex = 4;
             this.fourth.Text = "4";
             // 
@@ -1601,7 +1629,7 @@
             this.fifth.Location = new System.Drawing.Point(4, 22);
             this.fifth.Name = "fifth";
             this.fifth.Padding = new System.Windows.Forms.Padding(3);
-            this.fifth.Size = new System.Drawing.Size(553, 536);
+            this.fifth.Size = new System.Drawing.Size(609, 536);
             this.fifth.TabIndex = 5;
             this.fifth.Text = "5";
             this.fifth.UseVisualStyleBackColor = true;
@@ -1716,7 +1744,7 @@
             this.sixth.Location = new System.Drawing.Point(4, 22);
             this.sixth.Name = "sixth";
             this.sixth.Padding = new System.Windows.Forms.Padding(3);
-            this.sixth.Size = new System.Drawing.Size(553, 536);
+            this.sixth.Size = new System.Drawing.Size(609, 536);
             this.sixth.TabIndex = 6;
             this.sixth.Text = "6";
             this.sixth.UseVisualStyleBackColor = true;
@@ -1864,7 +1892,7 @@
             this.seventh.Location = new System.Drawing.Point(4, 22);
             this.seventh.Name = "seventh";
             this.seventh.Padding = new System.Windows.Forms.Padding(3);
-            this.seventh.Size = new System.Drawing.Size(553, 536);
+            this.seventh.Size = new System.Drawing.Size(609, 536);
             this.seventh.TabIndex = 7;
             this.seventh.Text = "7";
             this.seventh.UseVisualStyleBackColor = true;
@@ -2046,7 +2074,7 @@
             this.eighth.Location = new System.Drawing.Point(4, 22);
             this.eighth.Name = "eighth";
             this.eighth.Padding = new System.Windows.Forms.Padding(3);
-            this.eighth.Size = new System.Drawing.Size(553, 536);
+            this.eighth.Size = new System.Drawing.Size(609, 536);
             this.eighth.TabIndex = 8;
             this.eighth.Text = "8";
             this.eighth.UseVisualStyleBackColor = true;
@@ -2445,7 +2473,7 @@
             this.ninth.Location = new System.Drawing.Point(4, 22);
             this.ninth.Name = "ninth";
             this.ninth.Padding = new System.Windows.Forms.Padding(3);
-            this.ninth.Size = new System.Drawing.Size(553, 536);
+            this.ninth.Size = new System.Drawing.Size(609, 536);
             this.ninth.TabIndex = 9;
             this.ninth.Text = "9";
             this.ninth.UseVisualStyleBackColor = true;
@@ -2532,6 +2560,64 @@
             this.document.Text = "2";
             this.document.UseVisualStyleBackColor = true;
             // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.lbldatecon);
+            this.groupBox8.Controls.Add(this.lblintcon);
+            this.groupBox8.Controls.Add(this.label30);
+            this.groupBox8.Controls.Add(this.label32);
+            this.groupBox8.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox8.Location = new System.Drawing.Point(22, 22);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(424, 91);
+            this.groupBox8.TabIndex = 91;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Interview Details";
+            // 
+            // lbldatecon
+            // 
+            this.lbldatecon.AutoSize = true;
+            this.lbldatecon.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldatecon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.lbldatecon.Location = new System.Drawing.Point(163, 15);
+            this.lbldatecon.Name = "lbldatecon";
+            this.lbldatecon.Size = new System.Drawing.Size(46, 18);
+            this.lbldatecon.TabIndex = 79;
+            this.lbldatecon.Text = "Date";
+            // 
+            // lblintcon
+            // 
+            this.lblintcon.AutoSize = true;
+            this.lblintcon.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblintcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.lblintcon.Location = new System.Drawing.Point(163, 58);
+            this.lblintcon.Name = "lblintcon";
+            this.lblintcon.Size = new System.Drawing.Size(99, 18);
+            this.lblintcon.TabIndex = 78;
+            this.lblintcon.Text = "Interviewer";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label30.Location = new System.Drawing.Point(3, 17);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(51, 18);
+            this.label30.TabIndex = 77;
+            this.label30.Text = "Date:";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label32.Location = new System.Drawing.Point(3, 60);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(104, 18);
+            this.label32.TabIndex = 73;
+            this.label32.Text = "Interviewer:";
+            // 
             // btncancelviewrec
             // 
             this.btncancelviewrec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
@@ -2592,7 +2678,7 @@
             this.tenth.Location = new System.Drawing.Point(4, 22);
             this.tenth.Name = "tenth";
             this.tenth.Padding = new System.Windows.Forms.Padding(3);
-            this.tenth.Size = new System.Drawing.Size(553, 536);
+            this.tenth.Size = new System.Drawing.Size(609, 536);
             this.tenth.TabIndex = 10;
             this.tenth.Text = "10";
             this.tenth.UseVisualStyleBackColor = true;
@@ -3005,6 +3091,7 @@
             // 
             // eleventh
             // 
+            this.eleventh.Controls.Add(this.groupBox11);
             this.eleventh.Controls.Add(this.groupBox10);
             this.eleventh.Controls.Add(this.groupBox9);
             this.eleventh.Controls.Add(this.btnaddhealth);
@@ -3015,10 +3102,66 @@
             this.eleventh.Location = new System.Drawing.Point(4, 22);
             this.eleventh.Name = "eleventh";
             this.eleventh.Padding = new System.Windows.Forms.Padding(3);
-            this.eleventh.Size = new System.Drawing.Size(567, 536);
+            this.eleventh.Size = new System.Drawing.Size(609, 536);
             this.eleventh.TabIndex = 11;
             this.eleventh.Text = "11";
             this.eleventh.UseVisualStyleBackColor = true;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.dateTimePicker1);
+            this.groupBox11.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox11.Location = new System.Drawing.Point(335, 162);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(211, 55);
+            this.groupBox11.TabIndex = 92;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Checkup Date";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(6, 22);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(199, 27);
+            this.dateTimePicker1.TabIndex = 0;
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.rtxtcondition);
+            this.groupBox10.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox10.Location = new System.Drawing.Point(322, 226);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(274, 259);
+            this.groupBox10.TabIndex = 91;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Condition";
+            // 
+            // rtxtcondition
+            // 
+            this.rtxtcondition.Location = new System.Drawing.Point(6, 26);
+            this.rtxtcondition.Name = "rtxtcondition";
+            this.rtxtcondition.Size = new System.Drawing.Size(253, 227);
+            this.rtxtcondition.TabIndex = 89;
+            this.rtxtcondition.Text = "";
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.rtxtall);
+            this.groupBox9.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox9.Location = new System.Drawing.Point(9, 226);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(272, 259);
+            this.groupBox9.TabIndex = 90;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Allergies";
+            // 
+            // rtxtall
+            // 
+            this.rtxtall.Location = new System.Drawing.Point(6, 26);
+            this.rtxtall.Name = "rtxtall";
+            this.rtxtall.Size = new System.Drawing.Size(260, 227);
+            this.rtxtall.TabIndex = 89;
+            this.rtxtall.Text = "";
             // 
             // btnaddhealth
             // 
@@ -3027,7 +3170,7 @@
             this.btnaddhealth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnaddhealth.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnaddhealth.ForeColor = System.Drawing.Color.White;
-            this.btnaddhealth.Location = new System.Drawing.Point(16, 491);
+            this.btnaddhealth.Location = new System.Drawing.Point(6, 502);
             this.btnaddhealth.Name = "btnaddhealth";
             this.btnaddhealth.Size = new System.Drawing.Size(196, 28);
             this.btnaddhealth.TabIndex = 88;
@@ -3042,7 +3185,7 @@
             this.btncancelhealth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncancelhealth.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncancelhealth.ForeColor = System.Drawing.Color.White;
-            this.btncancelhealth.Location = new System.Drawing.Point(291, 491);
+            this.btncancelhealth.Location = new System.Drawing.Point(400, 502);
             this.btncancelhealth.Name = "btncancelhealth";
             this.btncancelhealth.Size = new System.Drawing.Size(196, 28);
             this.btncancelhealth.TabIndex = 87;
@@ -3054,9 +3197,9 @@
             // 
             this.groupBox3.Controls.Add(this.cbxbloodtype);
             this.groupBox3.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(336, 136);
+            this.groupBox3.Location = new System.Drawing.Point(335, 104);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(211, 80);
+            this.groupBox3.Size = new System.Drawing.Size(211, 55);
             this.groupBox3.TabIndex = 86;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Blood Type";
@@ -3077,7 +3220,7 @@
             "B-",
             "O+",
             "O-"});
-            this.cbxbloodtype.Location = new System.Drawing.Point(6, 26);
+            this.cbxbloodtype.Location = new System.Drawing.Point(6, 18);
             this.cbxbloodtype.Name = "cbxbloodtype";
             this.cbxbloodtype.Size = new System.Drawing.Size(199, 27);
             this.cbxbloodtype.TabIndex = 84;
@@ -3089,7 +3232,7 @@
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Controls.Add(this.label15);
             this.groupBox4.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(9, 125);
+            this.groupBox4.Location = new System.Drawing.Point(9, 105);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(313, 91);
             this.groupBox4.TabIndex = 85;
@@ -3176,7 +3319,7 @@
             this.twelfth.Location = new System.Drawing.Point(4, 22);
             this.twelfth.Name = "twelfth";
             this.twelfth.Padding = new System.Windows.Forms.Padding(3);
-            this.twelfth.Size = new System.Drawing.Size(553, 536);
+            this.twelfth.Size = new System.Drawing.Size(609, 536);
             this.twelfth.TabIndex = 12;
             this.twelfth.Text = "12";
             this.twelfth.UseVisualStyleBackColor = true;
@@ -3259,10 +3402,25 @@
             this.thirteen.Location = new System.Drawing.Point(4, 22);
             this.thirteen.Name = "thirteen";
             this.thirteen.Padding = new System.Windows.Forms.Padding(3);
-            this.thirteen.Size = new System.Drawing.Size(553, 536);
+            this.thirteen.Size = new System.Drawing.Size(609, 536);
             this.thirteen.TabIndex = 13;
             this.thirteen.Text = "13";
             this.thirteen.UseVisualStyleBackColor = true;
+            // 
+            // btnbackfrominc
+            // 
+            this.btnbackfrominc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btnbackfrominc.FlatAppearance.BorderSize = 0;
+            this.btnbackfrominc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbackfrominc.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbackfrominc.ForeColor = System.Drawing.Color.White;
+            this.btnbackfrominc.Location = new System.Drawing.Point(351, 502);
+            this.btnbackfrominc.Name = "btnbackfrominc";
+            this.btnbackfrominc.Size = new System.Drawing.Size(196, 28);
+            this.btnbackfrominc.TabIndex = 81;
+            this.btnbackfrominc.Text = "Back";
+            this.btnbackfrominc.UseVisualStyleBackColor = false;
+            this.btnbackfrominc.Click += new System.EventHandler(this.btnbackfrominc_Click);
             // 
             // incidlocation
             // 
@@ -3390,10 +3548,25 @@
             this.fourteen.Location = new System.Drawing.Point(4, 22);
             this.fourteen.Name = "fourteen";
             this.fourteen.Padding = new System.Windows.Forms.Padding(3);
-            this.fourteen.Size = new System.Drawing.Size(553, 536);
+            this.fourteen.Size = new System.Drawing.Size(609, 536);
             this.fourteen.TabIndex = 14;
             this.fourteen.Text = "14";
             this.fourteen.UseVisualStyleBackColor = true;
+            // 
+            // btnbackfrominvolve
+            // 
+            this.btnbackfrominvolve.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btnbackfrominvolve.FlatAppearance.BorderSize = 0;
+            this.btnbackfrominvolve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbackfrominvolve.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbackfrominvolve.ForeColor = System.Drawing.Color.White;
+            this.btnbackfrominvolve.Location = new System.Drawing.Point(351, 502);
+            this.btnbackfrominvolve.Name = "btnbackfrominvolve";
+            this.btnbackfrominvolve.Size = new System.Drawing.Size(196, 28);
+            this.btnbackfrominvolve.TabIndex = 87;
+            this.btnbackfrominvolve.Text = "Back";
+            this.btnbackfrominvolve.UseVisualStyleBackColor = false;
+            this.btnbackfrominvolve.Click += new System.EventHandler(this.btnbackfrominvolve_Click);
             // 
             // richTextBox1
             // 
@@ -3434,10 +3607,75 @@
             this.fifteen.Location = new System.Drawing.Point(4, 22);
             this.fifteen.Name = "fifteen";
             this.fifteen.Padding = new System.Windows.Forms.Padding(3);
-            this.fifteen.Size = new System.Drawing.Size(553, 536);
+            this.fifteen.Size = new System.Drawing.Size(609, 536);
             this.fifteen.TabIndex = 15;
             this.fifteen.Text = "15";
             this.fifteen.UseVisualStyleBackColor = true;
+            // 
+            // btngotohealth
+            // 
+            this.btngotohealth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btngotohealth.FlatAppearance.BorderSize = 0;
+            this.btngotohealth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btngotohealth.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btngotohealth.ForeColor = System.Drawing.Color.White;
+            this.btngotohealth.Location = new System.Drawing.Point(16, 487);
+            this.btngotohealth.Name = "btngotohealth";
+            this.btngotohealth.Size = new System.Drawing.Size(196, 28);
+            this.btngotohealth.TabIndex = 85;
+            this.btngotohealth.Text = "Add New Record";
+            this.btngotohealth.UseVisualStyleBackColor = false;
+            this.btngotohealth.Click += new System.EventHandler(this.btngotohealth_Click);
+            // 
+            // btnbackfromhealth
+            // 
+            this.btnbackfromhealth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btnbackfromhealth.FlatAppearance.BorderSize = 0;
+            this.btnbackfromhealth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbackfromhealth.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbackfromhealth.ForeColor = System.Drawing.Color.White;
+            this.btnbackfromhealth.Location = new System.Drawing.Point(341, 487);
+            this.btnbackfromhealth.Name = "btnbackfromhealth";
+            this.btnbackfromhealth.Size = new System.Drawing.Size(196, 28);
+            this.btnbackfromhealth.TabIndex = 84;
+            this.btnbackfromhealth.Text = "Back";
+            this.btnbackfromhealth.UseVisualStyleBackColor = false;
+            this.btnbackfromhealth.Click += new System.EventHandler(this.btnbackfromhealth_Click);
+            // 
+            // dtghealth
+            // 
+            this.dtghealth.AllowUserToAddRows = false;
+            this.dtghealth.AllowUserToDeleteRows = false;
+            this.dtghealth.AllowUserToResizeColumns = false;
+            this.dtghealth.AllowUserToResizeRows = false;
+            this.dtghealth.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dtghealth.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtghealth.Location = new System.Drawing.Point(16, 125);
+            this.dtghealth.Name = "dtghealth";
+            this.dtghealth.ReadOnly = true;
+            this.dtghealth.RowHeadersVisible = false;
+            this.dtghealth.Size = new System.Drawing.Size(521, 352);
+            this.dtghealth.TabIndex = 83;
+            // 
+            // panel43
+            // 
+            this.panel43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.panel43.Controls.Add(this.label33);
+            this.panel43.Location = new System.Drawing.Point(16, 22);
+            this.panel43.Name = "panel43";
+            this.panel43.Size = new System.Drawing.Size(519, 83);
+            this.panel43.TabIndex = 82;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.White;
+            this.label33.Location = new System.Drawing.Point(-3, 27);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(370, 55);
+            this.label33.TabIndex = 6;
+            this.label33.Text = "Health Records";
             // 
             // sixteen
             // 
@@ -3469,7 +3707,7 @@
             this.sixteen.Location = new System.Drawing.Point(4, 22);
             this.sixteen.Name = "sixteen";
             this.sixteen.Padding = new System.Windows.Forms.Padding(3);
-            this.sixteen.Size = new System.Drawing.Size(553, 536);
+            this.sixteen.Size = new System.Drawing.Size(609, 536);
             this.sixteen.TabIndex = 16;
             this.sixteen.Text = "16";
             // 
@@ -4211,6 +4449,101 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // seventeen
+            // 
+            this.seventeen.Controls.Add(this.groupBox12);
+            this.seventeen.Controls.Add(this.groupBox13);
+            this.seventeen.Controls.Add(this.groupBox14);
+            this.seventeen.Controls.Add(this.groupBox15);
+            this.seventeen.Controls.Add(this.btngotocheckup);
+            this.seventeen.Controls.Add(this.btnedithealth);
+            this.seventeen.Controls.Add(this.btnbackfromhealthview);
+            this.seventeen.Controls.Add(this.panel44);
+            this.seventeen.Location = new System.Drawing.Point(4, 22);
+            this.seventeen.Name = "seventeen";
+            this.seventeen.Padding = new System.Windows.Forms.Padding(3);
+            this.seventeen.Size = new System.Drawing.Size(609, 536);
+            this.seventeen.TabIndex = 17;
+            this.seventeen.Text = "17";
+            this.seventeen.UseVisualStyleBackColor = true;
+            // 
+            // btngotocheckup
+            // 
+            this.btngotocheckup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btngotocheckup.FlatAppearance.BorderSize = 0;
+            this.btngotocheckup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btngotocheckup.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btngotocheckup.ForeColor = System.Drawing.Color.White;
+            this.btngotocheckup.Location = new System.Drawing.Point(208, 502);
+            this.btngotocheckup.Name = "btngotocheckup";
+            this.btngotocheckup.Size = new System.Drawing.Size(187, 28);
+            this.btngotocheckup.TabIndex = 92;
+            this.btngotocheckup.Text = "Add Checkup Records";
+            this.btngotocheckup.UseVisualStyleBackColor = false;
+            // 
+            // btnedithealth
+            // 
+            this.btnedithealth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btnedithealth.FlatAppearance.BorderSize = 0;
+            this.btnedithealth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnedithealth.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnedithealth.ForeColor = System.Drawing.Color.White;
+            this.btnedithealth.Location = new System.Drawing.Point(6, 502);
+            this.btnedithealth.Name = "btnedithealth";
+            this.btnedithealth.Size = new System.Drawing.Size(196, 28);
+            this.btnedithealth.TabIndex = 91;
+            this.btnedithealth.Text = "Edit Info";
+            this.btnedithealth.UseVisualStyleBackColor = false;
+            this.btnedithealth.Click += new System.EventHandler(this.btnedithealth_Click);
+            // 
+            // btnbackfromhealthview
+            // 
+            this.btnbackfromhealthview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btnbackfromhealthview.FlatAppearance.BorderSize = 0;
+            this.btnbackfromhealthview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbackfromhealthview.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbackfromhealthview.ForeColor = System.Drawing.Color.White;
+            this.btnbackfromhealthview.Location = new System.Drawing.Point(407, 502);
+            this.btnbackfromhealthview.Name = "btnbackfromhealthview";
+            this.btnbackfromhealthview.Size = new System.Drawing.Size(196, 28);
+            this.btnbackfromhealthview.TabIndex = 90;
+            this.btnbackfromhealthview.Text = "Back";
+            this.btnbackfromhealthview.UseVisualStyleBackColor = false;
+            this.btnbackfromhealthview.Click += new System.EventHandler(this.btnbackfromhealthview_Click);
+            // 
+            // panel44
+            // 
+            this.panel44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.panel44.Controls.Add(this.lblviewhealthname);
+            this.panel44.Controls.Add(this.label67);
+            this.panel44.Location = new System.Drawing.Point(6, 5);
+            this.panel44.Name = "panel44";
+            this.panel44.Size = new System.Drawing.Size(519, 97);
+            this.panel44.TabIndex = 89;
+            // 
+            // lblviewhealthname
+            // 
+            this.lblviewhealthname.AutoSize = true;
+            this.lblviewhealthname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblviewhealthname.ForeColor = System.Drawing.Color.White;
+            this.lblviewhealthname.Location = new System.Drawing.Point(13, 17);
+            this.lblviewhealthname.Name = "lblviewhealthname";
+            this.lblviewhealthname.Size = new System.Drawing.Size(72, 25);
+            this.lblviewhealthname.TabIndex = 40;
+            this.lblviewhealthname.Text = "Name";
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.BackColor = System.Drawing.Color.Transparent;
+            this.label67.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.ForeColor = System.Drawing.Color.Black;
+            this.label67.Location = new System.Drawing.Point(11, 64);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(179, 24);
+            this.label67.TabIndex = 39;
+            this.label67.Text = "Basic Health Info";
+            // 
             // btnCaseStudy
             // 
             this.btnCaseStudy.BackColor = System.Drawing.Color.Transparent;
@@ -4729,198 +5062,128 @@
             // 
             this.opimage1.FileName = "openFileDialog1";
             // 
-            // groupBox8
+            // groupBox14
             // 
-            this.groupBox8.Controls.Add(this.lbldatecon);
-            this.groupBox8.Controls.Add(this.lblintcon);
-            this.groupBox8.Controls.Add(this.label30);
-            this.groupBox8.Controls.Add(this.label32);
-            this.groupBox8.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox8.Location = new System.Drawing.Point(22, 22);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(424, 91);
-            this.groupBox8.TabIndex = 91;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Interview Details";
+            this.groupBox14.Controls.Add(this.lblvblood);
+            this.groupBox14.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox14.Location = new System.Drawing.Point(337, 107);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(211, 55);
+            this.groupBox14.TabIndex = 94;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Blood Type";
             // 
-            // label30
+            // groupBox15
             // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label30.Location = new System.Drawing.Point(3, 17);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(51, 18);
-            this.label30.TabIndex = 77;
-            this.label30.Text = "Date:";
+            this.groupBox15.Controls.Add(this.lblvweight);
+            this.groupBox15.Controls.Add(this.lblvheight);
+            this.groupBox15.Controls.Add(this.label66);
+            this.groupBox15.Controls.Add(this.label69);
+            this.groupBox15.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox15.Location = new System.Drawing.Point(11, 108);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(313, 91);
+            this.groupBox15.TabIndex = 93;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "BMI";
             // 
-            // label32
+            // label66
             // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label32.Location = new System.Drawing.Point(3, 60);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(104, 18);
-            this.label32.TabIndex = 73;
-            this.label32.Text = "Interviewer:";
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label66.Location = new System.Drawing.Point(3, 17);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(60, 18);
+            this.label66.TabIndex = 77;
+            this.label66.Text = "Height";
             // 
-            // lbldatecon
+            // label69
             // 
-            this.lbldatecon.AutoSize = true;
-            this.lbldatecon.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldatecon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.lbldatecon.Location = new System.Drawing.Point(163, 15);
-            this.lbldatecon.Name = "lbldatecon";
-            this.lbldatecon.Size = new System.Drawing.Size(46, 18);
-            this.lbldatecon.TabIndex = 79;
-            this.lbldatecon.Text = "Date";
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label69.Location = new System.Drawing.Point(6, 51);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(63, 18);
+            this.label69.TabIndex = 73;
+            this.label69.Text = "Weight";
             // 
-            // lblintcon
+            // lblvheight
             // 
-            this.lblintcon.AutoSize = true;
-            this.lblintcon.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblintcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.lblintcon.Location = new System.Drawing.Point(163, 58);
-            this.lblintcon.Name = "lblintcon";
-            this.lblintcon.Size = new System.Drawing.Size(99, 18);
-            this.lblintcon.TabIndex = 78;
-            this.lblintcon.Text = "Interviewer";
+            this.lblvheight.AutoSize = true;
+            this.lblvheight.BackColor = System.Drawing.Color.Transparent;
+            this.lblvheight.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblvheight.ForeColor = System.Drawing.Color.Black;
+            this.lblvheight.Location = new System.Drawing.Point(93, 17);
+            this.lblvheight.Name = "lblvheight";
+            this.lblvheight.Size = new System.Drawing.Size(23, 24);
+            this.lblvheight.TabIndex = 78;
+            this.lblvheight.Text = "h";
             // 
-            // btnbackfrominc
+            // lblvweight
             // 
-            this.btnbackfrominc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.btnbackfrominc.FlatAppearance.BorderSize = 0;
-            this.btnbackfrominc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnbackfrominc.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbackfrominc.ForeColor = System.Drawing.Color.White;
-            this.btnbackfrominc.Location = new System.Drawing.Point(351, 502);
-            this.btnbackfrominc.Name = "btnbackfrominc";
-            this.btnbackfrominc.Size = new System.Drawing.Size(196, 28);
-            this.btnbackfrominc.TabIndex = 81;
-            this.btnbackfrominc.Text = "Back";
-            this.btnbackfrominc.UseVisualStyleBackColor = false;
-            this.btnbackfrominc.Click += new System.EventHandler(this.btnbackfrominc_Click);
+            this.lblvweight.AutoSize = true;
+            this.lblvweight.BackColor = System.Drawing.Color.Transparent;
+            this.lblvweight.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblvweight.ForeColor = System.Drawing.Color.Black;
+            this.lblvweight.Location = new System.Drawing.Point(93, 51);
+            this.lblvweight.Name = "lblvweight";
+            this.lblvweight.Size = new System.Drawing.Size(25, 24);
+            this.lblvweight.TabIndex = 79;
+            this.lblvweight.Text = "w";
             // 
-            // btnbackfrominvolve
+            // lblvblood
             // 
-            this.btnbackfrominvolve.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.btnbackfrominvolve.FlatAppearance.BorderSize = 0;
-            this.btnbackfrominvolve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnbackfrominvolve.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbackfrominvolve.ForeColor = System.Drawing.Color.White;
-            this.btnbackfrominvolve.Location = new System.Drawing.Point(351, 502);
-            this.btnbackfrominvolve.Name = "btnbackfrominvolve";
-            this.btnbackfrominvolve.Size = new System.Drawing.Size(196, 28);
-            this.btnbackfrominvolve.TabIndex = 87;
-            this.btnbackfrominvolve.Text = "Back";
-            this.btnbackfrominvolve.UseVisualStyleBackColor = false;
-            this.btnbackfrominvolve.Click += new System.EventHandler(this.btnbackfrominvolve_Click);
+            this.lblvblood.AutoSize = true;
+            this.lblvblood.BackColor = System.Drawing.Color.Transparent;
+            this.lblvblood.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblvblood.ForeColor = System.Drawing.Color.Black;
+            this.lblvblood.Location = new System.Drawing.Point(9, 23);
+            this.lblvblood.Name = "lblvblood";
+            this.lblvblood.Size = new System.Drawing.Size(25, 24);
+            this.lblvblood.TabIndex = 80;
+            this.lblvblood.Text = "w";
             // 
-            // btngotohealth
+            // groupBox12
             // 
-            this.btngotohealth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.btngotohealth.FlatAppearance.BorderSize = 0;
-            this.btngotohealth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btngotohealth.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btngotohealth.ForeColor = System.Drawing.Color.White;
-            this.btngotohealth.Location = new System.Drawing.Point(16, 487);
-            this.btngotohealth.Name = "btngotohealth";
-            this.btngotohealth.Size = new System.Drawing.Size(196, 28);
-            this.btngotohealth.TabIndex = 85;
-            this.btngotohealth.Text = "Add New Record";
-            this.btngotohealth.UseVisualStyleBackColor = false;
-            this.btngotohealth.Click += new System.EventHandler(this.btngotohealth_Click);
+            this.groupBox12.Controls.Add(this.rviewcondition);
+            this.groupBox12.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox12.Location = new System.Drawing.Point(324, 213);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(274, 283);
+            this.groupBox12.TabIndex = 96;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Condition";
             // 
-            // btnbackfromhealth
+            // rviewcondition
             // 
-            this.btnbackfromhealth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.btnbackfromhealth.FlatAppearance.BorderSize = 0;
-            this.btnbackfromhealth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnbackfromhealth.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbackfromhealth.ForeColor = System.Drawing.Color.White;
-            this.btnbackfromhealth.Location = new System.Drawing.Point(341, 487);
-            this.btnbackfromhealth.Name = "btnbackfromhealth";
-            this.btnbackfromhealth.Size = new System.Drawing.Size(196, 28);
-            this.btnbackfromhealth.TabIndex = 84;
-            this.btnbackfromhealth.Text = "Back";
-            this.btnbackfromhealth.UseVisualStyleBackColor = false;
-            this.btnbackfromhealth.Click += new System.EventHandler(this.btnbackfromhealth_Click);
+            this.rviewcondition.Location = new System.Drawing.Point(6, 26);
+            this.rviewcondition.Name = "rviewcondition";
+            this.rviewcondition.ReadOnly = true;
+            this.rviewcondition.Size = new System.Drawing.Size(253, 251);
+            this.rviewcondition.TabIndex = 89;
+            this.rviewcondition.Text = "";
             // 
-            // dtghealth
+            // groupBox13
             // 
-            this.dtghealth.AllowUserToAddRows = false;
-            this.dtghealth.AllowUserToDeleteRows = false;
-            this.dtghealth.AllowUserToResizeColumns = false;
-            this.dtghealth.AllowUserToResizeRows = false;
-            this.dtghealth.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.dtghealth.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtghealth.Location = new System.Drawing.Point(16, 125);
-            this.dtghealth.Name = "dtghealth";
-            this.dtghealth.ReadOnly = true;
-            this.dtghealth.RowHeadersVisible = false;
-            this.dtghealth.Size = new System.Drawing.Size(521, 352);
-            this.dtghealth.TabIndex = 83;
+            this.groupBox13.Controls.Add(this.rviewall);
+            this.groupBox13.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox13.Location = new System.Drawing.Point(11, 213);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(272, 283);
+            this.groupBox13.TabIndex = 95;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Allergies";
             // 
-            // panel43
+            // rviewall
             // 
-            this.panel43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
-            this.panel43.Controls.Add(this.label33);
-            this.panel43.Location = new System.Drawing.Point(16, 22);
-            this.panel43.Name = "panel43";
-            this.panel43.Size = new System.Drawing.Size(519, 83);
-            this.panel43.TabIndex = 82;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.Color.White;
-            this.label33.Location = new System.Drawing.Point(-3, 27);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(370, 55);
-            this.label33.TabIndex = 6;
-            this.label33.Text = "Health Records";
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Location = new System.Drawing.Point(6, 26);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(260, 227);
-            this.richTextBox2.TabIndex = 89;
-            this.richTextBox2.Text = "";
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.richTextBox2);
-            this.groupBox9.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox9.Location = new System.Drawing.Point(9, 226);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(272, 259);
-            this.groupBox9.TabIndex = 90;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Allergies";
-            // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.richTextBox3);
-            this.groupBox10.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox10.Location = new System.Drawing.Point(287, 226);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(274, 259);
-            this.groupBox10.TabIndex = 91;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Condition";
-            // 
-            // richTextBox3
-            // 
-            this.richTextBox3.Location = new System.Drawing.Point(6, 26);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.ReadOnly = true;
-            this.richTextBox3.Size = new System.Drawing.Size(253, 227);
-            this.richTextBox3.TabIndex = 89;
-            this.richTextBox3.Text = "";
+            this.rviewall.Location = new System.Drawing.Point(6, 26);
+            this.rviewall.Name = "rviewall";
+            this.rviewall.ReadOnly = true;
+            this.rviewall.Size = new System.Drawing.Size(260, 251);
+            this.rviewall.TabIndex = 89;
+            this.rviewall.Text = "";
             // 
             // casestudy
             // 
@@ -5004,6 +5267,8 @@
             this.tabrecords.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgcon)).EndInit();
             this.document.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.panel41.ResumeLayout(false);
             this.panel41.PerformLayout();
             this.tenth.ResumeLayout(false);
@@ -5025,6 +5290,9 @@
             this.panel28.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.eleventh.ResumeLayout(false);
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
@@ -5042,6 +5310,9 @@
             this.panel42.ResumeLayout(false);
             this.panel42.PerformLayout();
             this.fifteen.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtghealth)).EndInit();
+            this.panel43.ResumeLayout(false);
+            this.panel43.PerformLayout();
             this.sixteen.ResumeLayout(false);
             this.sixteen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbox2)).EndInit();
@@ -5059,18 +5330,20 @@
             this.panel20.PerformLayout();
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
+            this.seventeen.ResumeLayout(false);
+            this.panel44.ResumeLayout(false);
+            this.panel44.PerformLayout();
             this.panel.ResumeLayout(false);
             this.secondTaskbar.ResumeLayout(false);
             this.dropin.ResumeLayout(false);
             this.residential.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtghealth)).EndInit();
-            this.panel43.ResumeLayout(false);
-            this.panel43.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox10.ResumeLayout(false);
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox13.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -5425,8 +5698,28 @@
         private System.Windows.Forms.Panel panel43;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox rtxtall;
         private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.RichTextBox rtxtcondition;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TabPage seventeen;
+        private System.Windows.Forms.Button btngotocheckup;
+        private System.Windows.Forms.Button btnedithealth;
+        private System.Windows.Forms.Button btnbackfromhealthview;
+        private System.Windows.Forms.Panel panel44;
+        private System.Windows.Forms.Label lblviewhealthname;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.RichTextBox rviewcondition;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.RichTextBox rviewall;
+        private System.Windows.Forms.Label lblvblood;
+        private System.Windows.Forms.Label lblvweight;
+        private System.Windows.Forms.Label lblvheight;
     }
 }
