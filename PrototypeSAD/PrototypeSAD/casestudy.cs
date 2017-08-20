@@ -1816,7 +1816,38 @@ namespace PrototypeSAD
 
         private void dtghealth_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            try
+            {
+                int checkid = int.Parse(dtghealth.Rows[e.RowIndex].Cells[0].Value.ToString());
+                MessageBox.Show(checkid.ToString());
+                tabControl.SelectedTab = nineteen;
 
+                conn.Open();
+
+                MySqlCommand comm = new MySqlCommand("SELECT checkupdetails, checkupdate FROM checkup WHERE checkid = " + checkid, conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+
+                adp.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    rvcheckdetails.Text = dt.Rows[0]["checkupdetails"].ToString();
+
+                    lblcheckdate.Text = Convert.ToDateTime(dt.Rows[0]["checkupdate"]).ToString("MMMM dd, yyyy");
+
+
+                }
+
+                conn.Close();
+
+            }
+
+            catch (Exception ee)
+            {
+                MessageBox.Show("" + ee);
+                conn.Close();
+            }
         }
 
         public void gethid(int id)
@@ -1844,6 +1875,11 @@ namespace PrototypeSAD
                 MessageBox.Show("" + ee);
                 conn.Close();
             }
+        }
+
+        private void bttnbackfromcheckrec_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = fifteen;
         }
 
         private void btnaddcheckuprec_Click(object sender, EventArgs e)

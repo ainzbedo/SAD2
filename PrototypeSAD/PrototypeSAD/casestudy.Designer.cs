@@ -345,12 +345,36 @@
             this.label72 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.seventeen = new System.Windows.Forms.TabPage();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.rviewcondition = new System.Windows.Forms.RichTextBox();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.rviewall = new System.Windows.Forms.RichTextBox();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.lblvblood = new System.Windows.Forms.Label();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.lblvweight = new System.Windows.Forms.Label();
+            this.lblvheight = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
             this.btngotocheckup = new System.Windows.Forms.Button();
             this.btnedithealth = new System.Windows.Forms.Button();
             this.btnbackfromhealthview = new System.Windows.Forms.Button();
             this.panel44 = new System.Windows.Forms.Panel();
             this.lblviewhealthname = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
+            this.eighteen = new System.Windows.Forms.TabPage();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.dtpcheck = new System.Windows.Forms.DateTimePicker();
+            this.txtlocationcheck = new System.Windows.Forms.TextBox();
+            this.label75 = new System.Windows.Forms.Label();
+            this.label77 = new System.Windows.Forms.Label();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.rcheckdetails = new System.Windows.Forms.RichTextBox();
+            this.btnaddcheckuprec = new System.Windows.Forms.Button();
+            this.btnbackfromcheck = new System.Windows.Forms.Button();
+            this.panel45 = new System.Windows.Forms.Panel();
+            this.lblnamecheck = new System.Windows.Forms.Label();
+            this.label76 = new System.Windows.Forms.Label();
             this.btnCaseStudy = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -387,30 +411,12 @@
             this.btnSearch2 = new System.Windows.Forms.Button();
             this.btnCaseStudy2 = new System.Windows.Forms.Button();
             this.opimage1 = new System.Windows.Forms.OpenFileDialog();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.label66 = new System.Windows.Forms.Label();
-            this.label69 = new System.Windows.Forms.Label();
-            this.lblvheight = new System.Windows.Forms.Label();
-            this.lblvweight = new System.Windows.Forms.Label();
-            this.lblvblood = new System.Windows.Forms.Label();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.rviewcondition = new System.Windows.Forms.RichTextBox();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.rviewall = new System.Windows.Forms.RichTextBox();
-            this.eighteen = new System.Windows.Forms.TabPage();
-            this.btnaddcheckuprec = new System.Windows.Forms.Button();
-            this.btnbackfromcheck = new System.Windows.Forms.Button();
-            this.panel45 = new System.Windows.Forms.Panel();
-            this.lblnamecheck = new System.Windows.Forms.Label();
-            this.label76 = new System.Windows.Forms.Label();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.rcheckdetails = new System.Windows.Forms.RichTextBox();
-            this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.dtpcheck = new System.Windows.Forms.DateTimePicker();
-            this.txtlocationcheck = new System.Windows.Forms.TextBox();
-            this.label75 = new System.Windows.Forms.Label();
-            this.label77 = new System.Windows.Forms.Label();
+            this.nineteen = new System.Windows.Forms.TabPage();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.rvcheckdetails = new System.Windows.Forms.RichTextBox();
+            this.bttnbackfromcheckrec = new System.Windows.Forms.Button();
+            this.panel46 = new System.Windows.Forms.Panel();
+            this.lblcheckdate = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pan_RES.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -492,20 +498,23 @@
             this.panel20.SuspendLayout();
             this.panel19.SuspendLayout();
             this.seventeen.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox13.SuspendLayout();
+            this.groupBox14.SuspendLayout();
+            this.groupBox15.SuspendLayout();
             this.panel44.SuspendLayout();
+            this.eighteen.SuspendLayout();
+            this.groupBox17.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.panel45.SuspendLayout();
             this.panel.SuspendLayout();
             this.secondTaskbar.SuspendLayout();
             this.dropin.SuspendLayout();
             this.residential.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.groupBox14.SuspendLayout();
-            this.groupBox15.SuspendLayout();
-            this.groupBox12.SuspendLayout();
-            this.groupBox13.SuspendLayout();
-            this.eighteen.SuspendLayout();
-            this.panel45.SuspendLayout();
-            this.groupBox11.SuspendLayout();
-            this.groupBox17.SuspendLayout();
+            this.nineteen.SuspendLayout();
+            this.groupBox18.SuspendLayout();
+            this.panel46.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -866,6 +875,7 @@
             this.tabControl.Controls.Add(this.sixteen);
             this.tabControl.Controls.Add(this.seventeen);
             this.tabControl.Controls.Add(this.eighteen);
+            this.tabControl.Controls.Add(this.nineteen);
             this.tabControl.Location = new System.Drawing.Point(301, 74);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
@@ -4464,6 +4474,129 @@
             this.seventeen.Text = "17";
             this.seventeen.UseVisualStyleBackColor = true;
             // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.rviewcondition);
+            this.groupBox12.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox12.Location = new System.Drawing.Point(324, 213);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(274, 283);
+            this.groupBox12.TabIndex = 96;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Condition";
+            // 
+            // rviewcondition
+            // 
+            this.rviewcondition.Location = new System.Drawing.Point(6, 26);
+            this.rviewcondition.Name = "rviewcondition";
+            this.rviewcondition.ReadOnly = true;
+            this.rviewcondition.Size = new System.Drawing.Size(253, 251);
+            this.rviewcondition.TabIndex = 89;
+            this.rviewcondition.Text = "";
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.rviewall);
+            this.groupBox13.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox13.Location = new System.Drawing.Point(11, 213);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(272, 283);
+            this.groupBox13.TabIndex = 95;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Allergies";
+            // 
+            // rviewall
+            // 
+            this.rviewall.Location = new System.Drawing.Point(6, 26);
+            this.rviewall.Name = "rviewall";
+            this.rviewall.ReadOnly = true;
+            this.rviewall.Size = new System.Drawing.Size(260, 251);
+            this.rviewall.TabIndex = 89;
+            this.rviewall.Text = "";
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.lblvblood);
+            this.groupBox14.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox14.Location = new System.Drawing.Point(337, 107);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(211, 55);
+            this.groupBox14.TabIndex = 94;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Blood Type";
+            // 
+            // lblvblood
+            // 
+            this.lblvblood.AutoSize = true;
+            this.lblvblood.BackColor = System.Drawing.Color.Transparent;
+            this.lblvblood.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblvblood.ForeColor = System.Drawing.Color.Black;
+            this.lblvblood.Location = new System.Drawing.Point(9, 23);
+            this.lblvblood.Name = "lblvblood";
+            this.lblvblood.Size = new System.Drawing.Size(25, 24);
+            this.lblvblood.TabIndex = 80;
+            this.lblvblood.Text = "w";
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.lblvweight);
+            this.groupBox15.Controls.Add(this.lblvheight);
+            this.groupBox15.Controls.Add(this.label66);
+            this.groupBox15.Controls.Add(this.label69);
+            this.groupBox15.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox15.Location = new System.Drawing.Point(11, 108);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(313, 91);
+            this.groupBox15.TabIndex = 93;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "BMI";
+            // 
+            // lblvweight
+            // 
+            this.lblvweight.AutoSize = true;
+            this.lblvweight.BackColor = System.Drawing.Color.Transparent;
+            this.lblvweight.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblvweight.ForeColor = System.Drawing.Color.Black;
+            this.lblvweight.Location = new System.Drawing.Point(93, 51);
+            this.lblvweight.Name = "lblvweight";
+            this.lblvweight.Size = new System.Drawing.Size(25, 24);
+            this.lblvweight.TabIndex = 79;
+            this.lblvweight.Text = "w";
+            // 
+            // lblvheight
+            // 
+            this.lblvheight.AutoSize = true;
+            this.lblvheight.BackColor = System.Drawing.Color.Transparent;
+            this.lblvheight.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblvheight.ForeColor = System.Drawing.Color.Black;
+            this.lblvheight.Location = new System.Drawing.Point(93, 17);
+            this.lblvheight.Name = "lblvheight";
+            this.lblvheight.Size = new System.Drawing.Size(23, 24);
+            this.lblvheight.TabIndex = 78;
+            this.lblvheight.Text = "h";
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label66.Location = new System.Drawing.Point(3, 17);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(60, 18);
+            this.label66.TabIndex = 77;
+            this.label66.Text = "Height";
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label69.Location = new System.Drawing.Point(6, 51);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(63, 18);
+            this.label69.TabIndex = 73;
+            this.label69.Text = "Weight";
+            // 
             // btngotocheckup
             // 
             this.btngotocheckup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
@@ -4541,6 +4674,154 @@
             this.label67.Size = new System.Drawing.Size(179, 24);
             this.label67.TabIndex = 39;
             this.label67.Text = "Basic Health Info";
+            // 
+            // eighteen
+            // 
+            this.eighteen.Controls.Add(this.groupBox17);
+            this.eighteen.Controls.Add(this.groupBox11);
+            this.eighteen.Controls.Add(this.btnaddcheckuprec);
+            this.eighteen.Controls.Add(this.btnbackfromcheck);
+            this.eighteen.Controls.Add(this.panel45);
+            this.eighteen.Location = new System.Drawing.Point(4, 22);
+            this.eighteen.Name = "eighteen";
+            this.eighteen.Padding = new System.Windows.Forms.Padding(3);
+            this.eighteen.Size = new System.Drawing.Size(609, 536);
+            this.eighteen.TabIndex = 18;
+            this.eighteen.Text = "18";
+            this.eighteen.UseVisualStyleBackColor = true;
+            // 
+            // groupBox17
+            // 
+            this.groupBox17.Controls.Add(this.dtpcheck);
+            this.groupBox17.Controls.Add(this.txtlocationcheck);
+            this.groupBox17.Controls.Add(this.label75);
+            this.groupBox17.Controls.Add(this.label77);
+            this.groupBox17.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox17.Location = new System.Drawing.Point(21, 117);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(424, 91);
+            this.groupBox17.TabIndex = 98;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "General";
+            // 
+            // dtpcheck
+            // 
+            this.dtpcheck.Location = new System.Drawing.Point(185, 19);
+            this.dtpcheck.Name = "dtpcheck";
+            this.dtpcheck.Size = new System.Drawing.Size(199, 27);
+            this.dtpcheck.TabIndex = 94;
+            // 
+            // txtlocationcheck
+            // 
+            this.txtlocationcheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtlocationcheck.Location = new System.Drawing.Point(185, 60);
+            this.txtlocationcheck.Name = "txtlocationcheck";
+            this.txtlocationcheck.Size = new System.Drawing.Size(199, 27);
+            this.txtlocationcheck.TabIndex = 79;
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label75.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label75.Location = new System.Drawing.Point(3, 17);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(46, 18);
+            this.label75.TabIndex = 77;
+            this.label75.Text = "Date";
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label77.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label77.Location = new System.Drawing.Point(3, 60);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(147, 18);
+            this.label77.TabIndex = 73;
+            this.label77.Text = "Place of Checkup";
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.rcheckdetails);
+            this.groupBox11.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox11.Location = new System.Drawing.Point(3, 226);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(600, 259);
+            this.groupBox11.TabIndex = 97;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Remarks/Recommendations";
+            // 
+            // rcheckdetails
+            // 
+            this.rcheckdetails.Location = new System.Drawing.Point(6, 26);
+            this.rcheckdetails.Name = "rcheckdetails";
+            this.rcheckdetails.Size = new System.Drawing.Size(579, 227);
+            this.rcheckdetails.TabIndex = 89;
+            this.rcheckdetails.Text = "";
+            // 
+            // btnaddcheckuprec
+            // 
+            this.btnaddcheckuprec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btnaddcheckuprec.FlatAppearance.BorderSize = 0;
+            this.btnaddcheckuprec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnaddcheckuprec.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnaddcheckuprec.ForeColor = System.Drawing.Color.White;
+            this.btnaddcheckuprec.Location = new System.Drawing.Point(6, 502);
+            this.btnaddcheckuprec.Name = "btnaddcheckuprec";
+            this.btnaddcheckuprec.Size = new System.Drawing.Size(196, 28);
+            this.btnaddcheckuprec.TabIndex = 95;
+            this.btnaddcheckuprec.Text = "Add Info";
+            this.btnaddcheckuprec.UseVisualStyleBackColor = false;
+            this.btnaddcheckuprec.Click += new System.EventHandler(this.btnaddcheckuprec_Click);
+            // 
+            // btnbackfromcheck
+            // 
+            this.btnbackfromcheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btnbackfromcheck.FlatAppearance.BorderSize = 0;
+            this.btnbackfromcheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbackfromcheck.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbackfromcheck.ForeColor = System.Drawing.Color.White;
+            this.btnbackfromcheck.Location = new System.Drawing.Point(407, 502);
+            this.btnbackfromcheck.Name = "btnbackfromcheck";
+            this.btnbackfromcheck.Size = new System.Drawing.Size(196, 28);
+            this.btnbackfromcheck.TabIndex = 94;
+            this.btnbackfromcheck.Text = "Cancel";
+            this.btnbackfromcheck.UseVisualStyleBackColor = false;
+            this.btnbackfromcheck.Click += new System.EventHandler(this.btnbackfromcheck_Click);
+            // 
+            // panel45
+            // 
+            this.panel45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.panel45.Controls.Add(this.lblnamecheck);
+            this.panel45.Controls.Add(this.label76);
+            this.panel45.Location = new System.Drawing.Point(6, 5);
+            this.panel45.Name = "panel45";
+            this.panel45.Size = new System.Drawing.Size(519, 97);
+            this.panel45.TabIndex = 93;
+            // 
+            // lblnamecheck
+            // 
+            this.lblnamecheck.AutoSize = true;
+            this.lblnamecheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnamecheck.ForeColor = System.Drawing.Color.White;
+            this.lblnamecheck.Location = new System.Drawing.Point(13, 17);
+            this.lblnamecheck.Name = "lblnamecheck";
+            this.lblnamecheck.Size = new System.Drawing.Size(72, 25);
+            this.lblnamecheck.TabIndex = 40;
+            this.lblnamecheck.Text = "Name";
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.BackColor = System.Drawing.Color.Transparent;
+            this.label76.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label76.ForeColor = System.Drawing.Color.Black;
+            this.label76.Location = new System.Drawing.Point(11, 64);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(179, 24);
+            this.label76.TabIndex = 39;
+            this.label76.Text = "Basic Health Info";
             // 
             // btnCaseStudy
             // 
@@ -5060,276 +5341,73 @@
             // 
             this.opimage1.FileName = "openFileDialog1";
             // 
-            // groupBox14
+            // nineteen
             // 
-            this.groupBox14.Controls.Add(this.lblvblood);
-            this.groupBox14.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox14.Location = new System.Drawing.Point(337, 107);
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(211, 55);
-            this.groupBox14.TabIndex = 94;
-            this.groupBox14.TabStop = false;
-            this.groupBox14.Text = "Blood Type";
+            this.nineteen.Controls.Add(this.groupBox18);
+            this.nineteen.Controls.Add(this.bttnbackfromcheckrec);
+            this.nineteen.Controls.Add(this.panel46);
+            this.nineteen.Location = new System.Drawing.Point(4, 22);
+            this.nineteen.Name = "nineteen";
+            this.nineteen.Padding = new System.Windows.Forms.Padding(3);
+            this.nineteen.Size = new System.Drawing.Size(609, 536);
+            this.nineteen.TabIndex = 19;
+            this.nineteen.Text = "19";
+            this.nineteen.UseVisualStyleBackColor = true;
             // 
-            // groupBox15
+            // groupBox18
             // 
-            this.groupBox15.Controls.Add(this.lblvweight);
-            this.groupBox15.Controls.Add(this.lblvheight);
-            this.groupBox15.Controls.Add(this.label66);
-            this.groupBox15.Controls.Add(this.label69);
-            this.groupBox15.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox15.Location = new System.Drawing.Point(11, 108);
-            this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(313, 91);
-            this.groupBox15.TabIndex = 93;
-            this.groupBox15.TabStop = false;
-            this.groupBox15.Text = "BMI";
+            this.groupBox18.Controls.Add(this.rvcheckdetails);
+            this.groupBox18.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox18.Location = new System.Drawing.Point(4, 119);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Size = new System.Drawing.Size(600, 367);
+            this.groupBox18.TabIndex = 102;
+            this.groupBox18.TabStop = false;
+            this.groupBox18.Text = "Checkup Remarks";
             // 
-            // label66
+            // rvcheckdetails
             // 
-            this.label66.AutoSize = true;
-            this.label66.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label66.Location = new System.Drawing.Point(3, 17);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(60, 18);
-            this.label66.TabIndex = 77;
-            this.label66.Text = "Height";
+            this.rvcheckdetails.Location = new System.Drawing.Point(6, 26);
+            this.rvcheckdetails.Name = "rvcheckdetails";
+            this.rvcheckdetails.ReadOnly = true;
+            this.rvcheckdetails.Size = new System.Drawing.Size(579, 335);
+            this.rvcheckdetails.TabIndex = 89;
+            this.rvcheckdetails.Text = "";
             // 
-            // label69
+            // bttnbackfromcheckrec
             // 
-            this.label69.AutoSize = true;
-            this.label69.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label69.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label69.Location = new System.Drawing.Point(6, 51);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(63, 18);
-            this.label69.TabIndex = 73;
-            this.label69.Text = "Weight";
+            this.bttnbackfromcheckrec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.bttnbackfromcheckrec.FlatAppearance.BorderSize = 0;
+            this.bttnbackfromcheckrec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttnbackfromcheckrec.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttnbackfromcheckrec.ForeColor = System.Drawing.Color.White;
+            this.bttnbackfromcheckrec.Location = new System.Drawing.Point(408, 503);
+            this.bttnbackfromcheckrec.Name = "bttnbackfromcheckrec";
+            this.bttnbackfromcheckrec.Size = new System.Drawing.Size(196, 28);
+            this.bttnbackfromcheckrec.TabIndex = 100;
+            this.bttnbackfromcheckrec.Text = "Back";
+            this.bttnbackfromcheckrec.UseVisualStyleBackColor = false;
+            this.bttnbackfromcheckrec.Click += new System.EventHandler(this.bttnbackfromcheckrec_Click);
             // 
-            // lblvheight
+            // panel46
             // 
-            this.lblvheight.AutoSize = true;
-            this.lblvheight.BackColor = System.Drawing.Color.Transparent;
-            this.lblvheight.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblvheight.ForeColor = System.Drawing.Color.Black;
-            this.lblvheight.Location = new System.Drawing.Point(93, 17);
-            this.lblvheight.Name = "lblvheight";
-            this.lblvheight.Size = new System.Drawing.Size(23, 24);
-            this.lblvheight.TabIndex = 78;
-            this.lblvheight.Text = "h";
+            this.panel46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.panel46.Controls.Add(this.lblcheckdate);
+            this.panel46.Location = new System.Drawing.Point(7, 6);
+            this.panel46.Name = "panel46";
+            this.panel46.Size = new System.Drawing.Size(519, 97);
+            this.panel46.TabIndex = 99;
             // 
-            // lblvweight
+            // lblcheckdate
             // 
-            this.lblvweight.AutoSize = true;
-            this.lblvweight.BackColor = System.Drawing.Color.Transparent;
-            this.lblvweight.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblvweight.ForeColor = System.Drawing.Color.Black;
-            this.lblvweight.Location = new System.Drawing.Point(93, 51);
-            this.lblvweight.Name = "lblvweight";
-            this.lblvweight.Size = new System.Drawing.Size(25, 24);
-            this.lblvweight.TabIndex = 79;
-            this.lblvweight.Text = "w";
-            // 
-            // lblvblood
-            // 
-            this.lblvblood.AutoSize = true;
-            this.lblvblood.BackColor = System.Drawing.Color.Transparent;
-            this.lblvblood.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblvblood.ForeColor = System.Drawing.Color.Black;
-            this.lblvblood.Location = new System.Drawing.Point(9, 23);
-            this.lblvblood.Name = "lblvblood";
-            this.lblvblood.Size = new System.Drawing.Size(25, 24);
-            this.lblvblood.TabIndex = 80;
-            this.lblvblood.Text = "w";
-            // 
-            // groupBox12
-            // 
-            this.groupBox12.Controls.Add(this.rviewcondition);
-            this.groupBox12.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox12.Location = new System.Drawing.Point(324, 213);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(274, 283);
-            this.groupBox12.TabIndex = 96;
-            this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "Condition";
-            // 
-            // rviewcondition
-            // 
-            this.rviewcondition.Location = new System.Drawing.Point(6, 26);
-            this.rviewcondition.Name = "rviewcondition";
-            this.rviewcondition.ReadOnly = true;
-            this.rviewcondition.Size = new System.Drawing.Size(253, 251);
-            this.rviewcondition.TabIndex = 89;
-            this.rviewcondition.Text = "";
-            // 
-            // groupBox13
-            // 
-            this.groupBox13.Controls.Add(this.rviewall);
-            this.groupBox13.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox13.Location = new System.Drawing.Point(11, 213);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(272, 283);
-            this.groupBox13.TabIndex = 95;
-            this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "Allergies";
-            // 
-            // rviewall
-            // 
-            this.rviewall.Location = new System.Drawing.Point(6, 26);
-            this.rviewall.Name = "rviewall";
-            this.rviewall.ReadOnly = true;
-            this.rviewall.Size = new System.Drawing.Size(260, 251);
-            this.rviewall.TabIndex = 89;
-            this.rviewall.Text = "";
-            // 
-            // eighteen
-            // 
-            this.eighteen.Controls.Add(this.groupBox17);
-            this.eighteen.Controls.Add(this.groupBox11);
-            this.eighteen.Controls.Add(this.btnaddcheckuprec);
-            this.eighteen.Controls.Add(this.btnbackfromcheck);
-            this.eighteen.Controls.Add(this.panel45);
-            this.eighteen.Location = new System.Drawing.Point(4, 22);
-            this.eighteen.Name = "eighteen";
-            this.eighteen.Padding = new System.Windows.Forms.Padding(3);
-            this.eighteen.Size = new System.Drawing.Size(609, 536);
-            this.eighteen.TabIndex = 18;
-            this.eighteen.Text = "18";
-            this.eighteen.UseVisualStyleBackColor = true;
-            // 
-            // btnaddcheckuprec
-            // 
-            this.btnaddcheckuprec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.btnaddcheckuprec.FlatAppearance.BorderSize = 0;
-            this.btnaddcheckuprec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnaddcheckuprec.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnaddcheckuprec.ForeColor = System.Drawing.Color.White;
-            this.btnaddcheckuprec.Location = new System.Drawing.Point(6, 502);
-            this.btnaddcheckuprec.Name = "btnaddcheckuprec";
-            this.btnaddcheckuprec.Size = new System.Drawing.Size(196, 28);
-            this.btnaddcheckuprec.TabIndex = 95;
-            this.btnaddcheckuprec.Text = "Add Info";
-            this.btnaddcheckuprec.UseVisualStyleBackColor = false;
-            this.btnaddcheckuprec.Click += new System.EventHandler(this.btnaddcheckuprec_Click);
-            // 
-            // btnbackfromcheck
-            // 
-            this.btnbackfromcheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.btnbackfromcheck.FlatAppearance.BorderSize = 0;
-            this.btnbackfromcheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnbackfromcheck.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbackfromcheck.ForeColor = System.Drawing.Color.White;
-            this.btnbackfromcheck.Location = new System.Drawing.Point(407, 502);
-            this.btnbackfromcheck.Name = "btnbackfromcheck";
-            this.btnbackfromcheck.Size = new System.Drawing.Size(196, 28);
-            this.btnbackfromcheck.TabIndex = 94;
-            this.btnbackfromcheck.Text = "Cancel";
-            this.btnbackfromcheck.UseVisualStyleBackColor = false;
-            this.btnbackfromcheck.Click += new System.EventHandler(this.btnbackfromcheck_Click);
-            // 
-            // panel45
-            // 
-            this.panel45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
-            this.panel45.Controls.Add(this.lblnamecheck);
-            this.panel45.Controls.Add(this.label76);
-            this.panel45.Location = new System.Drawing.Point(6, 5);
-            this.panel45.Name = "panel45";
-            this.panel45.Size = new System.Drawing.Size(519, 97);
-            this.panel45.TabIndex = 93;
-            // 
-            // lblnamecheck
-            // 
-            this.lblnamecheck.AutoSize = true;
-            this.lblnamecheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnamecheck.ForeColor = System.Drawing.Color.White;
-            this.lblnamecheck.Location = new System.Drawing.Point(13, 17);
-            this.lblnamecheck.Name = "lblnamecheck";
-            this.lblnamecheck.Size = new System.Drawing.Size(72, 25);
-            this.lblnamecheck.TabIndex = 40;
-            this.lblnamecheck.Text = "Name";
-            // 
-            // label76
-            // 
-            this.label76.AutoSize = true;
-            this.label76.BackColor = System.Drawing.Color.Transparent;
-            this.label76.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label76.ForeColor = System.Drawing.Color.Black;
-            this.label76.Location = new System.Drawing.Point(11, 64);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(179, 24);
-            this.label76.TabIndex = 39;
-            this.label76.Text = "Basic Health Info";
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.rcheckdetails);
-            this.groupBox11.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox11.Location = new System.Drawing.Point(3, 226);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(600, 259);
-            this.groupBox11.TabIndex = 97;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Remarks/Recommendations";
-            // 
-            // rcheckdetails
-            // 
-            this.rcheckdetails.Location = new System.Drawing.Point(6, 26);
-            this.rcheckdetails.Name = "rcheckdetails";
-            this.rcheckdetails.Size = new System.Drawing.Size(579, 227);
-            this.rcheckdetails.TabIndex = 89;
-            this.rcheckdetails.Text = "";
-            // 
-            // groupBox17
-            // 
-            this.groupBox17.Controls.Add(this.dtpcheck);
-            this.groupBox17.Controls.Add(this.txtlocationcheck);
-            this.groupBox17.Controls.Add(this.label75);
-            this.groupBox17.Controls.Add(this.label77);
-            this.groupBox17.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox17.Location = new System.Drawing.Point(21, 117);
-            this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(424, 91);
-            this.groupBox17.TabIndex = 98;
-            this.groupBox17.TabStop = false;
-            this.groupBox17.Text = "General";
-            // 
-            // dtpcheck
-            // 
-            this.dtpcheck.Location = new System.Drawing.Point(185, 19);
-            this.dtpcheck.Name = "dtpcheck";
-            this.dtpcheck.Size = new System.Drawing.Size(199, 27);
-            this.dtpcheck.TabIndex = 94;
-            // 
-            // txtlocationcheck
-            // 
-            this.txtlocationcheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtlocationcheck.Location = new System.Drawing.Point(185, 60);
-            this.txtlocationcheck.Name = "txtlocationcheck";
-            this.txtlocationcheck.Size = new System.Drawing.Size(199, 27);
-            this.txtlocationcheck.TabIndex = 79;
-            // 
-            // label75
-            // 
-            this.label75.AutoSize = true;
-            this.label75.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label75.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label75.Location = new System.Drawing.Point(3, 17);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(46, 18);
-            this.label75.TabIndex = 77;
-            this.label75.Text = "Date";
-            // 
-            // label77
-            // 
-            this.label77.AutoSize = true;
-            this.label77.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label77.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label77.Location = new System.Drawing.Point(3, 60);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(147, 18);
-            this.label77.TabIndex = 73;
-            this.label77.Text = "Place of Checkup";
+            this.lblcheckdate.AutoSize = true;
+            this.lblcheckdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcheckdate.ForeColor = System.Drawing.Color.White;
+            this.lblcheckdate.Location = new System.Drawing.Point(13, 17);
+            this.lblcheckdate.Name = "lblcheckdate";
+            this.lblcheckdate.Size = new System.Drawing.Size(25, 25);
+            this.lblcheckdate.TabIndex = 40;
+            this.lblcheckdate.Text = "d";
             // 
             // casestudy
             // 
@@ -5476,25 +5554,29 @@
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
             this.seventeen.ResumeLayout(false);
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
             this.panel44.ResumeLayout(false);
             this.panel44.PerformLayout();
+            this.eighteen.ResumeLayout(false);
+            this.groupBox17.ResumeLayout(false);
+            this.groupBox17.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.panel45.ResumeLayout(false);
+            this.panel45.PerformLayout();
             this.panel.ResumeLayout(false);
             this.secondTaskbar.ResumeLayout(false);
             this.dropin.ResumeLayout(false);
             this.residential.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.groupBox14.ResumeLayout(false);
-            this.groupBox14.PerformLayout();
-            this.groupBox15.ResumeLayout(false);
-            this.groupBox15.PerformLayout();
-            this.groupBox12.ResumeLayout(false);
-            this.groupBox13.ResumeLayout(false);
-            this.eighteen.ResumeLayout(false);
-            this.panel45.ResumeLayout(false);
-            this.panel45.PerformLayout();
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox17.ResumeLayout(false);
-            this.groupBox17.PerformLayout();
+            this.nineteen.ResumeLayout(false);
+            this.groupBox18.ResumeLayout(false);
+            this.panel46.ResumeLayout(false);
+            this.panel46.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -5883,5 +5965,11 @@
         private System.Windows.Forms.TextBox txtlocationcheck;
         private System.Windows.Forms.Label label75;
         private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.TabPage nineteen;
+        private System.Windows.Forms.GroupBox groupBox18;
+        private System.Windows.Forms.RichTextBox rvcheckdetails;
+        private System.Windows.Forms.Button bttnbackfromcheckrec;
+        private System.Windows.Forms.Panel panel46;
+        private System.Windows.Forms.Label lblcheckdate;
     }
 }
