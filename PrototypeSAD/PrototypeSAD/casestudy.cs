@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.IO;
+using System.Globalization;
 
 namespace PrototypeSAD
 {
@@ -20,7 +21,7 @@ namespace PrototypeSAD
 
         public int id, hid, fammode;
         public string filename;
-        public DataTable tblfam;
+        public DataTable tblfam = new DataTable(), nullfam = new DataTable();
 
         public casestudy()
         {
@@ -356,7 +357,7 @@ namespace PrototypeSAD
 
             int count;
 
-            DataTable dt = new DataTable();
+            //DataTable dt = new DataTable();
 
             if (fammode == 0)
             {
@@ -366,16 +367,15 @@ namespace PrototypeSAD
                     {
                         //MessageBox.Show(ee.ToString());
 
+                        nullfam.Columns.Add("1st Header");
+                        nullfam.Columns.Add("2nd Header");
+                        nullfam.Columns.Add("3rd Header");
+
+                        DataRow newRow = nullfam.NewRow();
                         
+                        nullfam.Rows.Add(newRow);
 
-                        dt.Columns.Add("1st Header");
-                        dt.Columns.Add("2nd Header");
-                        dt.Columns.Add("3rd Header");
-
-                        DataRow newRow = dt.NewRow();
-                        dt.Rows.Add(newRow);
-
-                        dtfamOverview.DataSource = dt;
+                        dtfamOverview.DataSource = nullfam;
                     }
 
                     catch (Exception ee)
@@ -389,8 +389,8 @@ namespace PrototypeSAD
                 {
                     try
                     {
-                        DataRow newRow = dt.NewRow();
-                        dt.Rows.Add(newRow);
+                        DataRow newRow = nullfam.NewRow();
+                        nullfam.Rows.Add(newRow);
 
                         dtfamOverview.Refresh();
 
@@ -774,7 +774,7 @@ namespace PrototypeSAD
                         lblheight.Text = height.ToString();
                         lblweight.Text = weight.ToString();
 
-                        tabControl.SelectedTab = sixteen;
+                        tabControl.SelectedTab = seventeen;
 
                         reset3();
 
@@ -810,7 +810,8 @@ namespace PrototypeSAD
 
         private void button11_Click(object sender, EventArgs e)
         {
-            
+            tabControl.SelectedTab = fourth;
+
             existsfam(id);
 
             reloadfam(id);
@@ -991,7 +992,7 @@ namespace PrototypeSAD
             {
                 conn.Open();
 
-                MySqlCommand comm = new MySqlCommand("SELECT checkid, checkupdate FROM checkup JOIN health ON health.hid = checkup.hid WHERE health.caseid = " + id + " ORDER BY checkupdate", conn);
+                MySqlCommand comm = new MySqlCommand("SELECT checkid, checkupdate, checkuplocation FROM checkup JOIN health ON health.hid = checkup.hid WHERE health.caseid = " + id + " ORDER BY checkupdate", conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                 DataTable dt = new DataTable();
 
@@ -1719,12 +1720,15 @@ namespace PrototypeSAD
 
                 //dt.ToString("hh:mm tt");
 
+                //DateTime wut = DateTime.ParseExact(dateincid.Value.Date.ToString("yyyy-MM-dd") + " " + dt.ToString(), "yyyy-MM-dd hh:mm tt", CultureInfo.InvariantCulture);
+                MessageBox.Show(dateincid.Value.Date.ToString("yyyy-MM-dd"));
+
                 try
                 {
                     conn.Open();
 
 
-                    MySqlCommand comm = new MySqlCommand("INSERT INTO incident(type, incdate, venue, description, action, dateadded) VALUES('" + type + "', '" + dateincid.Value.Date.ToString("MM/dd/yyyy ") + dt.ToString("hh:mm tt") + "','" + location + "', '" + desc + "', '" + action + "', '" + DateTime.Now +"')", conn);
+                    MySqlCommand comm = new MySqlCommand("INSERT INTO incident(caseid, type, incdate, venue, description, action, dateadded) VALUES('" + id + "', '" + type + "', '" + dateincid.Value.Date.ToString("yyyy-MM-dd ") + dt.ToString("hh:mm tt") + "','" + location + "', '" + desc + "', '" + action + "', '" + DateTime.Now.ToString("yyyy-MM-dd") +"')", conn);
 
                     comm.ExecuteNonQuery();
 
@@ -1735,7 +1739,7 @@ namespace PrototypeSAD
                     reloadincid(id);
 
                     tabControl.SelectedTab = twelfth;
-
+                   
                     reset5();
                 }
 
@@ -1743,6 +1747,7 @@ namespace PrototypeSAD
                 {
                     MessageBox.Show("" + ee);
                     conn.Close();
+                    
                 }
 
             }
@@ -1824,7 +1829,7 @@ namespace PrototypeSAD
 
                 conn.Open();
 
-                MySqlCommand comm = new MySqlCommand("SELECT checkupdetails, checkupdate FROM checkup WHERE checkid = " + checkid, conn);
+                MySqlCommand comm = new MySqlCommand("SELECT checkupdetails, checkupdate, checkuplocation FROM checkup WHERE checkid = " + checkid, conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                 DataTable dt = new DataTable();
 
@@ -1835,6 +1840,7 @@ namespace PrototypeSAD
                     rvcheckdetails.Text = dt.Rows[0]["checkupdetails"].ToString();
 
                     lblcheckdate.Text = Convert.ToDateTime(dt.Rows[0]["checkupdate"]).ToString("MMMM dd, yyyy");
+                    lbllocationcheck.Text = dt.Rows[0]["checkuplocation"].ToString();
 
 
                 }
@@ -1901,7 +1907,7 @@ namespace PrototypeSAD
                     conn.Open();
 
 
-                    MySqlCommand comm = new MySqlCommand("INSERT INTO checkup(hid, checkupdetails, checkupdate) VALUES('" + hid + "', '" + details + "', '" + dtpcheck.Value.Date.ToString("yyyyMMdd") + "')", conn);
+                    MySqlCommand comm = new MySqlCommand("INSERT INTO checkup(hid, checkupdetails, checkupdate, checkuplocation) VALUES('" + hid + "', '" + details + "', '" + dtpcheck.Value.Date.ToString("yyyyMMdd") + "', '" + location + "')", conn);
                     MessageBox.Show(hid.ToString());
                     comm.ExecuteNonQuery();
 

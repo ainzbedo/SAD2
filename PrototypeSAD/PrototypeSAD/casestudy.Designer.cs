@@ -375,6 +375,12 @@
             this.panel45 = new System.Windows.Forms.Panel();
             this.lblnamecheck = new System.Windows.Forms.Label();
             this.label76 = new System.Windows.Forms.Label();
+            this.nineteen = new System.Windows.Forms.TabPage();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.rvcheckdetails = new System.Windows.Forms.RichTextBox();
+            this.bttnbackfromcheckrec = new System.Windows.Forms.Button();
+            this.panel46 = new System.Windows.Forms.Panel();
+            this.lblcheckdate = new System.Windows.Forms.Label();
             this.btnCaseStudy = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -411,12 +417,7 @@
             this.btnSearch2 = new System.Windows.Forms.Button();
             this.btnCaseStudy2 = new System.Windows.Forms.Button();
             this.opimage1 = new System.Windows.Forms.OpenFileDialog();
-            this.nineteen = new System.Windows.Forms.TabPage();
-            this.groupBox18 = new System.Windows.Forms.GroupBox();
-            this.rvcheckdetails = new System.Windows.Forms.RichTextBox();
-            this.bttnbackfromcheckrec = new System.Windows.Forms.Button();
-            this.panel46 = new System.Windows.Forms.Panel();
-            this.lblcheckdate = new System.Windows.Forms.Label();
+            this.lbllocationcheck = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pan_RES.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -507,14 +508,14 @@
             this.groupBox17.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.panel45.SuspendLayout();
+            this.nineteen.SuspendLayout();
+            this.groupBox18.SuspendLayout();
+            this.panel46.SuspendLayout();
             this.panel.SuspendLayout();
             this.secondTaskbar.SuspendLayout();
             this.dropin.SuspendLayout();
             this.residential.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.nineteen.SuspendLayout();
-            this.groupBox18.SuspendLayout();
-            this.panel46.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -1453,6 +1454,7 @@
             this.dtfamOverview.Name = "dtfamOverview";
             this.dtfamOverview.ReadOnly = true;
             this.dtfamOverview.RowHeadersVisible = false;
+            this.dtfamOverview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtfamOverview.Size = new System.Drawing.Size(500, 214);
             this.dtfamOverview.TabIndex = 28;
             // 
@@ -4823,6 +4825,75 @@
             this.label76.TabIndex = 39;
             this.label76.Text = "Basic Health Info";
             // 
+            // nineteen
+            // 
+            this.nineteen.Controls.Add(this.groupBox18);
+            this.nineteen.Controls.Add(this.bttnbackfromcheckrec);
+            this.nineteen.Controls.Add(this.panel46);
+            this.nineteen.Location = new System.Drawing.Point(4, 22);
+            this.nineteen.Name = "nineteen";
+            this.nineteen.Padding = new System.Windows.Forms.Padding(3);
+            this.nineteen.Size = new System.Drawing.Size(609, 536);
+            this.nineteen.TabIndex = 19;
+            this.nineteen.Text = "19";
+            this.nineteen.UseVisualStyleBackColor = true;
+            // 
+            // groupBox18
+            // 
+            this.groupBox18.Controls.Add(this.rvcheckdetails);
+            this.groupBox18.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox18.Location = new System.Drawing.Point(4, 119);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Size = new System.Drawing.Size(600, 367);
+            this.groupBox18.TabIndex = 102;
+            this.groupBox18.TabStop = false;
+            this.groupBox18.Text = "Checkup Remarks";
+            // 
+            // rvcheckdetails
+            // 
+            this.rvcheckdetails.Location = new System.Drawing.Point(6, 26);
+            this.rvcheckdetails.Name = "rvcheckdetails";
+            this.rvcheckdetails.ReadOnly = true;
+            this.rvcheckdetails.Size = new System.Drawing.Size(579, 335);
+            this.rvcheckdetails.TabIndex = 89;
+            this.rvcheckdetails.Text = "";
+            // 
+            // bttnbackfromcheckrec
+            // 
+            this.bttnbackfromcheckrec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.bttnbackfromcheckrec.FlatAppearance.BorderSize = 0;
+            this.bttnbackfromcheckrec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttnbackfromcheckrec.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttnbackfromcheckrec.ForeColor = System.Drawing.Color.White;
+            this.bttnbackfromcheckrec.Location = new System.Drawing.Point(408, 503);
+            this.bttnbackfromcheckrec.Name = "bttnbackfromcheckrec";
+            this.bttnbackfromcheckrec.Size = new System.Drawing.Size(196, 28);
+            this.bttnbackfromcheckrec.TabIndex = 100;
+            this.bttnbackfromcheckrec.Text = "Back";
+            this.bttnbackfromcheckrec.UseVisualStyleBackColor = false;
+            this.bttnbackfromcheckrec.Click += new System.EventHandler(this.bttnbackfromcheckrec_Click);
+            // 
+            // panel46
+            // 
+            this.panel46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.panel46.Controls.Add(this.lbllocationcheck);
+            this.panel46.Controls.Add(this.lblcheckdate);
+            this.panel46.Location = new System.Drawing.Point(7, 6);
+            this.panel46.Name = "panel46";
+            this.panel46.Size = new System.Drawing.Size(519, 97);
+            this.panel46.TabIndex = 99;
+            // 
+            // lblcheckdate
+            // 
+            this.lblcheckdate.AutoSize = true;
+            this.lblcheckdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcheckdate.ForeColor = System.Drawing.Color.White;
+            this.lblcheckdate.Location = new System.Drawing.Point(13, 17);
+            this.lblcheckdate.Name = "lblcheckdate";
+            this.lblcheckdate.Size = new System.Drawing.Size(25, 25);
+            this.lblcheckdate.TabIndex = 40;
+            this.lblcheckdate.Text = "d";
+            // 
             // btnCaseStudy
             // 
             this.btnCaseStudy.BackColor = System.Drawing.Color.Transparent;
@@ -5341,73 +5412,16 @@
             // 
             this.opimage1.FileName = "openFileDialog1";
             // 
-            // nineteen
+            // lbllocationcheck
             // 
-            this.nineteen.Controls.Add(this.groupBox18);
-            this.nineteen.Controls.Add(this.bttnbackfromcheckrec);
-            this.nineteen.Controls.Add(this.panel46);
-            this.nineteen.Location = new System.Drawing.Point(4, 22);
-            this.nineteen.Name = "nineteen";
-            this.nineteen.Padding = new System.Windows.Forms.Padding(3);
-            this.nineteen.Size = new System.Drawing.Size(609, 536);
-            this.nineteen.TabIndex = 19;
-            this.nineteen.Text = "19";
-            this.nineteen.UseVisualStyleBackColor = true;
-            // 
-            // groupBox18
-            // 
-            this.groupBox18.Controls.Add(this.rvcheckdetails);
-            this.groupBox18.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox18.Location = new System.Drawing.Point(4, 119);
-            this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Size = new System.Drawing.Size(600, 367);
-            this.groupBox18.TabIndex = 102;
-            this.groupBox18.TabStop = false;
-            this.groupBox18.Text = "Checkup Remarks";
-            // 
-            // rvcheckdetails
-            // 
-            this.rvcheckdetails.Location = new System.Drawing.Point(6, 26);
-            this.rvcheckdetails.Name = "rvcheckdetails";
-            this.rvcheckdetails.ReadOnly = true;
-            this.rvcheckdetails.Size = new System.Drawing.Size(579, 335);
-            this.rvcheckdetails.TabIndex = 89;
-            this.rvcheckdetails.Text = "";
-            // 
-            // bttnbackfromcheckrec
-            // 
-            this.bttnbackfromcheckrec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.bttnbackfromcheckrec.FlatAppearance.BorderSize = 0;
-            this.bttnbackfromcheckrec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bttnbackfromcheckrec.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnbackfromcheckrec.ForeColor = System.Drawing.Color.White;
-            this.bttnbackfromcheckrec.Location = new System.Drawing.Point(408, 503);
-            this.bttnbackfromcheckrec.Name = "bttnbackfromcheckrec";
-            this.bttnbackfromcheckrec.Size = new System.Drawing.Size(196, 28);
-            this.bttnbackfromcheckrec.TabIndex = 100;
-            this.bttnbackfromcheckrec.Text = "Back";
-            this.bttnbackfromcheckrec.UseVisualStyleBackColor = false;
-            this.bttnbackfromcheckrec.Click += new System.EventHandler(this.bttnbackfromcheckrec_Click);
-            // 
-            // panel46
-            // 
-            this.panel46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
-            this.panel46.Controls.Add(this.lblcheckdate);
-            this.panel46.Location = new System.Drawing.Point(7, 6);
-            this.panel46.Name = "panel46";
-            this.panel46.Size = new System.Drawing.Size(519, 97);
-            this.panel46.TabIndex = 99;
-            // 
-            // lblcheckdate
-            // 
-            this.lblcheckdate.AutoSize = true;
-            this.lblcheckdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcheckdate.ForeColor = System.Drawing.Color.White;
-            this.lblcheckdate.Location = new System.Drawing.Point(13, 17);
-            this.lblcheckdate.Name = "lblcheckdate";
-            this.lblcheckdate.Size = new System.Drawing.Size(25, 25);
-            this.lblcheckdate.TabIndex = 40;
-            this.lblcheckdate.Text = "d";
+            this.lbllocationcheck.AutoSize = true;
+            this.lbllocationcheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbllocationcheck.ForeColor = System.Drawing.Color.White;
+            this.lbllocationcheck.Location = new System.Drawing.Point(13, 66);
+            this.lbllocationcheck.Name = "lbllocationcheck";
+            this.lbllocationcheck.Size = new System.Drawing.Size(25, 25);
+            this.lbllocationcheck.TabIndex = 103;
+            this.lbllocationcheck.Text = "d";
             // 
             // casestudy
             // 
@@ -5568,15 +5582,15 @@
             this.groupBox11.ResumeLayout(false);
             this.panel45.ResumeLayout(false);
             this.panel45.PerformLayout();
+            this.nineteen.ResumeLayout(false);
+            this.groupBox18.ResumeLayout(false);
+            this.panel46.ResumeLayout(false);
+            this.panel46.PerformLayout();
             this.panel.ResumeLayout(false);
             this.secondTaskbar.ResumeLayout(false);
             this.dropin.ResumeLayout(false);
             this.residential.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.nineteen.ResumeLayout(false);
-            this.groupBox18.ResumeLayout(false);
-            this.panel46.ResumeLayout(false);
-            this.panel46.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -5971,5 +5985,6 @@
         private System.Windows.Forms.Button bttnbackfromcheckrec;
         private System.Windows.Forms.Panel panel46;
         private System.Windows.Forms.Label lblcheckdate;
+        private System.Windows.Forms.Label lbllocationcheck;
     }
 }
