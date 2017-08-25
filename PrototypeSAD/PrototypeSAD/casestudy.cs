@@ -19,9 +19,9 @@ namespace PrototypeSAD
         public Form2 ref_to_main { get; set; }
         public MySqlConnection conn;
 
-        public int id, hid, fammode;
+        public int id, hid, fammode, famid;
         public string filename;
-        public DataTable tblfam = new DataTable(), nullfam = new DataTable();
+        public DataTable tblfam = new DataTable();
 
         public casestudy()
         {
@@ -228,6 +228,7 @@ namespace PrototypeSAD
         private void casestudy_Load(object sender, EventArgs e)
         {
 
+           
             lbladdeditprofile.Text = "New Profile";
             btnaddeditcase.Text = "Add Profile";
 
@@ -235,6 +236,7 @@ namespace PrototypeSAD
             dtjoin.MaxDate = DateTime.Now;
             condate.MaxDate = DateTime.Now;
             dtpcheck.MaxDate = DateTime.Now;
+            dateincid.MaxDate = DateTime.Now;
 
             try
             {
@@ -242,6 +244,7 @@ namespace PrototypeSAD
 
                 MySqlCommand comm = new MySqlCommand("SELECT caseid, lastname, firstname, program FROM casestudyprofile", conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+
                 DataTable dt = new DataTable();
 
                 adp.Fill(dt);
@@ -293,7 +296,7 @@ namespace PrototypeSAD
                 adp.Fill(dt);
 
                 dtgcs.DataSource = dt;
-
+               
                 dtgcs.Columns[0].Visible = false;
 
                 getdrop();
@@ -312,7 +315,7 @@ namespace PrototypeSAD
                 conn.Close();
             }
 
-            tabControl.SelectedTab = first;
+            //tabControl.SelectedTab = first;
             resetColor();
             btnCaseStudy.BackColor = Color.Gray;
 
@@ -354,75 +357,7 @@ namespace PrototypeSAD
 
        private void btnAddMem_Click(object sender, EventArgs e)
         {
-
-            int count;
-
-            //DataTable dt = new DataTable();
-
-            if (fammode == 0)
-            {
-                if (dtfamOverview.DataSource == null)
-                {
-                    try
-                    {
-                        //MessageBox.Show(ee.ToString());
-
-                        nullfam.Columns.Add("1st Header");
-                        nullfam.Columns.Add("2nd Header");
-                        nullfam.Columns.Add("3rd Header");
-
-                        DataRow newRow = nullfam.NewRow();
-                        
-                        nullfam.Rows.Add(newRow);
-
-                        dtfamOverview.DataSource = nullfam;
-                    }
-
-                    catch (Exception ee)
-                    {
-                        MessageBox.Show(ee.ToString());
-
-                    }
-                }
-
-                else
-                {
-                    try
-                    {
-                        DataRow newRow = nullfam.NewRow();
-                        nullfam.Rows.Add(newRow);
-
-                        dtfamOverview.Refresh();
-
-                    }
-
-                    catch(Exception ee)
-                    {
-                        MessageBox.Show(ee.ToString());
-
-                    }
-                }
-                
-            }
-
-            else
-            {
-                try
-                {
-                    DataRow newRow = tblfam.NewRow();
-                    tblfam.Rows.Add(newRow);
-
-                    dtfamOverview.Refresh();
-                }
-
-                catch(Exception ee)
-                {
-                    MessageBox.Show(ee.ToString());
-                }
-            }
-            
-
-            
+            tabControl.SelectedTab = twenty;
         }
 
         
@@ -1084,13 +1019,13 @@ namespace PrototypeSAD
                 MySqlCommand comm = new MySqlCommand("SELECT memberid, type, gender, birthdate, relationship, dependency FROM member WHERE familyid = " + famid, conn);
 
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
-                //DataTable dt = new DataTable();
+                DataTable dt = new DataTable();
 
-                adp.Fill(tblfam);
+                adp.Fill(dt);
 
-                if (tblfam.Rows.Count > 0)
+                if (dt.Rows.Count > 0)
                 {
-                    dtfamOverview.DataSource = tblfam;
+                    dtfamOverview.DataSource = dt;
                     dtfamOverview.Columns[0].Visible = false;
 
                     fammode = 1;
@@ -1180,7 +1115,15 @@ namespace PrototypeSAD
 
                 btned.Text = (UserExist > 0) ? "Edit Info" : "Add Info"; //put add info on catch
 
+                comm = new MySqlCommand("SELECT familyid FROM family WHERE caseid = " + id, conn);
 
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+
+                DataTable dt = new DataTable();
+
+                adp.Fill(dt);
+
+                famid = int.Parse(dt.Rows[0]["familyid"].ToString());
 
                 conn.Close();
 
@@ -1308,6 +1251,11 @@ namespace PrototypeSAD
             dtpcheck.Value = DateTime.Now.Date;
             txtlocationcheck.Clear();
             rcheckdetails.Clear();
+        }
+
+        public void reset7()
+        {
+            dtfamOverview.DataSource = null;
         }
 
         private void btned_Click(object sender, EventArgs e)
@@ -1622,6 +1570,8 @@ namespace PrototypeSAD
         private void btnbackfam_Click(object sender, EventArgs e)
         {
             tabControl.SelectedTab = sixteen;
+
+            reset7();
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -1871,6 +1821,32 @@ namespace PrototypeSAD
                 hid = int.Parse(dt.Rows[0]["hid"].ToString());
 
                 conn.Close();
+
+            }
+
+
+            catch (Exception ee)
+            {
+
+                MessageBox.Show("" + ee);
+                conn.Close();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            dtfamOverview.EndEdit();
+
+            try
+            {
+                conn.Open();
+
+                for (int i = 0; i < dtfamOverview.Rows.Count; i++)
+                {
+                    //MySqlCommand comm = new MySqlCommand("INSERT INTO member(familyid, firstname, lastname, type, gender, birthdate, relationship, action, dateadded) VALUES('" + id + "', '" + type + "', '" + dateincid.Value.Date.ToString("yyyy-MM-dd ") + dt.ToString("hh:mm tt") + "','" + location + "', '" + desc + "', '" + action + "', '" + DateTime.Now.ToString("yyyy-MM-dd") + "')", conn);
+
+                    //comm.ExecuteNonQuery();
+                }
 
             }
 
