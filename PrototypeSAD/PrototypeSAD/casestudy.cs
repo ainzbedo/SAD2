@@ -1631,52 +1631,6 @@ namespace PrototypeSAD
 
         }
 
-        private void dtincid_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                int incid = int.Parse(dtincid.Rows[e.RowIndex].Cells[0].Value.ToString());
-
-                tabControl.SelectedTab = thirteen;
-
-                conn.Open();
-
-                MySqlCommand comm = new MySqlCommand("SELECT type, incdate, venue, description, action FROM incident WHERE incidid = " + incid, conn);
-                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
-                DataTable dt = new DataTable();
-
-                adp.Fill(dt);
-
-                if (dt.Rows.Count > 0)
-                {
-                    inctype.Text = dt.Rows[0]["type"].ToString();
-                    incidlocation.Text = dt.Rows[0]["venue"].ToString();
-                    repinciddesc.Text = dt.Rows[0]["description"].ToString();
-                    repincidaction.Text = dt.Rows[0]["action"].ToString();
-
-                    lbldateincid.Text = dt.Rows[0]["incdate"].ToString();
-
-
-                }
-
-                tabControl.SelectedTab = thirteen;
-
-                conn.Close();
-
-            }
-
-            catch (Exception ee)
-            {
-                //MessageBox.Show("" + ee);
-                conn.Close();
-            }
-
-            //existshealth(id);
-
-        }
-
-          
-
         private void btnaddincid_Click(object sender, EventArgs e)
         {
             tabControl.SelectedTab = fourteen;
@@ -1962,6 +1916,47 @@ namespace PrototypeSAD
             }
 
             //adpmem.Update(tblfam);
+        }
+
+        private void dtincid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                int incid = int.Parse(dtincid.Rows[e.RowIndex].Cells[0].Value.ToString());
+
+                tabControl.SelectedTab = thirteen;
+
+                conn.Open();
+
+                MySqlCommand comm = new MySqlCommand("SELECT type, incdate, venue, description, action FROM incident WHERE incidid = " + incid, conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+
+                adp.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    inctype.Text = dt.Rows[0]["type"].ToString();
+                    incidlocation.Text = dt.Rows[0]["venue"].ToString();
+                    repinciddesc.Text = dt.Rows[0]["description"].ToString();
+                    repincidaction.Text = dt.Rows[0]["action"].ToString();
+
+                    lbldateincid.Text = dt.Rows[0]["incdate"].ToString();
+
+
+                }
+
+                tabControl.SelectedTab = thirteen;
+
+                conn.Close();
+
+            }
+
+            catch (Exception ee)
+            {
+                //MessageBox.Show("" + ee);
+                conn.Close();
+            }
         }
 
         private void bttnbackfromcheckrec_Click(object sender, EventArgs e)

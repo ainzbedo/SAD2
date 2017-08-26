@@ -383,6 +383,7 @@
             this.lbllocationcheck = new System.Windows.Forms.Label();
             this.lblcheckdate = new System.Windows.Forms.Label();
             this.twenty = new System.Windows.Forms.TabPage();
+            this.cbxmemgender = new System.Windows.Forms.ComboBox();
             this.txtmemocc = new System.Windows.Forms.TextBox();
             this.label82 = new System.Windows.Forms.Label();
             this.label78 = new System.Windows.Forms.Label();
@@ -436,7 +437,6 @@
             this.btnSearch2 = new System.Windows.Forms.Button();
             this.btnCaseStudy2 = new System.Windows.Forms.Button();
             this.opimage1 = new System.Windows.Forms.OpenFileDialog();
-            this.cbxmemgender = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.pan_RES.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -3399,6 +3399,7 @@
             this.dtincid.RowHeadersVisible = false;
             this.dtincid.Size = new System.Drawing.Size(521, 352);
             this.dtincid.TabIndex = 79;
+            this.dtincid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtincid_CellClick);
             // 
             // panel8
             // 
@@ -4955,6 +4956,21 @@
             this.twenty.Text = "20";
             this.twenty.UseVisualStyleBackColor = true;
             // 
+            // cbxmemgender
+            // 
+            this.cbxmemgender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbxmemgender.CausesValidation = false;
+            this.cbxmemgender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxmemgender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxmemgender.FormattingEnabled = true;
+            this.cbxmemgender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.cbxmemgender.Location = new System.Drawing.Point(136, 280);
+            this.cbxmemgender.Name = "cbxmemgender";
+            this.cbxmemgender.Size = new System.Drawing.Size(199, 21);
+            this.cbxmemgender.TabIndex = 102;
+            // 
             // txtmemocc
             // 
             this.txtmemocc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -5655,21 +5671,6 @@
             // opimage1
             // 
             this.opimage1.FileName = "openFileDialog1";
-            // 
-            // cbxmemgender
-            // 
-            this.cbxmemgender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cbxmemgender.CausesValidation = false;
-            this.cbxmemgender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxmemgender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxmemgender.FormattingEnabled = true;
-            this.cbxmemgender.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.cbxmemgender.Location = new System.Drawing.Point(136, 280);
-            this.cbxmemgender.Name = "cbxmemgender";
-            this.cbxmemgender.Size = new System.Drawing.Size(199, 21);
-            this.cbxmemgender.TabIndex = 102;
             // 
             // casestudy
             // 
