@@ -22,6 +22,7 @@ namespace PrototypeSAD
         public int id, hid, fammode, famid;
         public string filename;
         public DataTable tblfam = new DataTable();
+        public MySqlDataAdapter adpmem = new MySqlDataAdapter();
 
         public casestudy()
         {
@@ -237,6 +238,7 @@ namespace PrototypeSAD
             condate.MaxDate = DateTime.Now;
             dtpcheck.MaxDate = DateTime.Now;
             dateincid.MaxDate = DateTime.Now;
+            dtpmembirth.MaxDate = DateTime.Now;
 
             try
             {
@@ -968,8 +970,6 @@ namespace PrototypeSAD
         public void reloadfam(int id)
         {
 
-            int famid;
-
             try
             {
                 conn.Open();
@@ -986,7 +986,7 @@ namespace PrototypeSAD
                     famid = int.Parse(dt.Rows[0]["familyid"].ToString());
 
                     lblfamtype.Text = dt.Rows[0]["famtype"].ToString();
-
+                    MessageBox.Show(famid.ToString());
                     reloadmem(famid);
                     
                 }
@@ -1016,27 +1016,63 @@ namespace PrototypeSAD
         {
             try
             {
-                MySqlCommand comm = new MySqlCommand("SELECT memberid, type, gender, birthdate, relationship, dependency FROM member WHERE familyid = " + famid, conn);
+                MySqlCommand comm = new MySqlCommand("SELECT memberid, firstname, lastname, gender, birthdate, relationship, dependency, occupation FROM member WHERE familyid = " + famid, conn);
 
-                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
-                DataTable dt = new DataTable();
+                adpmem = new MySqlDataAdapter(comm);
+                tblfam = new DataTable();
 
-                adp.Fill(dt);
+                adpmem.Fill(tblfam);
 
-                if (dt.Rows.Count > 0)
+                
+
+                if (tblfam.Rows.Count > 0)
                 {
-                    dtfamOverview.DataSource = dt;
+                    dtfamOverview.DataSource = tblfam;
                     dtfamOverview.Columns[0].Visible = false;
 
-                    fammode = 1;
+                    
+                    DataGridViewCheckBoxColumn dc = new DataGridViewCheckBoxColumn();
+                    
+                    dc.Name = "check";
+                    dc.Visible = true;
+                    dc.TrueValue = true;
+                    dc.FalseValue = false;
+
+                    
+                    
+                    if (dtfamOverview.Columns["check"] == null)
+                    {
+                        dtfamOverview.Columns.Add(dc);
+
+                        dtfamOverview.Columns["check"].DisplayIndex = dtfamOverview.ColumnCount - 1;
+                    }
+
+                    foreach (DataGridViewColumn ds in dtfamOverview.Columns)
+                    {
+                        if (ds.Index.Equals(8))
+                        {
+                            ds.ReadOnly = false;
+                        }
+                        else
+                        {
+                            ds.ReadOnly = true;
+                        }
+                    }
+                   
+
+                }
+
+                else
+                {
+                    MessageBox.Show("There are no current member records for this case study.");
                 }
             }
 
             catch (Exception ee)
             {
-                MessageBox.Show("There are no current member records for this case study.");
-
-                fammode = 0;
+                //MessageBox.Show("There are no current member records for this case study.");
+                MessageBox.Show(ee.ToString());
+               
             }
         }
 
@@ -1255,7 +1291,20 @@ namespace PrototypeSAD
 
         public void reset7()
         {
-            dtfamOverview.DataSource = null;
+            //dtfamOverview.DataSource = null;
+        }
+
+        public void reset8()
+        {
+            txtmemfirstname.Clear();
+            txtmemlastname.Clear();
+            txtmemocc.Clear();
+            txtmemrelationship.Clear();
+
+            cbxmemgender.SelectedIndex = -1;
+            cbxmemdependency.SelectedIndex = -1;
+
+            dtpmembirth.Value = DateTime.Now.Date;
         }
 
         private void btned_Click(object sender, EventArgs e)
@@ -1839,14 +1888,7 @@ namespace PrototypeSAD
 
             try
             {
-                conn.Open();
-
-                for (int i = 0; i < dtfamOverview.Rows.Count; i++)
-                {
-                    //MySqlCommand comm = new MySqlCommand("INSERT INTO member(familyid, firstname, lastname, type, gender, birthdate, relationship, action, dateadded) VALUES('" + id + "', '" + type + "', '" + dateincid.Value.Date.ToString("yyyy-MM-dd ") + dt.ToString("hh:mm tt") + "','" + location + "', '" + desc + "', '" + action + "', '" + DateTime.Now.ToString("yyyy-MM-dd") + "')", conn);
-
-                    //comm.ExecuteNonQuery();
-                }
+                adpmem.Update(tblfam);
 
             }
 
@@ -1857,6 +1899,69 @@ namespace PrototypeSAD
                 MessageBox.Show("" + ee);
                 conn.Close();
             }
+        }
+
+        private void btnbacktofamoverview_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = fourth;
+
+            reset8();
+        }
+
+        private void btnaddmember_Click(object sender, EventArgs e)
+        {
+            string lastname = txtmemlastname.Text, firstname = txtmemfirstname.Text, relationship = txtmemrelationship.Text,
+                   gender = cbxmemgender.Text, occupation = txtmemocc.Text, dependency = cbxmemdependency.Text;
+
+            if (string.IsNullOrEmpty(lastname) || string.IsNullOrEmpty(firstname) || string.IsNullOrEmpty(relationship) || string.IsNullOrEmpty(gender) || string.IsNullOrEmpty(occupation) || string.IsNullOrEmpty(dependency))
+            {
+                MessageBox.Show("Please fill out empty fields.");
+            }
+
+            else
+            {
+                try
+                {
+
+                    conn.Open();
+
+
+                    MySqlCommand comm = new MySqlCommand("INSERT INTO member(familyid, firstname, lastname, gender, birthdate, relationship, dependency, occupation) VALUES('" + famid + "', '" + firstname + "', '" + lastname + "', '" + gender + "', '" + dtpmembirth.Value.Date.ToString("yyyy-MM-dd") + "', '" + relationship + "', '" + dependency + "', '" + occupation + "')", conn);
+                    MessageBox.Show(famid.ToString());
+                    comm.ExecuteNonQuery();
+
+                    MessageBox.Show("Member Added!");
+
+                    conn.Close();
+
+                    reloadmem(famid);
+
+                    tabControl.SelectedTab = fourth;
+
+                    reset8();
+                }
+
+                catch (Exception ee)
+                {
+                    MessageBox.Show("" + ee);
+                    conn.Close();
+                }
+            }
+        }
+
+        private void btndeletefam_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dtfamOverview.Rows)
+            {
+                DataGridViewCheckBoxCell chk = row.Cells[8] as DataGridViewCheckBoxCell;
+
+                if (Convert.ToBoolean(chk.Value) == true)
+                {
+                    dtfamOverview.Rows.Remove(row);
+                }
+            }
+
+            //adpmem.Update(tblfam);
         }
 
         private void bttnbackfromcheckrec_Click(object sender, EventArgs e)
@@ -1934,7 +2039,7 @@ namespace PrototypeSAD
 
                     reloadfam(id);
 
-                    tabControl.SelectedTab = ninth;
+                    tabControl.SelectedTab = fourth;
 
                     cbxfamtype.SelectedIndex = -1;
                 }

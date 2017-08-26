@@ -117,7 +117,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.lblnamefam = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btndeletefam = new System.Windows.Forms.Button();
             this.fifth = new System.Windows.Forms.TabPage();
             this.btnaddfamtype = new System.Windows.Forms.Button();
             this.btncanfamtype = new System.Windows.Forms.Button();
@@ -382,6 +382,24 @@
             this.panel46 = new System.Windows.Forms.Panel();
             this.lbllocationcheck = new System.Windows.Forms.Label();
             this.lblcheckdate = new System.Windows.Forms.Label();
+            this.twenty = new System.Windows.Forms.TabPage();
+            this.txtmemocc = new System.Windows.Forms.TextBox();
+            this.label82 = new System.Windows.Forms.Label();
+            this.label78 = new System.Windows.Forms.Label();
+            this.txtmemrelationship = new System.Windows.Forms.TextBox();
+            this.label80 = new System.Windows.Forms.Label();
+            this.txtmemfirstname = new System.Windows.Forms.TextBox();
+            this.label81 = new System.Windows.Forms.Label();
+            this.dtpmembirth = new System.Windows.Forms.DateTimePicker();
+            this.btnaddmember = new System.Windows.Forms.Button();
+            this.btnbacktofamoverview = new System.Windows.Forms.Button();
+            this.label83 = new System.Windows.Forms.Label();
+            this.cbxmemdependency = new System.Windows.Forms.ComboBox();
+            this.txtmemlastname = new System.Windows.Forms.TextBox();
+            this.label84 = new System.Windows.Forms.Label();
+            this.label89 = new System.Windows.Forms.Label();
+            this.panel47 = new System.Windows.Forms.Panel();
+            this.label99 = new System.Windows.Forms.Label();
             this.btnCaseStudy = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -418,25 +436,7 @@
             this.btnSearch2 = new System.Windows.Forms.Button();
             this.btnCaseStudy2 = new System.Windows.Forms.Button();
             this.opimage1 = new System.Windows.Forms.OpenFileDialog();
-            this.twenty = new System.Windows.Forms.TabPage();
-            this.label78 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label79 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label80 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label81 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.btnaddmember = new System.Windows.Forms.Button();
-            this.btnbacktofamoverview = new System.Windows.Forms.Button();
-            this.label83 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label84 = new System.Windows.Forms.Label();
-            this.label89 = new System.Windows.Forms.Label();
-            this.panel47 = new System.Windows.Forms.Panel();
-            this.label99 = new System.Windows.Forms.Label();
+            this.cbxmemgender = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.pan_RES.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -530,13 +530,13 @@
             this.nineteen.SuspendLayout();
             this.groupBox18.SuspendLayout();
             this.panel46.SuspendLayout();
+            this.twenty.SuspendLayout();
+            this.panel47.SuspendLayout();
             this.panel.SuspendLayout();
             this.secondTaskbar.SuspendLayout();
             this.dropin.SuspendLayout();
             this.residential.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.twenty.SuspendLayout();
-            this.panel47.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -1455,7 +1455,7 @@
             this.fourth.Controls.Add(this.btnbackfam);
             this.fourth.Controls.Add(this.panel6);
             this.fourth.Controls.Add(this.panel5);
-            this.fourth.Controls.Add(this.button2);
+            this.fourth.Controls.Add(this.btndeletefam);
             this.fourth.Location = new System.Drawing.Point(4, 22);
             this.fourth.Name = "fourth";
             this.fourth.Padding = new System.Windows.Forms.Padding(3);
@@ -1474,10 +1474,9 @@
             this.dtfamOverview.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.dtfamOverview.Location = new System.Drawing.Point(17, 181);
             this.dtfamOverview.Name = "dtfamOverview";
-            this.dtfamOverview.ReadOnly = true;
             this.dtfamOverview.RowHeadersVisible = false;
-            this.dtfamOverview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtfamOverview.Size = new System.Drawing.Size(500, 214);
+            this.dtfamOverview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dtfamOverview.Size = new System.Drawing.Size(552, 250);
             this.dtfamOverview.TabIndex = 28;
             // 
             // btnfamtype
@@ -1503,7 +1502,7 @@
             this.btnAddMem.FlatAppearance.BorderSize = 0;
             this.btnAddMem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddMem.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddMem.Location = new System.Drawing.Point(480, 401);
+            this.btnAddMem.Location = new System.Drawing.Point(485, 437);
             this.btnAddMem.Name = "btnAddMem";
             this.btnAddMem.Size = new System.Drawing.Size(37, 32);
             this.btnAddMem.TabIndex = 26;
@@ -1522,7 +1521,7 @@
             this.btnaddfam.Name = "btnaddfam";
             this.btnaddfam.Size = new System.Drawing.Size(101, 28);
             this.btnaddfam.TabIndex = 22;
-            this.btnaddfam.Text = "add";
+            this.btnaddfam.Text = "Save Changes";
             this.btnaddfam.UseVisualStyleBackColor = false;
             this.btnaddfam.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -1655,20 +1654,21 @@
             this.label10.TabIndex = 4;
             this.label10.Text = "Family Overview";
             // 
-            // button2
+            // btndeletefam
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::PrototypeSAD.Properties.Resources.ttrrryyrry;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(440, 404);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(34, 32);
-            this.button2.TabIndex = 25;
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btndeletefam.BackColor = System.Drawing.Color.Transparent;
+            this.btndeletefam.BackgroundImage = global::PrototypeSAD.Properties.Resources.ttrrryyrry;
+            this.btndeletefam.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btndeletefam.FlatAppearance.BorderSize = 0;
+            this.btndeletefam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btndeletefam.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndeletefam.Location = new System.Drawing.Point(445, 440);
+            this.btndeletefam.Name = "btndeletefam";
+            this.btndeletefam.Size = new System.Drawing.Size(34, 32);
+            this.btndeletefam.TabIndex = 25;
+            this.btndeletefam.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btndeletefam.UseVisualStyleBackColor = false;
+            this.btndeletefam.Click += new System.EventHandler(this.btndeletefam_Click);
             // 
             // fifth
             // 
@@ -4928,6 +4928,216 @@
             this.lblcheckdate.TabIndex = 40;
             this.lblcheckdate.Text = "d";
             // 
+            // twenty
+            // 
+            this.twenty.Controls.Add(this.cbxmemgender);
+            this.twenty.Controls.Add(this.txtmemocc);
+            this.twenty.Controls.Add(this.label82);
+            this.twenty.Controls.Add(this.label78);
+            this.twenty.Controls.Add(this.txtmemrelationship);
+            this.twenty.Controls.Add(this.label80);
+            this.twenty.Controls.Add(this.txtmemfirstname);
+            this.twenty.Controls.Add(this.label81);
+            this.twenty.Controls.Add(this.dtpmembirth);
+            this.twenty.Controls.Add(this.btnaddmember);
+            this.twenty.Controls.Add(this.btnbacktofamoverview);
+            this.twenty.Controls.Add(this.label83);
+            this.twenty.Controls.Add(this.cbxmemdependency);
+            this.twenty.Controls.Add(this.txtmemlastname);
+            this.twenty.Controls.Add(this.label84);
+            this.twenty.Controls.Add(this.label89);
+            this.twenty.Controls.Add(this.panel47);
+            this.twenty.Location = new System.Drawing.Point(4, 22);
+            this.twenty.Name = "twenty";
+            this.twenty.Padding = new System.Windows.Forms.Padding(3);
+            this.twenty.Size = new System.Drawing.Size(609, 536);
+            this.twenty.TabIndex = 20;
+            this.twenty.Text = "20";
+            this.twenty.UseVisualStyleBackColor = true;
+            // 
+            // txtmemocc
+            // 
+            this.txtmemocc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtmemocc.Location = new System.Drawing.Point(136, 358);
+            this.txtmemocc.Name = "txtmemocc";
+            this.txtmemocc.Size = new System.Drawing.Size(199, 20);
+            this.txtmemocc.TabIndex = 101;
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label82.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label82.Location = new System.Drawing.Point(23, 357);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(101, 18);
+            this.label82.TabIndex = 100;
+            this.label82.Text = "Occupation";
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label78.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label78.Location = new System.Drawing.Point(23, 279);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(68, 18);
+            this.label78.TabIndex = 98;
+            this.label78.Text = "Gender";
+            // 
+            // txtmemrelationship
+            // 
+            this.txtmemrelationship.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtmemrelationship.Location = new System.Drawing.Point(136, 209);
+            this.txtmemrelationship.Name = "txtmemrelationship";
+            this.txtmemrelationship.Size = new System.Drawing.Size(199, 20);
+            this.txtmemrelationship.TabIndex = 94;
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label80.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label80.Location = new System.Drawing.Point(23, 208);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(107, 18);
+            this.label80.TabIndex = 93;
+            this.label80.Text = "Relationship";
+            // 
+            // txtmemfirstname
+            // 
+            this.txtmemfirstname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtmemfirstname.Location = new System.Drawing.Point(136, 170);
+            this.txtmemfirstname.Name = "txtmemfirstname";
+            this.txtmemfirstname.Size = new System.Drawing.Size(199, 20);
+            this.txtmemfirstname.TabIndex = 92;
+            // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label81.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label81.Location = new System.Drawing.Point(23, 174);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(94, 18);
+            this.label81.TabIndex = 91;
+            this.label81.Text = "First Name";
+            // 
+            // dtpmembirth
+            // 
+            this.dtpmembirth.Location = new System.Drawing.Point(136, 242);
+            this.dtpmembirth.MaxDate = new System.DateTime(9997, 12, 2, 0, 0, 0, 0);
+            this.dtpmembirth.Name = "dtpmembirth";
+            this.dtpmembirth.Size = new System.Drawing.Size(199, 20);
+            this.dtpmembirth.TabIndex = 90;
+            // 
+            // btnaddmember
+            // 
+            this.btnaddmember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btnaddmember.FlatAppearance.BorderSize = 0;
+            this.btnaddmember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnaddmember.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnaddmember.ForeColor = System.Drawing.Color.White;
+            this.btnaddmember.Location = new System.Drawing.Point(72, 494);
+            this.btnaddmember.Name = "btnaddmember";
+            this.btnaddmember.Size = new System.Drawing.Size(196, 28);
+            this.btnaddmember.TabIndex = 88;
+            this.btnaddmember.Text = "Add Member";
+            this.btnaddmember.UseVisualStyleBackColor = false;
+            this.btnaddmember.Click += new System.EventHandler(this.btnaddmember_Click);
+            // 
+            // btnbacktofamoverview
+            // 
+            this.btnbacktofamoverview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.btnbacktofamoverview.FlatAppearance.BorderSize = 0;
+            this.btnbacktofamoverview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbacktofamoverview.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbacktofamoverview.ForeColor = System.Drawing.Color.White;
+            this.btnbacktofamoverview.Location = new System.Drawing.Point(347, 494);
+            this.btnbacktofamoverview.Name = "btnbacktofamoverview";
+            this.btnbacktofamoverview.Size = new System.Drawing.Size(196, 28);
+            this.btnbacktofamoverview.TabIndex = 87;
+            this.btnbacktofamoverview.Text = "Cancel";
+            this.btnbacktofamoverview.UseVisualStyleBackColor = false;
+            this.btnbacktofamoverview.Click += new System.EventHandler(this.btnbacktofamoverview_Click);
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label83.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label83.Location = new System.Drawing.Point(23, 322);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(109, 18);
+            this.label83.TabIndex = 85;
+            this.label83.Text = "Dependency";
+            // 
+            // cbxmemdependency
+            // 
+            this.cbxmemdependency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbxmemdependency.CausesValidation = false;
+            this.cbxmemdependency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxmemdependency.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxmemdependency.FormattingEnabled = true;
+            this.cbxmemdependency.Items.AddRange(new object[] {
+            "Dependent",
+            "Independent"});
+            this.cbxmemdependency.Location = new System.Drawing.Point(136, 322);
+            this.cbxmemdependency.Name = "cbxmemdependency";
+            this.cbxmemdependency.Size = new System.Drawing.Size(199, 21);
+            this.cbxmemdependency.TabIndex = 84;
+            // 
+            // txtmemlastname
+            // 
+            this.txtmemlastname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtmemlastname.Location = new System.Drawing.Point(136, 135);
+            this.txtmemlastname.Name = "txtmemlastname";
+            this.txtmemlastname.Size = new System.Drawing.Size(199, 20);
+            this.txtmemlastname.TabIndex = 83;
+            // 
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label84.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label84.Location = new System.Drawing.Point(23, 244);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(83, 18);
+            this.label84.TabIndex = 82;
+            this.label84.Text = "Birthdate";
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label89.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label89.Location = new System.Drawing.Point(23, 135);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(93, 18);
+            this.label89.TabIndex = 81;
+            this.label89.Text = "Last Name";
+            // 
+            // panel47
+            // 
+            this.panel47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.panel47.Controls.Add(this.label99);
+            this.panel47.Location = new System.Drawing.Point(6, 9);
+            this.panel47.Name = "panel47";
+            this.panel47.Size = new System.Drawing.Size(519, 97);
+            this.panel47.TabIndex = 79;
+            // 
+            // label99
+            // 
+            this.label99.AutoSize = true;
+            this.label99.BackColor = System.Drawing.Color.Transparent;
+            this.label99.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label99.ForeColor = System.Drawing.Color.Black;
+            this.label99.Location = new System.Drawing.Point(16, 22);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(138, 24);
+            this.label99.TabIndex = 39;
+            this.label99.Text = "New Member";
+            // 
             // btnCaseStudy
             // 
             this.btnCaseStudy.BackColor = System.Drawing.Color.Transparent;
@@ -5446,229 +5656,20 @@
             // 
             this.opimage1.FileName = "openFileDialog1";
             // 
-            // twenty
+            // cbxmemgender
             // 
-            this.twenty.Controls.Add(this.label78);
-            this.twenty.Controls.Add(this.comboBox1);
-            this.twenty.Controls.Add(this.dateTimePicker1);
-            this.twenty.Controls.Add(this.label79);
-            this.twenty.Controls.Add(this.textBox5);
-            this.twenty.Controls.Add(this.label80);
-            this.twenty.Controls.Add(this.textBox7);
-            this.twenty.Controls.Add(this.label81);
-            this.twenty.Controls.Add(this.dateTimePicker2);
-            this.twenty.Controls.Add(this.btnaddmember);
-            this.twenty.Controls.Add(this.btnbacktofamoverview);
-            this.twenty.Controls.Add(this.label83);
-            this.twenty.Controls.Add(this.comboBox2);
-            this.twenty.Controls.Add(this.textBox8);
-            this.twenty.Controls.Add(this.label84);
-            this.twenty.Controls.Add(this.label89);
-            this.twenty.Controls.Add(this.panel47);
-            this.twenty.Location = new System.Drawing.Point(4, 22);
-            this.twenty.Name = "twenty";
-            this.twenty.Padding = new System.Windows.Forms.Padding(3);
-            this.twenty.Size = new System.Drawing.Size(609, 536);
-            this.twenty.TabIndex = 20;
-            this.twenty.Text = "20";
-            this.twenty.UseVisualStyleBackColor = true;
-            // 
-            // label78
-            // 
-            this.label78.AutoSize = true;
-            this.label78.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label78.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label78.Location = new System.Drawing.Point(366, 325);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(68, 18);
-            this.label78.TabIndex = 98;
-            this.label78.Text = "Gender";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.comboBox1.CausesValidation = false;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Drop-In",
-            "Residential"});
-            this.comboBox1.Location = new System.Drawing.Point(436, 229);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(123, 21);
-            this.comboBox1.TabIndex = 97;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(440, 174);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(123, 20);
-            this.dateTimePicker1.TabIndex = 96;
-            // 
-            // label79
-            // 
-            this.label79.AutoSize = true;
-            this.label79.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label79.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label79.Location = new System.Drawing.Point(373, 162);
-            this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(61, 36);
-            this.label79.TabIndex = 95;
-            this.label79.Text = "Date \r\nJoined";
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox5.Location = new System.Drawing.Point(136, 209);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(199, 20);
-            this.textBox5.TabIndex = 94;
-            // 
-            // label80
-            // 
-            this.label80.AutoSize = true;
-            this.label80.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label80.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label80.Location = new System.Drawing.Point(23, 208);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(107, 18);
-            this.label80.TabIndex = 93;
-            this.label80.Text = "Relationship";
-            // 
-            // textBox7
-            // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox7.Location = new System.Drawing.Point(136, 170);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(199, 20);
-            this.textBox7.TabIndex = 92;
-            // 
-            // label81
-            // 
-            this.label81.AutoSize = true;
-            this.label81.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label81.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label81.Location = new System.Drawing.Point(23, 174);
-            this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(94, 18);
-            this.label81.TabIndex = 91;
-            this.label81.Text = "First Name";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(422, 388);
-            this.dateTimePicker2.MaxDate = new System.DateTime(9997, 12, 2, 0, 0, 0, 0);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(190, 20);
-            this.dateTimePicker2.TabIndex = 90;
-            // 
-            // btnaddmember
-            // 
-            this.btnaddmember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.btnaddmember.FlatAppearance.BorderSize = 0;
-            this.btnaddmember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnaddmember.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnaddmember.ForeColor = System.Drawing.Color.White;
-            this.btnaddmember.Location = new System.Drawing.Point(72, 494);
-            this.btnaddmember.Name = "btnaddmember";
-            this.btnaddmember.Size = new System.Drawing.Size(196, 28);
-            this.btnaddmember.TabIndex = 88;
-            this.btnaddmember.Text = "Add Member";
-            this.btnaddmember.UseVisualStyleBackColor = false;
-            // 
-            // btnbacktofamoverview
-            // 
-            this.btnbacktofamoverview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.btnbacktofamoverview.FlatAppearance.BorderSize = 0;
-            this.btnbacktofamoverview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnbacktofamoverview.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbacktofamoverview.ForeColor = System.Drawing.Color.White;
-            this.btnbacktofamoverview.Location = new System.Drawing.Point(347, 494);
-            this.btnbacktofamoverview.Name = "btnbacktofamoverview";
-            this.btnbacktofamoverview.Size = new System.Drawing.Size(196, 28);
-            this.btnbacktofamoverview.TabIndex = 87;
-            this.btnbacktofamoverview.Text = "Cancel";
-            this.btnbacktofamoverview.UseVisualStyleBackColor = false;
-            // 
-            // label83
-            // 
-            this.label83.AutoSize = true;
-            this.label83.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label83.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label83.Location = new System.Drawing.Point(323, 417);
-            this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(47, 18);
-            this.label83.TabIndex = 85;
-            this.label83.Text = "Type";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.comboBox2.CausesValidation = false;
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Parented",
-            "Paternal Orphan",
-            "Maternal Orphan",
-            "Full Orphan"});
-            this.comboBox2.Location = new System.Drawing.Point(422, 414);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(188, 21);
-            this.comboBox2.TabIndex = 84;
-            // 
-            // textBox8
-            // 
-            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox8.Location = new System.Drawing.Point(136, 135);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(199, 20);
-            this.textBox8.TabIndex = 83;
-            // 
-            // label84
-            // 
-            this.label84.AutoSize = true;
-            this.label84.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label84.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label84.Location = new System.Drawing.Point(323, 390);
-            this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(83, 18);
-            this.label84.TabIndex = 82;
-            this.label84.Text = "Birthdate";
-            // 
-            // label89
-            // 
-            this.label89.AutoSize = true;
-            this.label89.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label89.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label89.Location = new System.Drawing.Point(23, 135);
-            this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(93, 18);
-            this.label89.TabIndex = 81;
-            this.label89.Text = "Last Name";
-            // 
-            // panel47
-            // 
-            this.panel47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
-            this.panel47.Controls.Add(this.label99);
-            this.panel47.Location = new System.Drawing.Point(6, 9);
-            this.panel47.Name = "panel47";
-            this.panel47.Size = new System.Drawing.Size(519, 97);
-            this.panel47.TabIndex = 79;
-            // 
-            // label99
-            // 
-            this.label99.AutoSize = true;
-            this.label99.BackColor = System.Drawing.Color.Transparent;
-            this.label99.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label99.ForeColor = System.Drawing.Color.Black;
-            this.label99.Location = new System.Drawing.Point(16, 22);
-            this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(138, 24);
-            this.label99.TabIndex = 39;
-            this.label99.Text = "New Member";
+            this.cbxmemgender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbxmemgender.CausesValidation = false;
+            this.cbxmemgender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxmemgender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxmemgender.FormattingEnabled = true;
+            this.cbxmemgender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.cbxmemgender.Location = new System.Drawing.Point(136, 280);
+            this.cbxmemgender.Name = "cbxmemgender";
+            this.cbxmemgender.Size = new System.Drawing.Size(199, 21);
+            this.cbxmemgender.TabIndex = 102;
             // 
             // casestudy
             // 
@@ -5833,15 +5834,15 @@
             this.groupBox18.ResumeLayout(false);
             this.panel46.ResumeLayout(false);
             this.panel46.PerformLayout();
+            this.twenty.ResumeLayout(false);
+            this.twenty.PerformLayout();
+            this.panel47.ResumeLayout(false);
+            this.panel47.PerformLayout();
             this.panel.ResumeLayout(false);
             this.secondTaskbar.ResumeLayout(false);
             this.dropin.ResumeLayout(false);
             this.residential.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.twenty.ResumeLayout(false);
-            this.twenty.PerformLayout();
-            this.panel47.ResumeLayout(false);
-            this.panel47.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -5948,7 +5949,7 @@
         private System.Windows.Forms.Label label88;
         private System.Windows.Forms.PictureBox pbox1;
         private System.Windows.Forms.Panel panel21;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btndeletefam;
         private System.Windows.Forms.Button btnAddMem;
         private System.Windows.Forms.Panel panel22;
         private System.Windows.Forms.Label lbltotalcase;
@@ -6239,22 +6240,22 @@
         private System.Windows.Forms.Label lbllocationcheck;
         private System.Windows.Forms.TabPage twenty;
         private System.Windows.Forms.Label label78;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label79;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtmemrelationship;
         private System.Windows.Forms.Label label80;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtmemfirstname;
         private System.Windows.Forms.Label label81;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpmembirth;
         private System.Windows.Forms.Button btnaddmember;
         private System.Windows.Forms.Button btnbacktofamoverview;
         private System.Windows.Forms.Label label83;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.ComboBox cbxmemdependency;
+        private System.Windows.Forms.TextBox txtmemlastname;
         private System.Windows.Forms.Label label84;
         private System.Windows.Forms.Label label89;
         private System.Windows.Forms.Panel panel47;
         private System.Windows.Forms.Label label99;
+        private System.Windows.Forms.TextBox txtmemocc;
+        private System.Windows.Forms.Label label82;
+        private System.Windows.Forms.ComboBox cbxmemgender;
     }
 }
